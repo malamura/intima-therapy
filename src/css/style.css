@@ -14,32 +14,35 @@
 }
 
 @layer components {
+    /* H2: Буде ~55px на MacBook (1440px) і 72px на великих екранах */
     .text-fluid-h2 {
-        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        font-size: clamp(2.5rem, 3.8vw, 4.5rem);
     }
-    .text-fluid-h3 {
-        font-size: clamp(1.75rem, 3vw, 2.625rem);
-    }
+
+    /* H3 / 28px: Буде ~24px на MacBook і 28px на 1920px */
     .text-fluid-28 {
-        font-size: clamp(1.25rem, 2vw, 1.75rem);
+        font-size: clamp(1.25rem, 1.6vw, 1.75rem);
     }
+
+    /* 20px: Стане ~18px на MacBook */
     .text-fluid-20 {
-        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        font-size: clamp(1rem, 1.25vw, 1.25rem);
     }
+
+    /* 18px: Майже не міняється, але стає трохи акуратнішим */
     .text-fluid-18 {
-        font-size: clamp(0.9375rem, 1.2vw, 1.125rem);
+        font-size: clamp(0.9375rem, 1.1vw, 1.125rem);
     }
+
+    /* Кнопки та іконки теж робимо трохи менш агресивними */
     .btn-fluid-icon {
-        width: clamp(2.75rem, 4vw, 3.5rem);
-        height: clamp(2.75rem, 4vw, 3.5rem);
+        width: clamp(2.5rem, 3vw, 3.5rem);
+        height: clamp(2.5rem, 3vw, 3.5rem);
     }
 
     .fluid-button {
-        padding-top: clamp(0.875rem, 1.2vw, 1.125rem);
-        padding-bottom: clamp(0.875rem, 1.2vw, 1.125rem);
-        padding-left: clamp(1.5rem, 4vw, 3rem);
-        padding-right: clamp(1.5rem, 4vw, 3rem);
-        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        padding: clamp(0.75rem, 1vw, 1rem) clamp(1.5rem, 3vw, 3rem);
+        font-size: clamp(1rem, 1.2vw, 1.125rem);
     }
 }
 
