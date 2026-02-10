@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+    /* Кольори */
+    --color-bg: #F4ECE4;
+    --color-primary: #491E42;
+    --color-card-purple: #491E42B2;
+    --color-card-pink: #D95F69;
+    --color-card-muted: #8C5F7A;
+    --color-card-light-pink: #DE847A;
+
+    /* Шрифти */
+    --font-sans: "Arimo", sans-serif;
+}
+
+@layer components {
+    .text-fluid-h2 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+    }
+    .text-fluid-h3 {
+        font-size: clamp(1.75rem, 3vw, 2.625rem);
+    }
+    .text-fluid-28 {
+        font-size: clamp(1.25rem, 2vw, 1.75rem);
+    }
+    .text-fluid-20 {
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+    }
+    .text-fluid-18 {
+        font-size: clamp(0.9375rem, 1.2vw, 1.125rem);
+    }
+    .btn-fluid-icon {
+        width: clamp(2.75rem, 4vw, 3.5rem);
+        height: clamp(2.75rem, 4vw, 3.5rem);
+    }
+
+    .fluid-button {
+        padding-top: clamp(0.875rem, 1.2vw, 1.125rem);
+        padding-bottom: clamp(0.875rem, 1.2vw, 1.125rem);
+        padding-left: clamp(1.5rem, 4vw, 3rem);
+        padding-right: clamp(1.5rem, 4vw, 3rem);
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+    }
+}
+
+/* Кастомні утиліти для анімації (якщо потрібно) */
+@utility reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+@utility reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dashed-line-path {
+    stroke-dasharray: 10, 10;
+    animation: dash 60s linear infinite;
+}
+
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dashed Line Animation */
+.dashed-line-path {
+    /* stroke-dasharray is already defined in the SVG path */
+    animation: dash 60s linear infinite;
+}
+@keyframes dash {
+    to {
+        stroke-dashoffset: 1000;
+    }
+}
+body{
+    line-height: 1.3;
+}
+
+
+.line-svg svg{
+    max-width: 100%;
+}
+
+.mod_line h3{padding-top: 100px}
+
+@media only screen and (max-width: 1480px) {
+    .line-svg svg {
+        max-width: 80%;
+    }
+    .top-\[95\%\] {
+        top: 76%;
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .line-svg svg{
+        max-width: 65%;
+    }
+    .left-\[11\%\] {
+        left: 9%;
+    }
+    .-top-\[20\%\] {
+        top: calc(32% * -1);
+    }
+    .top-\[95\%\] {
+        top: 70%;
+    }
+
+}

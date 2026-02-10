@@ -1,0 +1,21 @@
+{
+  "hash": "e1197a97",
+  "configHash": "b23a6983",
+  "lockfileHash": "9a03a794",
+  "browserHash": "a9aee708",
+  "optimized": {
+    "@alpinejs/intersect": {
+      "src": "../../node_modules/@alpinejs/intersect/dist/module.esm.js",
+      "file": "@alpinejs_intersect.js",
+      "fileHash": "75bdb5e8",
+      "needsInterop": false
+    },
+    "alpinejs": {
+      "src": "../../node_modules/alpinejs/dist/module.esm.js",
+      "file": "alpinejs.js",
+      "fileHash": "b4f1ca60",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}
