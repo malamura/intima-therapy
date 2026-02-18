@@ -14,7 +14,7 @@
 <header
         class="absolute top-0 left-0 w-full z-50 border-b border-white/15"
         x-data="{
-        activeMenu: null,
+        activeMenu: 'help',
         mobileMenu: false,
         timeout: null,
         openMenu(name) {
@@ -24,7 +24,7 @@
         closeMenu() {
             this.timeout = setTimeout(() => {
                 this.activeMenu = null;
-            }, 300);
+            }, 300); // 300ms затримка перед закриттям
         },
         keepMenuOpen() {
             clearTimeout(this.timeout);
@@ -44,25 +44,24 @@
             style="display: none;"
     ></div>
 
-    <div class="max-w-[1920px] mx-auto px-6 lg:px-[clamp(1.5rem,4vw,4rem)] py-[clamp(0.75rem,1vh,1rem)] relative">
+    <div class="max-w-[1920px] mx-auto lg:px-19 py-4 relative">
         <div class="flex justify-between items-center">
 
             <a href="/" class="flex items-center shrink-0 z-50 relative">
-                <img src="/src/images/logo.svg" alt="Intima Therapy" class="w-auto h-[clamp(2.25rem,2.5vw,3rem)]">
+                <img src="/src/images/logo.svg" alt="Intima Therapy" class="h-12 w-auto">
             </a>
 
-            <div class="flex justify-between items-center gap-6 lg:gap-[clamp(1.5rem,3vw,3.5rem)]">
-
-                <nav class="hidden lg:flex items-center gap-[clamp(1rem,1.7vw,2rem)] font-sans font-medium text-[clamp(14px,0.9vw,16px)] text-bg">
+            <div class="flex justify-between items-center lg:gap-14">
+                <nav class="hidden lg:flex items-center gap-8">
 
                     <div class="static h-full flex items-center"
                          @mouseenter="openMenu('therapies')"
                          @mouseleave="closeMenu()">
                         <button
-                                class="flex items-center gap-2 py-1 rounded-full transition relative z-50 whitespace-nowrap"
-                                :class="{ 'bg-card-pink-hover px-3 -ml-3': activeMenu === 'therapies' }">
+                                class="text-bg flex items-center gap-2 py-1 rounded-full transition relative z-50"
+                                :class="{ 'bg-card-pink-hover px-3': activeMenu === 'therapies' }">
                             Therapies
-                            <svg class="transition-transform duration-300 w-[0.7em] h-[0.7em]" :class="{ 'rotate-180': activeMenu === 'therapies' }" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 0.5L5.5 5.5L0.5 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg class="transition-transform duration-300" :class="{ 'rotate-180': activeMenu === 'therapies' }" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 0.5L5.5 5.5L0.5 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
 
                         <div x-show="activeMenu === 'therapies'"
@@ -74,52 +73,84 @@
                              x-transition:leave="transition ease-in duration-200"
                              x-transition:leave-start="opacity-100 translate-y-0"
                              x-transition:leave-end="opacity-0 translate-y-2"
-                             class="absolute top-full left-0 w-full z-40 px-6 lg:px-[clamp(1.5rem,4vw,4rem)]"
+                             class="absolute top-full left-0 w-full z-40 lg:px-19"
                              style="display: none;">
 
-                            <div class="bg-bg-menu rounded-[40px] p-[clamp(1.5rem,2.5vw,2.5rem)] relative w-full">
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[clamp(1rem,1vw,1.5rem)]">
+                            <div class="bg-bg-menu rounded-[40px] p-10 relative w-full">
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
                                     <a href="#" class="group relative overflow-hidden rounded-3xl aspect-[4/3.5] block cursor-pointer">
-                                        <img src="/src/images/content/card1.webp" alt="Couples Therapy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                        <img src="/src/images/content/card1.webp"
+                                             alt="Couples Therapy"
+                                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                        <div class="absolute bottom-0 left-0 w-full p-[clamp(1.25rem,1.5vw,2rem)] flex items-end justify-between gap-3">
-                                            <span class="text-bg text-[clamp(1.125rem,1.3vw,1.5rem)] font-medium leading-tight">Couples & Relationship Therapy</span>
-                                            <div class="w-[clamp(2rem,2.5vw,2.5rem)] h-[clamp(2rem,2.5vw,2.5rem)] rounded-full bg-card-pink flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:rotate-45">
-                                                <svg class="w-[0.7rem] h-[0.7rem]" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 10.5L10.5 0.5" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.375 0.5H10.5V8.625" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+                                        <div class="absolute bottom-0 left-0 w-full p-8 flex items-end justify-between gap-3">
+                                        <span class="text-bg text-fluid-24">
+                                            Couples & Relationship Therapy
+                                        </span>
+                                            <div class="w-10 h-10 rounded-full bg-card-pink flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:rotate-45">
+                                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.5 10.5L10.5 0.5" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M2.375 0.5H10.5V8.625" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
                                             </div>
                                         </div>
                                     </a>
 
                                     <a href="#" class="group relative overflow-hidden rounded-3xl aspect-[4/3.5] block cursor-pointer">
-                                        <img src="/src/images/content/card2.jpg" alt="Psychosexual Therapy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                        <img src="/src/images/content/card2.jpg"
+                                             alt="Psychosexual Therapy"
+                                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                        <div class="absolute bottom-0 left-0 w-full p-[clamp(1.25rem,1.5vw,2rem)] flex items-end justify-between gap-3">
-                                            <span class="text-bg text-[clamp(1.125rem,1.3vw,1.5rem)] font-medium leading-tight">Psychosexual Therapy (Sex Therapy)</span>
-                                            <div class="w-[clamp(2rem,2.5vw,2.5rem)] h-[clamp(2rem,2.5vw,2.5rem)] rounded-full bg-card-pink flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:rotate-45">
-                                                <svg class="w-[0.7rem] h-[0.7rem]" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 10.5L10.5 0.5" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.375 0.5H10.5V8.625" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+                                        <div class="absolute bottom-0 left-0 w-full p-8 flex items-end justify-between gap-3">
+                                        <span class="text-bg text-fluid-24">
+                                            Psychosexual Therapy (Sex Therapy)
+                                        </span>
+                                            <div class="w-10 h-10 rounded-full bg-card-pink flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:rotate-45">
+                                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.5 10.5L10.5 0.5" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M2.375 0.5H10.5V8.625" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
                                             </div>
                                         </div>
                                     </a>
 
                                     <a href="#" class="group relative overflow-hidden rounded-3xl aspect-[4/3.5] block cursor-pointer">
-                                        <img src="/src/images/content/card3.webp" alt="LGBTQIA+ Therapy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                        <img src="/src/images/content/card3.webp"
+                                             alt="LGBTQIA+ Therapy"
+                                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                        <div class="absolute bottom-0 left-0 w-full p-[clamp(1.25rem,1.5vw,2rem)] flex items-end justify-between gap-3">
-                                            <span class="text-bg text-[clamp(1.125rem,1.3vw,1.5rem)] font-medium leading-tight">LGBTQIA+ Affirming Therapy</span>
-                                            <div class="w-[clamp(2rem,2.5vw,2.5rem)] h-[clamp(2rem,2.5vw,2.5rem)] rounded-full bg-card-pink flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:rotate-45">
-                                                <svg class="w-[0.7rem] h-[0.7rem]" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 10.5L10.5 0.5" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.375 0.5H10.5V8.625" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+                                        <div class="absolute bottom-0 left-0 w-full p-8 flex items-end justify-between gap-3">
+                                        <span class="text-bg text-fluid-24">
+                                            LGBTQIA+ Affirming Therapy
+                                        </span>
+                                            <div class="w-10 h-10 rounded-full bg-card-pink flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:rotate-45">
+                                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.5 10.5L10.5 0.5" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M2.375 0.5H10.5V8.625" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
                                             </div>
                                         </div>
                                     </a>
 
                                     <a href="#" class="group relative overflow-hidden rounded-3xl aspect-[4/3.5] block cursor-pointer">
-                                        <img src="/src/images/content/card4.webp" alt="Kink-Affirming Therapy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                        <img src="/src/images/content/card4.webp"
+                                             alt="Kink-Affirming Therapy"
+                                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                        <div class="absolute bottom-0 left-0 w-full p-[clamp(1.25rem,1.5vw,2rem)] flex items-end justify-between gap-3">
-                                            <span class="text-bg text-[clamp(1.125rem,1.3vw,1.5rem)] font-medium leading-tight">Kink-Affirming Therapy</span>
-                                            <div class="w-[clamp(2rem,2.5vw,2.5rem)] h-[clamp(2rem,2.5vw,2.5rem)] rounded-full bg-card-pink flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:rotate-45">
-                                                <svg class="w-[0.7rem] h-[0.7rem]" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 10.5L10.5 0.5" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.375 0.5H10.5V8.625" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+                                        <div class="absolute bottom-0 left-0 w-full p-8 flex items-end justify-between gap-3">
+                                        <span class="text-bg text-fluid-24">
+                                            Kink-Affirming Therapy
+                                        </span>
+                                            <div class="w-10 h-10 rounded-full bg-card-pink flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:rotate-45">
+                                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.5 10.5L10.5 0.5" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M2.375 0.5H10.5V8.625" stroke="#F4ECE4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
                                             </div>
                                         </div>
                                     </a>
@@ -134,11 +165,11 @@
                          @mouseleave="closeMenu()">
 
                         <button
-                                class="text-bg flex items-center gap-2 py-1 rounded-full transition relative z-50 whitespace-nowrap"
-                                :class="{ 'bg-card-pink-hover px-3 -ml-3': activeMenu === 'help' }"
+                                class="text-bg flex items-center gap-2 py-1 rounded-full transition relative z-50"
+                                :class="{ 'bg-card-pink-hover px-3': activeMenu === 'help' }"
                         >
                             What We Help With
-                            <svg class="transition-transform duration-300 w-[0.7em] h-[0.7em]" :class="{ 'rotate-180': activeMenu === 'help' }" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 0.5L5.5 5.5L0.5 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg class="transition-transform duration-300" :class="{ 'rotate-180': activeMenu === 'help' }" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 0.5L5.5 5.5L0.5 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
 
                         <div
@@ -151,46 +182,62 @@
                                 x-transition:leave="transition ease-in duration-200"
                                 x-transition:leave-start="opacity-100 translate-y-0"
                                 x-transition:leave-end="opacity-0 translate-y-2"
-                                class="absolute top-full left-0 w-full z-40 px-6 lg:px-[clamp(1.5rem,4vw,4rem)]"
+                                class="absolute top-full left-0 w-full z-40 lg:px-19"
                                 style="display: none;"
                         >
-                            <div class="bg-bg-menu rounded-[40px] p-[clamp(1.5rem,2.5vw,2.5rem)] relative w-full">
+                            <div class="bg-bg-menu rounded-[40px] p-10 relative w-full">
                                 <div class="grid grid-cols-3 gap-2.5">
-                                    <a href="#" class="group flex items-center justify-between bg-bg px-[clamp(1rem,1.5vw,1.5rem)] py-[clamp(1rem,1.5vw,1.5rem)] rounded-2xl transition-colors duration-300">
-                                        <span class="text-[clamp(1rem,1.25vw,1.5rem)]">Sexual Performance Anxiety</span>
-                                        <svg class="group-hover:translate-x-1 transition-all duration-300 w-[0.7em] h-auto" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <a href="#" class="group flex items-center justify-between bg-bg px-6 py-6 rounded-2xl transition-colors duration-300">
+                                        <span class="text-fluid-24">Sexual Performance Anxiety</span>
+                                        <svg class="group-hover:translate-x-1 transition-all duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                     </a>
-                                    <a href="#" class="group flex items-center justify-between bg-bg px-[clamp(1rem,1.5vw,1.5rem)] py-[clamp(1rem,1.5vw,1.5rem)] rounded-2xl transition-colors duration-300">
-                                        <span class="text-[clamp(1rem,1.25vw,1.5rem)]">Vaginismus</span>
-                                        <svg class="group-hover:translate-x-1 transition-all duration-300 w-[0.7em] h-auto" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <a href="#" class="group flex items-center justify-between bg-bg px-6 py-6 rounded-2xl transition-colors duration-300">
+                                        <span class="text-fluid-24">Vaginismus</span>
+                                        <svg class="group-hover:translate-x-1 transition-all duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                     </a>
-                                    <a href="#" class="group flex items-center justify-between bg-bg px-[clamp(1rem,1.5vw,1.5rem)] py-[clamp(1rem,1.5vw,1.5rem)] rounded-2xl transition-colors duration-300">
-                                        <span class="text-[clamp(1rem,1.25vw,1.5rem)]">Anorgasmia</span>
-                                        <svg class="group-hover:translate-x-1 transition-all duration-300 w-[0.7em] h-auto" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <a href="#" class="group flex items-center justify-between bg-bg px-6 py-6 rounded-2xl transition-colors duration-300">
+                                        <span class="text-fluid-24">Anorgasmia</span>
+                                        <svg class="group-hover:translate-x-1 transition-all duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                     </a>
-                                    <a href="#" class="group flex items-center justify-between bg-bg px-[clamp(1rem,1.5vw,1.5rem)] py-[clamp(1rem,1.5vw,1.5rem)] rounded-2xl transition-colors duration-300">
-                                        <span class="text-[clamp(1rem,1.25vw,1.5rem)]">Low Libido</span>
-                                        <svg class="group-hover:translate-x-1 transition-all duration-300 w-[0.7em] h-auto" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <a href="#" class="group flex items-center justify-between bg-bg px-6 py-6 rounded-2xl transition-colors duration-300">
+                                        <span class="text-fluid-24">Low Libido</span>
+                                        <svg class="group-hover:translate-x-1 transition-all duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                     </a>
-                                    <a href="#" class="group flex items-center justify-between bg-bg px-[clamp(1rem,1.5vw,1.5rem)] py-[clamp(1rem,1.5vw,1.5rem)] rounded-2xl transition-colors duration-300">
-                                        <span class="text-[clamp(1rem,1.25vw,1.5rem)]">Erectile Dysfunction</span>
-                                        <svg class="group-hover:translate-x-1 transition-all duration-300 w-[0.7em] h-auto" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <a href="#" class="group flex items-center justify-between bg-bg px-6 py-6 rounded-2xl transition-colors duration-300">
+                                        <span class="text-fluid-24">Erectile Dysfunction</span>
+                                        <svg class="group-hover:translate-x-1 transition-all duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                     </a>
-                                    <a href="#" class="group flex items-center justify-between bg-bg px-[clamp(1rem,1.5vw,1.5rem)] py-[clamp(1rem,1.5vw,1.5rem)] rounded-2xl transition-colors duration-300">
-                                        <span class="text-[clamp(1rem,1.25vw,1.5rem)]">Infidelity Counselling</span>
-                                        <svg class="group-hover:translate-x-1 transition-all duration-300 w-[0.7em] h-auto" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <a href="#" class="group flex items-center justify-between bg-bg px-6 py-6 rounded-2xl transition-colors duration-300">
+                                        <span class="text-fluid-24">Infidelity Counselling</span>
+                                        <svg class="group-hover:translate-x-1 transition-all duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                     </a>
-                                    <a href="#" class="group flex items-center justify-between bg-bg px-[clamp(1rem,1.5vw,1.5rem)] py-[clamp(1rem,1.5vw,1.5rem)] rounded-2xl transition-colors duration-300">
-                                        <span class="text-[clamp(1rem,1.25vw,1.5rem)]">Pain During Sex</span>
-                                        <svg class="group-hover:translate-x-1 transition-all duration-300 w-[0.7em] h-auto" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <a href="#" class="group flex items-center justify-between bg-bg px-6 py-6 rounded-2xl transition-colors duration-300">
+                                        <span class="text-fluid-24">Pain During Sex</span>
+                                        <svg class="group-hover:translate-x-1 transition-all duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                     </a>
-                                    <a href="#" class="group flex items-center justify-between bg-bg px-[clamp(1rem,1.5vw,1.5rem)] py-[clamp(1rem,1.5vw,1.5rem)] rounded-2xl transition-colors duration-300">
-                                        <span class="text-[clamp(1rem,1.25vw,1.5rem)]">Rapid Ejaculation</span>
-                                        <svg class="group-hover:translate-x-1 transition-all duration-300 w-[0.7em] h-auto" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <a href="#" class="group flex items-center justify-between bg-bg px-6 py-6 rounded-2xl transition-colors duration-300">
+                                        <span class="text-fluid-24">Rapid Ejaculation</span>
+                                        <svg class="group-hover:translate-x-1 transition-all duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
                                     </a>
 
-                                    <div class="flex items-center px-[clamp(1rem,1.5vw,1.5rem)]">
-                                        <a href="#" class="font-bold text-[clamp(1rem,1.1vw,1.25rem)] underline underline-offset-5 decoration text-primary hover:text-card-pink transition-colors">
+                                    <div class="flex items-center px-6">
+                                        <a href="#" class="font-bold text-fluid-20 underline underline-offset-5 decoration text-primary hover:text-card-pink transition-colors">
                                             Explore All Topics
                                         </a>
                                     </div>
@@ -199,17 +246,17 @@
                         </div>
                     </div>
 
-                    <a href="#" class="text-bg hover:opacity-80 transition py-4 whitespace-nowrap">Our Therapists</a>
+                    <a href="#" class="text-bg hover:opacity-80 transition py-4">Our Therapists</a>
                     <a href="#" class="text-bg hover:opacity-80 transition py-4">About</a>
-                    <a href="#" class="text-bg hover:opacity-80 transition py-4">Contact</a>
                     <a href="#" class="text-bg hover:opacity-80 transition py-4">Resources</a>
+                    <a href="#" class="text-bg hover:opacity-80 transition py-4">Contact</a>
+
                 </nav>
 
                 <div class="flex items-center gap-6 z-50 relative">
-                    <a href="#" class="hidden md:block bg-card-pink text-white px-[clamp(1.25rem,1.5vw,1.75rem)] py-[clamp(0.6rem,0.7vw,0.875rem)] font-bold rounded-full hover:bg-card-light-pink transition shadow-sm text-[clamp(14px,0.85vw,16px)] whitespace-nowrap">
+                    <a href="#" class="hidden md:block bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-card-light-pink transition shadow-sm">
                         Book a consultation
                     </a>
-
                     <button @click="mobileMenu = !mobileMenu" class="lg:hidden text-bg">
                         <svg x-show="!mobileMenu" class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                         <svg x-show="mobileMenu" class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -220,7 +267,7 @@
     </div>
 </header>
 
-<section class="mb-20 2xl:mb-24 relative min-h-screen flex items-center px-6 lg:px-16 overflow-hidden">
+<section class="mb-20 2xl:mb-24 relative min-h-screen flex items-center lg:px-19 overflow-hidden">
     <div class="absolute inset-0 z-0">
         <img src="/src/images/first-section.webp" class="w-full h-full object-cover scale-105" alt="Hero Background">
         <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
@@ -232,7 +279,7 @@
              x-init="setTimeout(() => shown = true, 150)"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'">
 
-            <h1 class="font-sans text-fluid-h1 text-bg font-medium mb-8">
+            <h1 class="font-sans text-fluid-h1 text-bg mb-6">
                 Specialist Therapy <br class="hidden sm:block"> for Sex, Intimacy <br class="hidden sm:block"> &
                 Relationships
             </h1>
@@ -254,7 +301,7 @@
         </div>
     </div>
 </section>
-<section class="py-20 2xl:py-24 px-4 lg:px-16 max-w-[1920px] mx-auto" x-data>
+<section class="py-20 2xl:py-24 px-4 lg:px-19 max-w-[1920px] mx-auto" x-data>
 
     <div class="text-center mb-16 lg:mb-20 reveal-hidden"
          x-data="{ shown: false }"
@@ -320,7 +367,7 @@
                  alt="Sex Therapy"
                  class="absolute rounded-2xl md:rounded-3xl inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
-            
+
 
             <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
                 <div class="flex justify-between items-start gap-4">
@@ -360,7 +407,7 @@
                  alt="LGBTQIA+"
                  class="absolute rounded-2xl md:rounded-3xl inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
-            
+
 
             <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
                 <div class="flex justify-between items-start gap-4">
@@ -430,7 +477,7 @@
 
     </div>
 </section>
-<section class="py-20 2xl:py-24 px-4 lg:px-16 mt-16 2xl:mt-22 max-w-[1920px] mx-auto relative" x-data>
+<section class="py-20 2xl:py-24 px-4 lg:px-19 mt-16 2xl:mt-22 max-w-[1920px] mx-auto relative" x-data>
 
     <div class="absolute -bottom-[36%] -left-[14%] w-[60%] lg:w-[60%] pointer-events-none z-0">
         <svg width="1515" height="1419" viewBox="0 0 1515 1419" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
@@ -535,7 +582,7 @@
 
     </div>
 </section>
-<section class="py-30 2xl:py-38 px-4 lg:px-16 my-10 2xl:my-14 overflow-hidden relative text-bg" style="background: linear-gradient(180deg, #5A2251 0%, #894C7E 100%);"
+<section class="py-30 2xl:py-38 px-4 lg:px-19 my-10 2xl:my-14 overflow-hidden relative text-bg" style="background: linear-gradient(180deg, #5A2251 0%, #894C7E 100%);"
          x-data>
 
     <div class="absolute bottom-0 -left-[10%] md:left-0 w-full max-w-[740px] pointer-events-none mix-blend-overlay">
@@ -578,7 +625,7 @@
         </div>
     </div>
 </section>
-<section class="py-20 2xl:py-24 px-4 lg:px-16 max-w-[1920px] mx-auto" x-data="{ modalOpen: false, videoId: 'wWR0VD6qgt8' }">
+<section class="py-20 2xl:py-24 px-4 lg:px-19 max-w-[1920px] mx-auto" x-data="{ modalOpen: false, videoId: 'wWR0VD6qgt8' }">
     <div class="max-w-7xl mx-auto text-center">
 
         <div class="mb-16 lg:mb-20 reveal-hidden"
@@ -654,7 +701,7 @@
     </div>
 
 </section>
-<section class="py-20 2xl:py-24 px-4 lg:px-16 mt-16 2xl:mt-22 max-w-[1920px] mx-auto" x-data>
+<section class="py-20 2xl:py-24 px-4 lg:px-19 mt-16 2xl:mt-22 max-w-[1920px] mx-auto" x-data>
 
     <div class="text-center mb-20 reveal-hidden"
          x-data="{ shown: false }"
@@ -811,7 +858,7 @@
         </a>
     </div>
 </section>
-<section class="py-20 2xl:py-24 px-4 lg:px-16 max-w-[1920px] mx-auto relative" x-data>
+<section class="py-20 2xl:py-24 px-4 lg:px-19 max-w-[1920px] mx-auto relative" x-data>
 
     <div class="text-center mb-10 lg:mb-20 relative z-10"
          x-data="{ shown: false }"
@@ -923,8 +970,7 @@
         </div>
     </div>
 </section>
-
-<section class="relative min-h-[600px] flex items-center py-20 px-4 lg:px-16 overflow-hidden" x-data>
+<section class="relative min-h-[600px] flex items-center py-20 px-4 lg:px-19 overflow-hidden" x-data>
 
     <div class="absolute inset-0 z-0">
         <img src="/src/images/CTA.webp"
@@ -960,7 +1006,7 @@
     </div>
 </section>
 
-<footer class="bg-primary pt-20 pb-10 px-4 lg:px-16 text-bg">
+<footer class="bg-primary pt-20 pb-10 px-4 lg:px-19 text-bg">
     <div class="max-w-[1920px] mx-auto">
 
         <div class="flex flex-col xl:flex-row justify-between gap-12 xl:gap-24 mb-10">
