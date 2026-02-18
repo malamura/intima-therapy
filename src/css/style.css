@@ -190,6 +190,7 @@
         .btn-fluid-icon svg {
             height: 1.3rem;
         }
+
         .section-fluid-height {
             min-height: clamp(34.375rem, 31.25vw, 37.5rem);
         }
@@ -208,6 +209,19 @@
         .px-7 {
             padding-left: clamp(1.312rem, 1.45vw, 1.75rem) !important;
             padding-right: clamp(1.312rem, 1.45vw, 1.75rem) !important;
+        }
+
+        .pt-10 {
+            padding-top: clamp(1.875rem, 2.083vw, 2.5rem) !important;
+        }
+
+        /* Якщо ти також використовуєш pb-10 або py-10, їх краще додати поруч */
+        .pb-10 {
+            padding-bottom: clamp(1.875rem, 2.083vw, 2.5rem) !important;
+        }
+
+        .pt-20 {
+            padding-top: clamp(3.75rem, 4.167vw, 5rem) !important;
         }
 
         /* py-6 (24px -> 18px) та px-6 (24px -> 18px) - Пункти списку Help */
@@ -253,7 +267,7 @@
 
         /* gap-4 (16px -> 12px) */
         .gap-4 {
-            gap: clamp(0.75rem, 0.83vw, 1rem) !important;
+            gap: clamp(0.85rem, 0.83vw, 1rem) !important;
         }
 
         /* gap-2.5 (10px -> 7.5px) */
@@ -284,8 +298,23 @@
         .w-11 {
             width: clamp(0.515rem, 0.57vw, 0.687rem) !important;
         }
+
         .h-21 {
             height: clamp(3.75rem, 4.375vw, 5.25rem) !important;
+        }
+        .custom-height-fluid svg{
+            height: clamp(0.7rem, 0.781vw, 0.9375rem) !important;
+        }
+        footer .h-12 svg {
+            height: 1.1rem;
+        }
+        footer .w-12 {
+            width: clamp(2.25rem, 2.5vw, 3rem) !important;
+        }
+
+        /* Перевизначаємо h-12: 36px на 1440px -> 48px на 1920px */
+        footer .h-12 {
+            height: clamp(2.25rem, 2.5vw, 3rem) !important;
         }
     }
 
