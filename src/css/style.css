@@ -372,6 +372,20 @@
         .arrows-slider .h-12{
             height: clamp(2.25rem, 2.5vw, 3rem) !important;
         }
+        .play-btn svg {
+            width: clamp(1.75rem, 2.892vw, 2.75rem) !important;
+            height: clamp(1.75rem, 2.892vw, 2.75rem) !important;
+            margin-right: -8px;
+        }
+        /* w-40: 130px на 1440px -> 160px на 1920px */
+        .w-40.play-btn  {
+            width: clamp(8.125rem, 8.333vw, 10rem) !important;
+        }
+
+        /* h-40: 130px на 1440px -> 160px на 1920px */
+        .h-40.play-btn  {
+            height: clamp(8.125rem, 8.333vw, 10rem) !important;
+        }
     }
 
 }
