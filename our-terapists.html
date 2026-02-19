@@ -270,220 +270,13 @@
     </div>
 </header>
 
-<section class="mb-20 2xl:mb-24 relative min-h-screen flex items-center px-5 lg:px-19 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-        <img src="/src/images/first-section.webp" class="w-full h-full object-cover scale-105" alt="Hero Background">
-    </div>
-
-    <div class="relative z-10 max-w-[1920px] mx-auto w-full">
-        <div class="max-w-[1100px] reveal-hidden"
-             x-data="{ shown: false }"
-             x-init="setTimeout(() => shown = true, 150)"
-             :class="shown ? 'reveal-visible' : 'reveal-hidden'">
-
-            <h1 class="font-sans text-fluid-h1 text-bg mb-6">
-                Specialist Therapy <br class="hidden sm:block"> for Sex, Intimacy <br class="hidden sm:block"> &
-                Relationships
-            </h1>
-
-            <p class="font-sans text-fluid-24 text-bg/90 mb-14 max-w-[550px]">
-                A space where intimacy begins with you.
-            </p>
-
-            <div class="reveal-hidden"
-                 x-data="{ shown: false }"
-                 x-intersect.once.threshold.50="shown = true"
-                 :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                 style="transition-delay: 600ms;">
-                <a href="#"
-                   class="bg-card-pink hover:bg-card-light-pink text-bg font-sans font-bold fluid-button rounded-full transition">
-                    Find a Therapist
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="py-20 2xl:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto" x-data>
-
-    <div class="text-center mb-16 lg:mb-20 reveal-hidden"
-         x-data="{ shown: false }"
-         x-intersect.once.threshold.50="shown = true"
-         :class="shown ? 'reveal-visible' : 'reveal-hidden'">
-
-        <h2 class="font-sans leading-none text-fluid-h2 text-primary">
-            Support that meets <br>
-            you where you are
-        </h2>
-        <p class="font-sans text-fluid-24 text-card-purple max-w-2xl mt-8 mx-auto">
-            Thoughtful therapy for sex, intimacy, and relationships in all their forms.
-        </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-
-        <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[3/4.5] cursor-pointer reveal-hidden"
-           x-data="{ shown: false }"
-           x-intersect.once.threshold.20="shown = true"
-           :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-           style="transition-delay: 0ms;">
-
-            <img src="/src/images/content/card5.webp"
-                 alt="Couples Therapy"
-                 class="absolute rounded-2xl md:rounded-3xl inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
 
-
-            <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
-                <div class="flex justify-between items-start gap-4">
-                    <h3 class="font-sans text-fluid-28 text-bg relative z-10">
-                        Couples & Relationship Therapy
-                    </h3>
-                    <button class="btn-fluid-icon rounded-full bg-card-pink text-white flex items-center justify-center shrink-0 transform transition-transform group-hover:rotate-45 relative z-10">
-                        <svg class="w-1/2 h-1/2" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_48_200)">
-                                <path d="M7 21L21 7" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
-                                      stroke-linejoin="round"/>
-                                <path d="M9.625 7H21V18.375" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
-                                      stroke-linejoin="round"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_48_200">
-                                    <rect width="28" height="28" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </button>
-                </div>
-
-                <p class="font-sans text-fluid-24 text-white/80 leading-[1.5] relative z-10">
-                    From monogamous to non-monogamous and polyamorous relationships, our therapists offer support grounded in clinical expertise and real-world experience.
-                </p>
-            </div>
-        </a>
-
-        <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[3/4.5] cursor-pointer reveal-hidden"
-           x-data="{ shown: false }"
-           x-intersect.once.threshold.20="shown = true"
-           :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-           style="transition-delay: 150ms;">
-
-            <img src="/src/images/content/card6.jpg"
-                 alt="Sex Therapy"
-                 class="absolute rounded-2xl md:rounded-3xl inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-
-
-
-            <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
-                <div class="flex justify-between items-start gap-4">
-                    <h3 class="font-sans text-fluid-28 text-bg">
-                        Psychosexual Therapy (Sex Therapy)
-                    </h3>
-                    <button class="btn-fluid-icon rounded-full bg-card-pink text-white flex items-center justify-center shrink-0 transform transition-transform group-hover:rotate-45">
-                        <svg class="w-1/2 h-1/2" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_48_200)">
-                                <path d="M7 21L21 7" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
-                                      stroke-linejoin="round"/>
-                                <path d="M9.625 7H21V18.375" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
-                                      stroke-linejoin="round"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_48_200">
-                                    <rect width="28" height="28" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </button>
-                </div>
-
-                <p class="font-sans text-fluid-24 text-white/80 leading-[1.5]">
-                    Sex therapy, also known as psychosexual therapy, supports people who are experiencing difficulties or concerns around sex and intimacy.
-                </p>
-            </div>
-        </a>
-
-        <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[3/4.5] cursor-pointer reveal-hidden"
-           x-data="{ shown: false }"
-           x-intersect.once.threshold.20="shown = true"
-           :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-           style="transition-delay: 300ms;">
-            <img src="/src/images/content/card5-v2.webp"
-                 alt="LGBTQIA+"
-                 class="absolute rounded-2xl md:rounded-3xl inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-
-            <div class="absolute inset-0 bg-black/40 transition-opacity duration-500 group-hover:opacity-100"></div>
-
-
-
-
-            <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
-                <div class="flex justify-between items-start gap-4">
-                    <h3 class="font-sans text-fluid-28 text-bg">
-                        LGBTQIA+ Affirming Therapy
-                    </h3>
-                    <button class="btn-fluid-icon rounded-full bg-card-pink text-white flex items-center justify-center shrink-0 transform transition-transform group-hover:rotate-45">
-                        <svg class="w-1/2 h-1/2" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_48_200)">
-                                <path d="M7 21L21 7" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
-                                      stroke-linejoin="round"/>
-                                <path d="M9.625 7H21V18.375" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
-                                      stroke-linejoin="round"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_48_200">
-                                    <rect width="28" height="28" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </button>
-                </div>
-
-                <p class="font-sans text-fluid-24 text-white/80 leading-[1.5]">
-                    A space where sexual orientation, identity, relationships and desires are met with attuned, experienced support, not judgement or assumptions.
-                </p>
-            </div>
-        </a>
-
-        <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[3/4.5] cursor-pointer reveal-hidden"
-           x-data="{ shown: false }"
-           x-intersect.once.threshold.20="shown = true"
-           :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-           style="transition-delay: 450ms;">
-
-            <img src="/src/images/content/card8.webp"
-                 alt="Kink Affirming"
-                 class="absolute rounded-2xl md:rounded-3xl inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-
-            <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
-                <div class="flex justify-between items-start gap-4">
-                    <h3 class="font-sans text-fluid-28 text-bg">
-                        Kink-Affirming Therapy
-                    </h3>
-                    <button class="btn-fluid-icon rounded-full bg-card-pink text-white flex items-center justify-center shrink-0 transform transition-transform group-hover:rotate-45">
-                        <svg class="w-1/2 h-1/2" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_48_200)">
-                                <path d="M7 21L21 7" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
-                                      stroke-linejoin="round"/>
-                                <path d="M9.625 7H21V18.375" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
-                                      stroke-linejoin="round"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_48_200">
-                                    <rect width="28" height="28" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </button>
-                </div>
-
-                <p class="font-sans text-fluid-24 text-white/80 leading-[1.5]">
-                    Kink-aware, sex-positive therapy for exploring consent-led BDSM, power dynamics and alternative sexual expression with care, curiosity and professionalism.
-                </p>
-            </div>
-        </a>
-
-    </div>
-</section>
 <section class="py-20 2xl:py-24 px-4 lg:px-25 mt-16 2xl:mt-22 max-w-[1920px] mx-auto relative" x-data>
+
+    <h1 class="font-sans text-fluid-h1 text-center mb-6">
+        Meet our Psychosexual and<br class="hidden sm:block">  Relationship Therapists
+    </h1>
 
     <div class="absolute -bottom-[43%] 2xl:-bottom-[36%] -left-[14%] w-[60%] lg:w-[60%] pointer-events-none z-0">
         <svg width="1515" height="1419" viewBox="0 0 1515 1419" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
@@ -579,7 +372,7 @@
              style="transition-delay: 200ms;">
 
             <div class="relative w-full aspect-square md:aspect-[4/3.4] lg:aspect-square md:rounded-2xl overflow-hidden">
-                <img src="/src/images/content/image1.webp"
+                <img src="/src/images/content/hero-our-terapists.webp"
                      alt="Couple Intimacy"
                      class="w-full h-full object-cover">
 
@@ -1216,24 +1009,24 @@
             <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
                  :class="activeIndex === 0 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
                 <button @click="activeIndex = activeIndex === 0 ? null : 0" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 0 ? 'text-bg' : 'text-primary'">
-                    <span class="font-sans text-fluid-28 pr-4">Is the introductory call confidential?</span>
+                    <span class="font-sans text-fluid-28 pr-4">How long are therapy sessions?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
-                        <template x-if="activeIndex !== 0">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </template>
-                        <template x-if="activeIndex === 0">
-                            <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </template>
-                    </span>
+                    <template x-if="activeIndex !== 0">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                    <template x-if="activeIndex === 0">
+                        <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                </span>
                 </button>
                 <div x-show="activeIndex === 0" x-collapse.duration.500ms>
                     <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 0 ? 'text-bg' : 'text-primary'">
-                        Yes. The introductory call is confidential and lasts around 15 minutes, giving you space to ask questions, get a sense of the therapist, and decide whether you’d like to continue.
+                        Sessions are typically 50 minutes. Some therapists may also offer longer sessions for couples or specific types of work, which will be clearly noted on their profile or discussed during the introductory call.
                     </div>
                 </div>
             </div>
@@ -1243,24 +1036,24 @@
             <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
                  :class="activeIndex === 1 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
                 <button @click="activeIndex = activeIndex === 1 ? null : 1" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 1 ? 'text-bg' : 'text-primary'">
-                    <span class="font-sans text-fluid-28 pr-4">Do I have to commit to therapy after the consultation?</span>
+                    <span class="font-sans text-fluid-28 pr-4">What is therapy, and is it right for me?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
-                        <template x-if="activeIndex !== 1">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </template>
-                        <template x-if="activeIndex === 1">
-                            <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </template>
-                    </span>
+                    <template x-if="activeIndex !== 1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                    <template x-if="activeIndex === 1">
+                        <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                </span>
                 </button>
                 <div x-show="activeIndex === 1" x-collapse.duration.500ms>
                     <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 1 ? 'text-bg' : 'text-primary'">
-                        No. The introductory call is a chance to explore whether working together feels right. You’re free to take your time and decide whether to continue.
+                        Therapy provides a safe and confidential space to explore your thoughts and feelings. Please refer to our detailed guide or contact us to discuss if our approach aligns with your needs.
                     </div>
                 </div>
             </div>
@@ -1270,24 +1063,24 @@
             <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
                  :class="activeIndex === 2 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
                 <button @click="activeIndex = activeIndex === 2 ? null : 2" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 2 ? 'text-bg' : 'text-primary'">
-                    <span class="font-sans text-fluid-28 pr-4">Can I come on my own, or with my partner?</span>
+                    <span class="font-sans text-fluid-28 pr-4">How much does therapy cost?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
-                        <template x-if="activeIndex !== 2">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </template>
-                        <template x-if="activeIndex === 2">
-                            <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </template>
-                    </span>
+                    <template x-if="activeIndex !== 2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                    <template x-if="activeIndex === 2">
+                        <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                </span>
                 </button>
                 <div x-show="activeIndex === 2" x-collapse.duration.500ms>
                     <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 2 ? 'text-bg' : 'text-primary'">
-                        We work with individuals as well as couples and people in a range of relationship structures. You can explore what feels most appropriate for you when you enquire.
+                        Costs vary depending on the therapist and session type. We offer a transparent pricing model which will be shared with you during the matching process.
                     </div>
                 </div>
             </div>
@@ -1297,24 +1090,24 @@
             <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
                  :class="activeIndex === 3 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
                 <button @click="activeIndex = activeIndex === 3 ? null : 3" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 3 ? 'text-bg' : 'text-primary'">
-                    <span class="font-sans text-fluid-28 pr-4">How much does therapy cost?</span>
+                    <span class="font-sans text-fluid-28 pr-4">Are sessions online or in person?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
-                        <template x-if="activeIndex !== 3">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </template>
-                        <template x-if="activeIndex === 3">
-                            <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </template>
-                    </span>
+                    <template x-if="activeIndex !== 3">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                    <template x-if="activeIndex === 3">
+                        <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                </span>
                 </button>
                 <div x-show="activeIndex === 3" x-collapse.duration.500ms>
                     <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 3 ? 'text-bg' : 'text-primary'">
-                        Individual therapy is £80 per session, and couples or relationship therapy is £130 per session. Some therapists may offer a limited number of lower-cost sessions after the first session, which can be discussed directly with them.
+                        We offer both online and in-person sessions depending on your location and preference.
                     </div>
                 </div>
             </div>
@@ -1324,24 +1117,24 @@
             <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
                  :class="activeIndex === 4 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
                 <button @click="activeIndex = activeIndex === 4 ? null : 4" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 4 ? 'text-bg' : 'text-primary'">
-                    <span class="font-sans text-fluid-28 pr-4">Are sessions online or in person?</span>
+                    <span class="font-sans text-fluid-28 pr-4">What's the difference between sex therapy and psychosexual therapy?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
-                        <template x-if="activeIndex !== 4">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </template>
-                        <template x-if="activeIndex === 4">
-                            <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </template>
-                    </span>
+                    <template x-if="activeIndex !== 4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                    <template x-if="activeIndex === 4">
+                        <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                </span>
                 </button>
                 <div x-show="activeIndex === 4" x-collapse.duration.500ms>
                     <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 4 ? 'text-bg' : 'text-primary'">
-                        Sessions are primarily held online, allowing you to work with specialist therapists wherever you’re based in the UK or abroad. Some therapists also see clients in person. Any in-person availability will be clearly shown on individual therapist profiles.
+                        While often used interchangeably, psychosexual therapy tends to look deeper into psychological patterns, whereas sex therapy can sometimes be more behavioural. Our therapists integrate both.
                     </div>
                 </div>
             </div>
@@ -1351,24 +1144,51 @@
             <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
                  :class="activeIndex === 5 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
                 <button @click="activeIndex = activeIndex === 5 ? null : 5" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 5 ? 'text-bg' : 'text-primary'">
-                    <span class="font-sans text-fluid-28 pr-4">What happens after the first session?</span>
+                    <span class="font-sans text-fluid-28 pr-4">What is your cancellation policy?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
-                        <template x-if="activeIndex !== 5">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </template>
-                        <template x-if="activeIndex === 5">
-                            <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </template>
-                    </span>
+                    <template x-if="activeIndex !== 5">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                    <template x-if="activeIndex === 5">
+                        <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                </span>
                 </button>
                 <div x-show="activeIndex === 5" x-collapse.duration.500ms>
                     <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 5 ? 'text-bg' : 'text-primary'">
-                        If you decide to continue, ongoing sessions, arrangements and payments are made directly with your therapist, at a pace that feels right for you.
+                        We require at least 48 hours notice for cancellations to avoid being charged for the session.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 600ms;">
+            <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
+                 :class="activeIndex === 6 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
+                <button @click="activeIndex = activeIndex === 6 ? null : 6" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 6 ? 'text-bg' : 'text-primary'">
+                    <span class="font-sans text-fluid-28 pr-4">Do you work with clients who live abroad?</span>
+                    <span class="shrink-0 flex items-center justify-center w-6 h-6">
+                    <template x-if="activeIndex !== 6">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                    <template x-if="activeIndex === 6">
+                        <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </template>
+                </span>
+                </button>
+                <div x-show="activeIndex === 6" x-collapse.duration.500ms>
+                    <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 6 ? 'text-bg' : 'text-primary'">
+                        Yes, many of our therapists work online with international clients. Please mention your timezone when enquiring.
                     </div>
                 </div>
             </div>
