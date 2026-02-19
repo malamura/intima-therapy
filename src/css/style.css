@@ -19,6 +19,10 @@
 
 @layer components {
 
+    .bg-faq-gradient {
+        background: linear-gradient(180deg, #76426E 0%, #894C7E 100%) !important;
+    }
+
     /* --- Типографіка (вже адаптивна за твоїм прикладом) --- */
     .text-fluid-h1 {
         font-size: clamp(3rem, 5.2vw, 6.25rem);
@@ -193,6 +197,16 @@
             padding: clamp(1.5rem, 1.66vw, 2rem) !important;
         }
 
+        .px-8 {
+            padding-left: clamp(1.5rem, 1.667vw, 2rem) !important;
+            padding-right: clamp(1.5rem, 1.667vw, 2rem) !important;
+        }
+
+        /* pb-8: 24px на 1440px -> 32px на 1920px */
+        .pb-8 {
+            padding-bottom: clamp(1.5rem, 1.667vw, 2rem) !important;
+        }
+
         .btn-fluid-icon svg {
             height: 1.3rem;
         }
@@ -311,6 +325,16 @@
         /* w-11 h-6 - Стрілочки */
         .w-11 {
             width: clamp(0.515rem, 0.57vw, 0.687rem) !important;
+        }
+
+        /* w-6: 18px на 1440px -> 24px на 1920px */
+        .w-6 {
+            width: clamp(1.125rem, 1.25vw, 1.5rem) !important;
+        }
+
+        /* h-6: 18px на 1440px -> 24px на 1920px */
+        .h-6 {
+            height: clamp(1.125rem, 1.25vw, 1.5rem) !important;
         }
 
         .h-21 {

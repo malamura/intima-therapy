@@ -632,7 +632,7 @@
     </div>
 </section>
 <section class="py-20 2xl:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto" x-data="{ modalOpen: false, videoId: 'wWR0VD6qgt8' }">
-    <div class="max-w-[85%] mx-auto text-center">
+    <div class="max-w-[84%] mx-auto text-center">
 
         <div class="mb-16 lg:mb-20 reveal-hidden"
              x-data="{ shown: false }"
@@ -1210,12 +1210,12 @@
         <h2 class="font-sans text-fluid-h2 text-primary">FAQ</h2>
     </div>
 
-    <div class="max-w-[85%] mx-auto space-y-4">
+    <div class="max-w-[84%] mx-auto space-y-4">
 
         <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 0ms;">
-            <div class="border rounded-2xl md:rounded-3xl overflow-hidden border-primary/20 transition-colors duration-300"
-                 :class="activeIndex === 0 ? 'bg-[#764B73] border-[#764B73]' : 'bg-transparent'">
-                <button @click="activeIndex = activeIndex === 0 ? null : 0" class="w-full text-left px-6 py-5 md:px-8 md:py-6 flex justify-between items-center focus:outline-none" :class="activeIndex === 0 ? 'text-bg' : 'text-primary'">
+            <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
+                 :class="activeIndex === 0 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
+                <button @click="activeIndex = activeIndex === 0 ? null : 0" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 0 ? 'text-bg' : 'text-primary'">
                     <span class="font-sans text-fluid-28 pr-4">How long are therapy sessions?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
                     <template x-if="activeIndex !== 0">
@@ -1232,7 +1232,7 @@
                 </span>
                 </button>
                 <div x-show="activeIndex === 0" x-collapse.duration.500ms>
-                    <div class="px-6 pb-6 md:px-8 md:pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 0 ? 'text-bg' : 'text-primary'">
+                    <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 0 ? 'text-bg' : 'text-primary'">
                         Sessions are typically 50 minutes. Some therapists may also offer longer sessions for couples or specific types of work, which will be clearly noted on their profile or discussed during the introductory call.
                     </div>
                 </div>
@@ -1240,9 +1240,9 @@
         </div>
 
         <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 100ms;">
-            <div class="border rounded-2xl md:rounded-3xl overflow-hidden border-primary/20 transition-colors duration-300"
-                 :class="activeIndex === 1 ? 'bg-[#764B73] border-[#764B73]' : 'bg-transparent'">
-                <button @click="activeIndex = activeIndex === 1 ? null : 1" class="w-full text-left px-6 py-5 md:px-8 md:py-6 flex justify-between items-center focus:outline-none" :class="activeIndex === 1 ? 'text-bg' : 'text-primary'">
+            <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
+                 :class="activeIndex === 1 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
+                <button @click="activeIndex = activeIndex === 1 ? null : 1" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 1 ? 'text-bg' : 'text-primary'">
                     <span class="font-sans text-fluid-28 pr-4">What is therapy, and is it right for me?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
                     <template x-if="activeIndex !== 1">
@@ -1259,7 +1259,7 @@
                 </span>
                 </button>
                 <div x-show="activeIndex === 1" x-collapse.duration.500ms>
-                    <div class="px-6 pb-6 md:px-8 md:pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 1 ? 'text-bg' : 'text-primary'">
+                    <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 1 ? 'text-bg' : 'text-primary'">
                         Therapy provides a safe and confidential space to explore your thoughts and feelings. Please refer to our detailed guide or contact us to discuss if our approach aligns with your needs.
                     </div>
                 </div>
@@ -1267,9 +1267,9 @@
         </div>
 
         <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 200ms;">
-            <div class="border rounded-2xl md:rounded-3xl overflow-hidden border-primary/20 transition-colors duration-300"
-                 :class="activeIndex === 2 ? 'bg-[#764B73] border-[#764B73]' : 'bg-transparent'">
-                <button @click="activeIndex = activeIndex === 2 ? null : 2" class="w-full text-left px-6 py-5 md:px-8 md:py-6 flex justify-between items-center focus:outline-none" :class="activeIndex === 2 ? 'text-bg' : 'text-primary'">
+            <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
+                 :class="activeIndex === 2 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
+                <button @click="activeIndex = activeIndex === 2 ? null : 2" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 2 ? 'text-bg' : 'text-primary'">
                     <span class="font-sans text-fluid-28 pr-4">How much does therapy cost?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
                     <template x-if="activeIndex !== 2">
@@ -1286,7 +1286,7 @@
                 </span>
                 </button>
                 <div x-show="activeIndex === 2" x-collapse.duration.500ms>
-                    <div class="px-6 pb-6 md:px-8 md:pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 2 ? 'text-bg' : 'text-primary'">
+                    <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 2 ? 'text-bg' : 'text-primary'">
                         Costs vary depending on the therapist and session type. We offer a transparent pricing model which will be shared with you during the matching process.
                     </div>
                 </div>
@@ -1294,9 +1294,9 @@
         </div>
 
         <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 300ms;">
-            <div class="border rounded-2xl md:rounded-3xl overflow-hidden border-primary/20 transition-colors duration-300"
-                 :class="activeIndex === 3 ? 'bg-[#764B73] border-[#764B73]' : 'bg-transparent'">
-                <button @click="activeIndex = activeIndex === 3 ? null : 3" class="w-full text-left px-6 py-5 md:px-8 md:py-6 flex justify-between items-center focus:outline-none" :class="activeIndex === 3 ? 'text-bg' : 'text-primary'">
+            <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
+                 :class="activeIndex === 3 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
+                <button @click="activeIndex = activeIndex === 3 ? null : 3" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 3 ? 'text-bg' : 'text-primary'">
                     <span class="font-sans text-fluid-28 pr-4">Are sessions online or in person?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
                     <template x-if="activeIndex !== 3">
@@ -1313,7 +1313,7 @@
                 </span>
                 </button>
                 <div x-show="activeIndex === 3" x-collapse.duration.500ms>
-                    <div class="px-6 pb-6 md:px-8 md:pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 3 ? 'text-bg' : 'text-primary'">
+                    <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 3 ? 'text-bg' : 'text-primary'">
                         We offer both online and in-person sessions depending on your location and preference.
                     </div>
                 </div>
@@ -1321,9 +1321,9 @@
         </div>
 
         <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 400ms;">
-            <div class="border rounded-2xl md:rounded-3xl overflow-hidden border-primary/20 transition-colors duration-300"
-                 :class="activeIndex === 4 ? 'bg-[#764B73] border-[#764B73]' : 'bg-transparent'">
-                <button @click="activeIndex = activeIndex === 4 ? null : 4" class="w-full text-left px-6 py-5 md:px-8 md:py-6 flex justify-between items-center focus:outline-none" :class="activeIndex === 4 ? 'text-bg' : 'text-primary'">
+            <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
+                 :class="activeIndex === 4 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
+                <button @click="activeIndex = activeIndex === 4 ? null : 4" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 4 ? 'text-bg' : 'text-primary'">
                     <span class="font-sans text-fluid-28 pr-4">What's the difference between sex therapy and psychosexual therapy?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
                     <template x-if="activeIndex !== 4">
@@ -1340,7 +1340,7 @@
                 </span>
                 </button>
                 <div x-show="activeIndex === 4" x-collapse.duration.500ms>
-                    <div class="px-6 pb-6 md:px-8 md:pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 4 ? 'text-bg' : 'text-primary'">
+                    <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 4 ? 'text-bg' : 'text-primary'">
                         While often used interchangeably, psychosexual therapy tends to look deeper into psychological patterns, whereas sex therapy can sometimes be more behavioural. Our therapists integrate both.
                     </div>
                 </div>
@@ -1348,9 +1348,9 @@
         </div>
 
         <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 500ms;">
-            <div class="border rounded-2xl md:rounded-3xl overflow-hidden border-primary/20 transition-colors duration-300"
-                 :class="activeIndex === 5 ? 'bg-[#764B73] border-[#764B73]' : 'bg-transparent'">
-                <button @click="activeIndex = activeIndex === 5 ? null : 5" class="w-full text-left px-6 py-5 md:px-8 md:py-6 flex justify-between items-center focus:outline-none" :class="activeIndex === 5 ? 'text-bg' : 'text-primary'">
+            <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
+                 :class="activeIndex === 5 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
+                <button @click="activeIndex = activeIndex === 5 ? null : 5" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 5 ? 'text-bg' : 'text-primary'">
                     <span class="font-sans text-fluid-28 pr-4">What is your cancellation policy?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
                     <template x-if="activeIndex !== 5">
@@ -1367,7 +1367,7 @@
                 </span>
                 </button>
                 <div x-show="activeIndex === 5" x-collapse.duration.500ms>
-                    <div class="px-6 pb-6 md:px-8 md:pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 5 ? 'text-bg' : 'text-primary'">
+                    <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 5 ? 'text-bg' : 'text-primary'">
                         We require at least 48 hours notice for cancellations to avoid being charged for the session.
                     </div>
                 </div>
@@ -1375,9 +1375,9 @@
         </div>
 
         <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 600ms;">
-            <div class="border rounded-2xl md:rounded-3xl overflow-hidden border-primary/20 transition-colors duration-300"
-                 :class="activeIndex === 6 ? 'bg-[#764B73] border-[#764B73]' : 'bg-transparent'">
-                <button @click="activeIndex = activeIndex === 6 ? null : 6" class="w-full text-left px-6 py-5 md:px-8 md:py-6 flex justify-between items-center focus:outline-none" :class="activeIndex === 6 ? 'text-bg' : 'text-primary'">
+            <div class="border rounded-3xl overflow-hidden border-primary/50 transition-colors duration-300"
+                 :class="activeIndex === 6 ? 'bg-faq-gradient border-transparent' : 'bg-transparent'">
+                <button @click="activeIndex = activeIndex === 6 ? null : 6" class="w-full text-left p-8 flex justify-between items-center focus:outline-none" :class="activeIndex === 6 ? 'text-bg' : 'text-primary'">
                     <span class="font-sans text-fluid-28 pr-4">Do you work with clients who live abroad?</span>
                     <span class="shrink-0 flex items-center justify-center w-6 h-6">
                     <template x-if="activeIndex !== 6">
@@ -1394,7 +1394,7 @@
                 </span>
                 </button>
                 <div x-show="activeIndex === 6" x-collapse.duration.500ms>
-                    <div class="px-6 pb-6 md:px-8 md:pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 6 ? 'text-bg' : 'text-primary'">
+                    <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="activeIndex === 6 ? 'text-bg' : 'text-primary'">
                         Yes, many of our therapists work online with international clients. Please mention your timezone when enquiring.
                     </div>
                 </div>
@@ -1402,7 +1402,7 @@
         </div>
     </div>
 </section>
-<section class="relative section-fluid-height flex items-center py-20 px-4 lg:px-25 overflow-hidden" x-data>
+<section class="relative section-fluid-height flex items-center py-20 px-4 lg:px-25 mt-16 overflow-hidden" x-data>
 
     <div class="absolute inset-0 z-0">
         <img src="/src/images/CTA.webp"
