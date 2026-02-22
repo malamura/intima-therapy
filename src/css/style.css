@@ -4,20 +4,37 @@
 
 @theme {
     /* Кольори */
+    --color-blue-gray: #4E7DA6;
     --color-bg: #F4ECE4;
     --color-primary: #491E42;
     --color-card-purple: #491E42B2;
     --color-card-pink: #D95F69;
     --color-card-pink-hover: #ED8F85;
+    --color-hover-btn: #E2838B;
     --color-card-muted: #8C5F7A;
     --color-card-light-pink: #DE847A;
     --color-bg-menu: #FFFCF8;
+    --color-muted-purple: #8C587A;
+
 
     /* Шрифти */
     --font-sans: "Arimo", sans-serif;
 }
 
 @layer components {
+
+    header nav li.active > a {
+        opacity: .5;
+    }
+
+    .no-bg:not(.active-menu) nav > div button.text-bg,
+    .no-bg:not(.active-menu) nav > a.text-bg {
+        color: var(--color-primary) !important;
+    }
+
+    .no-bg:not(.active-menu) .logo svg path.name-logo {
+        fill: var(--color-primary) !important;
+    }
 
     .bg-faq-gradient {
         background: linear-gradient(180deg, #76426E 0%, #894C7E 100%) !important;
@@ -81,7 +98,42 @@
 /* --- FLUID LAYOUT OVERRIDES (SCALE 0.75) --- */
 /* Ці правила зроблять стандартні класи Tailwind адаптивними */
 @layer utilities {
-    @media (min-width: 1024px) {
+    @media (min-width: 640px) and (max-width: 1024px) {
+        .lg\:px-25 {
+            padding-left: clamp(3.875rem, 5.208vw, 6.25rem) !important;
+            padding-right: clamp(3.6875rem, 5.208vw, 6.25rem) !important;
+        }
+    }
+
+
+    @media (min-width: 640px) {
+        .last-item-blog {
+            display: none;
+        }
+
+        .leading-\[1\.5\] {
+            line-height: 1.3;
+        }
+
+        .h-40.play-btn {
+            height: clamp(6.125rem, 8.333vw, 10rem) !important;
+        }
+
+        .w-40.play-btn {
+            width: clamp(6.125rem, 8.333vw, 10rem) !important;
+        }
+
+
+        .gap-12 {
+            /* Від 30px до 44px у діапазоні екранів 1440px-1920px */
+            gap: clamp(1.875rem, -0.75rem + 2.917vw, 2.75rem);
+        }
+
+        .list-icon-svg {
+            /* Від 27px до 40px у діапазоні екранів 1440px-1920px */
+            width: clamp(1.6875rem, -0.75rem + 2.708vw, 2.5rem);
+            height: clamp(1.6875rem, -0.75rem + 2.708vw, 2.5rem);
+        }
 
         /* --- КОНТЕЙНЕРИ ТА ПАДІНГИ --- */
         /* lg:px-16 (64px -> 48px) */
@@ -155,7 +207,7 @@
 
         /* lg:mb-20: 60px на 1440px -> 80px на 1920px */
         .lg\:mb-20,
-        .mb-20{
+        .mb-20 {
             margin-bottom: clamp(3.75rem, 4.167vw, 5rem) !important;
         }
 
@@ -167,9 +219,6 @@
             gap: clamp(2.625rem, 2.917vw, 3.5rem) !important;
         }
 
-        .\32 xl\:mt-22 {
-            margin-top: clamp(4.125rem, 4.583vw, 5.5rem) !important;
-        }
 
         /* 2xl:py-24 (96px -> 72px) */
         .\32 xl\:py-24 {
@@ -239,7 +288,8 @@
         .pb-10 {
             padding-bottom: clamp(1.875rem, 2.083vw, 2.5rem) !important;
         }
-        .mb-6 {
+
+        .sm\:mb-6 {
             margin-bottom: clamp(1.125rem, 1.25vw, 1.5rem) !important;
         }
 
@@ -263,10 +313,6 @@
             padding: clamp(1.5rem, 1.666vw, 2rem) !important;
         }
 
-        .lg\:px-25 {
-            padding-left: clamp(4.6875rem, 5.208vw, 6.25rem) !important;
-            padding-right: clamp(4.6875rem, 5.208vw, 6.25rem) !important;
-        }
 
         /*.px-6 {*/
         /*    padding-left: clamp(1.125rem, 1.25vw, 1.5rem) !important;*/
@@ -309,8 +355,13 @@
 
         /* --- РОЗМІРИ --- */
         /* h-12 (48px -> 36px) - Логотип */
-        img.h-12 {
+        .logo .h-12,
+        .mob-btn.h-12 {
             height: clamp(2.45rem, 2.5vw, 3rem) !important;
+        }
+
+        .mob-btn.w-12 {
+            width: clamp(2.45rem, 2.5vw, 3rem) !important;
         }
 
         /* w-10 h-10 (40px -> 30px) - Іконки в картках */
@@ -340,12 +391,15 @@
         .h-21 {
             height: clamp(3.75rem, 4.375vw, 5.25rem) !important;
         }
-        .custom-height-fluid svg{
+
+        .custom-height-fluid svg {
             height: clamp(0.7rem, 0.781vw, 0.9375rem) !important;
         }
+
         footer .h-12 svg {
             height: 1.1rem;
         }
+
         .testimonial-quote-icon svg {
             /* 1.7rem на 1440px -> 2.27rem на 1920px */
             height: clamp(1.7rem, 1.889vw, 2.27rem) !important;
@@ -355,6 +409,7 @@
         .arrows-slider .h-12 svg {
             height: 0.7rem;
         }
+
         footer .w-12,
         .arrows-slider .w-12 {
             width: clamp(2.25rem, 2.5vw, 3rem) !important;
@@ -363,30 +418,77 @@
         .author-desc .w-13 {
             width: clamp(2.4375rem, 2.708vw, 3.25rem) !important;
         }
+
         .author-desc .h-13 {
             height: clamp(2.4375rem, 2.708vw, 3.25rem) !important;
         }
 
         /* Перевизначаємо h-12: 36px на 1440px -> 48px на 1920px */
         footer .h-12,
-        .arrows-slider .h-12{
+        .arrows-slider .h-12 {
             height: clamp(2.25rem, 2.5vw, 3rem) !important;
         }
+
         .play-btn svg {
             width: clamp(1.75rem, 2.892vw, 2.75rem) !important;
             height: clamp(1.75rem, 2.892vw, 2.75rem) !important;
             margin-right: -8px;
         }
+
+
+    }
+    @media (min-width: 1024px) {
         /* w-40: 130px на 1440px -> 160px на 1920px */
-        .w-40.play-btn  {
+        .w-40.play-btn {
             width: clamp(8.125rem, 8.333vw, 10rem) !important;
         }
 
         /* h-40: 130px на 1440px -> 160px на 1920px */
-        .h-40.play-btn  {
+        .h-40.play-btn {
             height: clamp(8.125rem, 8.333vw, 10rem) !important;
         }
+
+        .lg\:px-25 {
+            padding-left: clamp(3.875rem, 5.208vw, 6.25rem) !important;
+            padding-right: clamp(3.6875rem, 5.208vw, 6.25rem) !important;
+        }
+
+        .last-item-blog {
+            display: block;
+        }
+
+        .lg\:mt-20 {
+            /* Від 60px на 1440px до 80px на 1920px */
+            margin-top: clamp(3.75rem, 0rem + 4.167vw, 5rem);
+        }
+
+        .lg\:mt-22 {
+            margin-top: clamp(4.125rem, 4.583vw, 5.5rem) !important;
+        }
     }
+    @media (min-width: 1400px) {
+        .lg\:px-25 {
+            padding-left: clamp(4.6875rem, 5.208vw, 6.25rem) !important;
+            padding-right: clamp(4.6875rem, 5.208vw, 6.25rem) !important;
+        }
+
+        .leading-\[1\.5\] {
+            line-height: 1.5;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .fluid-button{
+            font-size: 20px;
+            display: inline-flex;
+            height: 62px;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
 
 }
 
