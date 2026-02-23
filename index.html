@@ -99,7 +99,7 @@
                              style="display: none;">
 
                             <div class="bg-bg-menu rounded-[40px] p-10 relative w-full">
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
                                     <a href="#" class="group relative overflow-hidden rounded-3xl aspect-[4/3.4] block cursor-pointer">
                                         <img src="/src/images/content/card5.webp"
@@ -279,8 +279,12 @@
                         Book a consultation
                     </a>
 
-                    <button @click="mobileMenu = !mobileMenu" class="lg:hidden text-bg bg-bg rounded-full flex items-center h-12 w-12 justify-center mob-btn relative z-[110]">
-                        <svg x-show="!mobileMenu" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <button
+                            @click="mobileMenu = !mobileMenu"
+                            class="lg:hidden text-bg bg-bg rounded-full flex items-center h-12 w-12 justify-center mob-btn relative z-[110]"
+                            :class="{ 'btn-mob-open': !mobileMenu }"
+                    >
+                        <svg class="btn-mob-open" x-show="!mobileMenu" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1_36203)">
                                 <path d="M3.15137 14H24.1514" stroke="#491E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M3.15137 7H24.1514" stroke="#491E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

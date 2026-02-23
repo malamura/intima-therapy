@@ -109,15 +109,19 @@
             padding-right: clamp(3.6875rem, 5.208vw, 6.25rem) !important;
         }
     }
+
+
     @media (min-width: 640px) {
         .last-item-blog {
             display: none;
         }
+
         .fluid-button {
             padding: clamp(0.797rem, 1.1vw, 1.063rem) clamp(1.359rem, 2.75vw, 1.813rem) !important;
             font-size: clamp(0.84rem, 1vw, 1.125rem); /* Зменшено на 25% на малих екранах */
             line-height: 1;
         }
+
         .play-btn svg {
             width: clamp(1.75rem, 2.892vw, 2.75rem) !important;
             height: clamp(1.75rem, 2.892vw, 2.75rem) !important;
@@ -203,15 +207,13 @@
 
         /* lg:mb-20: 60px на 1440px -> 80px на 1920px */
         .lg\:mb-20,
-        .sm\:mb-20{
+        .sm\:mb-20 {
             margin-bottom: clamp(3.75rem, 4.167vw, 5rem) !important;
         }
 
-        .sm\:mt-16{
+        .sm\:mt-16 {
             margin-top: clamp(3rem, 3.333vw, 4rem) !important;
         }
-
-
 
 
         /* 2xl:py-24 (96px -> 72px) */
@@ -246,7 +248,7 @@
         }
 
         /* pb-8: 24px на 1440px -> 32px на 1920px */
-        .pb-8 {
+        .sm\:pb-8 {
             padding-bottom: clamp(1.5rem, 1.667vw, 2rem) !important;
         }
 
@@ -274,7 +276,7 @@
             padding-right: clamp(1.312rem, 1.45vw, 1.75rem) !important;
         }
 
-        .pt-10 {
+        .sm\:pt-10 {
             padding-top: clamp(1.875rem, 2.083vw, 2.5rem) !important;
         }
 
@@ -287,7 +289,7 @@
             margin-bottom: clamp(1.125rem, 1.25vw, 1.5rem) !important;
         }
 
-        .sm\:pt-10{
+        .sm\:pt-10 {
             padding-top: clamp(1.875rem, 2.083vw, 2.5rem) !important;
         }
 
@@ -434,9 +436,11 @@
         .w-40.play-btn {
             width: clamp(8.125rem, 8.333vw, 10rem) !important;
         }
+
         .\32 xl\:gap-14 {
             gap: clamp(2.625rem, 2.917vw, 3.5rem) !important;
         }
+
         /* h-40: 130px на 1440px -> 160px на 1920px */
         .h-40.play-btn {
             height: clamp(8.125rem, 8.333vw, 10rem) !important;
@@ -471,20 +475,52 @@
         }
     }
 
+    @media (max-width: 1024px) {
+        .no-bg .mob-btn.btn-mob-open {
+            background: var(--color-primary);
+        }
+
+        .no-bg .mob-btn.btn-mob-open svg.btn-mob-open path {
+            stroke: var(--color-bg) !important;
+        }
+    }
+
     @media (max-width: 640px) {
+
+        .pb-8 {
+            padding-bottom: clamp(1.5rem, 1.667vw, 2rem) !important;
+        }
+        .btn-48 {
+            font-size: 16px !important;
+            min-height: 48px !important;
+            padding: 0 !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .list-icon-svg {
+            max-width: 29px;
+            max-height: 30px;
+        }
+
         .pb-10 {
             padding-bottom: clamp(1.875rem, 2.083vw, 2.5rem) !important;
         }
+
         .mb-20 {
             margin-bottom: clamp(3.75rem, 4.167vw, 5rem) !important;
         }
+
         .fluid-button {
             padding: clamp(0.697rem, 1.1vw, 1.063rem) clamp(1.159rem, 2.75vw, 1.813rem) !important;
         }
+
         .mt-16 {
             margin-top: clamp(3rem, 3.333vw, 4rem) !important;
         }
-        .text-fluid-28{
+
+        .text-fluid-28 {
             font-size: 22px;
         }
 
@@ -495,7 +531,6 @@
         /*.gap-10 {*/
         /*    gap: clamp(1.875rem, 2.083vw, 2.5rem) !important;*/
         /*}*/
-
         .btn-fluid-icon {
             width: 40px;
             height: 40px;

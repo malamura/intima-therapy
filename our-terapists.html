@@ -279,8 +279,12 @@
                         Book a consultation
                     </a>
 
-                    <button @click="mobileMenu = !mobileMenu" class="lg:hidden text-bg bg-bg rounded-full flex items-center h-12 w-12 justify-center mob-btn relative z-[110]">
-                        <svg x-show="!mobileMenu" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <button
+                            @click="mobileMenu = !mobileMenu"
+                            class="lg:hidden text-bg bg-bg rounded-full flex items-center h-12 w-12 justify-center mob-btn relative z-[110]"
+                            :class="{ 'btn-mob-open': !mobileMenu }"
+                    >
+                        <svg class="btn-mob-open" x-show="!mobileMenu" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1_36203)">
                                 <path d="M3.15137 14H24.1514" stroke="#491E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M3.15137 7H24.1514" stroke="#491E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -397,11 +401,11 @@
     </div>
 </header>
 <div class="overflow-hidden">
-<section class="py-12 sm:py-24 px-4 lg:px-25 lg:px-25 mt-16 lg:mt-22 max-w-[1920px] mx-auto relative" x-data>
+<section class="py-10 pb-8 sm:py-24 px-4 lg:px-25 lg:px-25 mt-20 sm:mt-16 lg:mt-22 max-w-[1920px] mx-auto relative" x-data>
     <h1 class="font-sans text-fluid-h1 text-center">
         Meet our Psychosexual and<br class="hidden sm:block">  Relationship Therapists
     </h1>
-    <div class="absolute -bottom-[43%] 2xl:-bottom-[36%] -left-[14%] w-[60%] lg:w-[60%] pointer-events-none z-0">
+    <div class="absolute bottom-0 sm:-bottom-[43%] 2xl:-bottom-[36%] -left-[35%] sm:-left-[14%] w-[120%] sm:w-[60%] pointer-events-none z-0">
         <svg width="1453" height="905" viewBox="0 0 1453 905" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
             <g filter="url(#filter0_f_859_9826)">
                 <path d="M1324.5 757.913C1238.26 731.271 977.836 559.968 931.263 498.262C884.689 436.555 1208.21 488.905 1208.21 488.905C1208.21 488.905 958.909 429.109 759.067 403.058C640.189 387.562 861.331 275.543 861.331 275.543C861.331 275.543 645.343 357.04 495.247 285.798C372.406 227.493 376.234 127.596 376.234 127.596L324.632 233.843L191.715 178.192C191.715 178.192 491.351 341.005 465.115 380.219C438.879 419.433 127.597 274.025 127.597 274.025L429.2 390.419C429.2 390.419 163.519 360.511 241.414 424.826C319.31 489.142 400.32 389.827 501.913 450.456C603.506 511.085 463.982 612.441 489.692 572.995C508.563 544.041 509.282 487.023 509.282 487.023C509.282 487.023 551.897 698.502 763.895 777.127C786.965 785.684 620.973 459.078 638.81 547.592C651.74 611.752 1100.46 732.549 1079.52 723.069C900.49 642.022 999.5 684.702 907.807 615.142C604.433 384.997 1324.5 757.913 1324.5 757.913Z" fill="url(#paint0_linear_859_9826)" fill-opacity="0.2"/>
@@ -424,7 +428,7 @@
         </svg>
     </div>
 
-    <div class="absolute -bottom-[43%] 2xl:-bottom-[46%] -right-[14%] w-[60%] lg:w-[60%] pointer-events-none z-0">
+    <div class="absolute bottom-0 sm:-bottom-[43%] 2xl:-bottom-[46%] -right-[65%] sm:-right-[14%] w-[120%] sm:w-[60%] pointer-events-none z-0">
 
         <svg width="1453" height="905" viewBox="0 0 1453 905" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
             <g filter="url(#filter0_f_859_9826)">
@@ -448,7 +452,7 @@
         </svg>
     </div>
 </section>
-<section class="py-12 sm:pt-10 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative" x-data>
+<section class="py-12 pt-10 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative" x-data>
     <div class="absolute -bottom-[43%] 2xl:-bottom-[36%] left-[15%] w-[60%] lg:w-[60%] pointer-events-none z-0">
         <svg width="1218" height="1296" viewBox="0 0 1218 1296" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
             <g filter="url(#filter0_f_859_9833)">
@@ -481,8 +485,8 @@
              :class="shown ? 'reveal-visible' : 'reveal-hidden'">
 
             <div class="lg:max-w-[81%]">
-                <ul class="flex flex-col sm:gap-12">
-                    <li class="flex items-start gap-5">
+                <ul class="flex flex-col gap-6 sm:gap-12">
+                    <li class="flex items-start sm:gap-5 gap-4">
                         <div class="shrink-0 mt-1">
                             <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="list-icon-svg">
                                 <g clip-path="url(#clip0_859_9837)">
@@ -496,7 +500,7 @@
                         </p>
                     </li>
 
-                    <li class="flex items-start gap-5">
+                    <li class="flex items-start sm:gap-5 gap-4">
                         <div class="shrink-0 mt-1">
                             <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="list-icon-svg">
                                 <g clip-path="url(#clip0_859_9837)"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.4717 5.62012C35.9732 6.19067 40.2815 10.8494 40.3047 16.501V16.5488C40.3046 20.5477 38.5894 24.2662 36.168 27.5225C31.3312 34.0302 23.6778 38.6935 21.2735 40.0615C20.8819 40.2838 20.6291 40.4194 20.5498 40.4609L20.1465 40.6748L19.7461 40.4561C19.6631 40.4096 19.3838 40.2559 18.9522 40.002C16.4758 38.5484 8.95628 33.8182 4.16703 27.4141C1.72993 24.1554 0.000161826 20.4633 3.72917e-05 16.5488C3.72917e-05 16.4927 -0.0004361 16.435 0.00199042 16.3789C0.0861622 10.7822 4.37237 6.18687 9.835 5.62012C9.86039 5.61892 9.88578 5.61914 9.91117 5.61914C15.4017 5.61914 19.8533 10.0757 19.8536 15.5732C19.8536 20.6569 16.0477 24.8518 11.1328 25.4541H11.1338C11.1338 25.4541 16.5845 25.4494 20.1338 25.4482C23.6657 25.4471 29.0807 25.4482 29.1329 25.4482C24.2437 24.8215 20.4649 20.6385 20.4649 15.5732C20.4651 10.0757 24.9167 5.61914 30.4073 5.61914C30.429 5.61914 30.4499 5.6189 30.4717 5.62012ZM20.1534 0C22.444 0 24.3008 1.8597 24.3008 4.15332C24.3006 6.44678 22.4439 8.30566 20.1534 8.30566C17.8629 8.30559 16.0061 6.44673 16.0059 4.15332C16.0059 1.85975 17.8628 7.2076e-05 20.1534 0Z" fill="#D95F69"/></g>
@@ -506,7 +510,7 @@
                             As a collective, we are diverse in background, culture, and lived experience. What brings us together is a shared commitment to thoughtful, compassionate work, and to supporting people as they navigate intimacy, relationships, and change in their own way.
                         </p>
                     </li>
-                    <li class="flex items-start gap-5">
+                    <li class="flex items-start sm:gap-5 gap-4">
                         <div class="shrink-0 mt-1">
                             <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="list-icon-svg">
                                 <g clip-path="url(#clip0_859_9837)">
@@ -520,7 +524,7 @@
                         </p>
                     </li>
 
-                    <li class="flex items-start gap-5">
+                    <li class="flex items-start sm:gap-5 gap-4">
                         <div class="shrink-0 mt-1">
                             <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="list-icon-svg">
                                 <g clip-path="url(#clip0_859_9837)"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.4717 5.62012C35.9732 6.19067 40.2815 10.8494 40.3047 16.501V16.5488C40.3046 20.5477 38.5894 24.2662 36.168 27.5225C31.3312 34.0302 23.6778 38.6935 21.2735 40.0615C20.8819 40.2838 20.6291 40.4194 20.5498 40.4609L20.1465 40.6748L19.7461 40.4561C19.6631 40.4096 19.3838 40.2559 18.9522 40.002C16.4758 38.5484 8.95628 33.8182 4.16703 27.4141C1.72993 24.1554 0.000161826 20.4633 3.72917e-05 16.5488C3.72917e-05 16.4927 -0.0004361 16.435 0.00199042 16.3789C0.0861622 10.7822 4.37237 6.18687 9.835 5.62012C9.86039 5.61892 9.88578 5.61914 9.91117 5.61914C15.4017 5.61914 19.8533 10.0757 19.8536 15.5732C19.8536 20.6569 16.0477 24.8518 11.1328 25.4541H11.1338C11.1338 25.4541 16.5845 25.4494 20.1338 25.4482C23.6657 25.4471 29.0807 25.4482 29.1329 25.4482C24.2437 24.8215 20.4649 20.6385 20.4649 15.5732C20.4651 10.0757 24.9167 5.61914 30.4073 5.61914C30.429 5.61914 30.4499 5.6189 30.4717 5.62012ZM20.1534 0C22.444 0 24.3008 1.8597 24.3008 4.15332C24.3006 6.44678 22.4439 8.30566 20.1534 8.30566C17.8629 8.30559 16.0061 6.44673 16.0059 4.15332C16.0059 1.85975 17.8628 7.2076e-05 20.1534 0Z" fill="#D95F69"/></g>
@@ -551,170 +555,9 @@
     </div>
 </section>
 <section class="px-4 lg:px-25 max-w-[1920px] mx-auto" x-data>
-    <div class="border-primary/40 border-t mt-8 -mb-8"></div>
+    <div class="border-primary/20 border-t mt-8 -mb-8"></div>
 
-    <div class="py-20 2xl:py-20 mt-16 lg:mt-22 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 space-y-16 2xl:space-y-24">
-
-        <div class="group cursor-pointer reveal-hidden"
-             x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
-             :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-             style="transition-delay: 0ms;">
-
-            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
-                <img src="/src/images/content/team1.webp"
-                     alt="Therapist"
-                     class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
-            </div>
-
-            <div class="flex justify-between flex-col px-4 gap-2">
-                <div>
-                    <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
-                    <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
-                </div>
-
-                <p class="font-sans mt-2 line-clamp-3">
-                    Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
-                </p>
-
-                <div class="mt-2">
-                    <div class="bg-blue-gray/8 backdrop-blur-sm text-[#3C6180] read-badge rounded-full border border-blue-gray/16 inline-flex px-4 py-1">
-                        English, Portuguese
-                    </div>
-                </div>
-
-                <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
-                        Book a consultation
-                    </a>
-
-                    <a href="#" class="flex-1 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
-                        More info
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="group cursor-pointer reveal-hidden"
-             x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
-             :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-             style="transition-delay: 150ms;">
-
-            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
-                <img src="/src/images/content/team2.webp"
-                     alt="Therapist"
-                     class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
-            </div>
-
-            <div class="flex justify-between flex-col px-4 gap-2">
-                <div>
-                    <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
-                    <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
-                </div>
-
-                <p class="font-sans mt-2 line-clamp-3">
-                    Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
-                </p>
-
-                <div class="mt-2">
-                    <div class="bg-blue-gray/8 backdrop-blur-sm text-[#3C6180] read-badge rounded-full border border-blue-gray/16 inline-flex px-4 py-1">
-                        English, Portuguese
-                    </div>
-                </div>
-
-                <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
-                        Book a consultation
-                    </a>
-
-                    <a href="#" class="flex-1 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
-                        More info
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="group cursor-pointer reveal-hidden"
-             x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
-             :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-             style="transition-delay: 300ms;">
-
-            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
-                <img src="/src/images/content/team4.webp"
-                     alt="Therapist"
-                     class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
-            </div>
-
-            <div class="flex justify-between flex-col px-4 gap-2">
-                <div>
-                    <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
-                    <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
-                </div>
-
-                <p class="font-sans mt-2 line-clamp-3">
-                    Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
-                </p>
-
-                <div class="mt-2">
-                    <div class="bg-blue-gray/8 backdrop-blur-sm text-[#3C6180] read-badge rounded-full border border-blue-gray/16 inline-flex px-4 py-1">
-                        English, Portuguese
-                    </div>
-                </div>
-
-                <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
-                        Book a consultation
-                    </a>
-
-                    <a href="#" class="flex-1 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
-                        More info
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="group cursor-pointer reveal-hidden"
-             x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
-             :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-             style="transition-delay: 450ms;">
-
-            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
-                <img src="/src/images/content/team3.webp"
-                     alt="Therapist"
-                     class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
-            </div>
-
-            <div class="flex justify-between flex-col px-4 gap-2">
-                <div>
-                    <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
-                    <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
-                </div>
-
-                <p class="font-sans mt-2 line-clamp-3">
-                    Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
-                </p>
-
-                <div class="mt-2">
-                    <div class="bg-blue-gray/8 backdrop-blur-sm text-[#3C6180] read-badge rounded-full border border-blue-gray/16 inline-flex px-4 py-1">
-                        English, Portuguese
-                    </div>
-                </div>
-
-                <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
-                        Book a consultation
-                    </a>
-
-                    <a href="#" class="flex-1 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
-                        More info
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div class="py-20 2xl:py-20 mt-16 lg:mt-22 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 space-y-6 sm:space-y-16 2xl:space-y-24">
 
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
@@ -728,12 +571,11 @@
                      class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             </div>
 
-            <div class="flex justify-between flex-col px-4 gap-2">
+            <div class="flex justify-between flex-col sm:px-4 gap-2">
                 <div>
                     <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
                     <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
                 </div>
-
                 <p class="font-sans mt-2 line-clamp-3">
                     Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
                 </p>
@@ -745,22 +587,23 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
                group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
                         More info
                     </a>
                 </div>
             </div>
+
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
              x-intersect.once.threshold.30="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-             style="transition-delay: 150ms;">
+             style="transition-delay: 0ms;">
 
             <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
                 <img src="/src/images/content/team2.webp"
@@ -768,12 +611,11 @@
                      class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             </div>
 
-            <div class="flex justify-between flex-col px-4 gap-2">
+            <div class="flex justify-between flex-col sm:px-4 gap-2">
                 <div>
                     <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
                     <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
                 </div>
-
                 <p class="font-sans mt-2 line-clamp-3">
                     Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
                 </p>
@@ -785,22 +627,23 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
                group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
                         More info
                     </a>
                 </div>
             </div>
+
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
              x-intersect.once.threshold.30="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-             style="transition-delay: 300ms;">
+             style="transition-delay: 0ms;">
 
             <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
                 <img src="/src/images/content/team4.webp"
@@ -808,12 +651,11 @@
                      class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             </div>
 
-            <div class="flex justify-between flex-col px-4 gap-2">
+            <div class="flex justify-between flex-col sm:px-4 gap-2">
                 <div>
                     <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
                     <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
                 </div>
-
                 <p class="font-sans mt-2 line-clamp-3">
                     Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
                 </p>
@@ -825,22 +667,23 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
                group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
                         More info
                     </a>
                 </div>
             </div>
+
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
              x-intersect.once.threshold.30="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-             style="transition-delay: 450ms;">
+             style="transition-delay: 0ms;">
 
             <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
                 <img src="/src/images/content/team3.webp"
@@ -848,12 +691,11 @@
                      class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             </div>
 
-            <div class="flex justify-between flex-col px-4 gap-2">
+            <div class="flex justify-between flex-col sm:px-4 gap-2">
                 <div>
                     <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
                     <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
                 </div>
-
                 <p class="font-sans mt-2 line-clamp-3">
                     Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
                 </p>
@@ -865,16 +707,17 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
                group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
                         More info
                     </a>
                 </div>
             </div>
+
         </div>
 
         <div class="group cursor-pointer reveal-hidden"
@@ -889,12 +732,11 @@
                      class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             </div>
 
-            <div class="flex justify-between flex-col px-4 gap-2">
+            <div class="flex justify-between flex-col sm:px-4 gap-2">
                 <div>
                     <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
                     <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
                 </div>
-
                 <p class="font-sans mt-2 line-clamp-3">
                     Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
                 </p>
@@ -906,22 +748,23 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
                group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
                         More info
                     </a>
                 </div>
             </div>
+
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
              x-intersect.once.threshold.30="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-             style="transition-delay: 150ms;">
+             style="transition-delay: 0ms;">
 
             <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
                 <img src="/src/images/content/team2.webp"
@@ -929,12 +772,11 @@
                      class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             </div>
 
-            <div class="flex justify-between flex-col px-4 gap-2">
+            <div class="flex justify-between flex-col sm:px-4 gap-2">
                 <div>
                     <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
                     <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
                 </div>
-
                 <p class="font-sans mt-2 line-clamp-3">
                     Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
                 </p>
@@ -946,22 +788,23 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
                group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
                         More info
                     </a>
                 </div>
             </div>
+
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
              x-intersect.once.threshold.30="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-             style="transition-delay: 300ms;">
+             style="transition-delay: 0ms;">
 
             <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
                 <img src="/src/images/content/team4.webp"
@@ -969,12 +812,11 @@
                      class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             </div>
 
-            <div class="flex justify-between flex-col px-4 gap-2">
+            <div class="flex justify-between flex-col sm:px-4 gap-2">
                 <div>
                     <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
                     <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
                 </div>
-
                 <p class="font-sans mt-2 line-clamp-3">
                     Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
                 </p>
@@ -986,22 +828,23 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
                group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
                         More info
                     </a>
                 </div>
             </div>
+
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
              x-intersect.once.threshold.30="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-             style="transition-delay: 450ms;">
+             style="transition-delay: 0ms;">
 
             <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
                 <img src="/src/images/content/team3.webp"
@@ -1009,12 +852,11 @@
                      class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             </div>
 
-            <div class="flex justify-between flex-col px-4 gap-2">
+            <div class="flex justify-between flex-col sm:px-4 gap-2">
                 <div>
                     <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
                     <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
                 </div>
-
                 <p class="font-sans mt-2 line-clamp-3">
                     Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
                 </p>
@@ -1026,16 +868,177 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
                group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
                         More info
                     </a>
                 </div>
             </div>
+
+        </div>
+        <div class="group cursor-pointer reveal-hidden"
+             x-data="{ shown: false }"
+             x-intersect.once.threshold.30="shown = true"
+             :class="shown ? 'reveal-visible' : 'reveal-hidden'"
+             style="transition-delay: 0ms;">
+
+            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
+                <img src="/src/images/content/team1.webp"
+                     alt="Therapist"
+                     class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            </div>
+
+            <div class="flex justify-between flex-col sm:px-4 gap-2">
+                <div>
+                    <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
+                    <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
+                </div>
+                <p class="font-sans mt-2 line-clamp-3">
+                    Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
+                </p>
+
+                <div class="mt-2">
+                    <div class="bg-blue-gray/8 backdrop-blur-sm text-[#3C6180] read-badge rounded-full border border-blue-gray/16 inline-flex px-4 py-1">
+                        English, Portuguese
+                    </div>
+                </div>
+
+                <div class="mt-4 flex flex-col sm:flex-row gap-2">
+                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                        Book a consultation
+                    </a>
+
+                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                        More info
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="group cursor-pointer reveal-hidden"
+             x-data="{ shown: false }"
+             x-intersect.once.threshold.30="shown = true"
+             :class="shown ? 'reveal-visible' : 'reveal-hidden'"
+             style="transition-delay: 0ms;">
+
+            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
+                <img src="/src/images/content/team2.webp"
+                     alt="Therapist"
+                     class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            </div>
+
+            <div class="flex justify-between flex-col sm:px-4 gap-2">
+                <div>
+                    <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
+                    <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
+                </div>
+                <p class="font-sans mt-2 line-clamp-3">
+                    Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
+                </p>
+
+                <div class="mt-2">
+                    <div class="bg-blue-gray/8 backdrop-blur-sm text-[#3C6180] read-badge rounded-full border border-blue-gray/16 inline-flex px-4 py-1">
+                        English, Portuguese
+                    </div>
+                </div>
+
+                <div class="mt-4 flex flex-col sm:flex-row gap-2">
+                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                        Book a consultation
+                    </a>
+
+                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                        More info
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="group cursor-pointer reveal-hidden"
+             x-data="{ shown: false }"
+             x-intersect.once.threshold.30="shown = true"
+             :class="shown ? 'reveal-visible' : 'reveal-hidden'"
+             style="transition-delay: 0ms;">
+
+            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
+                <img src="/src/images/content/team4.webp"
+                     alt="Therapist"
+                     class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            </div>
+
+            <div class="flex justify-between flex-col sm:px-4 gap-2">
+                <div>
+                    <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
+                    <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
+                </div>
+                <p class="font-sans mt-2 line-clamp-3">
+                    Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
+                </p>
+
+                <div class="mt-2">
+                    <div class="bg-blue-gray/8 backdrop-blur-sm text-[#3C6180] read-badge rounded-full border border-blue-gray/16 inline-flex px-4 py-1">
+                        English, Portuguese
+                    </div>
+                </div>
+
+                <div class="mt-4 flex flex-col sm:flex-row gap-2">
+                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                        Book a consultation
+                    </a>
+
+                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                        More info
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="group cursor-pointer reveal-hidden"
+             x-data="{ shown: false }"
+             x-intersect.once.threshold.30="shown = true"
+             :class="shown ? 'reveal-visible' : 'reveal-hidden'"
+             style="transition-delay: 0ms;">
+
+            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
+                <img src="/src/images/content/team3.webp"
+                     alt="Therapist"
+                     class=" w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            </div>
+
+            <div class="flex justify-between flex-col sm:px-4 gap-2">
+                <div>
+                    <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
+                    <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
+                </div>
+                <p class="font-sans mt-2 line-clamp-3">
+                    Lorem ipsum dolor sit amet consectetur. Interdum volutpat magna nisi sed turpis laoreet sollicitudin. In lorem sit lectus volutpat convallis feugiat.
+                </p>
+
+                <div class="mt-2">
+                    <div class="bg-blue-gray/8 backdrop-blur-sm text-[#3C6180] read-badge rounded-full border border-blue-gray/16 inline-flex px-4 py-1">
+                        English, Portuguese
+                    </div>
+                </div>
+
+                <div class="mt-4 flex flex-col sm:flex-row gap-2">
+                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                        Book a consultation
+                    </a>
+
+                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                        More info
+                    </a>
+                </div>
+            </div>
+
         </div>
 
     </div>
