@@ -329,8 +329,7 @@
         }
 
         /* lg:gap-8 (32px -> 24px) */
-        .lg\:gap-8,
-        .gap-8 {
+        .lg\:gap-8{
             gap: clamp(1.5rem, 1.66vw, 2rem) !important;
         }
 
@@ -491,6 +490,10 @@
 
     @media (max-width: 640px) {
 
+        .gap-8 {
+            gap: clamp(1.5rem, 1.66vw, 2rem) !important;
+        }
+
         .pb-8 {
             padding-bottom: clamp(1.5rem, 1.667vw, 2rem) !important;
         }
@@ -567,9 +570,9 @@
         }
 
         .btn-small {
-            padding: clamp(0.656rem, 0.83vw, 0.875rem) clamp(0.9rem, 1.2vw, 1.75rem) !important;
-            font-size: clamp(0.718rem, 0.8vw, 1rem) !important;
-            line-height: 1;
+            /*padding: clamp(0.656rem, 0.83vw, 0.875rem) clamp(0.9rem, 1.2vw, 1.75rem) !important;*/
+            /*font-size: clamp(0.718rem, 0.8vw, 1rem) !important;*/
+            /*line-height: 1;*/
         }
 
     }
