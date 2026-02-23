@@ -17,6 +17,7 @@
         x-data="{
         activeMenu: null,
         mobileMenu: false,
+        mobileAccordion: null, /* Стан для мобільних акордеонів */
         timeout: null,
         openMenu(name) {
             clearTimeout(this.timeout);
@@ -29,13 +30,22 @@
         },
         keepMenuOpen() {
             clearTimeout(this.timeout);
+        },
+        toggleAccordion(name) {
+            this.mobileAccordion = this.mobileAccordion === name ? null : name;
         }
     }"
+        x-init="$watch('mobileMenu', value => {
+        if (value) {
+            document.body.classList.add('overflow-hidden');
+        } else {
+            document.body.classList.remove('overflow-hidden');
+        }
+    })"
         @mouseleave="closeMenu()"
 >
     <div
             x-show="activeMenu !== null"
-
             x-transition:enter="transition ease-out duration-300"
             x-transition:enter-start="opacity-0"
             x-transition:enter-end="opacity-100"
@@ -94,8 +104,7 @@
                                     <a href="#" class="group relative overflow-hidden rounded-3xl aspect-[4/3.4] block cursor-pointer">
                                         <img src="/src/images/content/card5.webp"
                                              alt="Couples Therapy"
-                                             class="absolute inset-0  w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
-
+                                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                                         <div class="absolute bottom-0 left-0 w-full p-8 flex items-end justify-between gap-3">
                                         <span class="text-bg text-fluid-24">
@@ -113,8 +122,7 @@
                                     <a href="#" class="group relative overflow-hidden rounded-3xl aspect-[4/3.4] block cursor-pointer">
                                         <img src="/src/images/content/card2.jpg"
                                              alt="Psychosexual Therapy"
-                                             class="absolute inset-0  w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
-
+                                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                                         <div class="absolute bottom-0 left-0 w-full p-8 flex items-end justify-between gap-3">
                                         <span class="text-bg text-fluid-24">
@@ -131,7 +139,7 @@
                                     <a href="#" class="group relative overflow-hidden rounded-3xl aspect-[4/3.4] block cursor-pointer">
                                         <img src="/src/images/content/card5-v2.webp"
                                              alt="Couples Therapy"
-                                             class="absolute inset-0  w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                                         <div class="absolute inset-0 bg-black/40 to-transparent opacity-100 transition-opacity duration-500"></div>
 
@@ -149,12 +157,10 @@
                                         </div>
                                     </a>
 
-
                                     <a href="#" class="group relative overflow-hidden rounded-3xl aspect-[4/3.4] block cursor-pointer">
                                         <img src="/src/images/content/card8.webp"
                                              alt="Kink-Affirming Therapy"
-                                             class="absolute inset-0  w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
-
+                                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                                         <div class="absolute bottom-0 left-0 w-full p-8 flex items-end justify-between gap-3">
                                         <span class="text-bg text-fluid-24">
@@ -269,22 +275,129 @@
                 </nav>
 
                 <div class="flex items-center gap-6 z-50 relative">
-                    <a href="#" class="hidden md:block bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-card-light-pink transition shadow-sm">
+                    <a href="#" class="hidden lg:block bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition shadow-sm">
                         Book a consultation
                     </a>
-                    <button @click="mobileMenu = !mobileMenu" class="lg:hidden text-bg">
-                        <svg x-show="!mobileMenu" class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                        <svg x-show="mobileMenu" class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+
+                    <button @click="mobileMenu = !mobileMenu" class="lg:hidden text-bg bg-bg rounded-full flex items-center h-12 w-12 justify-center mob-btn relative z-[110]">
+                        <svg x-show="!mobileMenu" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_36203)">
+                                <path d="M3.15137 14H24.1514" stroke="#491E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.15137 7H24.1514" stroke="#491E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.15137 21H24.1514" stroke="#491E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_36203">
+                                    <rect width="28" height="28" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <svg x-show="mobileMenu" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.875 6.125L6.125 21.875" stroke="#491E42" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21.875 21.875L6.125 6.125" stroke="#491E42" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
     </div>
+
+    <div
+            x-show="mobileMenu"
+            x-transition:enter="transition ease-out duration-300 transform"
+            x-transition:enter-start="opacity-0 translate-x-full"
+            x-transition:enter-end="opacity-100 translate-x-0"
+            x-transition:leave="transition ease-in duration-300 transform"
+            x-transition:leave-start="opacity-100 translate-x-0"
+            x-transition:leave-end="opacity-0 translate-x-full"
+            class="fixed inset-0 z-[100] bg-[#491E42] text-[#F4ECE4] flex flex-col h-[100dvh] lg:hidden"
+            style="display: none;"
+    >
+        <div class="flex justify-between items-center px-5 lg:px-25 py-5 shrink-0">
+            <a href="/" class="flex items-center shrink-0 logo">
+                <svg class="h-12 w-auto" width="140" height="52" viewBox="0 0 140 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_900_6430)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.7881 7.1543C45.791 7.88061 51.2751 13.81 51.3047 21.0039V21.0645C51.3047 26.1549 49.1214 30.8881 46.0391 35.0332C39.8822 43.3173 30.1397 49.2537 27.0791 50.9951C26.5808 51.278 26.2591 51.4511 26.1582 51.5039L25.6445 51.7754L25.1357 51.4971C25.0302 51.438 24.6737 51.2423 24.124 50.9189C20.9715 49.0685 11.4008 43.0481 5.30469 34.8965C2.20217 30.7482 1.68528e-06 26.0477 1.68528e-06 21.0645C1.69315e-06 20.993 -0.000169301 20.92 0.00293137 20.8486C0.110093 13.7245 5.5652 7.87585 12.5186 7.1543C12.551 7.15275 12.5837 7.15234 12.6162 7.15234C19.6054 7.15234 25.2725 12.826 25.2725 19.8242C25.2724 26.2953 20.4271 31.6348 14.1709 32.4014H14.1729C14.2293 32.4013 21.1284 32.395 25.6279 32.3936C30.1302 32.3921 37.0372 32.3935 37.084 32.3936C30.8605 31.5959 26.0499 26.2719 26.0498 19.8242C26.0498 12.8261 31.716 7.15249 38.7051 7.15234C38.733 7.15234 38.7601 7.15274 38.7881 7.1543ZM25.6523 0C28.5681 0 30.9315 2.36669 30.9316 5.28613C30.9316 8.20573 28.5682 10.5732 25.6523 10.5732C22.7366 10.5731 20.373 8.20567 20.373 5.28613C20.3732 2.36675 22.7367 9.24939e-05 25.6523 0Z" fill="#D95F69"/>
+                    </g>
+                    <path class="name-logo" d="M123.63 31.2495C124.544 31.2496 125.386 31.4985 126.155 31.9956C126.941 32.4768 127.567 33.1825 128.032 34.1128C128.513 35.027 128.754 36.1415 128.754 37.4565C128.754 38.7557 128.513 39.871 128.032 40.8013C127.567 41.7314 126.941 42.4447 126.155 42.9419C125.386 43.4229 124.544 43.6635 123.63 43.6636C122.7 43.6636 121.913 43.4798 121.271 43.1108C120.63 42.7259 120.125 42.2124 119.756 41.5708V47.2485H117.735V31.4419H119.202L119.756 33.3188C120.125 32.6933 120.63 32.1956 121.271 31.8267C121.913 31.4417 122.7 31.2495 123.63 31.2495ZM134.85 40.6567L137.784 31.4653H139.998L135.764 43.9048C135.475 44.7548 135.178 45.4207 134.873 45.9019C134.584 46.3988 134.191 46.7436 133.694 46.936C133.197 47.1445 132.5 47.2485 131.602 47.2485H130.566V45.4683H131.385C131.962 45.4683 132.403 45.42 132.708 45.3237C133.013 45.2435 133.253 45.0513 133.43 44.7466C133.622 44.4579 133.807 44.0084 133.983 43.3989L129.677 31.4653H131.914L134.85 40.6567ZM89.3066 31.2495C90.2528 31.2496 91.0869 31.4418 91.8086 31.8267C92.5303 32.1955 93.1238 32.7008 93.5889 33.3423C94.0701 33.9678 94.4145 34.6819 94.623 35.4839C94.8476 36.2857 94.9283 37.1115 94.8643 37.9614H85.6729C85.7049 38.9559 85.9223 39.7424 86.3232 40.3198C86.7401 40.8969 87.229 41.3058 87.79 41.5464C88.3514 41.7709 88.8733 41.8833 89.3545 41.8833C90.0279 41.8833 90.5891 41.7792 91.0381 41.5708C91.5032 41.3462 91.8728 41.0575 92.1455 40.7046L94.0938 41.2817C93.6607 41.9714 93.0432 42.5416 92.2412 42.9907C91.4393 43.4397 90.477 43.6636 89.3545 43.6636C88.1035 43.6636 87.0448 43.3914 86.1787 42.8462C85.3127 42.2849 84.6468 41.539 84.1816 40.6089C83.7325 39.6626 83.5078 38.603 83.5078 37.4321C83.5079 36.1653 83.7643 35.0747 84.2773 34.1606C84.7906 33.2304 85.4806 32.5163 86.3467 32.019C87.2289 31.5058 88.216 31.2495 89.3066 31.2495ZM109.641 31.2495C111.293 31.2495 112.496 31.6423 113.25 32.4282C114.02 33.1981 114.404 34.4174 114.404 36.0854V38.8765C114.404 39.8708 114.445 40.729 114.525 41.4507C114.606 42.1724 114.701 42.8142 114.813 43.3755H112.961L112.48 41.7388C112.128 42.3322 111.621 42.8058 110.964 43.1587C110.306 43.4954 109.456 43.6636 108.414 43.6636C107.66 43.6636 106.97 43.528 106.345 43.2554C105.719 42.9827 105.222 42.589 104.854 42.0757C104.485 41.5624 104.3 40.9449 104.3 40.2231C104.3 39.277 104.629 38.5311 105.286 37.9858C105.96 37.4405 106.899 37.0236 108.102 36.7349C109.32 36.4302 110.74 36.1896 112.359 36.0132C112.391 35.0027 112.191 34.2245 111.758 33.6792C111.325 33.134 110.627 32.8608 109.665 32.8608C108.943 32.8608 108.35 33.0299 107.885 33.3667C107.436 33.6874 107.147 34.1362 107.019 34.7134L105.069 34.1362C105.39 33.222 105.96 32.5163 106.778 32.019C107.612 31.506 108.566 31.2496 109.641 31.2495ZM66.4404 31.4419H68.75V33.0532H66.4404V40.0552C66.4404 40.6643 66.4962 41.0732 66.6084 41.2817C66.7367 41.4902 67.0897 41.5952 67.667 41.5952H68.75V43.3755H67.2344C66.4805 43.3755 65.8946 43.303 65.4775 43.1587C65.0767 42.9983 64.7961 42.7011 64.6357 42.2681C64.4915 41.8351 64.419 41.2098 64.4189 40.3921V33.0532H62.3984V31.4419H64.4189V28.4341H66.4404V31.4419ZM73.4229 33.2466C73.7597 32.6852 74.2333 32.2116 74.8428 31.8267C75.4522 31.4418 76.2621 31.2495 77.2725 31.2495C78.716 31.2495 79.7347 31.6748 80.3281 32.5249C80.9214 33.3589 81.2178 34.4577 81.2178 35.8208V43.3755H79.1973V36.4224C79.1973 35.8129 79.1406 35.2511 79.0283 34.7378C78.916 34.2086 78.6681 33.7832 78.2832 33.4624C77.9143 33.1416 77.3441 32.9819 76.5742 32.9819C75.596 32.982 74.8259 33.3182 74.2646 33.9917C73.7033 34.6493 73.4229 35.6199 73.4229 36.9028V43.3755H71.4023V27.3032H73.4229V33.2466ZM103.622 33.3423H103.262C103.15 33.3423 103.037 33.3507 102.925 33.3667C101.562 33.479 100.607 33.9518 100.062 34.7856C99.5322 35.6197 99.2676 36.7749 99.2676 38.2505V43.3755H97.2461V31.4419H98.7139L99.3633 33.6548C99.7803 32.9331 100.342 32.3564 101.048 31.9233C101.77 31.4742 102.628 31.2495 103.622 31.2495V33.3423ZM112.528 37.6255C111.309 37.7538 110.251 37.9135 109.353 38.106C108.454 38.2824 107.756 38.5396 107.259 38.8765C106.778 39.1972 106.537 39.6301 106.537 40.1753C106.537 40.7366 106.738 41.1935 107.139 41.5464C107.556 41.8832 108.125 42.0522 108.847 42.0522C109.472 42.0522 110.067 41.9399 110.628 41.7153C111.189 41.4908 111.646 41.1137 111.999 40.5845C112.352 40.0391 112.528 39.3009 112.528 38.3706V37.6255ZM123.101 32.9819C122.074 32.9819 121.248 33.3747 120.622 34.1606C120.013 34.9305 119.708 36.0291 119.708 37.4565C119.708 38.8679 120.013 39.9665 120.622 40.7524C121.248 41.5384 122.074 41.9321 123.101 41.9321C124.127 41.932 124.945 41.5383 125.555 40.7524C126.18 39.9665 126.492 38.8678 126.492 37.4565C126.492 36.0293 126.18 34.9305 125.555 34.1606C124.945 33.3748 124.127 32.982 123.101 32.9819ZM89.3066 32.9819C88.7132 32.9819 88.1514 33.0943 87.6221 33.3188C87.0929 33.5434 86.6516 33.9038 86.2988 34.4009C85.962 34.8981 85.7614 35.5481 85.6973 36.3501H92.7227C92.7227 35.7887 92.5787 35.251 92.29 34.7378C92.0174 34.2245 91.6236 33.8076 91.1104 33.4868C90.6133 33.1502 90.0121 32.982 89.3066 32.9819ZM122.423 9.60303C124.075 9.6031 125.277 9.99684 126.031 10.7827C126.801 11.5526 127.186 12.7712 127.187 14.439V17.23C127.187 18.2243 127.226 19.0825 127.307 19.8042C127.387 20.5258 127.482 21.1677 127.595 21.729H125.742L125.262 20.0933C124.909 20.6867 124.404 21.1603 123.746 21.5132C123.088 21.85 122.238 22.0181 121.195 22.0181C120.441 22.0181 119.751 21.8815 119.126 21.6089C118.501 21.3362 118.004 20.9433 117.635 20.4302C117.266 19.9169 117.081 19.2994 117.081 18.5776C117.081 17.6315 117.41 16.8857 118.067 16.3403C118.741 15.795 119.68 15.3781 120.883 15.0894C122.102 14.7846 123.522 14.5431 125.142 14.3667C125.174 13.3567 124.973 12.5789 124.54 12.0337C124.107 11.4883 123.409 11.2153 122.446 11.2153C121.725 11.2154 121.131 11.3835 120.666 11.7202C120.217 12.041 119.928 12.4905 119.8 13.0679L117.852 12.4907C118.172 11.5765 118.742 10.8708 119.56 10.3735C120.394 9.86029 121.348 9.60303 122.423 9.60303ZM66.6807 21.729H64.6592V11.4077H63V9.79541H66.6807V21.729ZM76.167 9.60303C77.6105 9.60303 78.6292 10.0284 79.2227 10.8784C79.8161 11.7124 80.1132 12.8111 80.1133 14.1743V21.729H78.0918V14.7759C78.0918 14.1666 78.036 13.6054 77.9238 13.0923C77.8116 12.563 77.5627 12.1377 77.1777 11.8169C76.8089 11.4961 76.2395 11.3355 75.4697 11.3354C74.4914 11.3354 73.7215 11.6726 73.1602 12.3462C72.5988 13.0038 72.3174 13.9742 72.3174 15.2573V21.729H70.2969V9.79541H71.7881L72.3174 11.6001C72.6542 11.0387 73.1279 10.5661 73.7373 10.1812C74.3468 9.79623 75.1566 9.60306 76.167 9.60303ZM85.9648 9.79639H88.2744V11.4077H85.9648V18.4087C85.9648 19.0182 86.0205 19.4277 86.1328 19.6362C86.2611 19.8447 86.614 19.9487 87.1914 19.9487H88.2744V21.729H86.7588C86.0049 21.729 85.419 21.6575 85.002 21.5132C84.601 21.3528 84.3206 21.0556 84.1602 20.6226C84.0158 20.1895 83.9434 19.5636 83.9434 18.7456V11.4077H81.9229V9.79639H83.9434V6.78857H85.9648V9.79639ZM94.0059 21.729H91.9854V11.4077H90.3252V9.79541H94.0059V21.729ZM110.687 9.60303C112.066 9.60308 113.052 10.0284 113.646 10.8784C114.239 11.7124 114.536 12.8111 114.536 14.1743V21.729H112.515V14.7759C112.515 14.1666 112.451 13.6054 112.322 13.0923C112.21 12.563 111.969 12.1377 111.601 11.8169C111.248 11.4962 110.702 11.3355 109.965 11.3354C109.099 11.3354 108.4 11.6725 107.871 12.3462C107.358 13.0038 107.102 13.9742 107.102 15.2573V21.729H105.08V14.7759C105.08 14.1666 105.016 13.6054 104.888 13.0923C104.775 12.563 104.535 12.1377 104.166 11.8169C103.813 11.4962 103.268 11.3355 102.53 11.3354C101.664 11.3354 100.966 11.6725 100.437 12.3462C99.9073 13.0038 99.6426 13.9743 99.6426 15.2573V21.729H97.6221V9.79541H99.1133L99.6426 11.6001C99.9794 11.0387 100.437 10.5661 101.015 10.1812C101.608 9.79626 102.346 9.60307 103.228 9.60303C104.142 9.60303 104.88 9.78783 105.441 10.1567C106.003 10.5256 106.411 11.0392 106.668 11.6968C107.149 10.9591 107.727 10.4297 108.4 10.1089C109.09 9.77206 109.852 9.60303 110.687 9.60303ZM125.31 15.979C124.091 16.1073 123.032 16.268 122.134 16.4604C121.236 16.6368 120.538 16.8933 120.041 17.23C119.56 17.5508 119.318 17.9844 119.318 18.5298C119.318 19.0909 119.519 19.5481 119.92 19.9009C120.337 20.2377 120.907 20.4058 121.629 20.4058C122.254 20.4057 122.848 20.2933 123.409 20.0688C123.97 19.8443 124.427 19.4672 124.78 18.938C125.133 18.3927 125.31 17.6551 125.31 16.7251V15.979ZM65.6699 4.52686C66.0868 4.52686 66.4399 4.67098 66.7285 4.95947C67.0332 5.24808 67.1854 5.60124 67.1855 6.01807C67.1855 6.4351 67.0333 6.79632 66.7285 7.10107C66.4398 7.38975 66.0869 7.53467 65.6699 7.53467C65.269 7.53462 64.916 7.38974 64.6113 7.10107C64.3227 6.79636 64.1787 6.43502 64.1787 6.01807C64.1788 5.60124 64.3227 5.24808 64.6113 4.95947C64.916 4.67089 65.2691 4.5269 65.6699 4.52686ZM92.9951 4.52686C93.412 4.52686 93.7651 4.671 94.0537 4.95947C94.3584 5.24808 94.5106 5.60124 94.5107 6.01807C94.5107 6.4351 94.3585 6.79632 94.0537 7.10107C93.765 7.38973 93.4121 7.53467 92.9951 7.53467C92.5942 7.5346 92.2412 7.38972 91.9365 7.10107C91.6479 6.79636 91.5039 6.43501 91.5039 6.01807C91.504 5.60124 91.6479 5.24808 91.9365 4.95947C92.2412 4.67088 92.5943 4.52692 92.9951 4.52686Z" fill="#F4ECE4"/>
+                    <defs>
+                        <clipPath id="clip0_900_6430">
+                            <rect width="51.3049" height="51.7755" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+
+            <button @click="mobileMenu = false" class="text-primary mob-btn bg-bg rounded-full flex items-center h-12 w-12 justify-center transition-transform hover:scale-95">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto px-5 lg:px-25 py-5 pt-0 flex flex-col font-sans">
+
+            <div class="border-b border-white/10">
+                <button @click="toggleAccordion('therapies')" class="w-full py-6 flex justify-between items-center text-[22px] tracking-wide">
+                    Therapies
+                    <svg :class="{'rotate-180': mobileAccordion === 'therapies'}" class="transition-transform duration-300" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 1L8 8L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div x-show="mobileAccordion === 'therapies'"
+                     x-transition:enter="transition ease-out duration-200"
+                     x-transition:enter-start="opacity-0 -translate-y-2"
+                     x-transition:enter-end="opacity-100 translate-y-0"
+                     class="pb-6 space-y-2.5">
+                    <a href="#" class="block text-base hover:opacity-80 text-bg">Couples & Relationship Therapy</a>
+                    <a href="#" class="block text-base hover:opacity-80 text-bg">Psychosexual Therapy (Sex Therapy)</a>
+                    <a href="#" class="block text-base hover:opacity-80 text-bg">LGBTQIA+ Affirming Therapy</a>
+                    <a href="#" class="block text-base hover:opacity-80 text-bg">Kink-Affirming Therapy</a>
+                </div>
+            </div>
+
+            <div class="border-b border-white/10">
+                <button @click="toggleAccordion('help')" class="w-full py-6 flex justify-between items-center text-[22px] tracking-wide">
+                    What We Help With
+                    <svg :class="{'rotate-180': mobileAccordion === 'help'}" class="transition-transform duration-300" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 1L8 8L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div x-show="mobileAccordion === 'help'"
+                     x-transition:enter="transition ease-out duration-200"
+                     x-transition:enter-start="opacity-0 -translate-y-2"
+                     x-transition:enter-end="opacity-100 translate-y-0"
+                     class="pb-8 space-y-2.5">
+                    <a href="#" class="block text-base hover:opacity-80 text-bg">Infidelity Counselling</a>
+                    <a href="#" class="block text-base hover:opacity-80 text-bg">Sexual Performance Anxiety</a>
+                    <a href="#" class="block text-base hover:opacity-80 text-bg">Vaginismus</a>
+                    <a href="#" class="block text-base hover:opacity-80 text-bg">Low Libido</a>
+                    <a href="#" class="block text-base hover:opacity-80 text-bg">Erectile Dysfunction</a>
+                    <a href="#" class="block text-base hover:opacity-80 text-bg">Pain During Sex</a>
+                    <a href="#" class="block text-base hover:opacity-80 text-bg">Rapid Ejaculation</a>
+
+                    <a href="#" class="block text-lg font-bold underline underline-offset-4 mt-6 hover:opacity-80 text-bg transition-colors">
+                        Explore All Topics
+                    </a>
+                </div>
+            </div>
+
+            <a href="#" class="block py-6 border-b border-bg/10 text-[22px] tracking-wide hover:opacity-80 transition">Our Therapists</a>
+            <a href="#" class="block py-6 border-b border-bg/10 text-[22px] tracking-wide hover:opacity-80 transition">About</a>
+            <a href="#" class="block py-6 border-b border-bg/10 text-[22px] tracking-wide hover:opacity-80 transition">Resources</a>
+            <a href="#" class="block py-6 border-b border-bg/10 text-[22px] tracking-wide hover:opacity-80 transition">Contact</a>
+        </div>
+
+        <div class="p-5 px-5 lg:px-25 shrink-0 mb-4 mt-auto">
+            <a href="#" class="flex justify-center items-center w-full bg-card-pink hover:hover-btn text-bg py-4.5 rounded-[2rem] font-bold text-[20px] transition-all">
+                Book a consultation
+            </a>
+        </div>
+    </div>
 </header>
-
-
-
-<section class="py-25 sm:py-24 px-4 lg:px-25 mt-16 lg:mt-22 max-w-[1920px] mx-auto relative" x-data>
+<div class="overflow-hidden">
+<section class="py-12 sm:py-24 px-4 lg:px-25 lg:px-25 mt-16 lg:mt-22 max-w-[1920px] mx-auto relative" x-data>
     <h1 class="font-sans text-fluid-h1 text-center">
         Meet our Psychosexual and<br class="hidden sm:block">  Relationship Therapists
     </h1>
@@ -335,7 +448,7 @@
         </svg>
     </div>
 </section>
-<section class="py-25 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative" x-data>
+<section class="py-12 sm:pt-10 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative" x-data>
     <div class="absolute -bottom-[43%] 2xl:-bottom-[36%] left-[15%] w-[60%] lg:w-[60%] pointer-events-none z-0">
         <svg width="1218" height="1296" viewBox="0 0 1218 1296" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
             <g filter="url(#filter0_f_859_9833)">
@@ -360,14 +473,14 @@
     </div>
 
 
-    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-4 z-10 relative">
+    <div class="flex flex-col-reverse lg:flex-row items-center lg:items-start lg:gap-4 gap-10 z-10 relative">
 
         <div class="w-full lg:w-1/2 flex flex-col justify-between lg:self-stretch reveal-hidden"
              x-data="{ shown: false }"
              x-intersect.once.threshold.30="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'">
 
-            <div class="max-w-[81%]">
+            <div class="lg:max-w-[81%]">
                 <ul class="flex flex-col sm:gap-12">
                     <li class="flex items-start gap-5">
                         <div class="shrink-0 mt-1">
@@ -427,7 +540,7 @@
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 200ms;">
 
-            <div class="relative w-full aspect-square md:aspect-[4/3.4] lg:aspect-square md:rounded-2xl overflow-hidden">
+            <div class="relative w-full aspect-[4/4.5] sm:aspect-[4/3.4] lg:aspect-square rounded-2xl overflow-hidden">
                 <img src="/src/images/content/hero-our-terapists.webp"
                      alt="Couple Intimacy"
                      class="w-full h-full object-cover">
@@ -440,7 +553,7 @@
 <section class="px-4 lg:px-25 max-w-[1920px] mx-auto" x-data>
     <div class="border-primary/40 border-t mt-8 -mb-8"></div>
 
-    <div class="py-20 2xl:py-20 mt-16 lg:mt-22 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 space-y-20 2xl:space-y-24">
+    <div class="py-20 2xl:py-20 mt-16 lg:mt-22 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 space-y-16 2xl:space-y-24">
 
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
@@ -928,16 +1041,16 @@
     </div>
 
 </section>
+</div>
 
-
-<footer class="bg-primary pt-20 pb-10 px-4 lg:px-25 text-bg">
+<footer class="bg-primary pt-20 pb-20 sm:pb-10 px-4 lg:px-25 text-bg">
     <div class="max-w-[1920px] mx-auto">
 
-        <div class="flex flex-col xl:flex-row justify-between sm:gap-12 xl:gap-24 mb-10">
+        <div class="flex flex-col lg:flex-row justify-between gap-10 sm:gap-12 lg:gap-24 mb-10">
 
-            <div class="xl:w-1/4 flex flex-col justify-between ">
-                <a href="/" class="inline-block mb-8">
-                    <img src="/src/images/logo.svg" alt="Intima Therapy" class="h-21 w-auto">
+            <div class="lg:w-1/4 flex flex-col justify-between ">
+                <a href="/" class="inline-block mb-10 sm:mb-8">
+                    <img src="/src/images/logo.svg" alt="Intima Therapy" class="h-17 sm:h-21 w-auto">
                 </a>
                 <div class="flex gap-1">
                     <a href="#" class="w-12 h-12 rounded-full bg-white/4 border border-white/10 flex items-center justify-center hover:bg-card-pink transition-colors">
@@ -960,22 +1073,22 @@
                 </div>
             </div>
 
-            <div class="xl:w-3/4 flex flex-wrap justify-between gap-8 lg:gap-12">
+            <div class="xl:max-w-[70%] lg:w-3/4 flex flex-col md:flex-row md:flex-wrap justify-between gap-8 lg:gap-12">
 
                 <div class="flex flex-col gap-4 w-auto min-w-max">
-                    <h4 class="text-bg/50 text-fluid-18 mb-2">Therapies</h4>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Psychosexual therapy</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Couples & Relationship Therapy</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">LGBTQIA+ Affirming Therapy</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Kink-Affirming Therapy</a>
+                    <h4 class="text-bg/50 text-base sm:text-fluid-18 sm:mb-2">Therapies</h4>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Psychosexual therapy</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Couples & Relationship Therapy</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">LGBTQIA+ Affirming Therapy</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Kink-Affirming Therapy</a>
                 </div>
 
                 <div class="flex flex-col gap-4 w-auto min-w-max">
-                    <h4 class="text-bg/50 text-fluid-18 mb-2">What We Help With</h4>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Sexual Performance Anxiety</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Low Libido</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Pain During Sex</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors group flex items-center gap-2">
+                    <h4 class="text-bg/50 text-base sm:text-fluid-18 sm:mb-2">What We Help With</h4>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Sexual Performance Anxiety</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Low Libido</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Pain During Sex</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors group flex items-center gap-2">
                         View all
                         <span class="group-hover:translate-x-1 transition-transform">
                     <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -987,28 +1100,28 @@
                 </div>
 
                 <div class="flex flex-col gap-4 w-auto min-w-max">
-                    <h4 class="text-bg/50 text-fluid-18 mb-2">About us</h4>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Our Therapists</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">About</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Contact</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Resources</a>
+                    <h4 class="text-bg/50 text-base sm:text-fluid-18 sm:mb-2">About us</h4>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Our Therapists</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">About</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Contact</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Resources</a>
                 </div>
 
                 <div class="flex flex-col gap-4 w-auto min-w-max">
-                    <h4 class="text-bg/50 text-fluid-18 mb-2">Legals</h4>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Terms & Conditions</a>
+                    <h4 class="text-bg/50 text-base sm:text-fluid-18 sm:mb-2">Legals</h4>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Terms & Conditions</a>
                 </div>
 
             </div>
         </div>
 
-        <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-6 pt-10 relative border-t border-white/5">
-            <p class="text-white/80">
+        <div class="flex flex-col sm:flex-col-reverse md:flex-row justify-between items-center gap-8 sm:gap-6 pt-10 relative border-t border-white/5">
+            <p class="text-sm sm:text-fluid-16 text-white/80">
                 © Copyright Intima Therapy 2026. All Rights Reserved.
             </p>
 
-            <a href="tel:0000000000" class="custom-height-fluid flex gap-2 items-center bg-card-pink text-white px-7 py-3.5 font-bold rounded-full font-bold hover:bg-card-light-pink transition shadow-sm">
+            <a href="tel:0000000000" class="custom-height-fluid text-base sm:text-fluid-16 sm:w-auto w-full justify-center flex gap-2 items-center bg-card-pink text-white px-7 py-3.5 font-bold rounded-full font-bold hover:bg-card-pink-hover transition shadow-sm">
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.71797 8.85436C9.80452 8.79677 9.90408 8.76168 10.0076 8.75226C10.1112 8.74285 10.2154 8.75942 10.3109 8.80046L13.9953 10.4512C14.1195 10.5043 14.2231 10.5962 14.2907 10.7131C14.3583 10.8299 14.3862 10.9656 14.3703 11.0997C14.2489 12.0067 13.8023 12.8389 13.1133 13.4413C12.4244 14.0437 11.5402 14.3754 10.625 14.3747C7.80708 14.3747 5.10457 13.2553 3.11199 11.2627C1.11942 9.27011 1.10538e-06 6.5676 1.10538e-06 3.74968C-0.000698803 2.83452 0.330999 1.95026 0.933408 1.26134C1.53582 0.572425 2.36793 0.125741 3.275 0.00436499C3.40909 -0.0115645 3.54473 0.0163604 3.66162 0.0839604C3.77851 0.15156 3.87037 0.2552 3.92344 0.379365L5.57422 4.06686C5.61478 4.16157 5.6313 4.26484 5.6223 4.36748C5.6133 4.47012 5.57907 4.56894 5.52266 4.65515L3.85313 6.6403C3.7939 6.72966 3.75888 6.83286 3.75149 6.93981C3.74409 7.04676 3.76458 7.1538 3.81094 7.25046C4.45703 8.57311 5.82422 9.9239 7.15078 10.5637C7.24795 10.6099 7.35548 10.6299 7.46276 10.6218C7.57003 10.6138 7.67334 10.5778 7.7625 10.5176L9.71797 8.85436Z" fill="#F4ECE4"/>
                 </svg>

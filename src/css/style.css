@@ -211,9 +211,7 @@
             margin-top: clamp(3rem, 3.333vw, 4rem) !important;
         }
 
-        .\32 xl\:gap-14 {
-            gap: clamp(2.625rem, 2.917vw, 3.5rem) !important;
-        }
+
 
 
         /* 2xl:py-24 (96px -> 72px) */
@@ -287,6 +285,10 @@
 
         .sm\:mb-6 {
             margin-bottom: clamp(1.125rem, 1.25vw, 1.5rem) !important;
+        }
+
+        .sm\:pt-10{
+            padding-top: clamp(1.875rem, 2.083vw, 2.5rem) !important;
         }
 
 
@@ -432,7 +434,9 @@
         .w-40.play-btn {
             width: clamp(8.125rem, 8.333vw, 10rem) !important;
         }
-
+        .\32 xl\:gap-14 {
+            gap: clamp(2.625rem, 2.917vw, 3.5rem) !important;
+        }
         /* h-40: 130px на 1440px -> 160px на 1920px */
         .h-40.play-btn {
             height: clamp(8.125rem, 8.333vw, 10rem) !important;

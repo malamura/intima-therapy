@@ -99,7 +99,7 @@
                              style="display: none;">
 
                             <div class="bg-bg-menu rounded-[40px] p-10 relative w-full">
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
                                     <a href="#" class="group relative overflow-hidden rounded-3xl aspect-[4/3.4] block cursor-pointer">
                                         <img src="/src/images/content/card5.webp"
@@ -458,7 +458,7 @@
         </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
         <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl sm:aspect-[3/4.5] aspect-[4/4.5] cursor-pointer reveal-hidden"
            x-data="{ shown: false }"
@@ -857,7 +857,7 @@
         </h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-4">
 
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
@@ -1037,7 +1037,7 @@
 
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-14 relative z-10 mod_line">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-14 relative z-10 mod_line">
 
             <div class="bg-primary text-bg p-6 xl:p-8 rounded-2xl md:rounded-3xl sm:aspect-[4/4.1] aspect-[4.9/4.1] flex flex-col justify-end relative reveal-hidden"
                  x-data="{ shown: false }"
@@ -1353,34 +1353,34 @@
         <h2 class="font-sans text-fluid-h2 text-primary">FAQ</h2>
     </div>
 
-    <div class="lg:max-w-[84%] mx-auto space-y-4">
+    <div class="lg:max-w-[84%] mx-auto space-y-4" x-data="{ activeAccordion: 1 }">
 
-        <div class="reveal-hidden" x-data="{ open: true, shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 0ms;">
+        <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 0ms;">
             <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border"
-                 :class="open ? 'border-transparent' : 'border-primary/50'">
+                 :class="activeAccordion === 1 ? 'border-transparent' : 'border-primary/50'">
 
                 <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none"
-                     :class="open ? 'opacity-100' : 'opacity-0'"></div>
+                     :class="activeAccordion === 1 ? 'opacity-100' : 'opacity-0'"></div>
 
                 <div class="relative z-10">
-                    <button @click="open = !open" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
+                    <button @click="activeAccordion = activeAccordion === 1 ? null : 1" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="activeAccordion === 1 ? 'text-bg' : 'text-primary'">
                         <span class="font-sans text-fluid-28 pr-4">Is the introductory call confidential?</span>
                         <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
-                            <template x-if="!open">
+                            <template x-if="activeAccordion !== 1">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </template>
-                            <template x-if="open">
+                            <template x-if="activeAccordion === 1">
                                 <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </template>
                         </span>
                     </button>
-                    <div x-show="open" x-collapse.duration.400ms.ease-out>
-                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6  font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
+                    <div x-show="activeAccordion === 1" x-collapse.duration.400ms.ease-out>
+                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6 font-sans text-fluid-24 leading-[1.6]" :class="activeAccordion === 1 ? 'text-bg' : 'text-primary'">
                             Yes. The introductory call is confidential and lasts around 15 minutes, giving you space to ask questions, get a sense of the therapist, and decide whether you’d like to continue.
                         </div>
                     </div>
@@ -1388,27 +1388,27 @@
             </div>
         </div>
 
-        <div class="reveal-hidden" x-data="{ open: false, shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 100ms;">
+        <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 100ms;">
             <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border"
-                 :class="open ? 'border-transparent' : 'border-primary/50'">
+                 :class="activeAccordion === 2 ? 'border-transparent' : 'border-primary/50'">
 
                 <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none"
-                     :class="open ? 'opacity-100' : 'opacity-0'"></div>
+                     :class="activeAccordion === 2 ? 'opacity-100' : 'opacity-0'"></div>
 
                 <div class="relative z-10">
-                    <button @click="open = !open" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
+                    <button @click="activeAccordion = activeAccordion === 2 ? null : 2" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="activeAccordion === 2 ? 'text-bg' : 'text-primary'">
                         <span class="font-sans text-fluid-28 pr-4">Do I have to commit to therapy after the consultation?</span>
                         <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
-                            <template x-if="!open">
+                            <template x-if="activeAccordion !== 2">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </template>
-                            <template x-if="open">
+                            <template x-if="activeAccordion === 2">
                                 <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </template>
                         </span>
                     </button>
-                    <div x-show="open" x-collapse.duration.400ms.ease-out>
-                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6  font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
+                    <div x-show="activeAccordion === 2" x-collapse.duration.400ms.ease-out>
+                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6 font-sans text-fluid-24 leading-[1.6]" :class="activeAccordion === 2 ? 'text-bg' : 'text-primary'">
                             No. The introductory call is a chance to explore whether working together feels right. You’re free to take your time and decide whether to continue.
                         </div>
                     </div>
@@ -1416,19 +1416,19 @@
             </div>
         </div>
 
-        <div class="reveal-hidden" x-data="{ open: false, shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 200ms;">
-            <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="open ? 'border-transparent' : 'border-primary/50'">
-                <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="open ? 'opacity-100' : 'opacity-0'"></div>
+        <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 200ms;">
+            <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="activeAccordion === 3 ? 'border-transparent' : 'border-primary/50'">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="activeAccordion === 3 ? 'opacity-100' : 'opacity-0'"></div>
                 <div class="relative z-10">
-                    <button @click="open = !open" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
+                    <button @click="activeAccordion = activeAccordion === 3 ? null : 3" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="activeAccordion === 3 ? 'text-bg' : 'text-primary'">
                         <span class="font-sans text-fluid-28 pr-4">Can I come on my own, or with my partner?</span>
                         <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
-                            <template x-if="!open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
-                            <template x-if="open"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                            <template x-if="activeAccordion !== 3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                            <template x-if="activeAccordion === 3"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
                         </span>
                     </button>
-                    <div x-show="open" x-collapse.duration.400ms.ease-out>
-                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6  font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
+                    <div x-show="activeAccordion === 3" x-collapse.duration.400ms.ease-out>
+                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6 font-sans text-fluid-24 leading-[1.6]" :class="activeAccordion === 3 ? 'text-bg' : 'text-primary'">
                             We work with individuals as well as couples and people in a range of relationship structures. You can explore what feels most appropriate for you when you enquire.
                         </div>
                     </div>
@@ -1436,19 +1436,19 @@
             </div>
         </div>
 
-        <div class="reveal-hidden" x-data="{ open: false, shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 300ms;">
-            <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="open ? 'border-transparent' : 'border-primary/50'">
-                <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="open ? 'opacity-100' : 'opacity-0'"></div>
+        <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 300ms;">
+            <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="activeAccordion === 4 ? 'border-transparent' : 'border-primary/50'">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="activeAccordion === 4 ? 'opacity-100' : 'opacity-0'"></div>
                 <div class="relative z-10">
-                    <button @click="open = !open" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
+                    <button @click="activeAccordion = activeAccordion === 4 ? null : 4" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="activeAccordion === 4 ? 'text-bg' : 'text-primary'">
                         <span class="font-sans text-fluid-28 pr-4">How much does therapy cost?</span>
                         <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
-                            <template x-if="!open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
-                            <template x-if="open"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                            <template x-if="activeAccordion !== 4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                            <template x-if="activeAccordion === 4"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
                         </span>
                     </button>
-                    <div x-show="open" x-collapse.duration.400ms.ease-out>
-                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6  font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
+                    <div x-show="activeAccordion === 4" x-collapse.duration.400ms.ease-out>
+                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6 font-sans text-fluid-24 leading-[1.6]" :class="activeAccordion === 4 ? 'text-bg' : 'text-primary'">
                             Individual therapy is £80 per session, and couples or relationship therapy is £130 per session. Some therapists may offer a limited number of lower-cost sessions after the first session, which can be discussed directly with them.
                         </div>
                     </div>
@@ -1456,19 +1456,19 @@
             </div>
         </div>
 
-        <div class="reveal-hidden" x-data="{ open: false, shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 400ms;">
-            <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="open ? 'border-transparent' : 'border-primary/50'">
-                <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="open ? 'opacity-100' : 'opacity-0'"></div>
+        <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 400ms;">
+            <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="activeAccordion === 5 ? 'border-transparent' : 'border-primary/50'">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="activeAccordion === 5 ? 'opacity-100' : 'opacity-0'"></div>
                 <div class="relative z-10">
-                    <button @click="open = !open" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
+                    <button @click="activeAccordion = activeAccordion === 5 ? null : 5" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="activeAccordion === 5 ? 'text-bg' : 'text-primary'">
                         <span class="font-sans text-fluid-28 pr-4">Are sessions online or in person?</span>
                         <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
-                            <template x-if="!open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
-                            <template x-if="open"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                            <template x-if="activeAccordion !== 5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                            <template x-if="activeAccordion === 5"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
                         </span>
                     </button>
-                    <div x-show="open" x-collapse.duration.400ms.ease-out>
-                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6  font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
+                    <div x-show="activeAccordion === 5" x-collapse.duration.400ms.ease-out>
+                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6 font-sans text-fluid-24 leading-[1.6]" :class="activeAccordion === 5 ? 'text-bg' : 'text-primary'">
                             Sessions are primarily held online, allowing you to work with specialist therapists wherever you’re based in the UK or abroad. Some therapists also see clients in person. Any in-person availability will be clearly shown on individual therapist profiles.
                         </div>
                     </div>
@@ -1476,19 +1476,19 @@
             </div>
         </div>
 
-        <div class="reveal-hidden" x-data="{ open: false, shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 500ms;">
-            <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="open ? 'border-transparent' : 'border-primary/50'">
-                <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="open ? 'opacity-100' : 'opacity-0'"></div>
+        <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 500ms;">
+            <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="activeAccordion === 6 ? 'border-transparent' : 'border-primary/50'">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="activeAccordion === 6 ? 'opacity-100' : 'opacity-0'"></div>
                 <div class="relative z-10">
-                    <button @click="open = !open" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
+                    <button @click="activeAccordion = activeAccordion === 6 ? null : 6" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="activeAccordion === 6 ? 'text-bg' : 'text-primary'">
                         <span class="font-sans text-fluid-28 pr-4">What happens after the first session?</span>
                         <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
-                            <template x-if="!open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
-                            <template x-if="open"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                            <template x-if="activeAccordion !== 6"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                            <template x-if="activeAccordion === 6"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
                         </span>
                     </button>
-                    <div x-show="open" x-collapse.duration.400ms.ease-out>
-                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6  font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
+                    <div x-show="activeAccordion === 6" x-collapse.duration.400ms.ease-out>
+                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6 font-sans text-fluid-24 leading-[1.6]" :class="activeAccordion === 6 ? 'text-bg' : 'text-primary'">
                             If you decide to continue, ongoing sessions, arrangements and payments are made directly with your therapist, at a pace that feels right for you.
                         </div>
                     </div>
