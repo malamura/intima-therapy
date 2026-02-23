@@ -481,7 +481,7 @@
 
         <div class="w-full lg:w-1/2 flex flex-col justify-between lg:self-stretch reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'">
 
             <div class="lg:max-w-[81%]">
@@ -540,7 +540,7 @@
 
         <div class="w-full lg:w-1/2 reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 200ms;">
 
@@ -561,7 +561,7 @@
 
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 0ms;">
 
@@ -587,12 +587,12 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                    <a href="#" class="flex-1 btn-small btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               hover:bg-muted-purple hover:text-bg hover:border-transparent">
                         More info
                     </a>
                 </div>
@@ -601,7 +601,7 @@
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 150ms;">
 
@@ -627,12 +627,12 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                    <a href="#" class="flex-1 btn-small btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               hover:bg-muted-purple hover:text-bg hover:border-transparent">
                         More info
                     </a>
                 </div>
@@ -641,7 +641,7 @@
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 300ms;">
 
@@ -667,12 +667,12 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                    <a href="#" class="flex-1 btn-small btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               hover:bg-muted-purple hover:text-bg hover:border-transparent">
                         More info
                     </a>
                 </div>
@@ -681,7 +681,7 @@
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 450ms;">
 
@@ -707,12 +707,12 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                    <a href="#" class="flex-1 btn-small btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               hover:bg-muted-purple hover:text-bg hover:border-transparent">
                         More info
                     </a>
                 </div>
@@ -722,7 +722,7 @@
 
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 0ms;">
 
@@ -748,12 +748,12 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                    <a href="#" class="flex-1 btn-small btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               hover:bg-muted-purple hover:text-bg hover:border-transparent">
                         More info
                     </a>
                 </div>
@@ -762,7 +762,7 @@
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 150ms;">
 
@@ -788,12 +788,12 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                    <a href="#" class="flex-1 btn-small btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               hover:bg-muted-purple hover:text-bg hover:border-transparent">
                         More info
                     </a>
                 </div>
@@ -802,7 +802,7 @@
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 300ms;">
 
@@ -828,12 +828,12 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                    <a href="#" class="flex-1 btn-small btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               hover:bg-muted-purple hover:text-bg hover:border-transparent">
                         More info
                     </a>
                 </div>
@@ -842,7 +842,7 @@
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 450ms;">
 
@@ -868,12 +868,12 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                    <a href="#" class="flex-1 btn-small btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               hover:bg-muted-purple hover:text-bg hover:border-transparent">
                         More info
                     </a>
                 </div>
@@ -883,7 +883,7 @@
 
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 0ms;">
 
@@ -909,12 +909,12 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                    <a href="#" class="flex-1 btn-small btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               hover:bg-muted-purple hover:text-bg hover:border-transparent">
                         More info
                     </a>
                 </div>
@@ -923,7 +923,7 @@
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 150ms;">
 
@@ -949,12 +949,12 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                    <a href="#" class="flex-1 btn-small btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               hover:bg-muted-purple hover:text-bg hover:border-transparent">
                         More info
                     </a>
                 </div>
@@ -963,7 +963,7 @@
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 300ms;">
 
@@ -989,12 +989,12 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                    <a href="#" class="flex-1 btn-small btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               hover:bg-muted-purple hover:text-bg hover:border-transparent">
                         More info
                     </a>
                 </div>
@@ -1003,7 +1003,7 @@
         </div>
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.30="shown = true"
+             x-intersect.once.margin.-5%="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 450ms;">
 
@@ -1029,12 +1029,12 @@
                 </div>
 
                 <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a href="#" class="flex-[2] btn-48 bg-card-pink text-white py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center hover:bg-hover-btn transition-all">
+                    <a href="#" class="flex-[2] bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition">
                         Book a consultation
                     </a>
 
-                    <a href="#" class="flex-1 btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
-               group-hover:bg-muted-purple group-hover:text-white group-hover:border-transparent">
+                    <a href="#" class="flex-1 btn-small btn-48 border border-primary/30 text-primary py-4 px-2 rounded-[1.5rem] font-sans font-bold text-center transition-all
+               hover:bg-muted-purple hover:text-bg hover:border-transparent">
                         More info
                     </a>
                 </div>
