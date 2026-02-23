@@ -397,7 +397,7 @@
     </div>
 </header>
 
-<section class="mb-20 2xl:mb-24 relative min-h-screen flex items-center px-4 lg:px-25 overflow-hidden">
+<section class="mb-12 sm:mb-20 2xl:mb-24 sm:pb-0 pb-[25%] px-4 lg:px-25 relative min-h-screen flex sm:items-center items-end overflow-hidden">
 
     <div class="absolute inset-0 z-0"
          x-data="{ zoomOut: false }"
@@ -414,7 +414,7 @@
         </picture>
     </div>
 
-    <div class="relative z-10 max-w-[1920px] mx-auto w-full pt-[35%] sm:pt-0">
+    <div class="relative z-10 max-w-[1920px] mx-auto w-full">
         <div class="max-w-[1100px] reveal-hidden"
              x-data="{ shown: false }"
              x-init="setTimeout(() => shown = true, 150)"
@@ -442,9 +442,9 @@
         </div>
     </div>
 </section>
-<section class="py-20 2xl:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto" x-data>
+<section class="py-12 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto" x-data>
 
-    <div class="text-center mb-16 lg:mb-20 reveal-hidden"
+    <div class="text-center mb-10 sm:mb-16 lg:mb-20 reveal-hidden"
          x-data="{ shown: false }"
          x-intersect.once.threshold.50="shown = true"
          :class="shown ? 'reveal-visible' : 'reveal-hidden'">
@@ -453,14 +453,14 @@
             Support that meets <br>
             you where you are
         </h2>
-        <p class="font-sans text-fluid-24 text-card-purple max-w-2xl mt-8 mx-auto">
+        <p class="font-sans text-fluid-24 text-card-purple max-w-2xl mt-4 sm:mt-8 mx-auto">
             Thoughtful therapy for sex, intimacy, and relationships in all their forms.
         </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
-        <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[3/4.5] cursor-pointer reveal-hidden"
+        <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl sm:aspect-[3/4.5] aspect-[4/4.5] cursor-pointer reveal-hidden"
            x-data="{ shown: false }"
            x-intersect.once.threshold.20="shown = true"
            :class="shown ? 'reveal-visible' : 'reveal-hidden'"
@@ -500,7 +500,7 @@
             </div>
         </a>
 
-        <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[3/4.5] cursor-pointer reveal-hidden"
+        <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl sm:aspect-[3/4.5] aspect-[4/4.5] cursor-pointer reveal-hidden"
            x-data="{ shown: false }"
            x-intersect.once.threshold.20="shown = true"
            :class="shown ? 'reveal-visible' : 'reveal-hidden'"
@@ -540,7 +540,7 @@
             </div>
         </a>
 
-        <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[3/4.5] cursor-pointer reveal-hidden"
+        <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl sm:aspect-[3/4.5] aspect-[4/4.5] cursor-pointer reveal-hidden"
            x-data="{ shown: false }"
            x-intersect.once.threshold.20="shown = true"
            :class="shown ? 'reveal-visible' : 'reveal-hidden'"
@@ -582,7 +582,7 @@
             </div>
         </a>
 
-        <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[3/4.5] cursor-pointer reveal-hidden"
+        <a href="#" class="group relative overflow-hidden rounded-2xl md:rounded-3xl sm:aspect-[3/4.5] aspect-[4/4.5] cursor-pointer reveal-hidden"
            x-data="{ shown: false }"
            x-intersect.once.threshold.20="shown = true"
            :class="shown ? 'reveal-visible' : 'reveal-hidden'"
@@ -622,7 +622,7 @@
 
     </div>
 </section>
-<section class="py-20 2xl:py-24 px-4 lg:px-25 lg:mt-22 max-w-[1920px] mx-auto relative" x-data>
+<section class="py-12 sm:py-24 px-4 lg:px-25 lg:mt-22 max-w-[1920px] mx-auto relative" x-data>
 
     <div class="absolute -bottom-[43%] 2xl:-bottom-[36%] -left-[14%] w-[60%] lg:w-[60%] pointer-events-none z-0">
         <svg width="1515" height="1419" viewBox="0 0 1515 1419" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
@@ -646,7 +646,7 @@
             </defs>
         </svg>
     </div>
-    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-16 lg:gap-4 z-10 relative">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10 sm:gap-16 lg:gap-4 z-10 relative">
 
         <div class="w-full lg:w-1/2 flex flex-col justify-between lg:self-stretch reveal-hidden"
              x-data="{ shown: false }"
@@ -654,7 +654,7 @@
              :class="shown ? 'reveal-visible' : 'reveal-hidden'">
 
             <div class=" lg:max-w-[81%]">
-            <h2 class="font-sans text-fluid-h2 text-primary leading-none mb-8">
+            <h2 class="font-sans text-fluid-h2 text-primary leading-none mb-4 sm:mb-8">
                 Common reasons <br>
                 people reach out
             </h2>
@@ -704,7 +704,7 @@
                 </a>
             </div>
 
-            <div class="mt-10">
+            <div class="mt-6 sm:mt-10">
                 <a href="#" class="font-bold text-fluid-20 underline underline-offset-4 2xl:underline-offset-5 decoration text-primary hover:text-card-pink transition-colors">
                     Explore All Topics
                 </a>
@@ -717,7 +717,7 @@
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 200ms;">
 
-            <div class="relative w-full aspect-square md:aspect-[4/3.4] lg:aspect-square md:rounded-2xl overflow-hidden">
+            <div class="relative w-full aspect-[4/4.5] sm:aspect-[4/3.4] lg:aspect-square rounded-2xl overflow-hidden">
                 <img src="/src/images/content/image1.webp"
                      alt="Couple Intimacy"
                      class="w-full h-full object-cover">
@@ -727,10 +727,10 @@
 
     </div>
 </section>
-<section class="py-30 2xl:py-38 px-4 lg:px-25 my-10 2xl:my-14 overflow-hidden relative text-bg" style="background: linear-gradient(180deg, #5A2251 0%, #894C7E 100%);"
+<section class="py-24 sm:py-30 2xl:py-38 px-4 lg:px-25 my-14 md:my-10 2xl:my-14 overflow-hidden relative text-bg" style="background: linear-gradient(180deg, #5A2251 0%, #894C7E 100%);"
          x-data>
 
-    <div class="absolute bottom-0 -left-[10%] md:left-0 w-full max-w-[36%] pointer-events-none">
+    <div class="absolute bottom-0 -left-[10%] md:left-0 w-full max-w-[36%] pointer-events-none opacity-0 md:opacity-100">
         <svg viewBox="0 0 707 533" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
             <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M523.551 104.185C523.958 104.185 524.342 104.184 524.749 104.207C626.715 114.784 706.57 201.17 707 305.969V306.852C707 381.006 675.212 449.952 630.333 510.335C540.689 631.011 398.84 717.486 354.277 742.854C347.02 746.976 342.34 749.491 340.87 750.261L333.387 754.224L325.971 750.17C324.433 749.309 319.256 746.455 311.253 741.744C265.357 714.791 125.995 627.093 37.2324 508.342C-7.94027 447.913 -40 379.443 -40 306.852C-40 305.81 -40.0003 304.745 -39.9551 303.703C-38.3948 199.924 41.0307 114.716 142.273 104.207C142.748 104.184 143.223 104.185 143.698 104.185C245.461 104.185 327.961 186.832 327.961 288.777C327.961 383.044 257.421 460.823 166.329 471.989H166.352C166.352 471.989 267.367 471.897 333.149 471.876C398.926 471.855 499.947 471.876 499.947 471.876C409.331 460.257 339.288 382.705 339.288 288.777C339.288 186.832 421.788 104.185 523.551 104.185ZM333.495 0C375.949 0 410.366 34.4774 410.366 77.0078C410.366 119.538 375.949 154.016 333.495 154.016C291.041 154.015 256.625 119.538 256.625 77.0078C256.625 34.4775 291.041 0.000169806 333.495 0Z" fill="url(#paint0_linear_859_9669)" fill-opacity="0.5"/>
             <defs>
@@ -742,7 +742,7 @@
         </svg>
     </div>
 
-    <div class="relative z-10 max-w-[1920px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 text-fluid-36 text-bg">
+    <div class="relative z-10 max-w-[1920px] mx-auto flex flex-col lg:flex-row gap-10 sm:gap-12 lg:gap-20 text-fluid-36 text-bg">
 
         <div class="w-full lg:w-1/3 reveal-hidden"
              x-data="{ shown: false }"
@@ -770,10 +770,10 @@
         </div>
     </div>
 </section>
-<section class="py-20 2xl:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto" x-data="{ modalOpen: false, videoId: 'wWR0VD6qgt8' }">
+<section class="py-12 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto" x-data="{ modalOpen: false, videoId: 'wWR0VD6qgt8' }">
     <div class="lg:max-w-[84%] mx-auto text-center">
 
-        <div class="mb-16 lg:mb-20 reveal-hidden"
+        <div class="mb-10 sm:mb-16 lg:mb-20 reveal-hidden"
              x-data="{ shown: false }"
              x-intersect.once.threshold.50="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'">
@@ -846,9 +846,9 @@
     </div>
 
 </section>
-<section class="py-20 2xl:py-24 px-4 lg:px-25 lg:mt-22 max-w-[1920px] mx-auto" x-data>
+<section class="py-12 sm:py-24 px-4 lg:px-25 lg:mt-22 max-w-[1920px] mx-auto" x-data>
 
-    <div class="text-center mb-20 reveal-hidden"
+    <div class="text-center mb-10 sm:mb-20 reveal-hidden"
          x-data="{ shown: false }"
          x-intersect.once.threshold.50="shown = true"
          :class="shown ? 'reveal-visible' : 'reveal-hidden'">
@@ -857,19 +857,19 @@
         </h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-4">
 
         <div class="group cursor-pointer reveal-hidden"
              x-data="{ shown: false }"
              x-intersect.once.threshold.30="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 0ms;">
-            <div class="relative overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4] mb-4 sm:mb-6">
+            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
                 <img src="/src/images/content/team1.webp"
                      alt="Therapist"
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                     class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             </div>
-            <div class="flex justify-between items-center px-4 gap-2">
+            <div class="flex justify-between items-center sm:px-4 gap-2">
                 <div>
                     <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
                     <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
@@ -897,12 +897,12 @@
              x-intersect.once.threshold.30="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 150ms;">
-            <div class="relative overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4] mb-4 sm:mb-6">
+            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
                 <img src="/src/images/content/team2.webp"
                      alt="Therapist"
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                     class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             </div>
-            <div class="flex justify-between items-center px-4 gap-2">
+            <div class="flex justify-between items-center sm:px-4 gap-2">
                 <div>
                     <h3 class="font-sans text-fluid-28 leading-none text-primary">Mark Dobson</h3>
                     <p class="font-sans text-fluid-18 text-card-purple mt-3">Relationship Therapist</p>
@@ -930,12 +930,12 @@
              x-intersect.once.threshold.30="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 300ms;">
-            <div class="relative overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4] mb-4 sm:mb-6">
+            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
                 <img src="/src/images/content/team4.webp"
                      alt="Therapist"
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                     class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             </div>
-            <div class="flex justify-between items-center px-4 gap-2">
+            <div class="flex justify-between items-center sm:px-4 gap-2">
                 <div>
                     <h3 class="font-sans text-fluid-28 leading-none text-primary">Elena Rodriguez</h3>
                     <p class="font-sans text-fluid-18 text-card-purple mt-3">Clinical Psychologist</p>
@@ -963,12 +963,12 @@
              x-intersect.once.threshold.30="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
              style="transition-delay: 450ms;">
-            <div class="relative overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4] mb-4 sm:mb-6">
+            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
                 <img src="/src/images/content/team3.webp"
                      alt="Therapist"
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                     class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             </div>
-            <div class="flex justify-between items-center px-4 gap-2">
+            <div class="flex justify-between items-center sm:px-4 gap-2">
                 <div>
                     <h3 class="font-sans text-fluid-28 leading-none text-primary">James Carter</h3>
                     <p class="font-sans text-fluid-18 text-card-purple mt-3">Sex Therapist</p>
@@ -992,18 +992,18 @@
         </div>
     </div>
 
-    <div class="mt-16 lg:mt-20 flex justify-center reveal-hidden"
+    <div class="mt-10 sm:mt-16 lg:mt-20 flex justify-center reveal-hidden"
          x-data="{ shown: false }"
          x-intersect.once.threshold.50="shown = true"
          :class="shown ? 'reveal-visible' : 'reveal-hidden'"
          style="transition-delay: 600ms;">
         <a href="#"
-           class="bg-card-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition">
+           class="sm:w-auto w-full bg-card-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition">
             Meet all our therapists
         </a>
     </div>
 </section>
-<section class="py-20 2xl:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative" x-data>
+<section class="py-12 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative" x-data>
 
     <div class="text-center mb-10 lg:mb-20 relative z-10"
          x-data="{ shown: false }"
@@ -1039,29 +1039,29 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-14 relative z-10 mod_line">
 
-            <div class="bg-primary text-bg p-6 xl:p-8 rounded-xl md:rounded-3xl aspect-[4/4.1] flex flex-col justify-end relative reveal-hidden"
+            <div class="bg-primary text-bg p-6 xl:p-8 rounded-2xl md:rounded-3xl sm:aspect-[4/4.1] aspect-[4.9/4.1] flex flex-col justify-end relative reveal-hidden"
                  x-data="{ shown: false }"
                  x-intersect.once.half="shown = true"
                  :class="shown ? 'reveal-visible' : 'reveal-hidden'"
                  style="transition-delay: 0ms;">
 
-                <div class="absolute top-8 left-8">
+                <div class="absolute sm:top-8 sm:left-8 top-4 left-4">
                     <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M51.304 36C57.1959 34.8648 61.63 29.9298 61.63 24.013C61.63 17.2568 55.8487 11.7797 48.7172 11.7797C42.3257 11.7797 37.0329 16.1832 36.0002 21.9598C34.9674 16.1832 29.6746 11.7797 23.2831 11.7797C16.1513 11.7797 10.37 17.2568 10.37 24.013C10.37 29.9298 14.8043 34.8648 20.696 36C14.8041 37.1352 10.37 42.0703 10.37 47.9871C10.37 54.7434 16.1513 60.2203 23.283 60.2203C29.6743 60.2203 34.9671 55.817 36 50.0403C37.0327 55.817 42.3255 60.2203 48.717 60.2203C55.8487 60.2203 61.6299 54.7433 61.6299 47.9871C61.6299 42.0703 57.1959 37.1352 51.304 36ZM36 45.9339C35.1104 40.9581 31.0635 37.0006 25.87 36C31.0635 34.9994 35.1104 31.042 36 26.0663C36.8896 31.042 40.9366 34.9994 46.1302 36C40.9366 37.0006 36.8896 40.9581 36 45.9339Z"
                               fill="#F4ECE4"/>
                     </svg>
                 </div>
-                <h3 class="font-sans text-fluid-28 mb-4">Find a therapist</h3>
-                <p class="font-sans text-fluid-18  leading-[1.5]">Explore our therapists and see who feels like a good fit.</p>
+                <h3 class="font-sans text-[22px] sm:text-fluid-28 mb-4">Find a therapist</h3>
+                <p class="font-sans text-base sm:text-fluid-18 leading-[1.5">Explore our therapists and see who feels like a good fit.</p>
             </div>
 
-            <div class="bg-card-pink text-bg p-6 xl:p-8 rounded-xl md:rounded-3xl aspect-[4/4.1] flex flex-col justify-end relative lg:translate-y-12 xl:translate-y-24 reveal-hidden"
+            <div class="bg-card-pink text-bg p-6 xl:p-8 rounded-2xl md:rounded-3xl sm:aspect-[4/4.1] aspect-[4.9/4.1] flex flex-col justify-end relative lg:translate-y-12 xl:translate-y-24 reveal-hidden"
                  x-data="{ shown: false }"
                  x-intersect.once.half="shown = true"
                  :class="shown ? 'reveal-visible' : 'reveal-hidden'"
                  style="transition-delay: 150ms;">
 
-                <div class="absolute top-8 left-8">
+                <div class="absolute sm:top-8 sm:left-8 top-4 left-4">
                     <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M33.8114 10.2825V61.7175C48.2931 61.5851 59.9911 50.1219 59.9911 36C59.9911 21.8781 48.2931 10.4149 33.8114 10.2825Z"
                               fill="#F4ECE4"/>
@@ -1069,19 +1069,19 @@
                               fill="#F4ECE4"/>
                     </svg>
                 </div>
-                <h3 class="font-sans text-fluid-28 mb-4">Book a consultation</h3>
-                <p class="font-sans text-fluid-18  leading-[1.5]">Submit a short enquiry to request a free introductory call. <br
+                <h3 class="font-sans text-[22px] sm:text-fluid-28 mb-4">Book a consultation</h3>
+                <p class="font-sans text-base sm:text-fluid-18 leading-[1.5">Submit a short enquiry to request a free introductory call. <br
                         class="hidden 2xl:block">You can choose up to three therapists, or ask us to help you find a
                     match.</p>
             </div>
 
-            <div class="bg-card-muted text-bg p-6 xl:p-8 rounded-xl md:rounded-3xl aspect-[4/4.1] flex flex-col justify-end relative reveal-hidden"
+            <div class="bg-card-muted text-bg p-6 xl:p-8 rounded-2xl md:rounded-3xl sm:aspect-[4/4.1] aspect-[4.9/4.1] flex flex-col justify-end relative reveal-hidden"
                  x-data="{ shown: false }"
                  x-intersect.once.half="shown = true"
                  :class="shown ? 'reveal-visible' : 'reveal-hidden'"
                  style="transition-delay: 300ms;">
 
-                <div class="absolute top-8 left-8">
+                <div class="absolute sm:top-8 sm:left-8 top-4 left-4">
                     <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12.7546 36.0718V13.3828H12.9022C25.7425 13.3828 36.0738 23.4349 36.0738 35.9282C36.0738 48.4215 25.7425 58.4736 12.9022 58.4736H12.7546C12.7546 58.6172 12.7546 36.0718 12.7546 36.0718Z"
                               fill="#F4ECE4"/>
@@ -1089,25 +1089,25 @@
                               fill="#F4ECE4"/>
                     </svg>
                 </div>
-                <h3 class="font-sans text-fluid-28 mb-4">Introductory <br class="hidden 2xl:block"> conversation</h3>
-                <p class="font-sans text-fluid-18  leading-[1.5]">A therapist will be in touch to arrange an introductory call.</p>
+                <h3 class="font-sans text-[22px] sm:text-fluid-28 mb-4">Introductory <br class="hidden 2xl:block"> conversation</h3>
+                <p class="font-sans text-base sm:text-fluid-18 leading-[1.5">A therapist will be in touch to arrange an introductory call.</p>
             </div>
 
-            <div class="bg-card-light-pink text-bg p-6 xl:p-8 rounded-xl md:rounded-3xl aspect-[4/4.1] flex flex-col justify-end relative lg:translate-y-12 xl:translate-y-24 reveal-hidden"
+            <div class="bg-card-light-pink text-bg p-6 xl:p-8 rounded-2xl md:rounded-3xl sm:aspect-[4/4.1] aspect-[4.9/4.1] flex flex-col justify-end relative lg:translate-y-12 xl:translate-y-24 reveal-hidden"
                  x-data="{ shown: false }"
                  x-intersect.once.half="shown = true"
                  :class="shown ? 'reveal-visible' : 'reveal-hidden'"
                  style="transition-delay: 450ms;">
 
-                <div class="absolute top-8 left-8">
+                <div class="absolute sm:top-8 sm:left-8 top-4 left-4">
                     <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                               d="M50.4758 37.5078C51.6885 36.0718 52.4464 34.3486 52.4464 32.3382C52.4464 27.743 48.5053 23.8657 43.5032 23.8657H40.3201C44.1095 23.8657 47.2927 20.8501 47.2927 17.2601C47.2927 13.67 44.1095 10.6544 40.3201 10.6544C38.8043 10.6544 37.2885 11.2288 36.0758 12.0904C34.8632 11.2288 33.499 10.6544 31.8316 10.6544C28.0422 10.6544 24.859 13.67 24.859 17.2601C24.859 20.8501 28.0422 23.8657 31.8316 23.8657H28.6485C23.7979 23.8657 19.7053 27.5994 19.7053 32.3382C19.7053 34.3486 20.4632 36.0718 21.6758 37.5078C15.9158 38.6566 11.6716 43.5391 11.6716 49.2831C11.6716 55.8888 17.4316 61.3456 24.4043 61.3456H33.3474H38.8043H47.7474C54.7201 61.3456 60.4801 55.8888 60.4801 49.2831C60.3285 43.5391 56.0843 38.6566 50.4758 37.5078Z"
                               fill="#F4ECE4"/>
                     </svg>
                 </div>
-                <h3 class="font-sans text-fluid-28 mb-4">Begin therapy</h3>
-                <p class="font-sans text-fluid-18  leading-[1.5]">If you decide to continue, you book your first session and begin
+                <h3 class="font-sans text-[22px] sm:text-fluid-28 mb-4">Begin therapy</h3>
+                <p class="font-sans text-base sm:text-fluid-18 leading-[1.5">If you decide to continue, you book your first session and begin
                     therapy. <br class="hidden md:block"> From there, sessions and payments are arranged directly with
                     your therapist.</p>
             </div>
@@ -1115,7 +1115,7 @@
         </div>
     </div>
 </section>
-<section class="py-20 2xl:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative"
+<section class="py-12 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative overflow-hidden sm:overflow-visible"
          x-data="{
              active: 0,
              testimonials: [
@@ -1141,9 +1141,9 @@
          }">
 
 
-    <div class="absolute -bottom-[70%] md:-bottom-[100%] lg:-left-[40%] w-[60%] lg:w-[60%] pointer-events-none z-0">
+    <div class="absolute -bottom-[40%] sm:-bottom-[70%] md:-bottom-[100%] -left-[50%] lg:-left-[20%] w-[60%] lg:w-[60%] pointer-events-none z-0">
 
-        <svg class="w-[120%] lg:w-full" width="1204" height="1509" viewBox="0 0 1204 1509" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-[300%] sm:w-[120%] lg:w-full" width="1204" height="1509" viewBox="0 0 1204 1509" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_f_859_9811)">
                 <path d="M355.758 1352.65C371.009 1266.23 558.244 1007.35 640.012 961.767C721.78 916.185 738.525 1241.49 738.525 1241.49C738.525 1241.49 755.855 991.259 735.743 790.176C723.779 670.559 964.902 896.315 964.902 896.315C964.902 896.315 772.771 676.462 837.968 526.623C891.326 403.991 1047.72 410.153 1047.72 410.153L866.972 355.631L913.15 222.77C913.15 222.77 750.998 521.421 682.106 494.041C613.214 466.66 744.789 155.856 744.789 155.856L655.366 457.561C655.366 457.561 621.287 190.119 544.961 267.253C468.636 344.386 647.53 428.428 584.119 529.562C520.708 630.696 320.901 487.555 389.994 514.409C440.708 534.12 529.53 536.157 529.53 536.157C529.53 536.157 213.823 574.3 155.922 786.442C149.621 809.528 606.821 649.521 474.683 665.486C378.901 677.058 327.242 1127.13 335.624 1106.22C407.285 927.404 370.983 1026.34 451.274 935.407C716.923 634.532 355.758 1352.65 355.758 1352.65Z" fill="url(#paint0_linear_859_9811)" fill-opacity="0.3"/>
             </g>
@@ -1165,18 +1165,18 @@
         </svg>
 
     </div>
-    <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+    <div class="flex flex-col lg:flex-row gap-10 sm:gap-12 lg:gap-20 items-start">
 
         <div class="w-full lg:w-[35%] reveal-hidden"
              x-data="{ shown: false }"
              x-intersect.once.threshold.50="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'">
-            <h2 class="font-sans text-fluid-h2 leading-[1.1] text-primary max-w-[80%]">
+            <h2 class="font-sans text-fluid-h2 leading-[1.1] text-primary sm:max-w-[80%] sm:text-left text-center">
                 A space where people feel understood
             </h2>
         </div>
 
-        <div class="w-full lg:w-[58%] gap-10 flex flex-row justify-between relative reveal-hidden"
+        <div class="w-full lg:w-[58%] gap-6 sm:gap-10 flex flex-col sm:flex-row justify-between relative reveal-hidden"
              x-data="{ shown: false }"
              x-intersect.once.threshold.30="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'"
@@ -1199,12 +1199,12 @@
                             <span x-text="testimonial.text"></span>
                         </p>
 
-                        <p class="font-sans text-fluid-28 text-primary" x-text="testimonial.author"></p>
+                        <p class="font-sans text-[22px] sm:text-fluid-28 text-primary" x-text="testimonial.author"></p>
                     </div>
                 </template>
             </div>
 
-            <div class="flex gap-2 justify-end items-end md:justify-end arrows-slider">
+            <div class="flex gap-2 justify-center items-end sm:justify-end arrows-slider">
                 <button @click="prev()"
                         class="w-12 h-12 rounded-full border border-primary/70 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 group">
                     <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1225,28 +1225,28 @@
         </div>
     </div>
 </section>
-<section class="py-20 2xl:py-24 px-4 lg:px-25 lg:mt-22 max-w-[1920px] mx-auto" x-data>
+<section class="py-12 sm:py-24 px-4 lg:px-25 lg:mt-22 max-w-[1920px] mx-auto" x-data>
 
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-20 reveal-hidden"
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10 sm:mb-20 reveal-hidden"
          x-data="{ shown: false }"
          x-intersect.once.threshold.50="shown = true"
          :class="shown ? 'reveal-visible' : 'reveal-hidden'">
 
-        <div class="max-w-[80%] md:max-w-[60%]">
+        <div class="sm:max-w-[80%] md:max-w-[60%]">
             <h2 class="font-sans leading-none text-fluid-h2 text-primary">
                 From our therapists
             </h2>
-            <p class="font-sans text-fluid-24 text-card-purple max-w-2xl mt-8 mx-auto">
+            <p class="font-sans text-fluid-24 text-card-purple max-w-2xl mt-4 sm:mt-8 mx-auto">
                 Perspectives on intimacy, relationships and sexual wellbeing.
             </p>
         </div>
 
-        <a href="#" class="bg-card-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition">
+        <a href="#" class="hidden sm:inline-flex bg-card-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition">
             View all articles
         </a>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-4">
 
         <a href="#" class="group block cursor-pointer reveal-hidden"
            x-data="{ shown: false }"
@@ -1254,7 +1254,7 @@
            :class="shown ? 'reveal-visible' : 'reveal-hidden'"
            style="transition-delay: 0ms;">
 
-            <div class="relative overflow-hidden rounded-2xl aspect-[1.55/1] mb-4 sm:mb-6">
+            <div class="relative overflow-hidden rounded-2xl aspect-[1.7/1] sm:aspect-[1.55/1] mb-4 sm:mb-6">
                 <img src="/src/images/content/item1.jpg"
                      alt="Performance anxiety and erectile dysfunction"
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
@@ -1264,15 +1264,15 @@
                 </div>
             </div>
 
-            <div class="flex items-center gap-3 mb-4 author-desc">
-                <img src="/src/images/content/author1.webp" alt="Dr. Anna Lewis" class="w-13 h-13 rounded-full object-cover">
-                <span class="font-sans text-primary">Dr. Anna Lewis</span>
+            <div class="flex items-center gap-3 mb-3 sm:mb-4 author-desc">
+                <img src="/src/images/content/author1.webp" alt="Dr. Anna Lewis" class="sm:w-13 sm:h-13 w-10 h-10 rounded-full object-cover">
+                <span class="font-sans text-primary sm:text-fluid-16 text-base">Dr. Anna Lewis</span>
             </div>
 
-            <h3 class="font-sans text-fluid-28 text-primary mb-4 transition-colors duration-300 group-hover:text-card-pink">
+            <h3 class="font-sans text-[22px] sm:text-fluid-28 text-primary mb-3 sm:mb-4 transition-colors duration-300 group-hover:text-card-pink">
                 Performance anxiety and erectile dysfunction: what's the difference?
             </h3>
-            <p class="font-sans text-fluid-18 text-primary/70 leading-[1.5]">
+            <p class="font-sans text-base sm:text-fluid-18 text-primary/70 leading-[1.5]">
                 Many people use these terms interchangeably, but they describe different experiences. Understanding the distinction can help reduce shame and open up more helpful conversations.
             </p>
         </a>
@@ -1283,7 +1283,7 @@
            :class="shown ? 'reveal-visible' : 'reveal-hidden'"
            style="transition-delay: 150ms;">
 
-            <div class="relative overflow-hidden rounded-2xl aspect-[1.55/1] mb-4 sm:mb-6">
+            <div class="relative overflow-hidden rounded-2xl aspect-[1.7/1] sm:aspect-[1.55/1] mb-4 sm:mb-6">
                 <img src="/src/images/content/item2.jpg"
                      alt="Performance anxiety and erectile dysfunction"
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
@@ -1293,16 +1293,16 @@
                 </div>
             </div>
 
-            <div class="flex items-center gap-3 mb-4 author-desc">
-                <img src="/src/images/content/author2.webp" alt="Dr. Sofia Martinez" class="w-13 h-13 rounded-full object-cover">
-                <span class="font-sans text-primary">Dr. Sofia Martinez</span>
+            <div class="flex items-center gap-3 mb-3 sm:mb-4 author-desc">
+                <img src="/src/images/content/author2.webp" alt="Dr. Sofia Martinez" class="sm:w-13 sm:h-13 w-10 h-10 rounded-full object-cover">
+                <span class="font-sans text-primary sm:text-fluid-16 text-base">Dr. Sofia Martinez</span>
             </div>
 
 
-            <h3 class="font-sans text-fluid-28 text-primary mb-4 transition-colors duration-300 group-hover:text-card-pink">
+            <h3 class="font-sans text-[22px] sm:text-fluid-28 text-primary mb-3 sm:mb-4 transition-colors duration-300 group-hover:text-card-pink">
                 When desire changes: what's normal and when to seek support
             </h3>
-            <p class="font-sans text-fluid-18 text-primary/70 leading-[1.5]">
+            <p class="font-sans text-base sm:text-fluid-18 text-primary/70 leading-[1.5]">
                 Changes in sexual desire are common across relationships and life stages. This piece explores how desire shifts, why it happens, and how therapy can help you make sense of it.
             </p>
         </a>
@@ -1313,7 +1313,7 @@
            :class="shown ? 'reveal-visible' : 'reveal-hidden'"
            style="transition-delay: 300ms;">
 
-            <div class="relative overflow-hidden rounded-2xl aspect-[1.55/1] mb-4 sm:mb-6">
+            <div class="relative overflow-hidden rounded-2xl aspect-[1.7/1] sm:aspect-[1.55/1] mb-4 sm:mb-6">
                 <img src="/src/images/content/item3.jpg"
                      alt="Performance anxiety and erectile dysfunction"
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
@@ -1323,24 +1323,30 @@
                 </div>
             </div>
 
-            <div class="flex items-center gap-3 mb-4 author-desc">
-                <img src="/src/images/content/author3.webp" alt="Dr. James O'Connell" class="w-13 h-13 rounded-full object-cover">
-                <span class="font-sans text-primary">Dr. James O'Connell</span>
+            <div class="flex items-center gap-3 mb-3 sm:mb-4 author-desc">
+                <img src="/src/images/content/author3.webp" alt="Dr. James O'Connell" class="sm:w-13 sm:h-13 w-10 h-10 rounded-full object-cover">
+                <span class="font-sans text-primary sm:text-fluid-16 text-base">Dr. James O'Connell</span>
             </div>
 
-            <h3 class="font-sans text-fluid-28 text-primary mb-4 transition-colors duration-300 group-hover:text-card-pink">
+            <h3 class="font-sans text-[22px] sm:text-fluid-28 text-primary mb-3 sm:mb-4 transition-colors duration-300 group-hover:text-card-pink">
                 Pain during sex: why it happens and how therapy can help
             </h3>
-            <p class="font-sans text-fluid-18 text-primary/70 leading-[1.5]">
+            <p class="font-sans text-base sm:text-fluid-18 text-primary/70 leading-[1.5]">
                 Pain during sex is more common than many people realise. This article looks at possible factors involved and how a non-judgemental therapeutic approach can support healing.
             </p>
         </a>
 
     </div>
-</section>
-<section class="py-20 2xl:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto">
 
-    <div class="text-center mb-20 reveal-hidden"
+    <div class="flex sm:hidden mt-10">
+        <a href="#" class="w-full bg-card-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition">
+            View all articles
+        </a>
+    </div>
+</section>
+<section class="py-12 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto">
+
+    <div class="text-center mb-10 sm:mb-20 reveal-hidden"
          x-data="{ shown: false }"
          x-intersect.once.threshold.50="shown = true"
          :class="shown ? 'reveal-visible' : 'reveal-hidden'">
@@ -1357,9 +1363,9 @@
                      :class="open ? 'opacity-100' : 'opacity-0'"></div>
 
                 <div class="relative z-10">
-                    <button @click="open = !open" class="w-full text-left p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
+                    <button @click="open = !open" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
                         <span class="font-sans text-fluid-28 pr-4">Is the introductory call confidential?</span>
-                        <span class="shrink-0 flex items-center justify-center w-6 h-6">
+                        <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
                             <template x-if="!open">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1374,7 +1380,7 @@
                         </span>
                     </button>
                     <div x-show="open" x-collapse.duration.400ms.ease-out>
-                        <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
+                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6  font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
                             Yes. The introductory call is confidential and lasts around 15 minutes, giving you space to ask questions, get a sense of the therapist, and decide whether you’d like to continue.
                         </div>
                     </div>
@@ -1390,9 +1396,9 @@
                      :class="open ? 'opacity-100' : 'opacity-0'"></div>
 
                 <div class="relative z-10">
-                    <button @click="open = !open" class="w-full text-left p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
+                    <button @click="open = !open" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
                         <span class="font-sans text-fluid-28 pr-4">Do I have to commit to therapy after the consultation?</span>
-                        <span class="shrink-0 flex items-center justify-center w-6 h-6">
+                        <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
                             <template x-if="!open">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </template>
@@ -1402,7 +1408,7 @@
                         </span>
                     </button>
                     <div x-show="open" x-collapse.duration.400ms.ease-out>
-                        <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
+                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6  font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
                             No. The introductory call is a chance to explore whether working together feels right. You’re free to take your time and decide whether to continue.
                         </div>
                     </div>
@@ -1414,15 +1420,15 @@
             <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="open ? 'border-transparent' : 'border-primary/50'">
                 <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="open ? 'opacity-100' : 'opacity-0'"></div>
                 <div class="relative z-10">
-                    <button @click="open = !open" class="w-full text-left p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
+                    <button @click="open = !open" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
                         <span class="font-sans text-fluid-28 pr-4">Can I come on my own, or with my partner?</span>
-                        <span class="shrink-0 flex items-center justify-center w-6 h-6">
+                        <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
                             <template x-if="!open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
                             <template x-if="open"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
                         </span>
                     </button>
                     <div x-show="open" x-collapse.duration.400ms.ease-out>
-                        <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
+                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6  font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
                             We work with individuals as well as couples and people in a range of relationship structures. You can explore what feels most appropriate for you when you enquire.
                         </div>
                     </div>
@@ -1434,15 +1440,15 @@
             <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="open ? 'border-transparent' : 'border-primary/50'">
                 <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="open ? 'opacity-100' : 'opacity-0'"></div>
                 <div class="relative z-10">
-                    <button @click="open = !open" class="w-full text-left p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
+                    <button @click="open = !open" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
                         <span class="font-sans text-fluid-28 pr-4">How much does therapy cost?</span>
-                        <span class="shrink-0 flex items-center justify-center w-6 h-6">
+                        <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
                             <template x-if="!open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
                             <template x-if="open"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
                         </span>
                     </button>
                     <div x-show="open" x-collapse.duration.400ms.ease-out>
-                        <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
+                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6  font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
                             Individual therapy is £80 per session, and couples or relationship therapy is £130 per session. Some therapists may offer a limited number of lower-cost sessions after the first session, which can be discussed directly with them.
                         </div>
                     </div>
@@ -1454,15 +1460,15 @@
             <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="open ? 'border-transparent' : 'border-primary/50'">
                 <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="open ? 'opacity-100' : 'opacity-0'"></div>
                 <div class="relative z-10">
-                    <button @click="open = !open" class="w-full text-left p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
+                    <button @click="open = !open" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
                         <span class="font-sans text-fluid-28 pr-4">Are sessions online or in person?</span>
-                        <span class="shrink-0 flex items-center justify-center w-6 h-6">
+                        <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
                             <template x-if="!open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
                             <template x-if="open"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
                         </span>
                     </button>
                     <div x-show="open" x-collapse.duration.400ms.ease-out>
-                        <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
+                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6  font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
                             Sessions are primarily held online, allowing you to work with specialist therapists wherever you’re based in the UK or abroad. Some therapists also see clients in person. Any in-person availability will be clearly shown on individual therapist profiles.
                         </div>
                     </div>
@@ -1474,15 +1480,15 @@
             <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="open ? 'border-transparent' : 'border-primary/50'">
                 <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="open ? 'opacity-100' : 'opacity-0'"></div>
                 <div class="relative z-10">
-                    <button @click="open = !open" class="w-full text-left p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
+                    <button @click="open = !open" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="open ? 'text-bg' : 'text-primary'">
                         <span class="font-sans text-fluid-28 pr-4">What happens after the first session?</span>
-                        <span class="shrink-0 flex items-center justify-center w-6 h-6">
+                        <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
                             <template x-if="!open"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
                             <template x-if="open"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
                         </span>
                     </button>
                     <div x-show="open" x-collapse.duration.400ms.ease-out>
-                        <div class="px-8 pb-8 pt-0 font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
+                        <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6  font-sans text-fluid-24 leading-[1.6]" :class="open ? 'text-bg' : 'text-primary'">
                             If you decide to continue, ongoing sessions, arrangements and payments are made directly with your therapist, at a pace that feels right for you.
                         </div>
                     </div>
@@ -1492,7 +1498,7 @@
 
     </div>
 </section>
-<section class="relative section-fluid-height flex items-center py-20 px-4 lg:px-25 mt-16 overflow-hidden" x-data>
+<section class="py-40 sm:py-20 px-4 lg:px-25 mt-12 sm:mt-16 relative section-fluid-height flex items-center overflow-hidden" x-data>
 
     <div class="absolute inset-0 z-0">
         <img src="/src/images/CTA.webp"
@@ -1506,21 +1512,21 @@
              x-intersect.once.threshold.50="shown = true"
              :class="shown ? 'reveal-visible' : 'reveal-hidden'">
 
-            <h2 class="text-fluid-h2 text-bg leading-none mb-8">
-                Take the next step, <br>
-                when you’re ready
+            <h2 class="text-fluid-h2 text-bg leading-none mb-4 sm:mb-8">
+                Take the next<br class="sm:hidden block"> step, <br class="hidden sm:block">
+                when<br class="sm:hidden block"> you’re ready
             </h2>
 
-            <p class="font-sans text-fluid-24 text-bg max-w-lg ">
+            <p class="font-sans text-fluid-24 text-bg sm:max-w-lg max-w-[95%]">
                 Whether you’re clear about what you’re looking for or still finding the words, we’re here to help you move forward at your own pace.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 mt-14">
+            <div class="flex flex-col sm:flex-row gap-4 mt-10 sm:mt-14">
                 <a href="#" class="bg-card-pink border border-card-pink hover:border-card-light-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition">
                     Find a therapist
                 </a>
 
-                <a href="#" class="border border-bg/50 hover:border-card-light-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition">
+                <a href="#" class="border border-bg/50 hover:bg-muted-purple hover:text-white hover:border-transparent text-bg font-sans font-bold fluid-button rounded-full transition">
                     Have a question first? Contact us
                 </a>
             </div>
@@ -1528,14 +1534,14 @@
     </div>
 </section>
 
-<footer class="bg-primary pt-20 pb-10 px-4 lg:px-25 text-bg">
+<footer class="bg-primary pt-20 pb-20 sm:pb-10 px-4 lg:px-25 text-bg">
     <div class="max-w-[1920px] mx-auto">
 
-        <div class="flex flex-col xl:flex-row justify-between gap-12 xl:gap-24 mb-10">
+        <div class="flex flex-col lg:flex-row justify-between gap-10 sm:gap-12 lg:gap-24 mb-10">
 
-            <div class="xl:w-1/4 flex flex-col justify-between ">
-                <a href="/" class="inline-block mb-8">
-                    <img src="/src/images/logo.svg" alt="Intima Therapy" class="h-21 w-auto">
+            <div class="lg:w-1/4 flex flex-col justify-between ">
+                <a href="/" class="inline-block mb-10 sm:mb-8">
+                    <img src="/src/images/logo.svg" alt="Intima Therapy" class="h-17 sm:h-21 w-auto">
                 </a>
                 <div class="flex gap-1">
                     <a href="#" class="w-12 h-12 rounded-full bg-white/4 border border-white/10 flex items-center justify-center hover:bg-card-pink transition-colors">
@@ -1558,22 +1564,22 @@
                 </div>
             </div>
 
-            <div class="xl:w-3/4 flex flex-wrap justify-between gap-8 lg:gap-12">
+            <div class="xl:max-w-[70%] lg:w-3/4 flex flex-col md:flex-row md:flex-wrap justify-between gap-8 lg:gap-12">
 
                 <div class="flex flex-col gap-4 w-auto min-w-max">
-                    <h4 class="text-bg/50 text-fluid-18 mb-2">Therapies</h4>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Psychosexual therapy</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Couples & Relationship Therapy</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">LGBTQIA+ Affirming Therapy</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Kink-Affirming Therapy</a>
+                    <h4 class="text-bg/50 text-base sm:text-fluid-18 sm:mb-2">Therapies</h4>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Psychosexual therapy</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Couples & Relationship Therapy</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">LGBTQIA+ Affirming Therapy</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Kink-Affirming Therapy</a>
                 </div>
 
                 <div class="flex flex-col gap-4 w-auto min-w-max">
-                    <h4 class="text-bg/50 text-fluid-18 mb-2">What We Help With</h4>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Sexual Performance Anxiety</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Low Libido</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Pain During Sex</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors group flex items-center gap-2">
+                    <h4 class="text-bg/50 text-base sm:text-fluid-18 sm:mb-2">What We Help With</h4>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Sexual Performance Anxiety</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Low Libido</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Pain During Sex</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors group flex items-center gap-2">
                         View all
                         <span class="group-hover:translate-x-1 transition-transform">
                     <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1585,28 +1591,28 @@
                 </div>
 
                 <div class="flex flex-col gap-4 w-auto min-w-max">
-                    <h4 class="text-bg/50 text-fluid-18 mb-2">About us</h4>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Our Therapists</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">About</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Contact</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Resources</a>
+                    <h4 class="text-bg/50 text-base sm:text-fluid-18 sm:mb-2">About us</h4>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Our Therapists</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">About</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Contact</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Resources</a>
                 </div>
 
                 <div class="flex flex-col gap-4 w-auto min-w-max">
-                    <h4 class="text-bg/50 text-fluid-18 mb-2">Legals</h4>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-bg hover:text-card-pink transition-colors">Terms & Conditions</a>
+                    <h4 class="text-bg/50 text-base sm:text-fluid-18 sm:mb-2">Legals</h4>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-bg text-sm sm:text-fluid-16 hover:text-card-pink transition-colors">Terms & Conditions</a>
                 </div>
 
             </div>
         </div>
 
-        <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-6 pt-10 relative border-t border-white/5">
-            <p class="text-white/80">
+        <div class="flex flex-col sm:flex-col-reverse md:flex-row justify-between items-center gap-8 sm:gap-6 pt-10 relative border-t border-white/5">
+            <p class="text-sm sm:text-fluid-16 text-white/80">
                 © Copyright Intima Therapy 2026. All Rights Reserved.
             </p>
 
-            <a href="tel:0000000000" class="custom-height-fluid flex gap-2 items-center bg-card-pink text-white px-7 py-3.5 font-bold rounded-full font-bold hover:bg-hover-btn transition shadow-sm">
+            <a href="tel:0000000000" class="custom-height-fluid text-base sm:text-fluid-16 sm:w-auto w-full justify-center flex gap-2 items-center bg-card-pink text-white px-7 py-3.5 font-bold rounded-full font-bold hover:bg-card-pink-hover transition shadow-sm">
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.71797 8.85436C9.80452 8.79677 9.90408 8.76168 10.0076 8.75226C10.1112 8.74285 10.2154 8.75942 10.3109 8.80046L13.9953 10.4512C14.1195 10.5043 14.2231 10.5962 14.2907 10.7131C14.3583 10.8299 14.3862 10.9656 14.3703 11.0997C14.2489 12.0067 13.8023 12.8389 13.1133 13.4413C12.4244 14.0437 11.5402 14.3754 10.625 14.3747C7.80708 14.3747 5.10457 13.2553 3.11199 11.2627C1.11942 9.27011 1.10538e-06 6.5676 1.10538e-06 3.74968C-0.000698803 2.83452 0.330999 1.95026 0.933408 1.26134C1.53582 0.572425 2.36793 0.125741 3.275 0.00436499C3.40909 -0.0115645 3.54473 0.0163604 3.66162 0.0839604C3.77851 0.15156 3.87037 0.2552 3.92344 0.379365L5.57422 4.06686C5.61478 4.16157 5.6313 4.26484 5.6223 4.36748C5.6133 4.47012 5.57907 4.56894 5.52266 4.65515L3.85313 6.6403C3.7939 6.72966 3.75888 6.83286 3.75149 6.93981C3.74409 7.04676 3.76458 7.1538 3.81094 7.25046C4.45703 8.57311 5.82422 9.9239 7.15078 10.5637C7.24795 10.6099 7.35548 10.6299 7.46276 10.6218C7.57003 10.6138 7.67334 10.5778 7.7625 10.5176L9.71797 8.85436Z" fill="#F4ECE4"/>
                 </svg>

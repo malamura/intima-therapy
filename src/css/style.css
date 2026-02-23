@@ -22,9 +22,14 @@
 }
 
 @layer components {
-
     header nav li.active > a {
         opacity: .5;
+    }
+
+
+    .read-badge {
+        padding-block: clamp(0.1875rem, 0.3125vw, 0.175rem) !important;
+        padding-inline: clamp(0.4375rem, 0.629vw, 0.875rem) !important;
     }
 
     .no-bg:not(.active-menu) nav > div button.text-bg,
@@ -77,6 +82,10 @@
         letter-spacing: -0.02em;
     }
 
+    .text-fluid-16 {
+        font-size: clamp(0.718rem, 0.823vw, 1rem) !important;
+    }
+
     .text-fluid-hero {
         font-size: clamp(2.5rem, 5.2vw, 5.8rem);
         line-height: 1.05;
@@ -88,11 +97,7 @@
         height: clamp(2.625rem, 3vw, 3.5rem);
     }
 
-    .fluid-button {
-        padding: clamp(0.797rem, 1.1vw, 1.063rem) clamp(1.359rem, 2.75vw, 1.813rem) !important;
-        font-size: clamp(0.84rem, 1vw, 1.125rem); /* Зменшено на 25% на малих екранах */
-        line-height: 1;
-    }
+
 }
 
 /* --- FLUID LAYOUT OVERRIDES (SCALE 0.75) --- */
@@ -104,15 +109,19 @@
             padding-right: clamp(3.6875rem, 5.208vw, 6.25rem) !important;
         }
     }
-
-
     @media (min-width: 640px) {
         .last-item-blog {
             display: none;
         }
-
-        .leading-\[1\.5\] {
-            line-height: 1.3;
+        .fluid-button {
+            padding: clamp(0.797rem, 1.1vw, 1.063rem) clamp(1.359rem, 2.75vw, 1.813rem) !important;
+            font-size: clamp(0.84rem, 1vw, 1.125rem); /* Зменшено на 25% на малих екранах */
+            line-height: 1;
+        }
+        .play-btn svg {
+            width: clamp(1.75rem, 2.892vw, 2.75rem) !important;
+            height: clamp(1.75rem, 2.892vw, 2.75rem) !important;
+            margin-right: -8px;
         }
 
         .h-40.play-btn {
@@ -123,8 +132,11 @@
             width: clamp(6.125rem, 8.333vw, 10rem) !important;
         }
 
+        .leading-\[1\.5\] {
+            line-height: 1.3;
+        }
 
-        .gap-12 {
+        .sm\:gap-12 {
             /* Від 30px до 44px у діапазоні екранів 1440px-1920px */
             gap: clamp(1.875rem, -0.75rem + 2.917vw, 2.75rem);
         }
@@ -135,27 +147,11 @@
             height: clamp(1.6875rem, -0.75rem + 2.708vw, 2.5rem);
         }
 
-        /* --- КОНТЕЙНЕРИ ТА ПАДІНГИ --- */
-        /* lg:px-16 (64px -> 48px) */
-        /*.lg\:px-16 {*/
-        /*    padding-left: clamp(3rem, 3.33vw, 4rem) !important;*/
-        /*    padding-right: clamp(3rem, 3.33vw, 4rem) !important;*/
-        /*}*/
         .btn-small {
             padding: clamp(0.656rem, 0.83vw, 0.875rem) clamp(1rem, 1.2vw, 1.75rem) !important;
             font-size: clamp(0.718rem, 0.8vw, 1rem) !important;
             line-height: 1;
         }
-
-        .fluid-button {
-
-        }
-
-        .read-badge {
-            padding-block: clamp(0.1875rem, 0.3125vw, 0.175rem) !important;
-            padding-inline: clamp(0.4375rem, 0.629vw, 0.875rem) !important;
-        }
-
 
         /* Стрілочка в навігації (шеврон) */
         nav button svg {
@@ -195,23 +191,23 @@
         }
 
         /* py-20 (80px -> 60px) */
-        .py-20 {
+        .sm\:py-20 {
             padding-top: clamp(3.75rem, 4.167vw, 5rem) !important;
             padding-bottom: clamp(3.75rem, 4.167vw, 5rem) !important;
         }
 
         /* mb-16: 48px на 1440px -> 64px на 1920px */
-        .mb-16 {
+        .sm\:mb-16 {
             margin-bottom: clamp(3rem, 3.333vw, 4rem) !important;
         }
 
         /* lg:mb-20: 60px на 1440px -> 80px на 1920px */
         .lg\:mb-20,
-        .mb-20 {
+        .sm\:mb-20{
             margin-bottom: clamp(3.75rem, 4.167vw, 5rem) !important;
         }
 
-        .mt-16 {
+        .sm\:mt-16{
             margin-top: clamp(3rem, 3.333vw, 4rem) !important;
         }
 
@@ -221,7 +217,7 @@
 
 
         /* 2xl:py-24 (96px -> 72px) */
-        .\32 xl\:py-24 {
+        .sm\:py-24 {
             padding-top: clamp(4.5rem, 5vw, 6rem) !important;
             padding-bottom: clamp(4.5rem, 5vw, 6rem) !important;
         }
@@ -285,7 +281,7 @@
         }
 
         /* Якщо ти також використовуєш pb-10 або py-10, їх краще додати поруч */
-        .pb-10 {
+        .sm\:pb-10 {
             padding-bottom: clamp(1.875rem, 2.083vw, 2.5rem) !important;
         }
 
@@ -336,7 +332,7 @@
         }
 
         /* gap-4 (16px -> 12px) */
-        .gap-4 {
+        .sm\:gap-4 {
             gap: clamp(0.85rem, 0.83vw, 1rem) !important;
         }
 
@@ -349,7 +345,7 @@
             gap: clamp(0.375rem, 0.417vw, 0.5rem) !important;
         }
 
-        .gap-10 {
+        .sm\:gap-10 {
             gap: clamp(1.875rem, 2.083vw, 2.5rem) !important;
         }
 
@@ -379,16 +375,16 @@
         }
 
         /* w-6: 18px на 1440px -> 24px на 1920px */
-        .w-6 {
+        .sm\:w-6 {
             width: clamp(1.125rem, 1.25vw, 1.5rem) !important;
         }
 
         /* h-6: 18px на 1440px -> 24px на 1920px */
-        .h-6 {
+        .sm\:h-6 {
             height: clamp(1.125rem, 1.25vw, 1.5rem) !important;
         }
 
-        .h-21 {
+        .sm\:h-21 {
             height: clamp(3.75rem, 4.375vw, 5.25rem) !important;
         }
 
@@ -427,12 +423,6 @@
         footer .h-12,
         .arrows-slider .h-12 {
             height: clamp(2.25rem, 2.5vw, 3rem) !important;
-        }
-
-        .play-btn svg {
-            width: clamp(1.75rem, 2.892vw, 2.75rem) !important;
-            height: clamp(1.75rem, 2.892vw, 2.75rem) !important;
-            margin-right: -8px;
         }
 
 
@@ -478,13 +468,65 @@
     }
 
     @media (max-width: 640px) {
-        .fluid-button{
-            font-size: 20px;
+        .pb-10 {
+            padding-bottom: clamp(1.875rem, 2.083vw, 2.5rem) !important;
+        }
+        .mb-20 {
+            margin-bottom: clamp(3.75rem, 4.167vw, 5rem) !important;
+        }
+        .fluid-button {
+            padding: clamp(0.697rem, 1.1vw, 1.063rem) clamp(1.159rem, 2.75vw, 1.813rem) !important;
+        }
+        .mt-16 {
+            margin-top: clamp(3rem, 3.333vw, 4rem) !important;
+        }
+        .text-fluid-28{
+            font-size: 22px;
+        }
+
+        .gap-4 {
+            gap: clamp(0.85rem, 0.83vw, 1rem) !important;
+        }
+
+        /*.gap-10 {*/
+        /*    gap: clamp(1.875rem, 2.083vw, 2.5rem) !important;*/
+        /*}*/
+
+        .btn-fluid-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .play-btn svg {
+            width: 20px;
+            height: 20px;
+            margin-right: -4px;
+        }
+
+        .h-40.play-btn {
+            height: 64px !important;
+        }
+
+        .w-40.play-btn {
+            width: 64px !important;
+        }
+
+        .fluid-button:not(.hidden) {
             display: inline-flex;
+        }
+
+        .fluid-button {
+            font-size: 20px;
             height: 62px;
             align-content: center;
             align-items: center;
             justify-content: center;
+        }
+
+        .btn-small {
+            padding: clamp(0.656rem, 0.83vw, 0.875rem) clamp(0.9rem, 1.2vw, 1.75rem) !important;
+            font-size: clamp(0.718rem, 0.8vw, 1rem) !important;
+            line-height: 1;
         }
 
     }
