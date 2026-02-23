@@ -11,8 +11,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 therapists: resolve(__dirname, 'our-therapists.html'),
-                // додайте сюди інші сторінки, якщо вони є, наприклад:
-                // about: resolve(__dirname, 'about.html'),
+                profile: resolve(__dirname, 'therapist-profile.html'),
             },
         },
     },
