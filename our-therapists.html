@@ -479,14 +479,14 @@
 
     <div class="flex flex-col-reverse lg:flex-row items-center lg:items-start lg:gap-4 gap-10 z-10 relative">
 
-        <div class="w-full lg:w-1/2 flex flex-col justify-between lg:self-stretch reveal-hidden"
-             x-data="{ shown: false }"
-             x-intersect.once.margin.-5%="shown = true"
-             :class="shown ? 'reveal-visible' : 'reveal-hidden'">
+        <div class="w-full lg:w-1/2 flex flex-col justify-between lg:self-stretch">
 
             <div class="lg:max-w-[81%]">
                 <ul class="flex flex-col gap-6 sm:gap-12">
-                    <li class="flex items-start sm:gap-5 gap-4">
+                    <li class="flex items-start sm:gap-5 gap-4 reveal-hidden"
+                        x-data="{ shown: false }"
+                        x-intersect.once.margin.-5%="shown = true"
+                        :class="shown ? 'reveal-visible' : 'reveal-hidden'">
                         <div class="shrink-0 mt-1">
                             <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="list-icon-svg">
                                 <g clip-path="url(#clip0_859_9837)">
@@ -500,7 +500,10 @@
                         </p>
                     </li>
 
-                    <li class="flex items-start sm:gap-5 gap-4">
+                    <li class="flex items-start sm:gap-5 gap-4 reveal-hidden"
+                        x-data="{ shown: false }"
+                        x-intersect.once.margin.-5%="shown = true"
+                        :class="shown ? 'reveal-visible' : 'reveal-hidden'">
                         <div class="shrink-0 mt-1">
                             <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="list-icon-svg">
                                 <g clip-path="url(#clip0_859_9837)"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.4717 5.62012C35.9732 6.19067 40.2815 10.8494 40.3047 16.501V16.5488C40.3046 20.5477 38.5894 24.2662 36.168 27.5225C31.3312 34.0302 23.6778 38.6935 21.2735 40.0615C20.8819 40.2838 20.6291 40.4194 20.5498 40.4609L20.1465 40.6748L19.7461 40.4561C19.6631 40.4096 19.3838 40.2559 18.9522 40.002C16.4758 38.5484 8.95628 33.8182 4.16703 27.4141C1.72993 24.1554 0.000161826 20.4633 3.72917e-05 16.5488C3.72917e-05 16.4927 -0.0004361 16.435 0.00199042 16.3789C0.0861622 10.7822 4.37237 6.18687 9.835 5.62012C9.86039 5.61892 9.88578 5.61914 9.91117 5.61914C15.4017 5.61914 19.8533 10.0757 19.8536 15.5732C19.8536 20.6569 16.0477 24.8518 11.1328 25.4541H11.1338C11.1338 25.4541 16.5845 25.4494 20.1338 25.4482C23.6657 25.4471 29.0807 25.4482 29.1329 25.4482C24.2437 24.8215 20.4649 20.6385 20.4649 15.5732C20.4651 10.0757 24.9167 5.61914 30.4073 5.61914C30.429 5.61914 30.4499 5.6189 30.4717 5.62012ZM20.1534 0C22.444 0 24.3008 1.8597 24.3008 4.15332C24.3006 6.44678 22.4439 8.30566 20.1534 8.30566C17.8629 8.30559 16.0061 6.44673 16.0059 4.15332C16.0059 1.85975 17.8628 7.2076e-05 20.1534 0Z" fill="#D95F69"/></g>
@@ -510,7 +513,10 @@
                             As a collective, we are diverse in background, culture, and lived experience. What brings us together is a shared commitment to thoughtful, compassionate work, and to supporting people as they navigate intimacy, relationships, and change in their own way.
                         </p>
                     </li>
-                    <li class="flex items-start sm:gap-5 gap-4">
+                    <li class="flex items-start sm:gap-5 gap-4 reveal-hidden"
+                        x-data="{ shown: false }"
+                        x-intersect.once.margin.-5%="shown = true"
+                        :class="shown ? 'reveal-visible' : 'reveal-hidden'">
                         <div class="shrink-0 mt-1">
                             <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="list-icon-svg">
                                 <g clip-path="url(#clip0_859_9837)">
@@ -524,7 +530,10 @@
                         </p>
                     </li>
 
-                    <li class="flex items-start sm:gap-5 gap-4">
+                    <li class="flex items-start sm:gap-5 gap-4 reveal-hidden"
+                        x-data="{ shown: false }"
+                        x-intersect.once.margin.-5%="shown = true"
+                        :class="shown ? 'reveal-visible' : 'reveal-hidden'">
                         <div class="shrink-0 mt-1">
                             <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" class="list-icon-svg">
                                 <g clip-path="url(#clip0_859_9837)"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.4717 5.62012C35.9732 6.19067 40.2815 10.8494 40.3047 16.501V16.5488C40.3046 20.5477 38.5894 24.2662 36.168 27.5225C31.3312 34.0302 23.6778 38.6935 21.2735 40.0615C20.8819 40.2838 20.6291 40.4194 20.5498 40.4609L20.1465 40.6748L19.7461 40.4561C19.6631 40.4096 19.3838 40.2559 18.9522 40.002C16.4758 38.5484 8.95628 33.8182 4.16703 27.4141C1.72993 24.1554 0.000161826 20.4633 3.72917e-05 16.5488C3.72917e-05 16.4927 -0.0004361 16.435 0.00199042 16.3789C0.0861622 10.7822 4.37237 6.18687 9.835 5.62012C9.86039 5.61892 9.88578 5.61914 9.91117 5.61914C15.4017 5.61914 19.8533 10.0757 19.8536 15.5732C19.8536 20.6569 16.0477 24.8518 11.1328 25.4541H11.1338C11.1338 25.4541 16.5845 25.4494 20.1338 25.4482C23.6657 25.4471 29.0807 25.4482 29.1329 25.4482C24.2437 24.8215 20.4649 20.6385 20.4649 15.5732C20.4651 10.0757 24.9167 5.61914 30.4073 5.61914C30.429 5.61914 30.4499 5.6189 30.4717 5.62012ZM20.1534 0C22.444 0 24.3008 1.8597 24.3008 4.15332C24.3006 6.44678 22.4439 8.30566 20.1534 8.30566C17.8629 8.30559 16.0061 6.44673 16.0059 4.15332C16.0059 1.85975 17.8628 7.2076e-05 20.1534 0Z" fill="#D95F69"/></g>
