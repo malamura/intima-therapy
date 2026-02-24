@@ -332,7 +332,7 @@
             padding: clamp(1.875rem, 2.08vw, 2.5rem) !important;
         }
 
-        .p-6 {
+        .sm\:p-6 {
             padding: clamp(1.125rem, 1.25vw, 1.5rem) !important;
         }
 
