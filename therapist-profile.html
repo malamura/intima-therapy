@@ -13,7 +13,6 @@
 <body class="bg-bg text-primary antialiased overflow-x-hidden" x-data="{ shown: false }" x-cloak>
 <header
         class="absolute top-0 left-0 w-full z-50 border-b border-white/15 no-bg"
-        :class="{ 'active-menu': activeMenu !== null }"
         x-data="{
         activeMenu: null,
         mobileMenu: false,
@@ -37,10 +36,10 @@
     }"
         x-init="$watch('mobileMenu', value => {
         if (value) {
-            document.body.classList.add('overflow-hidden');
-        } else {
-            document.body.classList.remove('overflow-hidden');
-        }
+        document.body.classList.add('overflow-hidden', 'active-menu');
+    } else {
+        document.body.classList.remove('overflow-hidden', 'active-menu');
+    }
     })"
         @mouseleave="closeMenu()"
 >
@@ -499,8 +498,9 @@
     </div>
 </header>
 
-<section class="pt-24 md:pt-32 px-5 lg:px-25 max-w-[1920px] mx-auto text-primary"
+<section class="pt-24 md:pt-32 px-5 lg:px-25 max-w-[1920px] mx-auto"
          x-data="{ modalOpen: false, videoId: 'wWR0VD6qgt8' }">
+
     <div class="flex flex-col md:flex-row gap-8 lg:gap-16">
 
         <div class="hidden md:flex profile-left max-w-[420px] shrink-0 relative mx-auto lg:mx-0 reveal-hidden"

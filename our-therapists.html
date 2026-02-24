@@ -13,7 +13,6 @@
 <body class="bg-bg text-primary antialiased overflow-x-hidden">
 <header
         class="absolute top-0 left-0 w-full z-50 border-b border-white/15 no-bg"
-        :class="{ 'active-menu': activeMenu !== null }"
         x-data="{
         activeMenu: null,
         mobileMenu: false,
@@ -37,10 +36,10 @@
     }"
         x-init="$watch('mobileMenu', value => {
         if (value) {
-            document.body.classList.add('overflow-hidden');
-        } else {
-            document.body.classList.remove('overflow-hidden');
-        }
+        document.body.classList.add('overflow-hidden', 'active-menu');
+    } else {
+        document.body.classList.remove('overflow-hidden', 'active-menu');
+    }
     })"
         @mouseleave="closeMenu()"
 >

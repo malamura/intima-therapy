@@ -47,6 +47,10 @@
         fill: var(--color-primary) !important;
     }
 
+    .active-menu .no-bg .logo svg path.name-logo {
+        fill: #fff !important;
+    }
+
     .bg-faq-gradient {
         background: linear-gradient(180deg, #76426E 0%, #894C7E 100%) !important;
     }
