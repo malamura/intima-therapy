@@ -152,6 +152,9 @@
 
 
     @media (min-width: 640px) {
+       header nav a{
+        font-size: clamp(0.763rem, 0.874vw, 1.063rem) !important;
+    }
         .play-btn.small-play.w-20 {
             /* 60px на 1440px та 80px на 1920px */
             width: clamp(3.75rem, 4.166vw, 5rem) !important;

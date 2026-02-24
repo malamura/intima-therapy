@@ -557,7 +557,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col lg:flex-row gap-6 sm:gap-12 justify-between items-start">
+            <div class="flex flex-col lg:flex-row gap-6 sm:gap-12 justify-between lg:items-end">
 
                 <ul class="space-y-3 font-sans text-fluid-24 flex-1 reveal-hidden"
                     x-data="{ shown: false }"
@@ -565,7 +565,7 @@
                     :class="shown ? 'reveal-visible' : 'reveal-hidden'"
                     style="transition-delay: 150ms;">
 
-                    <li class="flex items-center sm:gap-4 profile-icon">
+                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.67]">
                         <div class="w-8 h-8 flex items-center justify-center shrink-0">
                             <svg class="w-auto" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1_37393)">
@@ -591,7 +591,7 @@
                                class="underline underline-offset-4 decoration-primary hover:decoration-primary/40 transition-colors">BACP</a>
                         </div>
                     </li>
-                    <li class="flex items-center sm:gap-4 profile-icon">
+                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.67]">
                         <div class="w-8 h-8 flex items-center justify-center shrink-0">
                             <svg class="w-auto" viewBox="0 0 32 32" stroke="currentColor" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -608,7 +608,7 @@
                         </div>
                         <span>English, Portuguese</span>
                     </li>
-                    <li class="flex items-center sm:gap-4 profile-icon">
+                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.67]">
                         <div class="w-8 h-8 flex items-center justify-center shrink-0">
                             <svg class="w-auto" stroke="currentColor" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1_37411)">
@@ -621,7 +621,7 @@
                         </div>
                         <span>Online</span>
                     </li>
-                    <li class="flex items-center sm:gap-4 profile-icon">
+                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.67]">
                         <div class="w-8 h-8 flex items-center justify-center shrink-0">
                             <svg class="w-auto" stroke="currentColor" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1_37418)">
@@ -780,7 +780,7 @@
                  x-intersect.once.margin.-5%="shown = true"
                  :class="shown ? 'reveal-visible' : 'reveal-hidden'">
                 <h2 class="font-sans text-[26px] leading-none mb-6 sm:text-fluid-36 sm:mb-8">Areas of special interest</h2>
-                <ul class="list-disc pl-5 space-y-3 font-sansmarker:text-primary">
+                <ul class="list-disc pl-5 space-y-4 font-sansmarker:text-primary">
                     <li>Trauma, PTSD, and adverse life experiences</li>
                     <li>LGBTQIA+ and neurodiversity affirming therapy</li>
                     <li>Life transitions, stress and low self-esteem</li>
