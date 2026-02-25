@@ -78,7 +78,7 @@
             </a>
 
             <div class="flex justify-between items-center lg:gap-14">
-                <nav class="hidden lg:flex items-center gap-8">
+                <nav class="hidden lg:flex items-center sm:gap-8">
 
                     <div class="static h-full flex items-center"
                          @mouseenter="openMenu('therapies')"
@@ -347,7 +347,7 @@
 
                 <div class="flex items-center gap-6 z-50 relative">
                     <a href="#"
-                       class="hidden lg:block bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition shadow-sm">
+                       class="hidden lg:block bg-card-pink text-bg btn-small watch-video font-bold rounded-full font-bold hover:bg-hover-btn transition shadow-sm">
                         Book a consultation
                     </a>
 
@@ -565,7 +565,7 @@
                     :class="shown ? 'reveal-visible' : 'reveal-hidden'"
                     style="transition-delay: 150ms;">
 
-                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.67]">
+                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.5]">
                         <div class="w-8 h-8 flex items-center justify-center shrink-0">
                             <svg class="w-auto" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1_37393)">
@@ -591,7 +591,7 @@
                                class="underline underline-offset-4 decoration-primary hover:decoration-primary/40 transition-colors">BACP</a>
                         </div>
                     </li>
-                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.67]">
+                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.5]">
                         <div class="w-8 h-8 flex items-center justify-center shrink-0">
                             <svg class="w-auto" viewBox="0 0 32 32" stroke="currentColor" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -608,7 +608,7 @@
                         </div>
                         <span>English, Portuguese</span>
                     </li>
-                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.67]">
+                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.5]">
                         <div class="w-8 h-8 flex items-center justify-center shrink-0">
                             <svg class="w-auto" stroke="currentColor" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1_37411)">
@@ -621,7 +621,7 @@
                         </div>
                         <span>Online</span>
                     </li>
-                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.67]">
+                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.5]">
                         <div class="w-8 h-8 flex items-center justify-center shrink-0">
                             <svg class="w-auto" stroke="currentColor" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1_37418)">
@@ -643,12 +643,12 @@
                      style="transition-delay: 300ms;">
 
                     <div class="flex justify-between items-center">
-                        <span class="font-sans text-base sm:text-fluid-18 opacity-70">Couple/Relationship</span>
-                        <span class="font-sans font-bold text-lg sm:text-fluid-20 underline underline-offset-3 sm:no-underline">£120</span>
+                        <span class="font-sans text-base sm:text-fluid-18 opacity-70 leading-[1.4]">Couple/Relationship</span>
+                        <span class="font-sans font-bold text-lg sm:text-fluid-20 underline underline-offset-3 sm:no-underline leading-[1.4]">£120</span>
                     </div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="font-sans text-base sm:text-fluid-18 opacity-70">Individuals</span>
-                        <span class="font-sans font-bold text-lg sm:text-fluid-20 underline underline-offset-3 sm:no-underline">£80</span>
+                    <div class="flex justify-between items-center mb-4 sm:mb-4">
+                        <span class="font-sans text-base sm:text-fluid-18 opacity-70 leading-[1.4]">Individuals</span>
+                        <span class="font-sans font-bold text-lg sm:text-fluid-20 underline underline-offset-3 sm:no-underline leading-[1.4]">£80</span>
                     </div>
 
                     <a href="#"
@@ -780,7 +780,7 @@
                  x-intersect.once.margin.-5%="shown = true"
                  :class="shown ? 'reveal-visible' : 'reveal-hidden'">
                 <h2 class="font-sans text-[26px] leading-none mb-6 sm:text-fluid-36 sm:mb-8">Areas of special interest</h2>
-                <ul class="list-disc pl-5 space-y-4 font-sansmarker:text-primary">
+                <ul class="list-disc pl-5 space-y-2 font-sans marker:text-primary">
                     <li>Trauma, PTSD, and adverse life experiences</li>
                     <li>LGBTQIA+ and neurodiversity affirming therapy</li>
                     <li>Life transitions, stress and low self-esteem</li>
@@ -899,10 +899,14 @@
                     <h3 class="font-sans leading-[1.2] text-[22px] sm:text-fluid-28 text-primary mb-3 sm:mb-4 transition-colors duration-300 group-hover:text-card-pink">
                         Performance anxiety and erectile dysfunction: what's the difference?
                     </h3>
-                    <p class="font-sans text-base sm:text-fluid-18 text-primary/70 leading-[1.5]">
+                    <p class="font-sans text-base sm:text-fluid-18 text-primary/70 leading-[1.5] mb-3 sm:mb-4">
                         Many people use these terms interchangeably, but they describe different experiences.
                         Understanding the distinction can help reduce shame and open up more helpful conversations.
                     </p>
+                    <div class="flex items-center font-sans text-primary sm:text-fluid-16 text-base">
+                        May 28, 2025
+                    </div>
+
                 </a>
 
                 <a href="#" class="group block cursor-pointer reveal-hidden"
@@ -931,10 +935,13 @@
                     <h3 class="font-sans leading-[1.2] text-[22px] sm:text-fluid-28 text-primary mb-3 sm:mb-4 transition-colors duration-300 group-hover:text-card-pink">
                         When desire changes: what's normal and when to seek support
                     </h3>
-                    <p class="font-sans text-base sm:text-fluid-18 text-primary/70 leading-[1.5]">
+                    <p class="font-sans text-base sm:text-fluid-18 text-primary/70 leading-[1.5] mb-3 sm:mb-4">
                         Changes in sexual desire are common across relationships and life stages. This piece explores
                         how desire shifts, why it happens, and how therapy can help you make sense of it.
                     </p>
+                    <div class="flex items-center font-sans text-primary sm:text-fluid-16 text-base">
+                        May 28, 2025
+                    </div>
                 </a>
 
                 <a href="#" class="group block cursor-pointer reveal-hidden last-item-blog"
@@ -962,10 +969,13 @@
                     <h3 class="font-sans leading-[1.2] text-[22px] sm:text-fluid-28 text-primary mb-3 sm:mb-4 transition-colors duration-300 group-hover:text-card-pink">
                         Pain during sex: why it happens and how therapy can help
                     </h3>
-                    <p class="font-sans text-base sm:text-fluid-18 text-primary/70 leading-[1.5]">
+                    <p class="font-sans text-base sm:text-fluid-18 text-primary/70 leading-[1.5] mb-3 sm:mb-4">
                         Pain during sex is more common than many people realise. This article looks at possible factors
                         involved and how a non-judgemental therapeutic approach can support healing.
                     </p>
+                    <div class="flex items-center font-sans text-primary sm:text-fluid-16 text-base">
+                        May 28, 2025
+                    </div>
                 </a>
 
             </div>

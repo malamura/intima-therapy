@@ -141,6 +141,12 @@
         transform: translateY(0);
     }
 
+    .watch-video svg {
+        /* 9px на 1440px та 13px на 1920px */
+        width: clamp(0.5625rem, -0.1875rem + 0.833vw, 0.8125rem) !important;
+        height: auto !important; /* зберігаємо пропорції */
+    }
+
     [x-cloak] { display: none !important; }
 
     @media (min-width: 640px) and (max-width: 1024px) {
@@ -152,6 +158,32 @@
 
 
     @media (min-width: 640px) {
+
+        .sm\:text-fluid-16 {
+            font-size: clamp(0.718rem, 0.823vw, 1rem) !important;
+        }
+        .sm\:text-fluid-18 {
+            font-size: clamp(0.875rem, 0.9375vw, 1.125rem) !important;
+            letter-spacing: -0.02em;
+        }
+        .sm\:text-fluid-20 {
+            /*font-size: clamp(1rem, 1.25vw, 1.25rem);*/
+            font-size: clamp(0.9375rem, 1.042vw, 1.25rem) !important;
+        }
+        .sm\:text-fluid-28 {
+            font-size: clamp(1.25rem, 1.5vw, 1.75rem);
+            letter-spacing: -0.03em;
+        }
+
+        .sm\:gap-8 {
+            gap: clamp(1.5rem, 1.66vw, 2rem) !important;
+        }
+
+        .sm\:p-10 {
+            /* 28px на 1440px та 40px на 1920px */
+            padding: clamp(1.75rem, -0.5rem + 2.5vw, 2.5rem) !important;
+        }
+
        header nav > a, header nav > div > button{
         font-size: clamp(0.763rem, 0.874vw, 1.063rem) !important;
     }
@@ -305,7 +337,6 @@
         }
 
         /* lg:mb-20: 60px на 1440px -> 80px на 1920px */
-        .lg\:mb-20,
         .sm\:mb-20 {
             margin-bottom: clamp(3.75rem, 4.167vw, 5rem) !important;
         }
@@ -337,8 +368,9 @@
         }
 
         /* p-8 (32px -> 24px) - Картки */
-        .p-8 {
-            padding: clamp(1.5rem, 1.66vw, 2rem) !important;
+        .sm\:p-8 {
+            padding: clamp(1rem, -2rem + 3.333vw, 2rem) !important;
+            /*padding: clamp(1.5rem, 1.66vw, 2rem) !important;*/
         }
 
         .px-8 {
@@ -390,6 +422,11 @@
 
         .sm\:pt-10 {
             padding-top: clamp(1.875rem, 2.083vw, 2.5rem) !important;
+        }
+
+        .sm\:mb-4 {
+            /* 12px на 1440px та 16px на 1920px */
+            margin-bottom: clamp(0.75rem, 0.833vw, 1rem) !important;
         }
 
 
@@ -535,6 +572,13 @@
         }
     }
     @media (min-width: 1024px) {
+        .lg\:mb-20{
+            margin-bottom: clamp(3.75rem, 4.167vw, 5rem) !important;
+        }
+        .lg\:gap-16 {
+            /* 50px на 1440px та 64px на 1920px */
+            gap: clamp(3.125rem, 0.5rem + 2.916vw, 4rem) !important;
+        }
         /* w-40: 130px на 1440px -> 160px на 1920px */
         .w-40.play-btn {
             width: clamp(8.125rem, 8.333vw, 10rem) !important;
