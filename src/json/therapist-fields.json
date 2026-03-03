@@ -1,0 +1,37 @@
+{
+  "key": "group_therapist_details",
+  "title": "Therapist Details",
+  "fields": [
+    {
+      "key": "field_th_eeat_group",
+      "label": "SEO & E-E-A-T Data",
+      "name": "seo_eeat",
+      "type": "group",
+      "sub_fields": [
+        { "key": "field_th_alumni", "label": "Education / University", "name": "alumni", "type": "text" },
+        { "key": "field_th_job_title", "label": "Professional Title", "name": "job_title", "type": "text" },
+        { "key": "field_th_clinical_focus", "label": "Clinical Focus", "name": "clinical_focus", "type": "textarea" }
+      ]
+    },
+    { "key": "field_th_pronouns", "label": "Pronouns", "name": "pronouns", "type": "text" },
+    { "key": "field_th_role", "label": "Role", "name": "role", "type": "text" },
+    { "key": "field_th_video", "label": "YouTube Video ID", "name": "video_id", "type": "text" },
+    { "key": "field_th_accr", "label": "Accreditations", "name": "accreditations", "type": "repeater", "sub_fields": [
+      { "key": "field_th_accr_name", "label": "Name", "name": "name", "type": "text" },
+      { "key": "field_th_accr_link", "label": "Link", "name": "link", "type": "url" }
+    ]},
+    { "key": "field_th_langs", "label": "Languages", "name": "languages", "type": "text" },
+    { "key": "field_th_location_online", "label": "Online Available?", "name": "online_available", "type": "true_false", "ui": 1 },
+    { "key": "field_th_location_person", "label": "In Person Location", "name": "in_person_location", "type": "text" },
+    { "key": "field_th_prices", "label": "Prices", "name": "prices", "type": "repeater", "sub_fields": [
+      { "key": "field_th_price_label", "label": "Label", "name": "label", "type": "text" },
+      { "key": "field_th_price_val", "label": "Value", "name": "value", "type": "text" }
+    ]},
+    { "key": "field_th_areas", "label": "Areas of special interest", "name": "special_interests", "type": "wysiwyg", "toolbar": "basic", "media_upload": 0 },
+    { "key": "field_th_testimonials", "label": "Testimonials", "name": "testimonials", "type": "repeater", "sub_fields": [
+      { "key": "field_th_test_text", "label": "Quote", "name": "quote", "type": "textarea" },
+      { "key": "field_th_test_author", "label": "Author Initials", "name": "author", "type": "text" }
+    ]}
+  ],
+  "location": [[{"param": "post_type", "operator": "==", "value": "therapist"}]]
+}

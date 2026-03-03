@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
           rel="stylesheet">
 </head>
-<body class="bg-bg text-primary antialiased overflow-x-hidden" x-data="{ shown: false }" x-cloak>
+<body class="bg-bg text-primary antialiased overflow-x-hidden">
 <header
         class="absolute top-0 left-0 w-full z-50 border-b border-white/15 no-bg"
         x-data="{
@@ -112,9 +112,9 @@
 
                                     <a href="#"
                                        class="group relative overflow-hidden rounded-3xl aspect-[4/3.4] block cursor-pointer">
-                                        <img src="/src/images/content/card5.webp"
+                                        <img src="/assets/card5-CZ4sQ97Q.webp"
                                              alt="Couples Therapy"
-                                             class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 transition-transform duration-700 group-hover:scale-105">
+                                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                                         <div class="absolute bottom-0 left-0 w-full p-8 flex items-end justify-between gap-3">
                                         <span class="text-bg text-fluid-24">
@@ -134,9 +134,9 @@
 
                                     <a href="#"
                                        class="group relative overflow-hidden rounded-3xl aspect-[4/3.4] block cursor-pointer">
-                                        <img src="/src/images/content/card2.jpg"
+                                        <img src="/assets/card2-DPZkX0Kz.jpg"
                                              alt="Psychosexual Therapy"
-                                             class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 transition-transform duration-700 group-hover:scale-105">
+                                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                                         <div class="absolute bottom-0 left-0 w-full p-8 flex items-end justify-between gap-3">
                                         <span class="text-bg text-fluid-24">
@@ -155,9 +155,9 @@
                                     </a>
                                     <a href="#"
                                        class="group relative overflow-hidden rounded-3xl aspect-[4/3.4] block cursor-pointer">
-                                        <img src="/src/images/content/card5-v2.webp"
+                                        <img src="/assets/card5-v2-Yy-nHTIt.webp"
                                              alt="Couples Therapy"
-                                             class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 transition-transform duration-700 group-hover:scale-105">
+                                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                                         <div class="absolute inset-0 bg-black/40 to-transparent opacity-100 transition-opacity duration-500"></div>
 
@@ -180,9 +180,9 @@
 
                                     <a href="#"
                                        class="group relative overflow-hidden rounded-3xl aspect-[4/3.4] block cursor-pointer">
-                                        <img src="/src/images/content/card8.webp"
+                                        <img src="/assets/card8-IFjXb_jy.webp"
                                              alt="Kink-Affirming Therapy"
-                                             class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 transition-transform duration-700 group-hover:scale-105">
+                                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                                         <div class="absolute bottom-0 left-0 w-full p-8 flex items-end justify-between gap-3">
                                         <span class="text-bg text-fluid-24">
@@ -347,7 +347,7 @@
 
                 <div class="flex items-center gap-6 z-50 relative">
                     <a href="#"
-                       class="hidden lg:block bg-card-pink text-bg btn-small watch-video font-bold rounded-full font-bold hover:bg-hover-btn transition shadow-sm">
+                       class="hidden lg:block bg-card-pink text-bg btn-small font-bold rounded-full font-bold hover:bg-hover-btn transition shadow-sm">
                         Book a consultation
                     </a>
 
@@ -497,372 +497,412 @@
         </div>
     </div>
 </header>
-
-<section class="pt-24 md:pt-32 px-5 lg:px-25 max-w-[1920px] mx-auto"
-         x-data="{ modalOpen: false, videoId: 'wWR0VD6qgt8' }">
-
-    <div class="flex flex-col md:flex-row gap-8 lg:gap-16">
-
-        <div class="hidden md:flex profile-left max-w-[420px] shrink-0 relative mx-auto lg:mx-0 reveal-hidden"
-             x-data="{ shown: false }"
-             x-intersect.once.margin.-5%="shown = true"
-             :class="shown ? 'reveal-visible' : 'reveal-hidden'">
-
-            <div class="relative rounded-3xl overflow-hidden aspect-[4/4.5] sm:aspect-[4/5] w-full cursor-pointer group"
-                 @click="modalOpen = true">
-                <img src="/src/images/content/team2.webp"
-                     alt="Hilton Mariano Da Silva"
-                     class="w-full h-full object-cover transition-opacity duration-700 transition-transform duration-700">
-
-                <button class="absolute bottom-6 right-6 bg-blue-gray text-bg hover:bg-blue-gray-hover btn-small font-bold rounded-full transition flex items-center gap-2 transition-colors duration-300 w-max z-10">
-                    <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.5 5.33161C11.1667 5.71651 11.1667 6.67876 10.5 7.06366L1.5 12.2598C0.833333 12.6447 1.29688e-06 12.1636 1.33053e-06 11.3938L1.78479e-06 1.00148C1.81844e-06 0.231677 0.833335 -0.249447 1.5 0.135453L10.5 5.33161Z"
-                              fill="#F4ECE4"/>
-                    </svg>
-                    Watch a video
-                </button>
-            </div>
+<div class="overflow-hidden lg:overflow-visible">
+    <section
+            class="py-10 sm:pt-24 lg:py-24 px-4 lg:px-25 mt-20 sm:mt-16 lg:mt-22 max-w-[1920px] mx-auto relative overflow-hidden"
+            x-data>
+        <div class="absolute -bottom-[43%] 2xl:-bottom-[36%] left-[15%] w-[60%] lg:w-[60%] pointer-events-none z-0 animate-float-slow opacity-60">
+            <svg width="1218" height="1296" viewBox="0 0 1218 1296" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-full h-auto">
+                <g filter="url(#filter0_f_859_9833)">
+                    <path d="M571.802 1139.86C557.345 1070.33 665.531 845.222 736.808 799.782C808.086 754.343..."
+                          fill="url(#paint0_linear_859_9833)" fill-opacity="0.15"/>
+                </g>
+            </svg>
         </div>
 
-        <div class="flex flex-col flex-1 justify-between lg:mt-0 gap-6 sm:gap-0">
+        <div class="block flex flex-col lg:flex-row items-stretch lg:gap-16 gap-4 sm:gap-10 z-10 relative">
 
-            <div class="md:mb-14 reveal-hidden"
+            <div class="w-full lg:w-1/2 lg:self-stretch"
                  x-data="{ shown: false }"
-                 x-intersect.once.margin.-5%="shown = true"
-                 :class="shown ? 'reveal-visible' : 'reveal-hidden'">
+                 x-intersect.once.margin.-10%="shown = true">
 
-                <h1 class="font-sans text-fluid-h2 font-normal">Hilton Mariano Da Silva</h1>
-                <p class="font-sans text-fluid-24 opacity-70 mt-3">He/him</p>
-                <p class="font-sans text-fluid-24 opacity-70 mt-3">Psychosexual & Relationship Therapist</p>
-            </div>
+                <div class="relative overflow-hidden rounded-3xl aspect-[1.2/1] sm:aspect-[1.7/1] xl:aspect-[1.2/1] lg:aspect-auto lg:h-full transition-all duration-1000 transform"
+                     :class="shown ? 'reveal-visible opacity-100 translate-y-0 scale-100' : 'reveal-hidden opacity-0 translate-y-10 scale-95'">
 
-            <div class="md:hidden flex shrink-0 relative mx-auto lg:mx-0 reveal-hidden"
-                 x-data="{ shown: false }"
-                 x-intersect.once.margin.-5%="shown = true"
-                 :class="shown ? 'reveal-visible' : 'reveal-hidden'">
+                    <img src="src/images/content/Rea_KS_semi-abstract_organic_flowing_forms_suggesting_human_f_4a17008a-5026-4c2b-a9a3-af18a64bc257_2.webp"
+                         alt="Performance anxiety and erectile dysfunction"
+                         class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
 
-                <div class="relative rounded-3xl overflow-hidden aspect-[4/5] w-full cursor-pointer group"
-                     @click="modalOpen = true">
-                    <img src="/src/images/content/team2.webp"
-                         alt="Hilton Mariano Da Silva"
-                         class="w-full h-full object-cover transition-opacity duration-700 transition-transform duration-700">
-
-                    <button class="absolute bottom-6 left-6 right-6 btn-48 bg-blue-gray text-bg hover:bg-blue-gray-hover btn-small font-bold rounded-full transition flex items-center justify-center gap-2 transition-colors duration-300 z-10 h-12">
-                        <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.5 5.33161C11.1667 5.71651 11.1667 6.67876 10.5 7.06366L1.5 12.2598C0.833333 12.6447 1.29688e-06 12.1636 1.33053e-06 11.3938L1.78479e-06 1.00148C1.81844e-06 0.231677 0.833335 -0.249447 1.5 0.135453L10.5 5.33161Z"
-                                  fill="#F4ECE4"/>
-                        </svg>
-                        Watch a video
-                    </button>
+                    <div class="text-fluid-16 absolute top-4 right-4 bg-white/15 backdrop-blur-sm text-white read-badge tag-item rounded-full border border-white/10">
+                        5 min read
+                    </div>
                 </div>
             </div>
 
-            <div class="flex flex-col lg:flex-row gap-6 sm:gap-12 justify-between lg:items-end">
+            <div class="w-full lg:w-1/2 flex flex-col justify-between lg:self-stretch flex-col gap-7 sm:gap-6 lg:gap-0"
+                 x-data="{ shown: false }"
+                 x-intersect.once.margin.-10%="shown = true">
 
-                <ul class="space-y-3 font-sans text-fluid-24 flex-1 reveal-hidden"
-                    x-data="{ shown: false }"
-                    x-intersect.once.margin.-5%="shown = true"
-                    :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                    style="transition-delay: 150ms;">
+                <div class="transition-all duration-1000 delay-200 transform flex flex-col"
+                     :class="shown ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'">
 
-                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.5]">
-                        <div class="w-8 h-8 flex items-center justify-center shrink-0">
-                            <svg class="w-full" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_1_37393)">
-                                    <path d="M1 12L16 4L31 12L16 20L1 12Z" stroke="#491E42" stroke-opacity="0.7"
-                                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M16 12L23 15.7338V30" stroke="#491E42" stroke-opacity="0.7"
-                                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M27 14.1337V20.7862C27.0006 21.0306 26.9116 21.2667 26.75 21.45C25.3375 23.0237 21.8875 26 16 26C10.1125 26 6.665 23.0237 5.25 21.45C5.08837 21.2667 4.99944 21.0306 5 20.7862V14.1337"
-                                          stroke="#491E42" stroke-opacity="0.7" stroke-width="2"
-                                          stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1_37393">
-                                        <rect width="32" height="32" fill="white"/>
-                                    </clipPath>
-                                </defs>
+                    <h1 class="font-sans leading-[1.2] text-[22px] sm:text-fluid-h2 text-primary mb-3 sm:mb-6 transition-colors duration-300 group-hover:text-card-pink">
+                        When desire changes: what’s normal and when to seek support
+                    </h1>
+
+                    <p class="font-sans text-base sm:text-fluid-24 text-primary/70 mb-3 sm:mb-4 line-clamp-3">
+                        Many people use these terms interchangeably, but they describe different experiences.
+                        Understanding the distinction can help reduce shame and open up more helpful conversations.
+                    </p>
+
+                    <div class="lg:mt-8 lg:mb-0 mb-4 flex flex-wrap gap-4 order-first lg:order-none">
+                        <div class="flex flex-wrap gap-1 font-bold">
+                            <a href=""
+                               class="bg-blue-gray/8 backdrop-blur-sm text-[#3C6180] read-badge tag-item rounded-full border border-blue-gray/16 inline-flex px-4 py-2 hover:bg-blue-gray/20 transition-colors duration-300">
+                                Article
+                            </a>
+                            <a href=""
+                               class="bg-blue-gray/8 backdrop-blur-sm text-[#3C6180] read-badge tag-item rounded-full border border-blue-gray/16 inline-flex px-4 py-2 hover:bg-blue-gray/20 transition-colors duration-300">
+                                Relationships
+                            </a>
+                        </div>
+                        <div class="order-first sm:order-none flex items-center font-sans text-primary sm:text-fluid-16 text-base sm:w-auto w-full opacity-60">
+                            May 28, 2025
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:mt-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 author-desc transition-all duration-700 delay-500"
+                     :class="shown ? 'opacity-100' : 'opacity-0'">
+                    <span class="font-sans text-primary sm:text-fluid-28 text-[22px]">Share this post</span>
+                    <div class="flex items-center gap-1">
+                        <a target="_blank" href="#"
+                           class="group flex items-center justify-center soc-btn w-12 h-12 rounded-full bg-blue-gray/10 hover:bg-blue-gray transition-colors duration-300">
+                            <svg class="w-5 h-5 text-blue-gray group-hover:text-white transition-colors duration-300"
+                                 viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M7.429 6.969H11.143V8.819C11.678 7.755 13.05 6.799 15.111 6.799C19.062 6.799 20 8.917 20 12.803V20H16V13.688C16 11.475 15.465 10.227 14.103 10.227C12.214 10.227 11.429 11.572 11.429 13.687V20H7.429V6.969ZM0.57 19.83H4.57V6.799H0.57V19.83ZM5.143 2.55C5.14315 2.88527 5.07666 3.21723 4.94739 3.52659C4.81812 3.83594 4.62865 4.11651 4.39 4.352C3.9064 4.83262 3.25181 5.10165 2.57 5.1C1.88939 5.09954 1.23631 4.8312 0.752 4.353C0.514211 4.11671 0.325386 3.83582 0.196344 3.52643C0.0673015 3.21704 0.000579132 2.88522 0 2.55C0 1.873 0.27 1.225 0.753 0.747C1.23689 0.268158 1.89024 -0.000299211 2.571 2.50264e-07C3.253 2.50264e-07 3.907 0.269 4.39 0.747C4.872 1.225 5.143 1.873 5.143 2.55Z"
+                                      fill="currentColor"/>
                             </svg>
-                        </div>
-                        <div class="flex flex-wrap gap-2 gap-y-1">
-                            <a target="_blank" rel="noopener noreferrer" href="#"
-                               class="underline underline-offset-4 decoration-primary hover:decoration-primary/40 transition-colors">MCOSRT</a>
-                            <a target="_blank" rel="noopener noreferrer" href="#"
-                               class="underline underline-offset-4 decoration-primary hover:decoration-primary/40 transition-colors">BACP</a>
-                        </div>
-                    </li>
-                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.5]">
-                        <div class="w-8 h-8 flex items-center justify-center shrink-0">
-                            <svg class="w-full" viewBox="0 0 32 32" stroke="currentColor" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_1_37401)">
-                                    <path d="M30 27L23 13L16 27" stroke="#491E42" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M18 23H28" stroke="#491E42" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 4V7" stroke="#491E42" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M4 7H20" stroke="#491E42" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M16 7C16 10.1826 14.7357 13.2348 12.4853 15.4853C10.2348 17.7357 7.1826 19 4 19" stroke="#491E42" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.68359 11C9.51092 13.34 11.0435 15.3659 13.0701 16.7987C15.0968 18.2314 17.5179 19.0005 19.9998 19" stroke="#491E42" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs><clipPath id="clip0_1_37401"><rect width="32" height="32" fill="white"/></clipPath></defs>
+                        </a>
+
+                        <a target="_blank" href="#"
+                           class="group flex items-center justify-center soc-btn w-12 h-12 rounded-full bg-blue-gray/10 hover:bg-blue-gray transition-colors duration-300">
+                            <svg class="w-5 h-5 text-blue-gray group-hover:text-white transition-colors duration-300"
+                                 viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.4066 17.6109C16.342 17.7286 16.2471 17.8267 16.1317 17.8951C16.0162 17.9636 15.8846 17.9998 15.7504 18H11.2504C11.1241 18 11 17.9681 10.8893 17.9073C10.7787 17.8465 10.6852 17.7587 10.6176 17.6522L6.82162 11.6869L1.30536 17.7544C1.17089 17.8988 0.984904 17.9845 0.787721 17.9927C0.590538 18.0009 0.398054 17.9311 0.252001 17.7984C0.105948 17.6657 0.0180975 17.4807 0.00749552 17.2836C-0.00310645 17.0866 0.064395 16.8933 0.195365 16.7456L5.9863 10.3706L0.117552 1.15313C0.0452725 1.03973 0.00481053 0.908984 0.000403041 0.774582C-0.00400445 0.64018 0.0278046 0.507066 0.0924997 0.389177C0.157195 0.271288 0.252396 0.172962 0.368134 0.104494C0.483873 0.0360256 0.615891 -6.53095e-05 0.750365 8.87202e-08H5.25036C5.37659 3.91221e-05 5.50077 0.0319361 5.61139 0.0927355C5.722 0.153535 5.81549 0.24127 5.88318 0.347813L9.67912 6.31312L15.1954 0.245625C15.3298 0.101174 15.5158 0.015547 15.713 0.00730857C15.9102 -0.00092985 16.1027 0.0688843 16.2487 0.201615C16.3948 0.334346 16.4826 0.519295 16.4932 0.716365C16.5038 0.913434 16.4363 1.10674 16.3054 1.25438L10.5144 7.62469L16.3832 16.8478C16.4551 16.9613 16.4951 17.0919 16.4993 17.2262C16.5034 17.3604 16.4714 17.4933 16.4066 17.6109Z"
+                                      fill="currentColor"/>
                             </svg>
-                        </div>
-                        <span>English, Portuguese</span>
-                    </li>
-                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.5]">
-                        <div class="w-8 h-8 flex items-center justify-center shrink-0">
-                            <svg class="w-full" stroke="currentColor" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_1_37411)">
-                                    <path d="M5 22V9C5 8.46957 5.21071 7.96086 5.58579 7.58579C5.96086 7.21071 6.46957 7 7 7H25C25.5304 7 26.0391 7.21071 26.4142 7.58579C26.7893 7.96086 27 8.46957 27 9V22" stroke="#491E42" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M3 22H29V24C29 24.5304 28.7893 25.0391 28.4142 25.4142C28.0391 25.7893 27.5304 26 27 26H5C4.46957 26 3.96086 25.7893 3.58579 25.4142C3.21071 25.0391 3 24.5304 3 24V22Z" stroke="#491E42" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M18 11H14" stroke="#491E42" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs><clipPath id="clip0_1_37411"><rect width="32" height="32" fill="white"/></clipPath></defs>
+                        </a>
+
+                        <a target="_blank" href="#"
+                           class="group flex items-center justify-center soc-btn w-12 h-12 rounded-full bg-blue-gray/10 hover:bg-blue-gray transition-colors duration-300">
+                            <svg class="w-5 h-5 text-blue-gray group-hover:text-white transition-colors duration-300"
+                                 viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 23.9999L1.687 17.837C0.645998 16.033 0.0989998 13.988 0.0999998 11.891C0.103 5.33499 5.43799 0 11.993 0C15.174 0.000999998 18.16 1.24 20.406 3.48799C22.6509 5.73599 23.8869 8.72398 23.8859 11.902C23.8829 18.459 18.548 23.7939 11.993 23.7939C10.003 23.7929 8.04198 23.2939 6.30499 22.346L0 23.9999ZM6.59698 20.193C8.27298 21.188 9.87298 21.784 11.989 21.785C17.437 21.785 21.875 17.351 21.878 11.9C21.88 6.43799 17.463 2.01 11.997 2.008C6.54498 2.008 2.11 6.44199 2.108 11.892C2.107 14.117 2.75899 15.783 3.85399 17.526L2.85499 21.174L6.59698 20.193ZM17.984 14.729C17.91 14.605 17.712 14.531 17.414 14.382C17.117 14.233 15.656 13.514 15.383 13.415C15.111 13.316 14.913 13.266 14.714 13.564C14.516 13.861 13.946 14.531 13.773 14.729C13.6 14.927 13.426 14.952 13.129 14.803C12.832 14.654 11.874 14.341 10.739 13.328C9.85598 12.54 9.25898 11.567 9.08598 11.269C8.91298 10.972 9.06798 10.811 9.21598 10.663C9.34998 10.53 9.51298 10.316 9.66198 10.142C9.81298 9.96998 9.86198 9.84598 9.96198 9.64698C10.061 9.44898 10.012 9.27498 9.93698 9.12598C9.86198 8.97798 9.26798 7.51498 9.02098 6.91998C8.77898 6.34099 8.53398 6.41899 8.35198 6.40999L7.78198 6.39999C7.58398 6.39999 7.26198 6.47399 6.98998 6.77199C6.71798 7.06998 5.94999 7.78798 5.94999 9.25098C5.94999 10.714 7.01498 12.127 7.16298 12.325C7.31198 12.523 9.25798 15.525 12.239 16.812C12.948 17.118 13.502 17.301 13.933 17.438C14.645 17.664 15.293 17.632 15.805 17.556C16.376 17.471 17.563 16.837 17.811 16.143C18.059 15.448 18.059 14.853 17.984 14.729Z"
+                                      fill="currentColor"/>
                             </svg>
-                        </div>
-                        <span>Online</span>
-                    </li>
-                    <li class="flex items-center sm:gap-4 profile-icon  leading-[1.5]">
-                        <div class="w-8 h-8 flex items-center justify-center shrink-0">
-                            <svg class="w-full" stroke="currentColor" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_1_37418)">
-                                    <path d="M10 17H22" stroke="#491E42" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M6 12V9C6 7.93913 6.42143 6.92172 7.17157 6.17157C7.92172 5.42143 8.93913 5 10 5H22C23.0609 5 24.0783 5.42143 24.8284 6.17157C25.5786 6.92172 26 7.93913 26 9V12" stroke="#491E42" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M10 21V16C10 15.2089 9.76541 14.4355 9.32588 13.7777C8.88635 13.1199 8.26164 12.6072 7.53074 12.3045C6.79983 12.0017 5.99556 11.9225 5.21964 12.0769C4.44372 12.2312 3.73098 12.6122 3.17157 13.1716C2.61216 13.731 2.2312 14.4437 2.07686 15.2196C1.92252 15.9956 2.00173 16.7998 2.30448 17.5307C2.60723 18.2616 3.11992 18.8864 3.77772 19.3259C4.43552 19.7654 5.20888 20 6 20V25C6 25.2652 6.10536 25.5196 6.2929 25.7071C6.48043 25.8946 6.73479 26 7 26H25C25.2652 26 25.5196 25.8946 25.7071 25.7071C25.8946 25.5196 26 25.2652 26 25V20C26.7911 20 27.5645 19.7654 28.2223 19.3259C28.8801 18.8864 29.3928 18.2616 29.6955 17.5307C29.9983 16.7998 30.0775 15.9956 29.9231 15.2196C29.7688 14.4437 29.3878 13.731 28.8284 13.1716C28.269 12.6122 27.5563 12.2312 26.7804 12.0769C26.0044 11.9225 25.2002 12.0017 24.4693 12.3045C23.7384 12.6072 23.1136 13.1199 22.6741 13.7777C22.2346 14.4355 22 15.2089 22 16V21" stroke="#491E42" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs><clipPath id="clip0_1_37418"><rect width="32" height="32" fill="white"/></clipPath></defs>
+                        </a>
+
+                        <a target="_blank" href="#"
+                           class="group flex items-center justify-center soc-btn w-12 h-12 rounded-full bg-blue-gray/10 hover:bg-blue-gray transition-colors duration-300">
+                            <svg class="w-5 h-5 text-blue-gray group-hover:text-white transition-colors duration-300"
+                                 viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 21C19.6569 21 21 19.6569 21 18C21 16.3431 19.6569 15 18 15C16.3431 15 15 16.3431 15 18C15 19.6569 16.3431 21 18 21Z"
+                                      stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M9 13.5L15 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M6 15C7.65685 15 9 13.6569 9 12C9 10.3431 7.65685 9 6 9C4.34315 9 3 10.3431 3 12C3 13.6569 4.34315 15 6 15Z"
+                                      stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M15 7.5L9 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M18 9C19.6569 9 21 7.65685 21 6C21 4.34315 19.6569 3 18 3C16.3431 3 15 4.34315 15 6C15 7.65685 16.3431 9 18 9Z"
+                                      stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
                             </svg>
-                        </div>
-                        <span>In person (London, Kensington)</span>
-                    </li>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+            class="max-w-[1920px] mx-auto px-4 lg:px-25"
+            x-data="{
+        headings: [],
+        currentHash: '',
+        generateToC() {
+            const contentArea = this.$refs.content;
+            if (!contentArea) return;
+
+            const foundHeadings = contentArea.querySelectorAll('h2, h3');
+
+            this.headings = Array.from(foundHeadings).map((el, index) => {
+                if (!el.id) {
+                    el.id = 'section-' + index;
+                }
+                return {
+                    id: el.id,
+                    text: el.innerText.trim(),
+                    level: el.tagName.toLowerCase()
+                };
+            });
+
+            this.initScrollSpy();
+        },
+
+        // Плавний скрол до секції
+        scrollTo(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                // Відступ зверху для фіксованого хедера (якщо є)
+                const offset = 80;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+                history.pushState(null, null, '#' + id);
+            }
+        },
+        initScrollSpy() {
+            window.addEventListener('scroll', () => {
+                let current = '';
+                for (let heading of this.headings) {
+                    const el = document.getElementById(heading.id);
+                    if (el && el.getBoundingClientRect().top <= 150) {
+                        current = heading.id;
+                    }
+                }
+                if (current) this.currentHash = '#' + current;
+            });
+        }
+    }"
+            x-init="setTimeout(() => generateToC(), 100)"
+    >
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 border-t border-primary/20 py-12 pb-20 sm:pb-12 lg:py-20 lg:mb-4">
+
+        <aside class="w-full lg:w-[310px] shrink-0 order-2 lg:order-1 hidden lg:block">
+            <div class="sticky top-12">
+                <h4 class="text-base sm:text-fluid-28 mb-6 leading-[1.1]">Table of content</h4>
+
+                <nav class="flex flex-col">
+                    <template x-for="(heading, index) in headings" :key="index">
+                        <a
+                                :href="'#' + heading.id"
+                                @click.prevent="scrollTo(heading.id)"
+                                class="block py-4 leading-snug transition-all duration-300 outline-none font-bold border-b border-primary/20"
+                                :class="{
+                            // Стилі для H2
+                            'text-base sm:text-fluid-20': heading.level === 'h2',
+
+                            // Активний стан
+                            'border-[#1D1D1B] text-primary border-b border-primary': currentHash === '#' + heading.id,
+                            // Неактивний стан
+                            'text-primary/70 hover:text-[#1D1D1B] border-b border-primary/20': currentHash !== '#' + heading.id
+                        }"
+                                x-text="heading.text"
+                        ></a>
+                    </template>
+                </nav>
+            </div>
+        </aside>
+
+        <article class="w-full order-1 lg:order-2">
+
+            <div x-ref="content" class="wp-content text-fluid-24">
+                <p>Desire is not a fixed state. It is responsive, contextual, and shaped by many aspects of our lives.</p>
+                <p>In reality, desire is influenced by emotional, relational, psychological, and situational factors. It often fluctuates across different stages of life.</p>
+
+                <h2>Desire is not a fixed trait</h2>
+                <p>Popular culture often suggests that sexual desire should remain consistent. When it doesn't, people may experience shame, confusion, or anxiety. However, <a href="#">changes in desire</a> are far more common than most people realise.</p>
+
+                <p><strong>Desire may shift in response to:</strong></p>
+                <ul>
+                    <li>stress or emotional overload</li>
+                    <li>physical health or hormonal changes</li>
+                    <li>life transitions such as parenthood, illness, or loss</li>
+                    <li>changes in emotional closeness or communication</li>
+                    <li>exhaustion, pressure, or feeling disconnected from oneself</li>
                 </ul>
 
-                <div class="w-full profile-price shrink-0 border border-primary/20 rounded-3xl p-6 sm:p-8 flex flex-col gap-2 justify-center reveal-hidden"
-                     x-data="{ shown: false }"
-                     x-intersect.once.margin.-5%="shown = true"
-                     :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                     style="transition-delay: 300ms;">
+                <blockquote>
+                    A change in desire does not automatically mean something is wrong. Often, it means something important is asking for attention.
+                </blockquote>
 
-                    <div class="flex justify-between items-center">
-                        <span class="font-sans text-base sm:text-fluid-18 opacity-70 leading-[1.4]">Couple/Relationship</span>
-                        <span class="font-sans font-bold text-lg sm:text-fluid-20 underline underline-offset-3 sm:no-underline leading-[1.4]">£120</span>
-                    </div>
-                    <div class="flex justify-between items-center mb-4 sm:mb-4">
-                        <span class="font-sans text-base sm:text-fluid-18 opacity-70 leading-[1.4]">Individuals</span>
-                        <span class="font-sans font-bold text-lg sm:text-fluid-20 underline underline-offset-3 sm:no-underline leading-[1.4]">£80</span>
-                    </div>
+                <h2>Desire within relationships</h2>
+                <p>In long-term relationships, desire is shaped not only by attraction, but also by how safe, seen, and connected partners feel with each other.</p>
 
-                    <a href="#"
-                       class="w-full sm:w-auto bg-card-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition flex justify-center text-center">
-                        Book a Consultation
+                <p>Common relational factors that can affect desire include:</p>
+                <ul>
+                    <li>unresolved conflict or unspoken tension</li>
+                    <li><a href="#">mismatched desire levels</a> between partners</li>
+                    <li>routines that leave little space for intimacy</li>
+                    <li>difficulties expressing needs, boundaries, or vulnerability</li>
+                </ul>
+
+                <blockquote>
+                    Desire often responds to the quality of connection, not just to physical closeness.
+                </blockquote>
+
+                <h2>When to consider seeking support</h2>
+                <p>Seeking support does not mean something is wrong. Often, it is a way of listening more carefully to what your body, emotions, and relationships are communicating.</p>
+            </div>
+
+
+
+                <div class="sm:mt-12 sm:pt-12 mt-10 pt-10 border-t border-primary/20 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 mb-10 sm:mb-12">
+                        <span class="font-sans text-primary sm:text-fluid-28 text-[22px]">Share this post</span>
+                        <div class="flex items-center gap-1">
+                            <a target="_blank" href="#"
+                               class="group flex items-center justify-center soc-btn w-12 h-12 rounded-full bg-blue-gray/10 hover:bg-blue-gray transition-colors duration-300">
+                                <svg class="w-5 h-5 text-blue-gray group-hover:text-white transition-colors duration-300"
+                                     viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M7.429 6.969H11.143V8.819C11.678 7.755 13.05 6.799 15.111 6.799C19.062 6.799 20 8.917 20 12.803V20H16V13.688C16 11.475 15.465 10.227 14.103 10.227C12.214 10.227 11.429 11.572 11.429 13.687V20H7.429V6.969ZM0.57 19.83H4.57V6.799H0.57V19.83ZM5.143 2.55C5.14315 2.88527 5.07666 3.21723 4.94739 3.52659C4.81812 3.83594 4.62865 4.11651 4.39 4.352C3.9064 4.83262 3.25181 5.10165 2.57 5.1C1.88939 5.09954 1.23631 4.8312 0.752 4.353C0.514211 4.11671 0.325386 3.83582 0.196344 3.52643C0.0673015 3.21704 0.000579132 2.88522 0 2.55C0 1.873 0.27 1.225 0.753 0.747C1.23689 0.268158 1.89024 -0.000299211 2.571 2.50264e-07C3.253 2.50264e-07 3.907 0.269 4.39 0.747C4.872 1.225 5.143 1.873 5.143 2.55Z"
+                                          fill="currentColor"/>
+                                </svg>
+                            </a>
+
+                            <a target="_blank" href="#"
+                               class="group flex items-center justify-center soc-btn w-12 h-12 rounded-full bg-blue-gray/10 hover:bg-blue-gray transition-colors duration-300">
+                                <svg class="w-5 h-5 text-blue-gray group-hover:text-white transition-colors duration-300"
+                                     viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.4066 17.6109C16.342 17.7286 16.2471 17.8267 16.1317 17.8951C16.0162 17.9636 15.8846 17.9998 15.7504 18H11.2504C11.1241 18 11 17.9681 10.8893 17.9073C10.7787 17.8465 10.6852 17.7587 10.6176 17.6522L6.82162 11.6869L1.30536 17.7544C1.17089 17.8988 0.984904 17.9845 0.787721 17.9927C0.590538 18.0009 0.398054 17.9311 0.252001 17.7984C0.105948 17.6657 0.0180975 17.4807 0.00749552 17.2836C-0.00310645 17.0866 0.064395 16.8933 0.195365 16.7456L5.9863 10.3706L0.117552 1.15313C0.0452725 1.03973 0.00481053 0.908984 0.000403041 0.774582C-0.00400445 0.64018 0.0278046 0.507066 0.0924997 0.389177C0.157195 0.271288 0.252396 0.172962 0.368134 0.104494C0.483873 0.0360256 0.615891 -6.53095e-05 0.750365 8.87202e-08H5.25036C5.37659 3.91221e-05 5.50077 0.0319361 5.61139 0.0927355C5.722 0.153535 5.81549 0.24127 5.88318 0.347813L9.67912 6.31312L15.1954 0.245625C15.3298 0.101174 15.5158 0.015547 15.713 0.00730857C15.9102 -0.00092985 16.1027 0.0688843 16.2487 0.201615C16.3948 0.334346 16.4826 0.519295 16.4932 0.716365C16.5038 0.913434 16.4363 1.10674 16.3054 1.25438L10.5144 7.62469L16.3832 16.8478C16.4551 16.9613 16.4951 17.0919 16.4993 17.2262C16.5034 17.3604 16.4714 17.4933 16.4066 17.6109Z"
+                                          fill="currentColor"/>
+                                </svg>
+                            </a>
+
+                            <a target="_blank" href="#"
+                               class="group flex items-center justify-center soc-btn w-12 h-12 rounded-full bg-blue-gray/10 hover:bg-blue-gray transition-colors duration-300">
+                                <svg class="w-5 h-5 text-blue-gray group-hover:text-white transition-colors duration-300"
+                                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 23.9999L1.687 17.837C0.645998 16.033 0.0989998 13.988 0.0999998 11.891C0.103 5.33499 5.43799 0 11.993 0C15.174 0.000999998 18.16 1.24 20.406 3.48799C22.6509 5.73599 23.8869 8.72398 23.8859 11.902C23.8829 18.459 18.548 23.7939 11.993 23.7939C10.003 23.7929 8.04198 23.2939 6.30499 22.346L0 23.9999ZM6.59698 20.193C8.27298 21.188 9.87298 21.784 11.989 21.785C17.437 21.785 21.875 17.351 21.878 11.9C21.88 6.43799 17.463 2.01 11.997 2.008C6.54498 2.008 2.11 6.44199 2.108 11.892C2.107 14.117 2.75899 15.783 3.85399 17.526L2.85499 21.174L6.59698 20.193ZM17.984 14.729C17.91 14.605 17.712 14.531 17.414 14.382C17.117 14.233 15.656 13.514 15.383 13.415C15.111 13.316 14.913 13.266 14.714 13.564C14.516 13.861 13.946 14.531 13.773 14.729C13.6 14.927 13.426 14.952 13.129 14.803C12.832 14.654 11.874 14.341 10.739 13.328C9.85598 12.54 9.25898 11.567 9.08598 11.269C8.91298 10.972 9.06798 10.811 9.21598 10.663C9.34998 10.53 9.51298 10.316 9.66198 10.142C9.81298 9.96998 9.86198 9.84598 9.96198 9.64698C10.061 9.44898 10.012 9.27498 9.93698 9.12598C9.86198 8.97798 9.26798 7.51498 9.02098 6.91998C8.77898 6.34099 8.53398 6.41899 8.35198 6.40999L7.78198 6.39999C7.58398 6.39999 7.26198 6.47399 6.98998 6.77199C6.71798 7.06998 5.94999 7.78798 5.94999 9.25098C5.94999 10.714 7.01498 12.127 7.16298 12.325C7.31198 12.523 9.25798 15.525 12.239 16.812C12.948 17.118 13.502 17.301 13.933 17.438C14.645 17.664 15.293 17.632 15.805 17.556C16.376 17.471 17.563 16.837 17.811 16.143C18.059 15.448 18.059 14.853 17.984 14.729Z"
+                                          fill="currentColor"/>
+                                </svg>
+                            </a>
+
+                            <a target="_blank" href="#"
+                               class="group flex items-center justify-center soc-btn w-12 h-12 rounded-full bg-blue-gray/10 hover:bg-blue-gray transition-colors duration-300">
+                                <svg class="w-5 h-5 text-blue-gray group-hover:text-white transition-colors duration-300"
+                                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 21C19.6569 21 21 19.6569 21 18C21 16.3431 19.6569 15 18 15C16.3431 15 15 16.3431 15 18C15 19.6569 16.3431 21 18 21Z"
+                                          stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M9 13.5L15 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M6 15C7.65685 15 9 13.6569 9 12C9 10.3431 7.65685 9 6 9C4.34315 9 3 10.3431 3 12C3 13.6569 4.34315 15 6 15Z"
+                                          stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M15 7.5L9 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M18 9C19.6569 9 21 7.65685 21 6C21 4.34315 19.6569 3 18 3C16.3431 3 15 4.34315 15 6C15 7.65685 16.3431 9 18 9Z"
+                                          stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+
+                            </a>
+                        </div>
+
+                </div>
+
+                <div class="sm:mt-12 sm:pt-12 mt-10 pt-10 border-t border-primary/20 flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-between">
+                    <div class="flex sm:items-center gap-8">
+                        <img src="/src/images/content/team1.webp" alt="Author" class="w-25 h-25 sm:w-37 sm:h-37 rounded-2xl object-cover">
+                        <div class="flex-1 flex flex-col gap-2">
+                            <span class="text-sm sm:text-fluid-16 text-primary/70">Author name</span>
+                            <h4 class="text-[26px] sm:text-fluid-36 text-primary leading-none">Hilton Mariano Da Silva</h4>
+                            <span class="text-lg sm:text-fluid-18 text-primary/70">Psychosexual & Relationship Therapist</span>
+                        </div>
+                    </div>
+                    <a href="#" class="w-full sm:max-w-fit bg-card-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition">
+                        View Hilton's profile
                     </a>
                 </div>
 
-            </div>
+
+        </article>
         </div>
+    </section>
 
-    </div>
+    <style>
 
-    <div x-show="modalOpen"
-         style="display: none;"
-         class="fixed inset-0 z-[100] flex items-center justify-center px-4"
-         x-transition:enter="transition ease-out duration-300"
-         x-transition:enter-start="opacity-0"
-         x-transition:enter-end="opacity-100"
-         x-transition:leave="transition ease-in duration-200"
-         x-transition:leave-start="opacity-100"
-         x-transition:leave-end="opacity-0">
-
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" @click="modalOpen = false"></div>
-
-        <div class="relative w-full max-w-5xl aspect-video bg-black rounded-3xl overflow-hidden"
-             x-show="modalOpen"
-             x-transition:enter="transition ease-out duration-300"
-             x-transition:enter-start="opacity-0 scale-95 translate-y-4"
-             x-transition:enter-end="opacity-100 scale-100 translate-y-0"
-             x-transition:leave="transition ease-in duration-200"
-             x-transition:leave-start="opacity-100 scale-100 translate-y-0"
-             x-transition:leave-end="opacity-0 scale-95 translate-y-4">
-
-            <button @click="modalOpen = false"
-                    class="absolute top-4 right-4 z-10 text-bg bg-card-pink hover:bg-card-pink-hover rounded-full p-2 transition">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-
-            <template x-if="modalOpen">
-                <iframe class="w-full h-full"
-                        :src="'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0'"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                </iframe>
-            </template>
-        </div>
-    </div>
-
-</section>
-
-<section x-data="{
-        activeTab: 'areas',
-        sections: ['areas', 'bio', 'testimonials', 'resources'],
-
-        scrollTo(id, event) {
-            const el = document.getElementById(id);
-            if (el) {
-                const y = el.getBoundingClientRect().top + window.scrollY - 100;
-                window.scrollTo({top: y, behavior: 'smooth'});
-                event.currentTarget.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-            }
-        },
-
-        init() {
-            window.addEventListener('scroll', () => {
-                let current = this.sections[0];
-                for (let id of this.sections) {
-                    const el = document.getElementById(id);
-                    if (el) {
-                        const rect = el.getBoundingClientRect();
-                        if (rect.top <= 150) {
-                            current = id;
-                        }
-                    }
-                }
-                if (this.activeTab !== current) {
-                    this.activeTab = current;
-                    const activeBtn = this.$refs[current + 'Tab'];
-                    if(activeBtn) {
-                        activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-                    }
-                }
-            }, { passive: true });
+        .wp-content h2 {
+            margin-top: clamp(2.5rem, 1.11vw, 3rem) !important;
+            margin-bottom: 1.5rem;
+            /*scroll-margin-top: 1.5rem; !* Щоб при кліку на зміст не перекривало шапкою *!*/
         }
-    }">
 
-    <div class="sticky top-0 z-40 bg-bg pt-5 mt-15 sm:mt-12">
-        <div class="max-w-[1920px] mx-auto px-5 pr-0 lg:px-25">
-            <nav class="no-scrollbar flex overflow-x-auto gap-8 sm:gap-10 no-scrollbar relative font-sans text-lg sm:text-fluid-20 border-b border-primary/20 font-bold pr-5 sm:pr-0">
+        .wp-content h3 {
+            margin-top: clamp(2.5rem, 1.11vw, 3rem) !important;
+            margin-bottom: 1rem;
+            /*scroll-margin-top: 1.5rem;*/
+        }
 
-                <button x-ref="areasTab" @click.prevent="scrollTo('areas', $event)"
-                        class="pb-5 border-b-2 whitespace-nowrap transition-colors duration-300"
-                        :class="activeTab === 'areas' ? 'border-primary' : 'border-transparent opacity-70 hover:opacity-100'">
-                    Areas Of Special Interest
-                </button>
+        .wp-content p {
+            margin-bottom: clamp(0.5rem, 0.555vw, 1.5rem) !important;
+        }
 
-                <button x-ref="bioTab" @click.prevent="scrollTo('bio', $event)"
-                        class="pb-5 border-b-2 whitespace-nowrap transition-colors duration-300"
-                        :class="activeTab === 'bio' ? 'border-primary' : 'border-transparent opacity-70 hover:opacity-100'">
-                    Bio
-                </button>
+        .wp-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: clamp(1rem, 1.11vw, 2rem);
+        }
 
-                <button x-ref="testimonialsTab" @click.prevent="scrollTo('testimonials', $event)"
-                        class="pb-5 border-b-2 whitespace-nowrap transition-colors duration-300"
-                        :class="activeTab === 'testimonials' ? 'border-primary' : 'border-transparent opacity-70 hover:opacity-100'">
-                    Testimonials
-                </button>
+        .wp-content ul li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: clamp(0.5rem, 0.69vw, 1.25rem);
+        }
 
-                <button x-ref="resourcesTab" @click.prevent="scrollTo('resources', $event)"
-                        class="pb-5 border-b-2 whitespace-nowrap transition-colors duration-300"
-                        :class="activeTab === 'resources' ? 'border-primary' : 'border-transparent opacity-70 hover:opacity-100'">
-                    Resources
-                </button>
-            </nav>
-        </div>
-    </div>
+        /* Кастомний буліт (крапка) для списків як на макеті */
+        .wp-content ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #491E42;
+        }
 
-    <div class="max-w-[1920px] mx-auto px-5 lg:px-25 pt-10 sm:pt-12 text-lg sm:text-fluid-24">
+        /* Цитати (Блоки фокусу) */
+        .wp-content blockquote,
+        .wp-content .wp-block-quote {
+            background-color: #491E421A; /* Сіро-бежевий фон як на макеті */
+            border-left: 5px solid #491E42; /* Темний бордер зліва */
+            padding-block: clamp(0.75rem, 1.11vw, 1.5rem) !important;
+            padding-inline: clamp(1rem, 1.66vw, 2rem) !important;
+            margin-block: clamp(1.25rem, 1.66vw, 3rem);
+        }
 
-        <div id="areas" class="scroll-mt-32 sm:pb-16 pb-10 border-b border-primary/20">
-            <div class="lg:max-w-[81%] reveal-hidden"
-                 x-data="{ shown: false }"
-                 x-intersect.once.margin.-5%="shown = true"
-                 :class="shown ? 'reveal-visible' : 'reveal-hidden'">
-                <h2 class="font-sans text-[26px] leading-none mb-6 sm:text-fluid-36 sm:mb-8">Areas of special interest</h2>
-                <div class="font-sans [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_ul]:marker:text-primary">
-                <ul>
-                    <li>Trauma, PTSD, and adverse life experiences</li>
-                    <li>LGBTQIA+ and neurodiversity affirming therapy</li>
-                    <li>Life transitions, stress and low self-esteem</li>
-                    <li>Compulsive sexual behaviours (inc. pornography addiction)</li>
-                    <li>Chemsex behaviour</li>
-                </ul>
-                </div>
-            </div>
-        </div>
+        .wp-content blockquote p:last-child {
+            margin-bottom: 0;
+        }
 
-        <div id="bio" class="scroll-mt-32 sm:mt-16 sm:pb-16 mt-10 pb-10 border-b border-primary/20">
-            <div class="lg:max-w-[81%] reveal-hidden"
-                 x-data="{ shown: false }"
-                 x-intersect.once.margin.-5%="shown = true"
-                 :class="shown ? 'reveal-visible' : 'reveal-hidden'">
-                <h2 class="font-sans text-[26px] leading-none mb-6 sm:text-fluid-36 sm:mb-8">Bio</h2>
-                <div class="font-sans space-y-4">
-                    <p>I work with individuals and couples who are experiencing difficulties with sex, intimacy, and relationships. I offer a warm, confidential, and non-judgemental space where clients can explore sensitive concerns at their own pace and develop a deeper understanding of themselves and their relationships.</p>
-                    <p>Many people seek therapy feeling confused, distressed, or disconnected — either from their partner or from their own sexuality. My role is to support clients in making sense of what is happening, addressing underlying emotional or relational patterns, and finding ways forward that feel authentic and sustainable.</p>
-                    <p>I aim to provide an inclusive and affirming therapeutic environment, and I welcome clients from LGBTQIA+ communities, as well as those exploring questions around identity, desire, or intimacy.</p>
-                    <p>My work is integrative and relational, informed by psychosexual therapy models, attachment theory, and contemporary relationship therapy. I focus on understanding how emotional, relational, psychological, and contextual factors interact with sexual concerns, rather than viewing difficulties in isolation.</p>
-                    <p>Sessions are collaborative and tailored to each client or relationship. Psychosexual therapy is talking-based; there is no physical contact or sexual activity involved at any stage. Where appropriate, I may suggest reflective or experiential exercises to explore between sessions, always with consent and clear explanation.</p>
-                    <p>I am attentive to pace and safety, particularly when working with shame, trauma, or long-standing patterns that can feel difficult to discuss.</p>
-                </div>
-            </div>
-        </div>
+        /* Посилання всередині тексту */
+        .wp-content a {
+            color: #D95F69; /* Червоно-рожевий колір з макету */
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: opacity 0.3s ease;
+        }
 
-        <div id="testimonials" class="scroll-mt-32 sm:mt-16 sm:pb-16 mt-10 pb-10 border-b border-primary/20">
+        .wp-content a:hover {
+            opacity: 0.7;
+        }
 
-            <h2 class="font-sans text-[26px] leading-none mb-6 sm:text-fluid-36 sm:mb-8 reveal-hidden"
+        /* Strong / Bold текст */
+        .wp-content strong,
+        .wp-content b {
+            font-weight: 600;
+            opacity: 1;
+        }
+    </style>
+
+    <section class="pb-10 lg:py-10 mb-10 sm:mb-14 px-4 lg:px-25 max-w-[1920px] mx-auto" x-data>
+
+        <div class="border-t border-primary/20 pt-20 sm:pt-16">
+
+            <h2 class="font-sans text-[40px] leading-none mb-10 sm:text-fluid-44 sm:mb-16 reveal-hidden"
                 x-data="{ shown: false }"
                 x-intersect.once.margin.-5%="shown = true"
                 :class="shown ? 'reveal-visible' : 'reveal-hidden'">
-                Testimonials
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-
-                <div class="border border-primary/20 rounded-3xl p-6 sm:p-10 flex flex-col reveal-hidden"
-                     x-data="{ shown: false }"
-                     x-intersect.once.margin.-5%="shown = true"
-                     :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                     style="transition-delay: 0ms;">
-                    <div class="mb-6 sm:mb-20 testimonial-quote-icon">
-                        <svg width="58" height="38" viewBox="0 0 58 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 23.4309C0 11.4635 9.69552 -0.503942 25.4507 0.0163744V7.12746C16.2746 7.12746 9.86866 12.6776 9.00298 20.1356C10.3881 19.4418 11.7731 19.2684 12.9851 19.2684C18.5254 19.2684 22.5075 23.2575 22.5075 28.4607C22.5075 34.1843 18.006 38 12.1194 38C4.15522 38 0 31.7561 0 23.4309ZM32.5492 23.4309C32.5492 11.4635 42.2448 -0.503942 58 0.0163744V7.12746C48.8239 7.12746 42.4179 12.6776 41.5522 20.1356C42.9373 19.4418 44.3224 19.2684 45.7075 19.2684C51.0746 19.2684 55.0567 23.2575 55.0567 28.4607C55.0567 34.1843 50.7283 38 44.6686 38C36.7045 38 32.5492 31.7561 32.5492 23.4309Z" fill="#4E7DA6"/>
-                        </svg>
-                    </div>
-                    <div class="text-lg sm:text-fluid-24 space-y-4 mb-4">
-                        <p>I highly recommend the work with Hilton for anyone struggling with long-term disconnection.</p>
-                        <p>After a decade of distance, my partner and I used our sessions to bridge the gap through targeted exercises and roleplaying. It wasn't just about the 'spark' — though that has certainly returned — it was about healing.</p>
-                    </div>
-                    <p class="font-sans text-base sm:text-fluid-16 opacity-70 mt-auto uppercase tracking-wide mt-2">A.K.</p>
-                </div>
-
-                <div class="border border-primary/20 rounded-3xl p-6 sm:p-10 flex flex-col reveal-hidden"
-                     x-data="{ shown: false }"
-                     x-intersect.once.margin.-5%="shown = true"
-                     :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                     style="transition-delay: 200ms;">
-                    <div class="mb-6 sm:mb-20 testimonial-quote-icon">
-                        <svg width="58" height="38" viewBox="0 0 58 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 23.4309C0 11.4635 9.69552 -0.503942 25.4507 0.0163744V7.12746C16.2746 7.12746 9.86866 12.6776 9.00298 20.1356C10.3881 19.4418 11.7731 19.2684 12.9851 19.2684C18.5254 19.2684 22.5075 23.2575 22.5075 28.4607C22.5075 34.1843 18.006 38 12.1194 38C4.15522 38 0 31.7561 0 23.4309ZM32.5492 23.4309C32.5492 11.4635 42.2448 -0.503942 58 0.0163744V7.12746C48.8239 7.12746 42.4179 12.6776 41.5522 20.1356C42.9373 19.4418 44.3224 19.2684 45.7075 19.2684C51.0746 19.2684 55.0567 23.2575 55.0567 28.4607C55.0567 34.1843 50.7283 38 44.6686 38C36.7045 38 32.5492 31.7561 32.5492 23.4309Z" fill="#4E7DA6"/>
-                        </svg>
-                    </div>
-                    <div class="text-lg sm:text-fluid-24 space-y-4 mb-4">
-                        <p>Hilton helped us uncover how our individual histories and past traumas were impacting our marriage. Learning to have compassion for myself and my partner's past has changed the way we communicate.</p>
-                        <p>We've moved from a place of disconnect to one of deep intimacy and mutual empathy.</p>
-                    </div>
-                    <p class="font-sans text-base sm:text-fluid-16 opacity-70 mt-auto uppercase tracking-wide mt-2">I.T.</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="resources" class="scroll-mt-32 mt-16">
-
-            <h2 class="font-sans text-[26px] leading-none mb-6 sm:text-fluid-36 sm:mb-8 reveal-hidden"
-                x-data="{ shown: false }"
-                x-intersect.once.margin.-5%="shown = true"
-                :class="shown ? 'reveal-visible' : 'reveal-hidden'">
-                Some resources from Hilton
+                Related articled
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-4">
@@ -983,32 +1023,9 @@
             </div>
         </div>
 
-    </div>
-</section>
+    </section>
 
-<section class="py-12 pt-16 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto mb-10 sm:mb-14">
-    <div class="relative overflow-hidden rounded-3xl bg-blue-gray p-6 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-12 reveal-hidden"
-         x-data="{ shown: false }"
-         x-intersect.once.margin.-5%="shown = true"
-         :class="shown ? 'reveal-visible' : 'reveal-hidden'">
-
-        <div class="absolute inset-0 z-0 pointer-events-none">
-            <img src="/src/images/pattern.webp"
-                 alt=""
-                 class="w-full h-full object-cover mix-blend-overlay">
-        </div>
-
-        <h2 class="relative z-10 font-sans text-[2rem] sm:text-fluid-44 text-bg font-normal text-center md:text-left leading-[1.2]">
-            Start with an introductory call
-        </h2>
-
-        <a href="#"
-           class="relative z-10 sm:w-auto w-full bg-bg hover:bg-muted-purple hover:text-bg text-primary font-sans font-bold fluid-button rounded-full transition flex justify-center text-center">
-            Book a consultation
-        </a>
-
-    </div>
-</section>
+</div>
 
 <footer class="bg-primary pt-20 pb-20 sm:pb-10 px-4 lg:px-25 text-bg">
     <div class="max-w-[1920px] mx-auto">
@@ -1103,13 +1120,13 @@
             </div>
         </div>
 
-        <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-8 sm:gap-6 pt-10 relative border-t border-white/5">
+        <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-8 sm:gap-6 sm:pt-10 relative border-t border-white/5">
             <p class="text-sm sm:text-fluid-16 text-white/80">
                 © Copyright Intima Therapy 2026. All Rights Reserved.
             </p>
 
             <a href="tel:0000000000"
-               class="custom-height-fluid text-base sm:text-fluid-16 sm:w-auto w-full justify-center flex gap-2 items-center bg-card-pink text-white px-7 py-3.5 font-bold rounded-full font-bold hover:bg-card-pink-hover transition shadow-sm">
+               class="btn-small custom-height-fluid text-base sm:text-fluid-16 sm:w-auto w-full justify-center flex gap-2 items-center bg-card-pink text-white px-6 py-3.5 font-bold rounded-full font-bold hover:bg-card-pink-hover transition shadow-sm">
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.71797 8.85436C9.80452 8.79677 9.90408 8.76168 10.0076 8.75226C10.1112 8.74285 10.2154 8.75942 10.3109 8.80046L13.9953 10.4512C14.1195 10.5043 14.2231 10.5962 14.2907 10.7131C14.3583 10.8299 14.3862 10.9656 14.3703 11.0997C14.2489 12.0067 13.8023 12.8389 13.1133 13.4413C12.4244 14.0437 11.5402 14.3754 10.625 14.3747C7.80708 14.3747 5.10457 13.2553 3.11199 11.2627C1.11942 9.27011 1.10538e-06 6.5676 1.10538e-06 3.74968C-0.000698803 2.83452 0.330999 1.95026 0.933408 1.26134C1.53582 0.572425 2.36793 0.125741 3.275 0.00436499C3.40909 -0.0115645 3.54473 0.0163604 3.66162 0.0839604C3.77851 0.15156 3.87037 0.2552 3.92344 0.379365L5.57422 4.06686C5.61478 4.16157 5.6313 4.26484 5.6223 4.36748C5.6133 4.47012 5.57907 4.56894 5.52266 4.65515L3.85313 6.6403C3.7939 6.72966 3.75888 6.83286 3.75149 6.93981C3.74409 7.04676 3.76458 7.1538 3.81094 7.25046C4.45703 8.57311 5.82422 9.9239 7.15078 10.5637C7.24795 10.6099 7.35548 10.6299 7.46276 10.6218C7.57003 10.6138 7.67334 10.5778 7.7625 10.5176L9.71797 8.85436Z"
                           fill="#F4ECE4"/>
@@ -1120,7 +1137,6 @@
 
     </div>
 </footer>
-
 <script type="module" src="/src/js/main.js"></script>
 </body>
 </html>

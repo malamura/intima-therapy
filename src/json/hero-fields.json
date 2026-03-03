@@ -1,0 +1,74 @@
+[
+  {
+    "key": "group_hero_section",
+    "title": "Block: Hero Section",
+    "fields": [
+      {
+        "key": "field_hero_title",
+        "label": "Title",
+        "name": "title",
+        "type": "textarea",
+        "instructions": "Use <br> for line breaks. You can also include visibility classes as found in the original layout.",
+        "required": 1,
+        "default_value": "Specialist <br class=\"sm:hidden block\"> Therapy <br class=\"hidden sm:block\"> for<br class=\"sm:hidden block\"> Sex, Intimacy <br> & Relationships",
+        "new_lines": "",
+        "rows": 4
+      },
+      {
+        "key": "field_hero_subtitle",
+        "label": "Subtitle",
+        "name": "subtitle",
+        "type": "textarea",
+        "required": 0,
+        "default_value": "A space where intimacy begins with you.",
+        "new_lines": "br",
+        "rows": 2
+      },
+      {
+        "key": "field_hero_bg_desktop",
+        "label": "Background Image (Desktop)",
+        "name": "bg_desktop",
+        "type": "image",
+        "required": 1,
+        "return_format": "url",
+        "preview_size": "medium",
+        "library": "all"
+      },
+      {
+        "key": "field_hero_bg_mobile",
+        "label": "Background Image (Mobile)",
+        "name": "bg_mobile",
+        "type": "image",
+        "instructions": "Optional. If not set, the desktop image will be used by default.",
+        "required": 0,
+        "return_format": "url",
+        "preview_size": "medium",
+        "library": "all"
+      },
+      {
+        "key": "field_hero_button",
+        "label": "Button",
+        "name": "button",
+        "type": "link",
+        "required": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "block",
+          "operator": "==",
+          "value": "acf/hero-section"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Settings for the main hero section"
+  }
+]

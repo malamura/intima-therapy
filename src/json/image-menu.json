@@ -1,0 +1,51 @@
+[
+  {
+    "key": "group_65d8c1e2b3a4f",
+    "title": "Menu Item Settings",
+    "fields": [
+      {
+        "key": "field_65d8c1e2b3a50",
+        "label": "Menu Image",
+        "name": "image_menu",
+        "aria-label": "",
+        "type": "image",
+        "instructions": "Завантажте зображення для мегаменю (використовується в стилі Therapies)",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "url",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": "jpg,jpeg,png,webp",
+        "preview_size": "medium"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "nav_menu_item",
+          "operator": "==",
+          "value": "all"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Додає можливість прикріпити зображення до пунктів меню для мегаменю",
+    "show_in_rest": 0
+  }
+]

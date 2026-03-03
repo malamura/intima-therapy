@@ -1,0 +1,111 @@
+[
+  {
+    "key": "group_featured_articles",
+    "title": "Block: Featured Articles",
+    "fields": [
+      {
+        "key": "field_fa_title",
+        "label": "Title",
+        "name": "title",
+        "type": "text",
+        "default_value": "From our therapists"
+      },
+      {
+        "key": "field_fa_subtitle",
+        "label": "Subtitle",
+        "name": "subtitle",
+        "type": "textarea",
+        "rows": 2
+      },
+      {
+        "key": "field_fa_view_all",
+        "label": "View All Link",
+        "name": "view_all_link",
+        "type": "link"
+      },
+      {
+        "key": "field_fa_articles",
+        "label": "Articles",
+        "name": "articles",
+        "type": "repeater",
+        "max": 3,
+        "layout": "row",
+        "sub_fields": [
+          { "key": "field_fa_a_image", "label": "Image", "name": "image", "type": "image", "return_format": "id" },
+          { "key": "field_fa_a_time", "label": "Read Time", "name": "read_time", "type": "text", "default_value": "5 min read" },
+          { "key": "field_fa_a_author_img", "label": "Author Image", "name": "author_image", "type": "image", "return_format": "id" },
+          { "key": "field_fa_a_author_name", "label": "Author Name", "name": "author_name", "type": "text" },
+          { "key": "field_fa_a_title", "label": "Article Title", "name": "title", "type": "text" },
+          { "key": "field_fa_a_desc", "label": "Description", "name": "description", "type": "textarea", "rows": 3 },
+          { "key": "field_fa_a_link", "label": "Link", "name": "link", "type": "link" }
+        ]
+      }
+    ],
+    "location": [ [ { "param": "block", "operator": "==", "value": "acf/featured-articles" } ] ]
+  },
+  {
+    "key": "group_faq_accordion",
+    "title": "Block: FAQ",
+    "fields": [
+      {
+        "key": "field_faq_title",
+        "label": "Section Title",
+        "name": "title",
+        "type": "text",
+        "default_value": "FAQ"
+      },
+      {
+        "key": "field_faq_items",
+        "label": "Questions",
+        "name": "faqs",
+        "type": "repeater",
+        "layout": "block",
+        "sub_fields": [
+          { "key": "field_faq_q", "label": "Question", "name": "question", "type": "text" },
+          { "key": "field_faq_a", "label": "Answer", "name": "answer", "type": "textarea", "rows": 4 }
+        ]
+      }
+    ],
+    "location": [ [ { "param": "block", "operator": "==", "value": "acf/faq-accordion" } ] ]
+  },
+  {
+    "key": "group_bottom_cta",
+    "title": "Block: Bottom CTA",
+    "fields": [
+      {
+        "key": "field_cta_bg",
+        "label": "Background Image",
+        "name": "bg_image",
+        "type": "image",
+        "return_format": "id"
+      },
+      {
+        "key": "field_cta_title",
+        "label": "Title",
+        "name": "title",
+        "type": "textarea",
+        "rows": 3
+      },
+      {
+        "key": "field_cta_desc",
+        "label": "Description",
+        "name": "description",
+        "type": "textarea",
+        "rows": 3
+      },
+      {
+        "key": "field_cta_btn1",
+        "label": "Primary Button",
+        "name": "btn_primary",
+        "type": "link"
+      },
+      {
+        "key": "field_cta_btn2",
+        "label": "Secondary Button",
+        "name": "btn_secondary",
+        "type": "link"
+      }
+    ],
+    "location": [ [ { "param": "block", "operator": "==", "value": "acf/bottom-cta" } ] ]
+  }
+]

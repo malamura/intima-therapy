@@ -1,0 +1,125 @@
+[
+  {
+    "key": "group_our_approach",
+    "title": "Block: Our Approach",
+    "fields": [
+      {
+        "key": "field_oa_title",
+        "label": "Title",
+        "name": "title",
+        "type": "textarea",
+        "rows": 2
+      },
+      {
+        "key": "field_oa_content",
+        "label": "Content",
+        "name": "content",
+        "type": "wysiwyg",
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0
+      }
+    ],
+    "location": [ [ { "param": "block", "operator": "==", "value": "acf/our-approach" } ] ]
+  },
+  {
+    "key": "group_welcome_video",
+    "title": "Block: Welcome Video",
+    "fields": [
+      {
+        "key": "field_wv_title",
+        "label": "Title",
+        "name": "title",
+        "type": "textarea",
+        "rows": 2
+      },
+      {
+        "key": "field_wv_image",
+        "label": "Thumbnail Image",
+        "name": "thumbnail",
+        "type": "image",
+        "return_format": "id"
+      },
+      {
+        "key": "field_wv_video_id",
+        "label": "YouTube Video ID",
+        "name": "video_id",
+        "type": "text",
+        "instructions": "Enter only the ID (e.g. wWR0VD6qgt8)"
+      }
+    ],
+    "location": [ [ { "param": "block", "operator": "==", "value": "acf/welcome-video" } ] ]
+  },
+  {
+    "key": "group_how_it_works",
+    "title": "Block: How It Works",
+    "fields": [
+      {
+        "key": "field_hiw_title",
+        "label": "Section Title",
+        "name": "title",
+        "type": "text"
+      },
+      {
+        "key": "field_hiw_steps",
+        "label": "Steps",
+        "name": "steps",
+        "type": "repeater",
+        "max": 4,
+        "layout": "table",
+        "sub_fields": [
+          {
+            "key": "field_hiw_step_title",
+            "label": "Step Title",
+            "name": "title",
+            "type": "text"
+          },
+          {
+            "key": "field_hiw_step_desc",
+            "label": "Description",
+            "name": "description",
+            "type": "textarea",
+            "rows": 3
+          }
+        ]
+      }
+    ],
+    "location": [ [ { "param": "block", "operator": "==", "value": "acf/how-it-works" } ] ]
+  },
+  {
+    "key": "group_testimonials_slider",
+    "title": "Block: Testimonials Slider",
+    "fields": [
+      {
+        "key": "field_ts_title",
+        "label": "Title",
+        "name": "title",
+        "type": "textarea",
+        "rows": 2
+      },
+      {
+        "key": "field_ts_items",
+        "label": "Testimonials",
+        "name": "testimonials",
+        "type": "repeater",
+        "layout": "block",
+        "sub_fields": [
+          {
+            "key": "field_ts_text",
+            "label": "Quote Text",
+            "name": "text",
+            "type": "textarea",
+            "rows": 4
+          },
+          {
+            "key": "field_ts_author",
+            "label": "Author",
+            "name": "author",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "location": [ [ { "param": "block", "operator": "==", "value": "acf/testimonials-slider" } ] ]
+  }
+]

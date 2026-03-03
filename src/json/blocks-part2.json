@@ -1,0 +1,128 @@
+[
+  {
+    "key": "group_support_cards",
+    "title": "Block: Support Cards",
+    "fields": [
+      {
+        "key": "field_sc_title",
+        "label": "Section Title",
+        "name": "title",
+        "type": "textarea",
+        "required": 1,
+        "default_value": "Support that meets <br>\nyou where you are",
+        "rows": 2
+      },
+      {
+        "key": "field_sc_subtitle",
+        "label": "Section Subtitle",
+        "name": "subtitle",
+        "type": "textarea",
+        "rows": 2
+      },
+      {
+        "key": "field_sc_cards",
+        "label": "Cards",
+        "name": "cards",
+        "type": "repeater",
+        "layout": "block",
+        "button_label": "Add Card",
+        "sub_fields": [
+          {
+            "key": "field_sc_card_image",
+            "label": "Card Image",
+            "name": "image",
+            "type": "image",
+            "return_format": "id"
+          },
+          {
+            "key": "field_sc_card_title",
+            "label": "Card Title",
+            "name": "title",
+            "type": "text"
+          },
+          {
+            "key": "field_sc_card_text",
+            "label": "Card Description",
+            "name": "description",
+            "type": "textarea",
+            "rows": 3
+          },
+          {
+            "key": "field_sc_card_link",
+            "label": "Card Link",
+            "name": "link",
+            "type": "link"
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "block",
+          "operator": "==",
+          "value": "acf/support-cards"
+        }
+      ]
+    ]
+  },
+  {
+    "key": "group_common_reasons",
+    "title": "Block: Common Reasons",
+    "fields": [
+      {
+        "key": "field_cr_title",
+        "label": "Title",
+        "name": "title",
+        "type": "textarea",
+        "required": 1,
+        "rows": 2
+      },
+      {
+        "key": "field_cr_text",
+        "label": "Description",
+        "name": "description",
+        "type": "textarea",
+        "rows": 4
+      },
+      {
+        "key": "field_cr_topics",
+        "label": "Topics (Tags)",
+        "name": "topics",
+        "type": "repeater",
+        "layout": "table",
+        "button_label": "Add Topic",
+        "sub_fields": [
+          {
+            "key": "field_cr_topic_link",
+            "label": "Topic Link & Text",
+            "name": "link",
+            "type": "link"
+          }
+        ]
+      },
+      {
+        "key": "field_cr_explore_link",
+        "label": "Explore All Link",
+        "name": "explore_link",
+        "type": "link"
+      },
+      {
+        "key": "field_cr_image",
+        "label": "Right Image",
+        "name": "image",
+        "type": "image",
+        "return_format": "id"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "block",
+          "operator": "==",
+          "value": "acf/common-reasons"
+        }
+      ]
+    ]
+  }
+]
