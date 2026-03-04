@@ -838,6 +838,7 @@
     }
     @media (max-width: 640px) {
         footer .btn-small{
+            height: 48px;
             justify-content: center;
         }
         .wp-content h2,
