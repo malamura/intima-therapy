@@ -173,6 +173,20 @@
         height: auto !important; /* зберігаємо пропорції */
     }
 
+    .px-6 {
+        padding-left: clamp(0.984rem, 1.093vw, 1.3125rem) !important;
+        padding-right: clamp(0.984rem, 1.093vw, 1.3125rem) !important;
+    }
+
+    /* gap-2.5 (10px -> 7.5px) */
+    .gap-2\.5 {
+        gap: clamp(0.468rem, 0.72vw, 0.725rem) !important;
+    }
+
+    /*.gap-2 {*/
+    /*    gap: clamp(0.375rem, 0.417vw, 0.5rem) !important;*/
+    /*}*/
+
     [x-cloak] {
         display: none !important;
     }
@@ -186,6 +200,16 @@
 
 
     @media (min-width: 640px) {
+        .sm\:gap-6 {
+            gap: clamp(1rem, 1.11vw, 1.5rem) !important;
+        }
+        .min-h-fluid-400 {
+            /* Min: 18.75rem (300px @ 1440px)
+               Pref: 20.83vw (400px @ 1920px)
+               Max: 25rem (400px)
+            */
+            min-height: clamp(18.75rem, 20.83vw, 25rem) !important;
+        }
         .max-w-fluid-17 {
             /* Формула: 5px + 0.625vw
                Min: 0.875rem (14px @ 1440px)
@@ -277,6 +301,15 @@
             line-height: 1.12;
             letter-spacing: -0.03em;
             font-weight: 400;
+        }
+
+        .sm\:gap-25 {
+            gap: clamp(4.6875rem, 5.2vw, 6.25rem) !important;
+        }
+
+        .sm\:p-20 {
+            /* Min: 3.75rem (60px), Pref: 4.16vw, Max: 5rem (80px) */
+            padding: clamp(3.75rem, 4.16vw, 5rem) !important;
         }
 
         .sm\:gap-8 {
@@ -570,10 +603,7 @@
             padding-bottom: clamp(0.984rem, 1.093vw, 1.3125rem) !important;
         }
 
-        .px-6 {
-            padding-left: clamp(0.984rem, 1.093vw, 1.3125rem) !important;
-            padding-right: clamp(0.984rem, 1.093vw, 1.3125rem) !important;
-        }
+
 
         .md\:p-8 {
             padding: clamp(1.5rem, 1.666vw, 2rem) !important;
@@ -606,11 +636,11 @@
         }
 
         /* gap-2.5 (10px -> 7.5px) */
-        .gap-2\.5 {
+        .sm\:gap-2\.5 {
             gap: clamp(0.468rem, 0.72vw, 0.725rem) !important;
         }
 
-        .gap-2 {
+        .sm\:gap-2 {
             gap: clamp(0.375rem, 0.417vw, 0.5rem) !important;
         }
 
@@ -703,7 +733,10 @@
 
 
     }
-    @media (min-width: 767px) {
+    @media (min-width: 768px) {
+        .md\:gap-6 {
+            gap: clamp(1rem, 1.11vw, 1.5rem) !important;
+        }
         .profile-price {
             width: clamp(19.375rem, -0.875rem + 22.5vw, 26.125rem) !important;
         }

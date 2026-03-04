@@ -498,7 +498,505 @@
     </div>
 </header>
 <div class="overflow-hidden">
+    <section
+            class="py-10 md:pb-8 sm:py-24 px-4 lg:px-25 mt-20 sm:mt-16 lg:mt-22 max-w-[1920px] mx-auto relative"
+            x-data="{ shown: false }"
+            x-intersect.once.margin.-15%="shown = true">
 
+        <div class="absolute inset-0 z-0">
+            <picture>
+                <source srcset="/src/images/hero-bg-serivce-mobile.png" media="(max-width: 639px)">
+
+                <img src="/src/images/hero-bg-service.png"
+                     alt=""
+                     class="w-full h-full object-cover"
+                     loading="lazy"
+                     decoding="async">
+            </picture>
+        </div>
+        <div class="relative sm:py-24">
+            <h1 class="font-sans text-fluid-h1 text-center transition-all duration-1000 transform sm:py-12"
+                :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+                Psychosexual Therapy
+            </h1>
+        </div>
+
+    </section>
+    <section class="py-12 sm:py-24 px-4 lg:px-20 max-w-[1920px] mx-auto relative">
+
+        <!-- Заголовок секції -->
+        <div class="text-center mb-10 sm:mb-20"
+             x-data="{ shown: false }"
+             x-intersect.once.threshold.50="shown = true"
+             :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
+             class="transition-all duration-1000">
+            <h2 class="font-sans text-[32px] md:text-[48px] leading-tight text-[#432448]">
+                When sex, desire, <br>or intimacy feel difficult
+            </h2>
+        </div>
+
+        <!-- Контентні блоки -->
+        <div class="flex flex-col gap-6">
+
+            <!-- Перший блок (Фіолетовий) -->
+            <div
+                    x-data="{ shown: false }"
+                    x-intersect.once.threshold.20="shown = true"
+                    class="grid grid-cols-1 lg:grid-cols-2 bg-[#432448] rounded-[30px] lg:rounded-3xl overflow-hidden transition-all duration-1000"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'"
+            >
+                <!-- Текст -->
+                <div class="p-8 sm:p-20 flex flex-col justify-center text-bg sm:gap-25">
+                    <h3 class="text-[32px] sm:text-fluid-44">
+                        Exploring sex beyond performance
+                    </h3>
+                    <p class="text-lg sm:text-fluid-24 !leading-[1.5]">
+                        Psychosexual therapy, also referred to as sex therapy, offers a space to explore sexual problems with care, curiosity, and empathy. It's not about performance, techniques, or quick solutions. It's about understanding how sex, desire, and intimacy are shaped by experience, relationship, and context, and how patterns that once made sense may no longer feel supportive.
+                    </p>
+                </div>
+                <!-- Зображення -->
+                <div class="h-[300px] lg:h-auto min-h-fluid-400 ">
+                    <img src="/src/images/content/service-img2.jpg"
+                         alt="Embrace"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Другий блок (Рожевий) -->
+            <div
+                    x-data="{ shown: false }"
+                    x-intersect.once.threshold.20="shown = true"
+                    class="grid grid-cols-1 lg:grid-cols-2 bg-[#db6c73] rounded-[30px] lg:rounded-3xl overflow-hidden transition-all duration-1000"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'"
+            >
+                <!-- Зображення (перше на десктопі через order) -->
+                <div class="h-[300px] lg:h-auto min-h-fluid-400  order-2 lg:order-1">
+                    <img src="/src/images/content/service-img1.webp"
+                         alt="Close intimacy"
+                         class="w-full h-full object-cover">
+                </div>
+                <!-- Текст (другий на десктопі) -->
+                <div class="p-8 sm:p-20 flex flex-col justify-center text-bg order-1 lg:order-2 sm:gap-25">
+                    <h3 class="text-[32px] sm:text-fluid-44">
+                        Different concerns, shared intention
+                    </h3>
+                    <p class="text-lg sm:text-fluid-24 !leading-[1.5]">
+                        Some people come with a clear concern or a clear sexual difficulty. Others arrive with a quieter sense that something feels tense, confusing, or disconnected. Both are welcome here. The goal of psychosexual therapy is to improve sex life, enhance intimacy, support healthy sexual function, and foster healthier sexual relationships with oneself and a sexual partner.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section
+            class="py-12 sm:py-24 px-4 lg:px-20 max-w-[1920px] mx-auto relative overflow-hidden font-sans"
+            x-data="{
+        activeAccordion: 1,
+        shown: false
+    }"
+            x-intersect.once.threshold.10="shown = true"
+    >
+        <!-- Основна сітка з кастомною пропорцією: ліва колонка менша -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-start">
+
+            <!-- ЛІВА КОЛОНКА (40% ширини на десктопі) -->
+            <div
+                    class="transition-all duration-1000 transform lg:pr-30 flex flex-col justify-between h-full"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
+            >
+                <h2 class="text-fluid-h2 leading-[1.1] text-[#432448] mb-4 sm:mb-8">
+                    What this therapy <br> helps with
+                </h2>
+
+                <!-- Зображення з великим радіусом заокруглення -->
+                <div class="rounded-3xl overflow-hidden aspect-[4/3.8] ">
+                    <img
+                            src="/src/images/content/service-img3.webp"
+                            alt="Therapy space"
+                            class="w-full h-full object-cover"
+                    />
+                </div>
+            </div>
+
+            <!-- ПРАВА КОЛОНКА (60% ширини на десктопі) -->
+            <div
+                    class="space-y-4 transition-all duration-1000 delay-300 transform"
+                    :class="shown ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'"
+            >
+
+                <!-- Акордеон -->
+                <div class="rounded-3xl border border-muted-purple/50 bg-gradient-to-r from-red-400/10 via-orange-300/10 to-pink-400/10 transition-all duration-300">
+                    <button
+                            @click="activeAccordion = activeAccordion === 1 ? null : 1"
+                            class="w-full flex justify-between items-center p-8 text-left focus:outline-none group"
+                    >
+                    <span class="text-[20px] sm:text-fluid-28 pr-8">
+                        When sex becomes painful, tense, or something you avoid
+                    </span>
+                        <span
+                                class="shrink-0 transition-transform duration-500 transform"
+                                :class="activeAccordion === 1 ? 'rotate-0' : 'rotate-180'"
+                        >
+                            <svg width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 11.5L11.5 1L22 11.5" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                    </span>
+                    </button>
+                    <div x-show="activeAccordion === 1" x-collapse>
+                        <div class="p-8 pt-0 opacity-90 text-primary text-[16px] sm:text-fluid-18 leading-[1.6]">
+                            For many people, sexual difficulty shows up first in the body. Pain, tightness, numbness, anxiety, or involuntary responses can make sex feel stressful rather than connective. This may include experiences such as vaginismus, dyspareunia (pain during sex), vulvodynia, pain during penetration or arousal, ongoing vulval or pelvic pain, anal pain, pelvic floor difficulties, or pain linked to erection - including conditions such as Peyronie’s disease or experiences of priapism. These experiences can be influenced by many factors, including stress, past medical or sexual health experiences, trauma, hormonal changes, or shifts in the body over time - such as those associated with pregnancy, menopause, or ageing.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-3xl border border-muted-purple/50 bg-gradient-to-r from-red-400/10 via-orange-300/10 to-pink-400/10 transition-all duration-300">
+                    <button
+                            @click="activeAccordion = activeAccordion === 2 ? null : 2"
+                            class="w-full flex justify-between items-center p-8 text-left focus:outline-none group"
+                    >
+        <span class="text-[20px] sm:text-fluid-28 pr-8">
+            When desire feels confusing, absent, or doesn’t match
+        </span>
+                        <span
+                                class="shrink-0 transition-transform duration-500 transform"
+                                :class="activeAccordion === 2 ? 'rotate-0' : 'rotate-180'"
+                        >
+            <svg width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 11.5L11.5 1L22 11.5" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </span>
+                    </button>
+                    <div x-show="activeAccordion === 2" x-collapse>
+                        <div class="p-8 pt-0 opacity-90 text-primary text-[16px] sm:text-fluid-18 leading-[1.6]">
+                            Desire is a complex and fluid experience. We work to understand the underlying emotional and relational dynamics that affect how you feel.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-3xl border border-muted-purple/50 bg-gradient-to-r from-red-400/10 via-orange-300/10 to-pink-400/10 transition-all duration-300">
+                    <button
+                            @click="activeAccordion = activeAccordion === 3 ? null : 3"
+                            class="w-full flex justify-between items-center p-8 text-left focus:outline-none group"
+                    >
+        <span class="text-[20px] sm:text-fluid-28 pr-8">
+            When orgasm or ejaculation feel difficult, pressured, or absent
+        </span>
+                        <span
+                                class="shrink-0 transition-transform duration-500 transform"
+                                :class="activeAccordion === 3 ? 'rotate-0' : 'rotate-180'"
+                        >
+            <svg width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 11.5L11.5 1L22 11.5" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </span>
+                    </button>
+                    <div x-show="activeAccordion === 3" x-collapse>
+                        <div class="p-8 pt-0 opacity-90 text-primary text-[16px] sm:text-fluid-18 leading-[1.6]">
+                            Understanding the physiological and psychological aspects of your sexual response in a non-judgmental environment.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-3xl border border-muted-purple/50 bg-gradient-to-r from-red-400/10 via-orange-300/10 to-pink-400/10 transition-all duration-300">
+                    <button
+                            @click="activeAccordion = activeAccordion === 4 ? null : 4"
+                            class="w-full flex justify-between items-center p-8 text-left focus:outline-none group"
+                    >
+        <span class="text-[20px] sm:text-fluid-28 pr-8">
+            When sex and intimacy feel out of sync
+        </span>
+                        <span
+                                class="shrink-0 transition-transform duration-500 transform"
+                                :class="activeAccordion === 4 ? 'rotate-0' : 'rotate-180'"
+                        >
+            <svg width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 11.5L11.5 1L22 11.5" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </span>
+                    </button>
+                    <div x-show="activeAccordion === 4" x-collapse>
+                        <div class="p-8 pt-0 opacity-90 text-primary text-[16px] sm:text-fluid-18 leading-[1.6]">
+                            Exploring ways to reconnect with your body and your partner. We help bridge the gap between physical experience and emotional closeness.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-3xl border border-muted-purple/50 bg-gradient-to-r from-red-400/10 via-orange-300/10 to-pink-400/10 transition-all duration-300">
+                    <button
+                            @click="activeAccordion = activeAccordion === 3 ? null : 3"
+                            class="w-full flex justify-between items-center p-8 text-left focus:outline-none group"
+                    >
+        <span class="text-[20px] sm:text-fluid-28 pr-8">
+            When sexual behaviour feels hard to control or full of shame
+        </span>
+                        <span
+                                class="shrink-0 transition-transform duration-500 transform"
+                                :class="activeAccordion === 3 ? 'rotate-0' : 'rotate-180'"
+                        >
+            <svg width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 11.5L11.5 1L22 11.5" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </span>
+                    </button>
+                    <div x-show="activeAccordion === 3" x-collapse>
+                        <div class="p-8 pt-0 opacity-90 text-primary text-[16px] sm:text-fluid-18 leading-[1.6]">
+                            Understanding the physiological and psychological aspects of your sexual response in a non-judgmental environment.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-3xl border border-muted-purple/50 bg-gradient-to-r from-red-400/10 via-orange-300/10 to-pink-400/10 transition-all duration-300">
+                    <button
+                            @click="activeAccordion = activeAccordion === 4 ? null : 4"
+                            class="w-full flex justify-between items-center p-8 text-left focus:outline-none group"
+                    >
+        <span class="text-[20px] sm:text-fluid-28 pr-8">
+            When sex connects with identity, orientation, or ways of relating
+        </span>
+                        <span
+                                class="shrink-0 transition-transform duration-500 transform"
+                                :class="activeAccordion === 4 ? 'rotate-0' : 'rotate-180'"
+                        >
+            <svg width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 11.5L11.5 1L22 11.5" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </span>
+                    </button>
+                    <div x-show="activeAccordion === 4" x-collapse>
+                        <div class="p-8 pt-0 opacity-90 text-primary text-[16px] sm:text-fluid-18 leading-[1.6]">
+                            Exploring ways to reconnect with your body and your partner. We help bridge the gap between physical experience and emotional closeness.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-12 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative">
+
+        <div class="text-center mb-10 sm:mb-20 reveal-hidden"
+             x-data="{ shown: false }"
+             x-intersect.once.threshold.50="shown = true"
+             :class="shown ? 'reveal-visible' : 'reveal-hidden'">
+            <h2 class="font-sans text-fluid-h2 text-primary">FAQ</h2>
+        </div>
+
+
+
+        <div class="lg:max-w-[84%] mx-auto space-y-4 relative" x-data="{ activeAccordion: 1 }">
+
+            <div class="absolute left-0 top-0 w-full -translate-y-[10%]">
+
+                <svg class="w-full" height="1296" viewBox="0 0 1218 1296" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_1_37911)">
+                        <path d="M571.802 1139.86C557.345 1070.33 665.531 845.222 736.808 799.783C808.086 754.343 941.863 1007.24 941.863 1007.24C941.863 1007.24 871.292 809.115 778.151 653.949C722.745 561.647 1061.21 709.864 1061.21 709.864C1061.21 709.864 777.281 560.447 793.692 435.288C807.123 332.856 976.699 319.086 976.699 319.086L763.835 297.859L765.938 188.265C765.938 188.265 698.761 441.554 615.278 428.293C531.796 415.032 561.919 155.857 561.919 155.857L573.667 402.889C573.667 402.889 441.944 197.39 387.729 266.904C333.513 336.417 554.905 380.994 523.059 467.778C491.212 554.562 226.39 466.164 309.901 478.989C371.197 488.403 466.984 479.437 466.984 479.437C466.984 479.437 142.685 546.866 156.271 719.974C157.75 738.812 590.079 559.071 454.345 587.294C355.957 607.751 460.962 966.544 462.483 949.161C475.495 800.533 471.881 882.373 525.424 801.572C702.577 534.234 571.802 1139.86 571.802 1139.86Z" fill="url(#paint0_linear_1_37911)" fill-opacity="0.15"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_f_1_37911" x="-0.000930786" y="4.57764e-05" width="1217.07" height="1295.72" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="77.9282" result="effect1_foregroundBlur_1_37911"/>
+                        </filter>
+                        <linearGradient id="paint0_linear_1_37911" x1="-182.6" y1="1044.9" x2="1093.72" y2="600.644" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#ED8F85"/>
+                            <stop offset="0.1875" stop-color="#D95F69"/>
+                            <stop offset="0.375" stop-color="#ECB1B6"/>
+                            <stop offset="0.629808" stop-color="#D95F69"/>
+                            <stop offset="0.769231" stop-color="#D29FEC"/>
+                            <stop offset="0.982559" stop-color="#D95F69"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+            </div>
+
+            <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 0ms;">
+                <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border"
+                     :class="activeAccordion === 1 ? 'border-transparent' : 'border-primary/50'">
+
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none"
+                         :class="activeAccordion === 1 ? 'opacity-100' : 'opacity-0'"></div>
+
+                    <div class="relative z-10">
+                        <button @click="activeAccordion = activeAccordion === 1 ? null : 1" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="activeAccordion === 1 ? 'text-bg' : 'text-primary'">
+                            <span class="font-sans text-fluid-28 pr-4">Is the introductory call confidential?</span>
+                            <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
+                            <template x-if="activeAccordion !== 1">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </template>
+                            <template x-if="activeAccordion === 1">
+                                <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </template>
+                        </span>
+                        </button>
+                        <div x-show="activeAccordion === 1" x-collapse.duration.400ms.ease-out>
+                            <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6 font-sans text-fluid-24 leading-[1.6]" :class="activeAccordion === 1 ? 'text-bg' : 'text-primary'">
+                                Yes. The introductory call is confidential and lasts around 15 minutes, giving you space to ask questions, get a sense of the therapist, and decide whether you’d like to continue.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 100ms;">
+                <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border"
+                     :class="activeAccordion === 2 ? 'border-transparent' : 'border-primary/50'">
+
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none"
+                         :class="activeAccordion === 2 ? 'opacity-100' : 'opacity-0'"></div>
+
+                    <div class="relative z-10">
+                        <button @click="activeAccordion = activeAccordion === 2 ? null : 2" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="activeAccordion === 2 ? 'text-bg' : 'text-primary'">
+                            <span class="font-sans text-fluid-28 pr-4">Do I have to commit to therapy after the consultation?</span>
+                            <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
+                            <template x-if="activeAccordion !== 2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </template>
+                            <template x-if="activeAccordion === 2">
+                                <svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </template>
+                        </span>
+                        </button>
+                        <div x-show="activeAccordion === 2" x-collapse.duration.400ms.ease-out>
+                            <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6 font-sans text-fluid-24 leading-[1.6]" :class="activeAccordion === 2 ? 'text-bg' : 'text-primary'">
+                                No. The introductory call is a chance to explore whether working together feels right. You’re free to take your time and decide whether to continue.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 200ms;">
+                <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="activeAccordion === 3 ? 'border-transparent' : 'border-primary/50'">
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="activeAccordion === 3 ? 'opacity-100' : 'opacity-0'"></div>
+                    <div class="relative z-10">
+                        <button @click="activeAccordion = activeAccordion === 3 ? null : 3" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="activeAccordion === 3 ? 'text-bg' : 'text-primary'">
+                            <span class="font-sans text-fluid-28 pr-4">Can I come on my own, or with my partner?</span>
+                            <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
+                            <template x-if="activeAccordion !== 3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                            <template x-if="activeAccordion === 3"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                        </span>
+                        </button>
+                        <div x-show="activeAccordion === 3" x-collapse.duration.400ms.ease-out>
+                            <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6 font-sans text-fluid-24 leading-[1.6]" :class="activeAccordion === 3 ? 'text-bg' : 'text-primary'">
+                                We work with individuals as well as couples and people in a range of relationship structures. You can explore what feels most appropriate for you when you enquire.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 300ms;">
+                <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="activeAccordion === 4 ? 'border-transparent' : 'border-primary/50'">
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="activeAccordion === 4 ? 'opacity-100' : 'opacity-0'"></div>
+                    <div class="relative z-10">
+                        <button @click="activeAccordion = activeAccordion === 4 ? null : 4" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="activeAccordion === 4 ? 'text-bg' : 'text-primary'">
+                            <span class="font-sans text-fluid-28 pr-4">How much does therapy cost?</span>
+                            <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
+                            <template x-if="activeAccordion !== 4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                            <template x-if="activeAccordion === 4"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                        </span>
+                        </button>
+                        <div x-show="activeAccordion === 4" x-collapse.duration.400ms.ease-out>
+                            <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6 font-sans text-fluid-24 leading-[1.6]" :class="activeAccordion === 4 ? 'text-bg' : 'text-primary'">
+                                Individual therapy is £80 per session, and couples or relationship therapy is £130 per session. Some therapists may offer a limited number of lower-cost sessions after the first session, which can be discussed directly with them.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 400ms;">
+                <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="activeAccordion === 5 ? 'border-transparent' : 'border-primary/50'">
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="activeAccordion === 5 ? 'opacity-100' : 'opacity-0'"></div>
+                    <div class="relative z-10">
+                        <button @click="activeAccordion = activeAccordion === 5 ? null : 5" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="activeAccordion === 5 ? 'text-bg' : 'text-primary'">
+                            <span class="font-sans text-fluid-28 pr-4">Are sessions online or in person?</span>
+                            <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
+                            <template x-if="activeAccordion !== 5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                            <template x-if="activeAccordion === 5"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                        </span>
+                        </button>
+                        <div x-show="activeAccordion === 5" x-collapse.duration.400ms.ease-out>
+                            <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6 font-sans text-fluid-24 leading-[1.6]" :class="activeAccordion === 5 ? 'text-bg' : 'text-primary'">
+                                Sessions are primarily held online, allowing you to work with specialist therapists wherever you’re based in the UK or abroad. Some therapists also see clients in person. Any in-person availability will be clearly shown on individual therapist profiles.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 500ms;">
+                <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border" :class="activeAccordion === 6 ? 'border-transparent' : 'border-primary/50'">
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#76426E] to-[#894C7E] transition-opacity duration-500 ease-in-out pointer-events-none" :class="activeAccordion === 6 ? 'opacity-100' : 'opacity-0'"></div>
+                    <div class="relative z-10">
+                        <button @click="activeAccordion = activeAccordion === 6 ? null : 6" class="w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none transition-colors duration-300" :class="activeAccordion === 6 ? 'text-bg' : 'text-primary'">
+                            <span class="font-sans text-fluid-28 pr-4">What happens after the first session?</span>
+                            <span class="shrink-0 flex items-center justify-center sm:w-6 sm:h-6 w-4 h-4">
+                            <template x-if="activeAccordion !== 6"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 11.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.75 0.75V22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                            <template x-if="activeAccordion === 6"><svg width="24" height="2" viewBox="0 0 24 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75H22.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></template>
+                        </span>
+                        </button>
+                        <div x-show="activeAccordion === 6" x-collapse.duration.400ms.ease-out>
+                            <div class="sm:px-8 sm:pb-8 pt-0 px-6 pb-6 font-sans text-fluid-24 leading-[1.6]" :class="activeAccordion === 6 ? 'text-bg' : 'text-primary'">
+                                If you decide to continue, ongoing sessions, arrangements and payments are made directly with your therapist, at a pace that feels right for you.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="py-40 sm:py-20 px-4 lg:px-25 mt-12 sm:mt-16 relative section-fluid-height flex items-center overflow-hidden" x-data>
+
+        <div class="absolute inset-0 z-0">
+            <picture>
+                <source srcset="/src/images/CTA-mobile.webp" media="(max-width: 639px)">
+
+                <img src="/src/images/CTA.webp"
+                     alt="Therapy Room"
+                     class="w-full h-full object-cover"
+                     loading="lazy"
+                     decoding="async">
+            </picture>
+        </div>
+
+        <div class="relative z-10 max-w-[1920px] mx-auto w-full">
+            <div class="max-w-2xl reveal-hidden"
+                 x-data="{ shown: false }"
+                 x-intersect.once.threshold.50="shown = true"
+                 :class="shown ? 'reveal-visible' : 'reveal-hidden'">
+
+                <h2 class="text-fluid-h2 text-bg leading-none mb-4 sm:mb-8">
+                    Take the next<br class="sm:hidden block"> step, <br class="hidden sm:block">
+                    when<br class="sm:hidden block"> you’re ready
+                </h2>
+
+                <p class="font-sans text-fluid-24 text-bg sm:max-w-lg max-w-[95%]">
+                    Whether you’re clear about what you’re looking for or still finding the words, we’re here to help you move forward at your own pace.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 mt-10 sm:mt-14">
+                    <a href="#" class="bg-card-pink border border-card-pink hover:border-card-light-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition">
+                        Find a therapist
+                    </a>
+
+                    <a href="#" class="border border-bg/50 hover:bg-muted-purple hover:text-white hover:border-transparent text-bg font-sans font-bold fluid-button rounded-full transition">
+                        Have a question first? Contact us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 <footer class="bg-primary pt-20 pb-20 sm:pb-10 px-4 lg:px-25 text-bg">
