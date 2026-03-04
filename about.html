@@ -499,33 +499,32 @@
 </header>
 <div class="overflow-hidden">
     <section
-            class="py-10 md:pb-8 sm:py-24 px-4 lg:px-25 lg:px-25 mt-20 sm:mt-16 lg:mt-22 max-w-[1920px] mx-auto relative"
-            x-data>
+            class="py-10 md:pb-8 sm:py-24 px-4 lg:px-25 mt-20 sm:mt-16 lg:mt-22 max-w-[1920px] mx-auto relative "
+            x-data="{ shown: false }"
+            x-intersect.once.margin.-15%="shown = true">
         <div class="relative">
-            <h1 class="font-sans text-fluid-h1 text-center">
+            <h1 class="font-sans text-fluid-h1 text-center transition-all duration-1000 transform"
+                :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
                 About Intima Therapy
             </h1>
-            <div class="text-fluid-24 text-center mt-4 sm:mt-8 max-w-[870px] mx-auto">
-                At Intima Therapy, our mission is to create a space where people, in all their uniqueness, can explore
-                sex, intimacy, and connection - not as problems to fix, but as pathways to feeling, healing, and
+            <div class="text-fluid-24 text-center mt-4 sm:mt-8 max-w-[870px] mx-auto transition-all duration-1000 delay-300 transform"
+                 :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+                At Intima Therapy, our mission is to create a space where people, in all their<br class="hidden sm:block"> uniqueness, can explore
+                sex, intimacy, and connection - not as problems to fix, but<br class="hidden sm:block"> as pathways to feeling, healing, and
                 becoming more fully themselves.
             </div>
-            <div class="absolute bottom-0 sm:-bottom-[43%] 2xl:-bottom-[36%] -left-[35%] sm:-left-[14%] w-[120%] sm:w-[60%] pointer-events-none z-0">
-                <svg width="1453" height="905" viewBox="0 0 1453 905" fill="none" xmlns="http://www.w3.org/2000/svg"
-                     class="w-full h-auto">
-                    <g filter="url(#filter0_f_859_9826)">
-                        <path d="M1324.5 757.913C1238.26 731.271 977.836 559.968 931.263 498.262C884.689 436.555 1208.21 488.905 1208.21 488.905C1208.21 488.905 958.909 429.109 759.067 403.058C640.189 387.562 861.331 275.543 861.331 275.543C861.331 275.543 645.343 357.04 495.247 285.798C372.406 227.493 376.234 127.596 376.234 127.596L324.632 233.843L191.715 178.192C191.715 178.192 491.351 341.005 465.115 380.219C438.879 419.433 127.597 274.025 127.597 274.025L429.2 390.419C429.2 390.419 163.519 360.511 241.414 424.826C319.31 489.142 400.32 389.827 501.913 450.456C603.506 511.085 463.982 612.441 489.692 572.995C508.563 544.041 509.282 487.023 509.282 487.023C509.282 487.023 551.897 698.502 763.895 777.127C786.965 785.684 620.973 459.078 638.81 547.592C651.74 611.752 1100.46 732.549 1079.52 723.069C900.49 642.022 999.5 684.702 907.807 615.142C604.433 384.997 1324.5 757.913 1324.5 757.913Z"
-                              fill="url(#paint0_linear_859_9826)" fill-opacity="0.2"/>
+            <div class="absolute max-w-[578px] -top-[300px] -left-[478px] pointer-events-none z-0">
+                <svg width="1453" height="905" viewBox="0 0 1453 905" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_1_37816)">
+                        <path d="M1324.5 757.913C1238.26 731.271 977.834 559.968 931.261 498.262C884.687 436.555 1208.21 488.905 1208.21 488.905C1208.21 488.905 958.907 429.109 759.065 403.058C640.187 387.562 861.329 275.543 861.329 275.543C861.329 275.543 645.341 357.04 495.245 285.798C372.404 227.493 376.232 127.596 376.232 127.596L324.63 233.843L191.713 178.192C191.713 178.192 491.349 341.005 465.113 380.219C438.877 419.433 127.595 274.025 127.595 274.025L429.198 390.419C429.198 390.419 163.517 360.511 241.412 424.826C319.308 489.142 400.318 389.827 501.911 450.456C603.504 511.085 463.98 612.441 489.69 572.995C508.561 544.041 509.28 487.023 509.28 487.023C509.28 487.023 551.895 698.502 763.893 777.127C786.963 785.684 620.972 459.078 638.808 547.592C651.738 611.752 1100.45 732.549 1079.51 723.069C900.489 642.022 999.498 684.702 907.805 615.142C604.431 384.997 1324.5 757.913 1324.5 757.913Z" fill="url(#paint0_linear_1_37816)" fill-opacity="0.2"/>
                     </g>
                     <defs>
-                        <filter id="filter0_f_859_9826" x="0.00173187" y="-0.000221252" width="1452.09" height="904.889"
-                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <filter id="filter0_f_1_37816" x="-0.000221252" y="2.28882e-05" width="1452.09" height="904.889" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                             <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                            <feGaussianBlur stdDeviation="63.798" result="effect1_foregroundBlur_859_9826"/>
+                            <feGaussianBlur stdDeviation="63.798" result="effect1_foregroundBlur_1_37816"/>
                         </filter>
-                        <linearGradient id="paint0_linear_859_9826" x1="1117.64" y1="1124.65" x2="1307.9" y2="343.537"
-                                        gradientUnits="userSpaceOnUse">
+                        <linearGradient id="paint0_linear_1_37816" x1="1117.64" y1="1124.65" x2="1307.9" y2="343.537" gradientUnits="userSpaceOnUse">
                             <stop stop-color="#ED8F85"/>
                             <stop offset="0.1875" stop-color="#D95F69"/>
                             <stop offset="0.375" stop-color="#ECB1B6"/>
@@ -536,23 +535,18 @@
                     </defs>
                 </svg>
             </div>
-            <div class="absolute bottom-0 sm:-bottom-[43%] 2xl:-bottom-[46%] -right-[65%] sm:-right-[14%] w-[120%] sm:w-[60%] pointer-events-none z-0">
-
-                <svg width="1453" height="905" viewBox="0 0 1453 905" fill="none" xmlns="http://www.w3.org/2000/svg"
-                     class="w-full h-auto">
-                    <g filter="url(#filter0_f_859_9826)">
-                        <path d="M1324.5 757.913C1238.26 731.271 977.836 559.968 931.263 498.262C884.689 436.555 1208.21 488.905 1208.21 488.905C1208.21 488.905 958.909 429.109 759.067 403.058C640.189 387.562 861.331 275.543 861.331 275.543C861.331 275.543 645.343 357.04 495.247 285.798C372.406 227.493 376.234 127.596 376.234 127.596L324.632 233.843L191.715 178.192C191.715 178.192 491.351 341.005 465.115 380.219C438.879 419.433 127.597 274.025 127.597 274.025L429.2 390.419C429.2 390.419 163.519 360.511 241.414 424.826C319.31 489.142 400.32 389.827 501.913 450.456C603.506 511.085 463.982 612.441 489.692 572.995C508.563 544.041 509.282 487.023 509.282 487.023C509.282 487.023 551.897 698.502 763.895 777.127C786.965 785.684 620.973 459.078 638.81 547.592C651.74 611.752 1100.46 732.549 1079.52 723.069C900.49 642.022 999.5 684.702 907.807 615.142C604.433 384.997 1324.5 757.913 1324.5 757.913Z"
-                              fill="url(#paint0_linear_859_9826)" fill-opacity="0.2"/>
+            <div class="hidden lg:block absolute max-w-[1200px] -top-[200px] -right-[250px] pointer-events-none z-0">
+                <svg width="1518" height="798" viewBox="0 0 1518 798" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_1_37817)">
+                        <path d="M762.959 127.596C790.693 164.382 664.424 298.941 570.016 331.032C475.608 363.124 261.544 237.416 261.544 237.416C261.544 237.416 381.524 339.312 528.283 415.338C615.585 460.562 127.596 412.821 127.596 412.821C127.596 412.821 539.691 466.66 530.461 537.112C522.907 594.771 288.015 619.252 288.015 619.252L587.067 609.696L596.085 670.162C596.085 670.162 662.114 524.2 779.937 523.166C897.76 522.133 884.025 667.637 884.025 667.637L840.714 532.985C840.714 532.985 1046.75 632.837 1114.74 589.211C1182.74 545.584 869.255 543.152 904.188 492.261C939.121 441.369 1317.93 463.564 1200.11 464.84C1113.64 465.777 981.086 480.259 981.086 480.259C981.086 480.259 1425.82 410.845 1388 317.022C1383.89 306.812 800.806 448.749 986.946 419.696C1121.87 398.637 936.37 211.836 936.144 221.546C934.212 304.562 930.326 259.204 864.496 308.969C646.689 473.623 762.959 127.596 762.959 127.596Z" fill="url(#paint0_linear_1_37817)" fill-opacity="0.2"/>
                     </g>
                     <defs>
-                        <filter id="filter0_f_859_9826" x="0.00173187" y="-0.000221252" width="1452.09" height="904.889"
-                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <filter id="filter0_f_1_37817" x="-0.000221252" y="2.28882e-05" width="1517.88" height="797.758" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                             <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                            <feGaussianBlur stdDeviation="63.798" result="effect1_foregroundBlur_859_9826"/>
+                            <feGaussianBlur stdDeviation="63.798" result="effect1_foregroundBlur_1_37817"/>
                         </filter>
-                        <linearGradient id="paint0_linear_859_9826" x1="1117.64" y1="1124.65" x2="1307.9" y2="343.537"
-                                        gradientUnits="userSpaceOnUse">
+                        <linearGradient id="paint0_linear_1_37817" x1="1824.97" y1="104.578" x2="898.547" y2="1173.35" gradientUnits="userSpaceOnUse">
                             <stop stop-color="#ED8F85"/>
                             <stop offset="0.1875" stop-color="#D95F69"/>
                             <stop offset="0.375" stop-color="#ECB1B6"/>
@@ -564,17 +558,21 @@
                 </svg>
             </div>
         </div>
-        <div class="relative w-full aspect-[4/4.5] sm:aspect-[4/2.13] rounded-3xl overflow-hidden sm:mt-20">
-            <img src="/src/images/content/Image-aboutHero.webp"
-                 alt="Couple Intimacy"
-                 class="w-full h-full object-cover">
+        <div class="relative w-full aspect-[4/4.2] sm:aspect-[4/2.13] rounded-3xl overflow-hidden mt-10 mb-16 sm:mb-0 sm:mt-20 transition-all duration-1000 delay-500 transform"
+             :class="shown ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'">
+            <picture>
+                <source srcset="/src/images/content/Image-aboutHero-mobile.webp" media="(max-width: 639px)">
 
+                <img src="/src/images/content/Image-aboutHero.webp"
+                     alt="Couple Intimacy"
+                     class="w-full h-full object-cover">
+            </picture>
         </div>
 
 
     </section>
 
-    <section class="py-24 sm:py-30 2xl:py-38 px-4 lg:px-25 my-14 md:my-10 2xl:my-14 overflow-hidden relative text-bg" style="background: linear-gradient(180deg, #5A2251 0%, #894C7E 100%);"
+    <section class="py-24 sm:py-30 2xl:py-38 px-4 lg:px-25 sm:my-14 md:my-10 overflow-hidden relative text-bg" style="background: linear-gradient(180deg, #5A2251 0%, #894C7E 100%);"
              x-data>
 
         <div class="absolute bottom-0 -left-[10%] md:left-0 w-full max-w-[36%] pointer-events-none opacity-0 md:opacity-100">
@@ -615,6 +613,114 @@
                 </p>
 
             </div>
+        </div>
+    </section>
+    <section class="py-12 pt-24 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative" x-data>
+        <div class="absolute -bottom-[43%] 2xl:-bottom-[36%] left-[15%] w-[60%] lg:w-[60%] pointer-events-none z-0">
+            <svg width="1218" height="1296" viewBox="0 0 1218 1296" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-full h-auto">
+                <g filter="url(#filter0_f_859_9833)">
+                    <path d="M571.802 1139.86C557.345 1070.33 665.531 845.222 736.808 799.782C808.086 754.343 941.863 1007.24 941.863 1007.24C941.863 1007.24 871.292 809.115 778.151 653.949C722.745 561.647 1061.21 709.863 1061.21 709.863C1061.21 709.863 777.281 560.446 793.692 435.287C807.123 332.855 976.699 319.085 976.699 319.085L763.835 297.859L765.938 188.265C765.938 188.265 698.761 441.554 615.278 428.293C531.796 415.031 561.919 155.856 561.919 155.856L573.667 402.889C573.667 402.889 441.944 197.389 387.729 266.903C333.513 336.417 554.905 380.994 523.059 467.777C491.212 554.561 226.39 466.164 309.901 478.989C371.197 488.402 466.984 479.436 466.984 479.436C466.984 479.436 142.685 546.866 156.271 719.973C157.75 738.812 590.079 559.071 454.345 587.293C355.957 607.751 460.962 966.544 462.483 949.16C475.495 800.533 471.881 882.373 525.424 801.572C702.577 534.233 571.802 1139.86 571.802 1139.86Z"
+                          fill="url(#paint0_linear_859_9833)" fill-opacity="0.15"/>
+                </g>
+                <defs>
+                    <filter id="filter0_f_859_9833" x="-0.000930786" y="4.57764e-05" width="1217.07" height="1295.72"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feGaussianBlur stdDeviation="77.9282" result="effect1_foregroundBlur_859_9833"/>
+                    </filter>
+                    <linearGradient id="paint0_linear_859_9833" x1="-182.6" y1="1044.9" x2="1093.72" y2="600.643"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#ED8F85"/>
+                        <stop offset="0.1875" stop-color="#D95F69"/>
+                        <stop offset="0.375" stop-color="#ECB1B6"/>
+                        <stop offset="0.629808" stop-color="#D95F69"/>
+                        <stop offset="0.769231" stop-color="#D29FEC"/>
+                        <stop offset="0.982559" stop-color="#D95F69"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+
+        <div class="flex flex-col-reverse lg:flex-row items-center lg:items-start lg:gap-4 gap-20 z-10 relative">
+
+            <div class="w-full lg:w-1/2 flex flex-col justify-between lg:self-stretch">
+
+                <div class="lg:max-w-[81%]">
+                    <h2 class="font-sans text-fluid-h2 text-primary leading-none mb-10 sm:mb-20">
+                        An inclusive,<br>
+                        sex-positive space
+                    </h2>
+                    <ul class="flex flex-col gap-6 sm:gap-12 links-section">
+                        <li class="flex items-start sm:gap-5 gap-4 reveal-hidden border-b border-primary/20 pb-6 sm:pb-0 sm:border-none"
+                            x-data="{ shown: false }"
+                            x-intersect.once.margin.-5%="shown = true"
+                            :class="shown ? 'reveal-visible' : 'reveal-hidden'">
+                            <div class="shrink-0 mt-1">
+                                <svg width="41" height="41" viewBox="0 0 41 41" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg" class="list-icon-svg">
+                                    <g clip-path="url(#clip0_859_9837)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M30.4717 5.62012C35.9732 6.19067 40.2815 10.8494 40.3047 16.501V16.5488C40.3046 20.5477 38.5894 24.2662 36.168 27.5225C31.3312 34.0302 23.6778 38.6935 21.2735 40.0615C20.8819 40.2838 20.6291 40.4194 20.5498 40.4609L20.1465 40.6748L19.7461 40.4561C19.6631 40.4096 19.3838 40.2559 18.9522 40.002C16.4758 38.5484 8.95628 33.8182 4.16703 27.4141C1.72993 24.1554 0.000161826 20.4633 3.72917e-05 16.5488C3.72917e-05 16.4927 -0.0004361 16.435 0.00199042 16.3789C0.0861622 10.7822 4.37237 6.18687 9.835 5.62012C9.86039 5.61892 9.88578 5.61914 9.91117 5.61914C15.4017 5.61914 19.8533 10.0757 19.8536 15.5732C19.8536 20.6569 16.0477 24.8518 11.1328 25.4541H11.1338C11.1338 25.4541 16.5845 25.4494 20.1338 25.4482C23.6657 25.4471 29.0807 25.4482 29.1329 25.4482C24.2437 24.8215 20.4649 20.6385 20.4649 15.5732C20.4651 10.0757 24.9167 5.61914 30.4073 5.61914C30.429 5.61914 30.4499 5.6189 30.4717 5.62012ZM20.1534 0C22.444 0 24.3008 1.8597 24.3008 4.15332C24.3006 6.44678 22.4439 8.30566 20.1534 8.30566C17.8629 8.30559 16.0061 6.44673 16.0059 4.15332C16.0059 1.85975 17.8628 7.2076e-05 20.1534 0Z"
+                                              fill="#D95F69"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_859_9837">
+                                            <rect width="40.3049" height="40.6746" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <p class="font-sans text-fluid-28 text-primary leading-[1.3]">
+                                Intima Therapy is an inclusive, sex-positive space. We offer <a href="">LGBTQIA+
+                                affirming</a> and <a href="">Kink-aware therapy</a>. Our therapists are informed by a
+                                GSRD (Gender, Sex, and Relationship Diversity) perspective and have experience working
+                                with diverse identities, desires, and relationship structures.
+                            </p>
+                        </li>
+
+                        <li class="flex items-start sm:gap-5 gap-4 reveal-hidden border-b border-primary/20 pb-6 sm:pb-0 sm:border-none"
+                            x-data="{ shown: false }"
+                            x-intersect.once.margin.-5%="shown = true"
+                            :class="shown ? 'reveal-visible' : 'reveal-hidden'">
+                            <div class="shrink-0 mt-1">
+                                <svg width="41" height="41" viewBox="0 0 41 41" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg" class="list-icon-svg">
+                                    <g clip-path="url(#clip0_859_9837)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M30.4717 5.62012C35.9732 6.19067 40.2815 10.8494 40.3047 16.501V16.5488C40.3046 20.5477 38.5894 24.2662 36.168 27.5225C31.3312 34.0302 23.6778 38.6935 21.2735 40.0615C20.8819 40.2838 20.6291 40.4194 20.5498 40.4609L20.1465 40.6748L19.7461 40.4561C19.6631 40.4096 19.3838 40.2559 18.9522 40.002C16.4758 38.5484 8.95628 33.8182 4.16703 27.4141C1.72993 24.1554 0.000161826 20.4633 3.72917e-05 16.5488C3.72917e-05 16.4927 -0.0004361 16.435 0.00199042 16.3789C0.0861622 10.7822 4.37237 6.18687 9.835 5.62012C9.86039 5.61892 9.88578 5.61914 9.91117 5.61914C15.4017 5.61914 19.8533 10.0757 19.8536 15.5732C19.8536 20.6569 16.0477 24.8518 11.1328 25.4541H11.1338C11.1338 25.4541 16.5845 25.4494 20.1338 25.4482C23.6657 25.4471 29.0807 25.4482 29.1329 25.4482C24.2437 24.8215 20.4649 20.6385 20.4649 15.5732C20.4651 10.0757 24.9167 5.61914 30.4073 5.61914C30.429 5.61914 30.4499 5.6189 30.4717 5.62012ZM20.1534 0C22.444 0 24.3008 1.8597 24.3008 4.15332C24.3006 6.44678 22.4439 8.30566 20.1534 8.30566C17.8629 8.30559 16.0061 6.44673 16.0059 4.15332C16.0059 1.85975 17.8628 7.2076e-05 20.1534 0Z"
+                                              fill="#D95F69"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="font-sans text-fluid-28 text-primary leading-[1.3]">
+                                We welcome people of all genders, sexual identities, relationship configurations -
+                                including monogamous, non-monogamous and polyamorous - as well as people from diverse
+                                cultural backgrounds, faiths, and abilities. The diversity of our therapists reflects
+                                our values.
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2 reveal-hidden"
+                 x-data="{ shown: false }"
+                 x-intersect.once.margin.-5%="shown = true"
+                 :class="shown ? 'reveal-visible' : 'reveal-hidden'"
+                 style="transition-delay: 200ms;">
+
+                <div class="relative w-full aspect-[4/4.5] sm:aspect-[4/3.4] lg:aspect-square rounded-3xl overflow-hidden">
+                    <img src="/src/images/content/Image-about.webp"
+                         alt="Couple Intimacy"
+                         class="w-full h-full object-cover">
+
+                </div>
+            </div>
+
         </div>
     </section>
     <section class="py-12 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto" x-data="{ modalOpen: false, videoId: 'wWR0VD6qgt8' }">
@@ -688,36 +794,38 @@
 
         <div class="text-center mb-10 lg:mb-20 relative z-10"
              x-data="{ shown: false }"
-             x-intersect.threshold.20="shown = true"
-             :class="shown ? 'reveal-visible' : 'reveal-hidden'">
-            <h2 class="font-sans text-fluid-h2 text-primary">Choosing a therapist</h2>
+             x-intersect.threshold.20="shown = true">
+            <h2 class="font-sans text-fluid-h2 text-primary transition-all duration-1000 transform"
+                :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
+                Choosing a therapist
+            </h2>
         </div>
-        <div class="relative lg:mt-30 lg:mb-60">
+        <div class="relative">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10 mod_line">
 
-                <div class="bg-primary text-bg p-6 xl:p-8 rounded-3xl md:rounded-3xl sm:aspect-[4/3.3] aspect-[4.9/4.1] flex flex-col justify-end relative reveal-hidden"
+                <div class="bg-primary text-bg p-6 xl:p-8 rounded-3xl md:rounded-3xl lg:aspect-[4/3.3] sm:aspect-[4/3.9] flex flex-col justify-between relative gap-8 reveal-hidden"
                      x-data="{ shown: false }"
                      x-intersect.once.half="shown = true"
                      :class="shown ? 'reveal-visible' : 'reveal-hidden'"
                      style="transition-delay: 0ms;">
 
-                    <div class="absolute sm:top-8 sm:left-8 top-4 left-4">
+                    <div class="md:top-8 md:left-8 top-4 left-4">
                         <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M35.9994 36C49.7748 36 60.9421 25.1346 60.9421 11.7314H44.3135C44.3135 16.1921 40.5838 19.8211 35.9994 19.8211C31.4149 19.8211 27.685 16.1921 27.685 11.7314H11.0566C11.0566 25.1346 22.2239 36 35.9994 36Z" fill="#F4ECE4"/>
                             <path d="M35.9994 44.0895C31.4149 44.0895 27.685 40.4605 27.685 36H11.0566C11.0566 49.4032 22.2239 60.2686 35.9994 60.2686C49.7748 60.2686 60.9421 49.4032 60.9421 36H44.3135C44.3135 40.4605 40.5838 44.0895 35.9994 44.0895Z" fill="white"/>
                         </svg>
                     </div>
-                    <p class="font-sans text-base sm:text-fluid-24 leading-[1.5]">All therapists on the platform charge the same fee, so you can focus on what matters most - areas of specialism, lived experience, cultural sensitivity, and, above all, who you feel most at ease with. </p>
+                    <p class="font-sans text-lg sm:text-fluid-24 leading-[1.5]">All therapists on the platform charge the same fee, so you can focus on what matters most - areas of specialism, lived experience, cultural sensitivity, and, above all, who you feel most at ease with. </p>
                 </div>
 
-                <div class="bg-card-pink text-bg p-6 xl:p-8 rounded-3xl md:rounded-3xl sm:aspect-[4/3.3] aspect-[4.9/4.1] flex flex-col justify-end relative reveal-hidden"
+                <div class="bg-card-pink text-bg p-6 xl:p-8 rounded-3xl md:rounded-3xl lg:aspect-[4/3.3] sm:aspect-[4/3.9] flex flex-col justify-between relative gap-8 reveal-hidden"
                      x-data="{ shown: false }"
                      x-intersect.once.half="shown = true"
                      :class="shown ? 'reveal-visible' : 'reveal-hidden'"
                      style="transition-delay: 150ms;">
 
-                    <div class="absolute sm:top-8 sm:left-8 top-4 left-4">
+                    <div class="md:top-8 md:left-8 top-4 left-4">
                         <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M35.9999 28.161C46.7573 31.8335 58.0017 24.5236 61.115 11.8338C50.3576 8.16136 39.1133 15.4713 35.9999 28.161C32.8866 15.4713 21.6422 8.16136 10.8848 11.8338C13.998 24.5236 25.2425 31.8335 35.9999 28.161Z" fill="#F4ECE4"/>
                             <path d="M10.8848 27.8363C13.998 40.5259 25.2423 47.8358 35.9997 44.1633C32.8866 31.4736 21.6422 24.1638 10.8848 27.8363Z" fill="#F4ECE4"/>
@@ -726,33 +834,78 @@
                             <path d="M36 60.1657C46.7574 63.8382 58.0018 56.5284 61.1151 43.8387C50.3577 40.1662 39.1134 47.4761 36 60.1657Z" fill="white"/>
                         </svg>
                     </div>
-                    <p class="font-sans text-base sm:text-fluid-24 leading-[1.5]">Our therapists come from diverse cultural backgrounds and offer sessions in multiple languages, including English, French, Greek, Portuguese, Farsi, and Hungarian. </p>
+                    <p class="font-sans text-lg sm:text-fluid-24 leading-[1.5]">Our therapists come from diverse cultural backgrounds and offer sessions in multiple languages, including English, French, Greek, Portuguese, Farsi, and Hungarian. </p>
                 </div>
 
-                <div class="bg-card-muted text-bg p-6 xl:p-8 rounded-3xl md:rounded-3xl sm:aspect-[4/3.3] aspect-[4.9/4.1] flex flex-col justify-end relative reveal-hidden"
+                <div class="bg-card-muted text-bg p-6 xl:p-8 rounded-3xl md:rounded-3xl lg:aspect-[4/3.3] sm:aspect-[4/3.9] flex flex-col justify-between relative gap-8 reveal-hidden"
                      x-data="{ shown: false }"
                      x-intersect.once.half="shown = true"
                      :class="shown ? 'reveal-visible' : 'reveal-hidden'"
                      style="transition-delay: 300ms;">
 
-                    <div class="absolute sm:top-8 sm:left-8 top-4 left-4">
+                    <div class="md:top-8 md:left-8 top-4 left-4">
                         <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M36.0007 48.9432C29.9294 48.9432 24.9899 54.0237 24.9899 60.2686H12.4062C12.4062 46.8654 22.9699 36 36.0007 36C49.0316 36 59.5952 46.8654 59.5952 60.2686H47.0115C47.0115 54.0238 42.0722 48.9432 36.0007 48.9432Z" fill="#F4ECE4"/>
                             <path d="M36.0007 23.0568C42.072 23.0568 47.0115 17.9764 47.0115 11.7314H59.5952C59.5952 25.1346 49.0316 36 36.0007 36C22.9699 36 12.4062 25.1346 12.4062 11.7314H24.9899C24.9899 17.9762 29.9293 23.0568 36.0007 23.0568Z" fill="white"/>
                         </svg>
 
                     </div>
-                    <p class="font-sans text-base sm:text-fluid-24 leading-[1.5]">For many people, being able to work in their first language or with someone who understands their cultural context can make a real difference. We see the therapeutic relationship as central to the work. </p>
+                    <p class="font-sans text-lg sm:text-fluid-24 leading-[1.5]">For many people, being able to work in their first language or with someone who understands their cultural context can make a real difference. We see the therapeutic relationship as central to the work. </p>
                 </div>
 
             </div>
-            <svg class="w-full h-full my-14" viewBox="0 0 1724 288" fill="none">
+
+            <svg class="block sm:hidden w-full h-full my-10" viewBox="0 0 355 88" fill="none">
+                <path d="M0.982422 0.410176C8.89867 43.169 102.763 40.3021 125.057 43.6251C151.068 47.5019 173.427 60.8199 177.563 87.1821M353.982 0.182129C346.066 42.941 252.202 40.0741 229.907 43.3971C203.897 47.2739 181.537 60.5918 177.402 86.9541" stroke="#491E42" stroke-width="2" stroke-dasharray="2 9"/>
+            </svg>
+
+
+            <svg class="hidden sm:block w-full h-full sm:my-14" viewBox="0 0 1724 288" fill="none">
                 <path d="M1.6875 1.21372C40.2596 142.269 497.614 132.811 606.246 143.773C732.983 156.562 841.929 200.496 862.081 287.461M1721.69 0.461426C1683.12 141.516 1225.76 132.059 1117.13 143.021C990.392 155.81 881.446 199.744 861.294 286.709" stroke="#491E42" stroke-width="3.5" stroke-dasharray="2 18"/>
             </svg>
 
-            <h2 class="font-sans text-fluid-h2 text-primary text-center">Taking time to choose someone who feels like<br class="sm:block hidden"> a good fit is not only encouraged -<br class="sm:block hidden"> it’s part of the process</h2>
 
-            <svg class="my-14 mx-auto" width="4" height="160" viewBox="0 0 4 160" fill="none">
+            <div x-data="{ shown: false }"
+                 x-intersect.once.margin.-10%="shown = true"
+                 class="relative z-10">
+                <h2 class="font-sans text-fluid-h2 text-primary text-center transition-all duration-1000 transform"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
+                    Taking time to choose someone who feels like<br class="lg:block hidden">
+                    a good fit is not only encouraged -<br class="lg:block hidden">
+                    it’s part of the process
+                </h2>
+                <div class="absolute left-0 top-0 w-full -translate-y-[40%]">
+                    <svg class="w-full" height="2048" viewBox="0 0 1909 2048" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_f_1_37866)">
+                            <path d="M889.395 1891.19C863.9 1768.58 1054.69 1371.59 1180.39 1291.45C1306.09 1211.32 1542.02 1657.31 1542.02 1657.31C1542.02 1657.31 1417.56 1307.91 1253.3 1034.27C1155.59 871.487 1752.49 1132.87 1752.49 1132.87C1752.49 1132.87 1251.77 869.37 1280.71 648.646C1304.39 468.002 1603.45 443.718 1603.45 443.718L1228.05 406.285L1231.76 213.01C1231.76 213.01 1113.29 659.698 966.068 636.311C818.842 612.924 871.967 155.856 871.967 155.856L892.685 591.51C892.685 591.51 660.385 229.102 564.774 351.693C469.162 474.284 859.597 552.896 803.434 705.944C747.271 858.991 280.245 703.098 427.52 725.716C535.619 742.317 704.544 726.505 704.544 726.505C704.544 726.505 132.627 845.42 156.587 1150.7C159.195 1183.93 921.627 866.944 682.254 916.716C508.742 952.793 693.923 1585.54 696.607 1554.89C719.553 1292.77 713.18 1437.1 807.606 1294.61C1120.02 823.142 889.395 1891.19 889.395 1891.19Z" fill="url(#paint0_linear_1_37866)" fill-opacity="0.15"/>
+                        </g>
+                        <defs>
+                            <filter id="filter0_f_1_37866" x="-0.000930786" y="4.57764e-05" width="1908.35" height="2047.05" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="77.9282" result="effect1_foregroundBlur_1_37866"/>
+                            </filter>
+                            <linearGradient id="paint0_linear_1_37866" x1="-441.028" y1="1723.73" x2="1809.83" y2="940.26" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#ED8F85"/>
+                                <stop offset="0.1875" stop-color="#D95F69"/>
+                                <stop offset="0.375" stop-color="#ECB1B6"/>
+                                <stop offset="0.629808" stop-color="#D95F69"/>
+                                <stop offset="0.769231" stop-color="#D29FEC"/>
+                                <stop offset="0.982559" stop-color="#D95F69"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                </div>
+
+            </div>
+
+            <svg class="block sm:hidden w-full my-10" width="2" height="120" viewBox="0 0 2 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0V120" stroke="#491E42" stroke-width="2" stroke-dasharray="2 9"/>
+            </svg>
+
+
+            <svg class="hidden sm:block sm:my-14 mx-auto max-h-fluid-header" width="4" height="160" viewBox="0 0 4 160" fill="none">
                 <path d="M1.75 0L1.75 160" stroke="#491E42" stroke-width="3.5" stroke-dasharray="2 18"/>
             </svg>
 
@@ -922,29 +1075,42 @@
             </div>
 
 
+
         </div>
     </section>
 
+    <section
+            class="py-12 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative"
+            x-data="{ shown: false }"
+            x-intersect.once.margin.-15%="shown = true">
 
-
-
-    <section class="py-12 pt-2 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative" x-data>
-        <div class="absolute -bottom-[43%] 2xl:-bottom-[36%] left-[15%] w-[60%] lg:w-[60%] pointer-events-none z-0">
-            <svg width="1218" height="1296" viewBox="0 0 1218 1296" fill="none" xmlns="http://www.w3.org/2000/svg"
-                 class="w-full h-auto">
-                <g filter="url(#filter0_f_859_9833)">
-                    <path d="M571.802 1139.86C557.345 1070.33 665.531 845.222 736.808 799.782C808.086 754.343 941.863 1007.24 941.863 1007.24C941.863 1007.24 871.292 809.115 778.151 653.949C722.745 561.647 1061.21 709.863 1061.21 709.863C1061.21 709.863 777.281 560.446 793.692 435.287C807.123 332.855 976.699 319.085 976.699 319.085L763.835 297.859L765.938 188.265C765.938 188.265 698.761 441.554 615.278 428.293C531.796 415.031 561.919 155.856 561.919 155.856L573.667 402.889C573.667 402.889 441.944 197.389 387.729 266.903C333.513 336.417 554.905 380.994 523.059 467.777C491.212 554.561 226.39 466.164 309.901 478.989C371.197 488.402 466.984 479.436 466.984 479.436C466.984 479.436 142.685 546.866 156.271 719.973C157.75 738.812 590.079 559.071 454.345 587.293C355.957 607.751 460.962 966.544 462.483 949.16C475.495 800.533 471.881 882.373 525.424 801.572C702.577 534.233 571.802 1139.86 571.802 1139.86Z"
-                          fill="url(#paint0_linear_859_9833)" fill-opacity="0.15"/>
+        <div class="sm:text-center mb-10 lg:mb-20 relative z-10 transition-all duration-1000 transform"
+             :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'">
+            <h2 class="font-sans text-fluid-h2 text-primary">How It Works</h2>
+            <svg class="absolute left-[55%] top-0" width="114" height="113" viewBox="0 0 114 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_37134)">
+                    <path d="M83.1613 43.3733C92.7306 64.532 86.7053 89.4706 72.1157 106.797C72.1198 107.007 72.124 107.217 72.1282 107.428C77.4862 101.853 82.9472 96.1706 88.4123 90.6987C89.5458 89.5194 91.4755 91.3741 90.3421 92.5534C84.1599 98.986 77.8704 105.316 71.6881 111.748C70.9668 112.499 69.3796 112.004 69.4617 110.846C69.4492 110.215 69.5439 109.687 69.5314 109.057C68.6904 109.073 67.9399 108.352 68.3437 107.503C68.8297 105.495 69.3157 103.487 69.6945 101.376C69.8254 97.3775 69.9564 93.3786 70.0874 89.3797C70.157 87.5906 72.577 87.6477 72.8206 89.3255C73.3245 93.5221 73.0905 97.6282 72.4319 101.532C72.333 101.85 72.3372 102.06 72.3413 102.27C84.7421 85.9339 89.453 63.6505 80.9725 44.3632C72.2734 24.6596 50.994 12.2517 29.5988 15.2003C28.968 15.2128 28.8441 14.2688 29.3676 14.1532C51.377 10.3511 74.0334 23.2575 83.1613 43.3733Z" fill="#4E7DA6"/>
                 </g>
                 <defs>
-                    <filter id="filter0_f_859_9833" x="-0.000930786" y="4.57764e-05" width="1217.07" height="1295.72"
-                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <clipPath id="clip0_1_37134">
+                        <rect width="62.0068" height="98.2889" fill="white" transform="matrix(0.692937 -0.720998 -0.720998 -0.692937 70.8661 112.815)"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="absolute left-0 top-0 w-full -translate-y-[40%]">
+            <svg class="w-full" height="1820" viewBox="0 0 1700 1820" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_f_1_37907)">
+                    <path d="M793.36 1664C771.203 1557.44 937.015 1212.42 1046.26 1142.78C1155.5 1073.13 1360.54 1460.74 1360.54 1460.74C1360.54 1460.74 1252.38 1157.08 1109.62 919.264C1024.71 777.795 1543.46 1004.96 1543.46 1004.96C1543.46 1004.96 1108.29 775.956 1133.44 584.13C1154.03 427.135 1413.93 406.031 1413.93 406.031L1087.68 373.498L1090.9 205.528C1090.9 205.528 987.945 593.734 859.995 573.409C732.044 553.084 778.214 155.856 778.214 155.856L796.219 534.473C796.219 534.473 594.333 219.512 511.239 326.053C428.145 432.595 767.464 500.915 718.654 633.926C669.843 766.936 263.961 631.453 391.954 651.109C485.901 665.537 632.71 651.795 632.71 651.795C632.71 651.795 135.669 755.142 156.492 1020.46C158.758 1049.33 821.373 773.848 613.338 817.103C462.543 848.457 623.48 1398.37 625.812 1371.72C645.754 1143.93 640.215 1269.36 722.279 1145.52C993.795 735.78 793.36 1664 793.36 1664Z" fill="url(#paint0_linear_1_37907)" fill-opacity="0.11"/>
+                </g>
+                <defs>
+                    <filter id="filter0_f_1_37907" x="-0.000930786" y="4.57764e-05" width="1699.31" height="1819.86" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                        <feGaussianBlur stdDeviation="77.9282" result="effect1_foregroundBlur_859_9833"/>
+                        <feGaussianBlur stdDeviation="77.9282" result="effect1_foregroundBlur_1_37907"/>
                     </filter>
-                    <linearGradient id="paint0_linear_859_9833" x1="-182.6" y1="1044.9" x2="1093.72" y2="600.643"
-                                    gradientUnits="userSpaceOnUse">
+                    <linearGradient id="paint0_linear_1_37907" x1="-362.883" y1="1518.46" x2="1593.29" y2="837.564" gradientUnits="userSpaceOnUse">
                         <stop stop-color="#ED8F85"/>
                         <stop offset="0.1875" stop-color="#D95F69"/>
                         <stop offset="0.375" stop-color="#ECB1B6"/>
@@ -957,86 +1123,103 @@
         </div>
 
 
-        <div class="flex flex-col-reverse lg:flex-row items-center lg:items-start lg:gap-4 gap-20 z-10 relative">
+            <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
 
-            <div class="w-full lg:w-1/2 flex flex-col justify-between lg:self-stretch">
+                <!-- Ліва колонка -->
+                <div class="lg:col-span-3 max-w-fluid-388  flex flex-col gap-8 lg:gap-20 h-full justify-between z-20 order-2 lg:order-1 lg:py-15">
+                    <!-- Крок 1 -->
+                    <div class="transition-all duration-1000 delay-300" :class="shown ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'">
+                        <h3 class="text-fluid-36 mb-4">Find a therapist</h3>
+                        <p class="font-sans text-fluid-24 text-primary/70 leading-[1.5]">Explore our therapists and see who feels like a good fit.</p>
+                    </div>
 
-                <div class="lg:max-w-[81%]">
-                    <h2 class="font-sans text-fluid-h2 text-primary leading-none mb-4 sm:mb-8">
-                        An inclusive,<br>
-                        sex-positive space
-                    </h2>
-                    <ul class="flex flex-col gap-6 sm:gap-12 links-section">
-                        <li class="flex items-start sm:gap-5 gap-4 reveal-hidden border-b border-primary/20 pb-6 sm:pb-0 sm:border-none"
-                            x-data="{ shown: false }"
-                            x-intersect.once.margin.-5%="shown = true"
-                            :class="shown ? 'reveal-visible' : 'reveal-hidden'">
-                            <div class="shrink-0 mt-1">
-                                <svg width="41" height="41" viewBox="0 0 41 41" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg" class="list-icon-svg">
-                                    <g clip-path="url(#clip0_859_9837)">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M30.4717 5.62012C35.9732 6.19067 40.2815 10.8494 40.3047 16.501V16.5488C40.3046 20.5477 38.5894 24.2662 36.168 27.5225C31.3312 34.0302 23.6778 38.6935 21.2735 40.0615C20.8819 40.2838 20.6291 40.4194 20.5498 40.4609L20.1465 40.6748L19.7461 40.4561C19.6631 40.4096 19.3838 40.2559 18.9522 40.002C16.4758 38.5484 8.95628 33.8182 4.16703 27.4141C1.72993 24.1554 0.000161826 20.4633 3.72917e-05 16.5488C3.72917e-05 16.4927 -0.0004361 16.435 0.00199042 16.3789C0.0861622 10.7822 4.37237 6.18687 9.835 5.62012C9.86039 5.61892 9.88578 5.61914 9.91117 5.61914C15.4017 5.61914 19.8533 10.0757 19.8536 15.5732C19.8536 20.6569 16.0477 24.8518 11.1328 25.4541H11.1338C11.1338 25.4541 16.5845 25.4494 20.1338 25.4482C23.6657 25.4471 29.0807 25.4482 29.1329 25.4482C24.2437 24.8215 20.4649 20.6385 20.4649 15.5732C20.4651 10.0757 24.9167 5.61914 30.4073 5.61914C30.429 5.61914 30.4499 5.6189 30.4717 5.62012ZM20.1534 0C22.444 0 24.3008 1.8597 24.3008 4.15332C24.3006 6.44678 22.4439 8.30566 20.1534 8.30566C17.8629 8.30559 16.0061 6.44673 16.0059 4.15332C16.0059 1.85975 17.8628 7.2076e-05 20.1534 0Z"
-                                              fill="#D95F69"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_859_9837">
-                                            <rect width="40.3049" height="40.6746" fill="white"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </div>
-                            <p class="font-sans text-fluid-28 text-primary leading-[1.3]">
-                                Intima Therapy is an inclusive, sex-positive space. We offer <a href="">LGBTQIA+
-                                affirming</a> and <a href="">Kink-aware therapy</a>. Our therapists are informed by a
-                                GSRD (Gender, Sex, and Relationship Diversity) perspective and have experience working
-                                with diverse identities, desires, and relationship structures.
-                            </p>
-                        </li>
-
-                        <li class="flex items-start sm:gap-5 gap-4 reveal-hidden border-b border-primary/20 pb-6 sm:pb-0 sm:border-none"
-                            x-data="{ shown: false }"
-                            x-intersect.once.margin.-5%="shown = true"
-                            :class="shown ? 'reveal-visible' : 'reveal-hidden'">
-                            <div class="shrink-0 mt-1">
-                                <svg width="41" height="41" viewBox="0 0 41 41" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg" class="list-icon-svg">
-                                    <g clip-path="url(#clip0_859_9837)">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M30.4717 5.62012C35.9732 6.19067 40.2815 10.8494 40.3047 16.501V16.5488C40.3046 20.5477 38.5894 24.2662 36.168 27.5225C31.3312 34.0302 23.6778 38.6935 21.2735 40.0615C20.8819 40.2838 20.6291 40.4194 20.5498 40.4609L20.1465 40.6748L19.7461 40.4561C19.6631 40.4096 19.3838 40.2559 18.9522 40.002C16.4758 38.5484 8.95628 33.8182 4.16703 27.4141C1.72993 24.1554 0.000161826 20.4633 3.72917e-05 16.5488C3.72917e-05 16.4927 -0.0004361 16.435 0.00199042 16.3789C0.0861622 10.7822 4.37237 6.18687 9.835 5.62012C9.86039 5.61892 9.88578 5.61914 9.91117 5.61914C15.4017 5.61914 19.8533 10.0757 19.8536 15.5732C19.8536 20.6569 16.0477 24.8518 11.1328 25.4541H11.1338C11.1338 25.4541 16.5845 25.4494 20.1338 25.4482C23.6657 25.4471 29.0807 25.4482 29.1329 25.4482C24.2437 24.8215 20.4649 20.6385 20.4649 15.5732C20.4651 10.0757 24.9167 5.61914 30.4073 5.61914C30.429 5.61914 30.4499 5.6189 30.4717 5.62012ZM20.1534 0C22.444 0 24.3008 1.8597 24.3008 4.15332C24.3006 6.44678 22.4439 8.30566 20.1534 8.30566C17.8629 8.30559 16.0061 6.44673 16.0059 4.15332C16.0059 1.85975 17.8628 7.2076e-05 20.1534 0Z"
-                                              fill="#D95F69"/>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p class="font-sans text-fluid-28 text-primary leading-[1.3]">
-                                We welcome people of all genders, sexual identities, relationship configurations -
-                                including monogamous, non-monogamous and polyamorous - as well as people from diverse
-                                cultural backgrounds, faiths, and abilities. The diversity of our therapists reflects
-                                our values.
-                            </p>
-                        </li>
-
-                    </ul>
+                    <!-- Крок 2 -->
+                    <div class="transition-all duration-1000 delay-500" :class="shown ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'">
+                        <h3 class="text-fluid-36 mb-4">Book a consultation</h3>
+                        <p class="font-sans text-fluid-24 text-primary/70 leading-[1.5]">
+                            Submit a short enquiry to request a free introductory call.
+                            You can choose up to three therapists, or ask us to help you find a match.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="w-full lg:w-1/2 reveal-hidden"
-                 x-data="{ shown: false }"
-                 x-intersect.once.margin.-5%="shown = true"
-                 :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                 style="transition-delay: 200ms;">
+                <!-- Центральна частина з овалом та вашими стрілками -->
+                <div class="lg:col-span-6 relative flex justify-center items-center lg:py-12 lg:py-0 order-last mt-2 lg:mt-0 lg:order-2">
 
-                <div class="relative w-full aspect-[4/4.5] sm:aspect-[4/3.4] lg:aspect-square rounded-3xl overflow-hidden">
-                    <img src="/src/images/content/Image-about.webp"
-                         alt="Couple Intimacy"
-                         class="w-full h-full object-cover">
+                    <!-- Овальне зображення -->
+                    <div
+                            class="relative z-10 max-w-fluid-about rounded-[330px] overflow-hidden transition-all duration-1000 delay-200"
+                            :class="shown ? 'opacity-100 scale-100' : 'opacity-0 scale-95'"
+                    >
+                        <img
+                                src="/src/images/content/Image-about2.webp"
+                                alt="Therapy room"
+                                class="w-full h-full object-cover"
+                        />
+                    </div>
+
+
+
+
+                    <!-- ВЕРХНЯ ЛІВА СТРІЛКА -->
+                    <div class="absolute top-[5%] left-0 hidden lg:block transition-all duration-1000 delay-700" :class="shown ? 'opacity-100' : 'opacity-0'">
+                        <svg class="max-w-fluid-136" height="91" viewBox="0 0 136 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_37899)"><path d="M83.2889 9.90207C110.968 23.256 126.026 53.6881 125.927 83.6643C126.11 83.8741 126.292 84.084 126.475 84.2939C127.181 74.0853 127.9 63.6804 128.802 53.4854C128.951 51.3259 132.485 51.5701 132.336 53.7296C131.521 65.5088 130.511 77.2743 129.697 89.0535C129.602 90.4277 127.571 91.2736 126.671 90.0279C126.122 89.3982 125.77 88.7821 125.222 88.1525C124.383 88.8835 123.008 88.7885 122.697 87.5834C121.486 85.1326 120.274 82.6818 118.867 80.2174C115.604 76.0468 112.342 71.8762 109.08 67.7056C107.631 65.8301 110.136 63.8335 111.808 65.3298C115.883 69.1621 119.132 73.529 121.778 78.0516C121.947 78.4578 122.13 78.6677 122.313 78.8775C121.03 51.7647 106.893 25.1442 81.9074 12.7654C56.347 0.149676 24.2104 5.62155 4.99486 26.7807C4.3652 27.329 3.43788 26.4759 3.87122 25.914C22.9854 3.36706 56.9431 -2.76797 83.2889 9.90207Z" fill="#4E7DA6"/></g>
+                            <defs><clipPath id="clip0_1_37899"><rect width="82.0603" height="130.076" fill="white" transform="matrix(0.0689514 -0.99762 -0.99762 -0.0689514 129.768 90.834)"/></clipPath></defs>
+                        </svg>
+                    </div>
+
+                    <!-- НИЖНЯ ЛІВА СТРІЛКА -->
+                    <div class="absolute bottom-[20%] -left-[5%] hidden lg:block transition-all duration-1000 delay-1000" :class="shown ? 'opacity-100' : 'opacity-0'">
+                        <svg class="max-w-fluid-148" height="142" viewBox="0 0 148 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_37904)"><path d="M137.574 87.3726C138.345 81.7969 139.945 76.446 142.467 70.9804C142.852 70.0426 142.309 69.0095 141.287 69.2536C134.135 70.9628 127.087 72.7525 119.934 74.4616C118.504 74.8035 118.159 77.2115 119.701 77.1603C123.706 76.9432 127.601 76.4355 131.577 75.1682C120.192 87.4032 105.478 98.3192 90.565 102.094C69.1185 107.641 66.6073 87.6269 56.8033 75.3808C44.4418 59.94 21.3018 56.3777 0.696243 66.27C-0.115366 66.6754 0.223321 67.7573 1.03493 67.352C15.3637 61.0738 30.4749 60.7402 42.4742 66.8588C48.7337 70.0146 53.9071 74.8042 57.5742 80.9053C61.4514 87.1675 63.9215 94.6117 68.9023 99.8702C85.9759 118.308 121.114 90.9885 136.359 73.2855L136.459 73.1561C137.276 72.9607 138.298 72.7166 139.115 72.5212C137.195 77.4203 135.787 82.3023 134.9 87.3773C134.742 89.1064 137.212 89.1505 137.574 87.3726Z" fill="#4E7DA6"/></g>
+                            <defs><clipPath id="clip0_1_37904"><rect width="121.59" height="84.6552" fill="white" transform="translate(51.5157) rotate(37.4837)"/></clipPath></defs>
+                        </svg>
+                    </div>
+
+                    <!-- ПРАВА ВЕРХНЯ СТРІЛКА -->
+                    <div class="absolute top-[5%] right-[4%] hidden lg:block transition-all duration-1000 delay-700" :class="shown ? 'opacity-100' : 'opacity-0'">
+                        <svg class="max-w-fluid-134" height="85" viewBox="0 0 134 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_37902)"><path d="M117.592 81.7318C114.522 56.3157 102.803 27.4087 76.1217 19.2658C51.2623 11.7356 26.4583 24.2529 12.2942 44.6704C12.2539 44.8396 12.0846 44.7993 12.0443 44.9686C12.2216 45.7264 12.3989 46.4841 12.4069 47.2015C14.1885 44.2271 16.8245 42.1717 20.3956 40.6968C22.2013 39.8747 23.0798 42.9459 21.3144 43.5988C16.776 45.38 14.0674 48.4913 13.5271 53.0135C13.2046 54.3677 10.8024 54.69 10.4478 53.1745C9.2793 46.8144 8.07049 40.6236 6.902 34.2635C6.45875 32.3691 9.19144 31.41 9.80397 33.3447C10.5051 35.6582 11.037 37.9314 11.5689 40.2046C26.8373 20.4078 51.6494 8.608 76.6377 16.3478C104.165 24.6922 117.883 54.9697 119.196 81.7561C119.293 82.8524 117.688 82.8281 117.592 81.7318Z" fill="#4E7DA6"/></g>
+                            <defs><clipPath id="clip0_1_37902"><rect width="123.548" height="57.4236" fill="white" transform="translate(13.2891) rotate(13.3805)"/></clipPath></defs>
+                        </svg>
+                    </div>
+
+                    <!-- ПРАВА НИЖНЯ СТРІЛКА -->
+                    <div class="absolute bottom-[10%] right-[2%] hidden lg:block transition-all duration-1000 delay-1000" :class="shown ? 'opacity-100' : 'opacity-0'">
+                        <svg class="max-w-fluid-135" height="101" viewBox="0 0 135 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.202466 94.1074C1.94349 96.6782 3.87237 98.3219 6.40292 99.7171C7.53894 100.25 8.20681 98.2099 7.07077 97.6767C6.03792 97.1228 5.21142 96.5272 4.36753 95.8081C17.7218 100.229 32.3304 103.762 44.2864 92.9649C49.1822 88.5471 52.9745 82.3192 54.9596 75.3124C57.4235 66.4304 56.2232 57.1441 56.4162 47.9578C56.749 28.4527 67.2691 11.9745 82.2922 4.87867C99.2919 -3.25107 118.616 2.12534 133.666 13.3187C134.131 13.6061 134.56 12.8844 134.095 12.597C110.711 -5.04617 76.1861 -6.84832 60.0461 24.7385C56.8045 31.1095 54.9573 38.3425 54.6241 45.7784C54.1575 56.0362 55.8585 66.619 52.6908 76.5323C49.7284 85.642 43.1689 93.3174 35.3298 96.4232C25.3937 100.46 14.7589 97.2694 4.9496 93.9121C7.62991 91.8469 10.4655 90.1315 13.577 88.8686C14.574 88.4135 14.0722 86.3549 13.0752 86.8101C12.972 86.8309 12.8689 86.8517 12.8689 86.8517C8.62245 88.3435 4.6519 90.2878 0.630326 92.6236C0.0112783 92.7484 -0.193953 93.5521 0.202466 94.1074Z" fill="#4E7DA6"/>
+                        </svg>
+                    </div>
 
                 </div>
+
+                <!-- Права колонка -->
+                <div class="lg:col-span-3 max-w-fluid-388 flex flex-col gap-8 lg:gap-20 h-full justify-between z-20 order-3 lg:py-15">
+                    <!-- Крок 3 -->
+                    <div class="transition-all duration-1000 delay-700" :class="shown ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'">
+                        <h3 class="text-fluid-36 mb-4">Introductory conversation</h3>
+                        <p class="font-sans text-fluid-24 text-primary/70 leading-[1.5]">A therapist will be in touch to arrange an introductory call.</p>
+                    </div>
+
+                    <!-- Крок 4 -->
+                    <div class="transition-all duration-1000 delay-900" :class="shown ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'">
+                        <h3 class="text-fluid-36 mb-4">Begin therapy</h3>
+                        <p class="font-sans text-fluid-24 text-primary/70 leading-[1.5]">
+                            If you decide to continue, you book your first session and begin therapy.
+                            From there, sessions and payments are arranged directly with your therapist.
+                        </p>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
     </section>
-    <section class="py-12 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto">
+
+
+
+
+    <section class="py-12 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative">
 
         <div class="text-center mb-10 sm:mb-20 reveal-hidden"
              x-data="{ shown: false }"
@@ -1045,7 +1228,34 @@
             <h2 class="font-sans text-fluid-h2 text-primary">FAQ</h2>
         </div>
 
-        <div class="lg:max-w-[84%] mx-auto space-y-4" x-data="{ activeAccordion: 1 }">
+
+
+        <div class="lg:max-w-[84%] mx-auto space-y-4 relative" x-data="{ activeAccordion: 1 }">
+
+            <div class="absolute left-0 top-0 w-full -translate-y-[10%]">
+
+                <svg class="w-full" height="1296" viewBox="0 0 1218 1296" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_1_37911)">
+                        <path d="M571.802 1139.86C557.345 1070.33 665.531 845.222 736.808 799.783C808.086 754.343 941.863 1007.24 941.863 1007.24C941.863 1007.24 871.292 809.115 778.151 653.949C722.745 561.647 1061.21 709.864 1061.21 709.864C1061.21 709.864 777.281 560.447 793.692 435.288C807.123 332.856 976.699 319.086 976.699 319.086L763.835 297.859L765.938 188.265C765.938 188.265 698.761 441.554 615.278 428.293C531.796 415.032 561.919 155.857 561.919 155.857L573.667 402.889C573.667 402.889 441.944 197.39 387.729 266.904C333.513 336.417 554.905 380.994 523.059 467.778C491.212 554.562 226.39 466.164 309.901 478.989C371.197 488.403 466.984 479.437 466.984 479.437C466.984 479.437 142.685 546.866 156.271 719.974C157.75 738.812 590.079 559.071 454.345 587.294C355.957 607.751 460.962 966.544 462.483 949.161C475.495 800.533 471.881 882.373 525.424 801.572C702.577 534.234 571.802 1139.86 571.802 1139.86Z" fill="url(#paint0_linear_1_37911)" fill-opacity="0.15"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_f_1_37911" x="-0.000930786" y="4.57764e-05" width="1217.07" height="1295.72" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="77.9282" result="effect1_foregroundBlur_1_37911"/>
+                        </filter>
+                        <linearGradient id="paint0_linear_1_37911" x1="-182.6" y1="1044.9" x2="1093.72" y2="600.644" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#ED8F85"/>
+                            <stop offset="0.1875" stop-color="#D95F69"/>
+                            <stop offset="0.375" stop-color="#ECB1B6"/>
+                            <stop offset="0.629808" stop-color="#D95F69"/>
+                            <stop offset="0.769231" stop-color="#D29FEC"/>
+                            <stop offset="0.982559" stop-color="#D95F69"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+            </div>
 
             <div class="reveal-hidden" x-data="{ shown: false }" x-intersect.once.threshold.50="shown = true" :class="shown ? 'reveal-visible' : 'reveal-hidden'" style="transition-delay: 0ms;">
                 <div class="relative rounded-3xl overflow-hidden transition-colors duration-500 border"
@@ -1193,9 +1403,15 @@
     <section class="py-40 sm:py-20 px-4 lg:px-25 mt-12 sm:mt-16 relative section-fluid-height flex items-center overflow-hidden" x-data>
 
         <div class="absolute inset-0 z-0">
-            <img src="/src/images/CTA.webp"
-                 alt="Therapy Room"
-                 class="w-full h-full object-cover">
+            <picture>
+                <source srcset="/src/images/CTA-mobile.webp" media="(max-width: 639px)">
+
+                <img src="/src/images/CTA.webp"
+                     alt="Therapy Room"
+                     class="w-full h-full object-cover"
+                     loading="lazy"
+                     decoding="async">
+            </picture>
         </div>
 
         <div class="relative z-10 max-w-[1920px] mx-auto w-full">

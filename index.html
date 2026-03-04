@@ -1504,9 +1504,15 @@
 <section class="py-40 sm:py-20 px-4 lg:px-25 mt-12 sm:mt-16 relative section-fluid-height flex items-center overflow-hidden" x-data>
 
     <div class="absolute inset-0 z-0">
-        <img src="/src/images/CTA.webp"
-             alt="Therapy Room"
-             class="w-full h-full object-cover">
+        <picture>
+            <source srcset="/src/images/CTA-mobile.webp" media="(max-width: 639px)">
+
+            <img src="/src/images/CTA.webp"
+                 alt="Therapy Room"
+                 class="w-full h-full object-cover"
+                 loading="lazy"
+                 decoding="async">
+        </picture>
     </div>
 
     <div class="relative z-10 max-w-[1920px] mx-auto w-full">

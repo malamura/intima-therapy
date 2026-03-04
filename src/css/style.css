@@ -187,7 +187,13 @@
 
     @media (min-width: 640px) {
 
+        .sm\:my-14 {
+            /* Min: 1.875rem (30px), Pref: 2.083vw (30px @ 1440px), Max: 3.5rem (56px) */
+            --fluid-my-14: clamp(1.875rem, 2.083vw, 3.5rem);
 
+            margin-top: var(--fluid-my-14) !important;
+            margin-bottom: var(--fluid-my-14) !important;
+        }
         .checkbox-custom .sm\:w-6 {
             width: clamp(1.125rem, 1.5vw, 1.5rem) !important;
         }
@@ -360,7 +366,6 @@
             padding: clamp(0.656rem, 0.83vw, 0.875rem) clamp(1rem, 1.2vw, 1.75rem) !important;
             font-size: clamp(0.718rem, 0.8vw, 1rem) !important;
             line-height: 1;
-            display: flex;
             align-items: center;
             justify-content: center;
             justify-items: center;
@@ -669,6 +674,44 @@
         }
     }
     @media (min-width: 1024px) {
+        .max-w-fluid-about {
+            max-width: clamp(17.5rem, 29.16vw, 35rem) !important;
+            width: 100%;
+        }
+        /* Динамічний блок: 388px (1920) -> 300px (1440) -> і далі вниз */
+        .max-w-fluid-388 {
+            /* Поріг Min знижено до 240px для мобілок, Pref дасть 300px на 1440px */
+            max-width: clamp(15rem, 20.2vw, 24.25rem) !important;
+            width: 100%;
+        }
+
+        /* 1. Стрілка/Елемент: 136px (1920) -> 102px (1440) -> і далі вниз */
+        .max-w-fluid-136 {
+            /* Min знижено до 80px (5rem) */
+            max-width: clamp(5rem, 7.08vw, 8.5rem) !important;
+            width: 100%;
+        }
+
+        /* 2. Стрілка/Елемент: 148px (1920) -> 111px (1440) -> і далі вниз */
+        .max-w-fluid-148 {
+            /* Min знижено до 88px (5.5rem) */
+            max-width: clamp(5.5rem, 7.7vw, 9.25rem) !important;
+            width: 100%;
+        }
+
+        /* 3. Стрілка/Елемент: 134px (1920) -> 101px (1440) -> і далі вниз */
+        .max-w-fluid-134 {
+            /* Min знижено до 80px (5rem) */
+            max-width: clamp(5rem, 6.98vw, 8.375rem) !important;
+            width: 100%;
+        }
+
+        /* 4. Стрілка/Елемент: 135px (1920) -> 102px (1440) -> і далі вниз */
+        .max-w-fluid-135 {
+            /* Min знижено до 80px (5rem) */
+            max-width: clamp(5rem, 7.03vw, 8.4375rem) !important;
+            width: 100%;
+        }
         .lg\:block.btn-small{
             display: flex;
         }
@@ -733,6 +776,10 @@
     }
 
     @media (max-width: 1024px) {
+
+        .max-w-fluid-about{
+            max-width: 400px;
+        }
         .profile-left {
             width: 50% !important;
         }
@@ -960,6 +1007,13 @@ body {
     gap: clamp(0.75rem, 0.8vw, 1rem) !important;
 }
 
+
+
+.max-h-fluid-header {
+    /* Min: 5.625rem (90px), Pref: 0.625rem + 7.8125vw, Max: 10rem (160px) */
+    max-height: clamp(5.625rem, 0.625rem + 7.8125vw, 10rem) !important;
+}
+
 @media only screen and (max-width: 1480px) {
     .line-svg svg {
         max-width: 80%;
@@ -990,7 +1044,6 @@ body {
 
 @media (width >= 40rem) {
     .sm\:space-y-12 {
-
     :where(& > :not(:last-child)) {
         --tw-space-y-reverse: 0;
         /* Min: 2rem (32px), Pref: 2vw (~38px на 1200px), Max: 3rem (48px) */
@@ -1000,11 +1053,8 @@ body {
         margin-block-end: calc(var(--fluid-space-12) * calc(1 - var(--tw-space-y-reverse))) !important;
     }
 }
-
 }
-
 .space-y-6 {
-
 :where(& > :not(:last-child)) {
     --tw-space-y-reverse: 0;
     /* Min: 1rem (16px), Pref: 1.2vw, Max: 1.5rem (24px) */
@@ -1013,5 +1063,4 @@ body {
     margin-block-start: calc(var(--fluid-space-6) * var(--tw-space-y-reverse)) !important;
     margin-block-end: calc(var(--fluid-space-6) * calc(1 - var(--tw-space-y-reverse))) !important;
 }
-
 }
