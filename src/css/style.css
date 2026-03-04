@@ -186,6 +186,39 @@
 
 
     @media (min-width: 640px) {
+        .max-w-fluid-17 {
+            /* Формула: 5px + 0.625vw
+               Min: 0.875rem (14px @ 1440px)
+               Pref: 0.3125rem + 0.625vw
+               Max: 1.0625rem (17px @ 1920px)
+            */
+            max-width: clamp(0.875rem, 0.3125rem + 0.625vw, 1.0625rem) !important;
+            width: 100%;
+        }
+
+        /* 1. Margin Top: від 48px (1920) до 36px (1440) */
+        .sm\:mt-12 {
+            /* Min: 2.25rem (36px @ 1440), Pref: 2.5vw, Max: 3rem (48px @ 1920) */
+            margin-top: clamp(2.25rem, 2.5vw, 3rem) !important;
+        }
+
+        .sm\:mb-12 {
+            /* Min: 2.25rem (36px @ 1440), Pref: 2.5vw, Max: 3rem (48px @ 1920) */
+            margin-bottom: clamp(2.25rem, 2.5vw, 3rem) !important;
+        }
+
+        /* 2. Padding Top: від 48px (1920) до 36px (1440) */
+        .sm\:pt-12 {
+            /* Аналогічно: 36px на 1440 та 48px на 1920 */
+            padding-top: clamp(2.25rem, 2.5vw, 3rem) !important;
+        }
+        .sm\:mb-8 {
+            /* Min: 1.25rem (20px) — поріг для планшетів
+               Pref: 1.66vw — дає 24px на 1440px та 32px на 1920px
+               Max: 2rem (32px) — фіксація на значенні mb-8
+            */
+            margin-bottom: clamp(1.25rem, 1.66vw, 2rem) !important;
+        }
 
         .sm\:my-14 {
             /* Min: 1.875rem (30px), Pref: 2.083vw (30px @ 1440px), Max: 3.5rem (56px) */
@@ -355,6 +388,8 @@
             /* Від 30px до 44px у діапазоні екранів 1440px-1920px */
             gap: clamp(1.875rem, -0.75rem + 2.917vw, 2.75rem);
         }
+
+
 
         .list-icon-svg {
             /* Від 27px до 40px у діапазоні екранів 1440px-1920px */
@@ -674,6 +709,11 @@
         }
     }
     @media (min-width: 1024px) {
+
+        .max-w-fluid-sidebar {
+            max-width: clamp(17.5rem, 11.875rem + 6.25vw, 19.375rem) !important;
+            width: 100%;
+        }
         .max-w-fluid-about {
             max-width: clamp(17.5rem, 29.16vw, 35rem) !important;
             width: 100%;
