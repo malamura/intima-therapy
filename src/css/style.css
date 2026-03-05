@@ -142,6 +142,10 @@
 /* --- FLUID LAYOUT OVERRIDES (SCALE 0.75) --- */
 /* Ці правила зроблять стандартні класи Tailwind адаптивними */
 @layer utilities {
+
+    .gap-6 {
+        gap: clamp(1.125rem, 1.25vw, 1.5rem)
+    }
     /* Приховуємо скролбар для Chrome, Safari та Opera */
     .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -200,6 +204,10 @@
 
 
     @media (min-width: 640px) {
+        .sm\:mt-20 {
+
+            margin-top: clamp(4.25rem, 2rem + 2.5vw, 5rem) !important;
+        }
         .sm\:gap-6 {
             gap: clamp(1rem, 1.11vw, 1.5rem) !important;
         }
@@ -438,6 +446,10 @@
             justify-content: center;
             justify-items: center;
         }
+        .btn-48{
+            display: flex;
+            text-align: center;
+        }
 
         /* Стрілочка в навігації (шеврон) */
         nav button svg {
@@ -626,8 +638,8 @@
         }
 
         /* gap-6 (24px -> 18px) */
-        .gap-6 {
-            gap: clamp(1.125rem, 1.25vw, 1.5rem) !important;
+        .sm\:gap-6 {
+            gap: clamp(1.125rem, 1.25vw, 1.5rem);
         }
 
         /* gap-4 (16px -> 12px) */
@@ -734,6 +746,18 @@
 
     }
     @media (min-width: 768px) {
+        .md\:mb-25 {
+            margin-bottom: 100px !important;
+        }
+
+        .md\:pb-25 {
+            padding-bottom: 100px !important;
+        }
+
+        .md\:mb-18 {
+            margin-bottom: 72px !important;
+        }
+
         .md\:gap-6 {
             gap: clamp(1rem, 1.11vw, 1.5rem) !important;
         }
@@ -870,6 +894,10 @@
         }
     }
     @media (max-width: 640px) {
+
+        .font-sans.mt-2.line-clamp-3{
+            font-size: 14px;
+        }
         footer .btn-small{
             height: 48px;
             justify-content: center;
@@ -896,8 +924,10 @@
             justify-items: center;
         }
 
-        .btn-small:not(.hidden){
+        .btn-small:not(.hidden),
+        .btn-48{
             display: flex;
+            text-align: center;
         }
 
 
