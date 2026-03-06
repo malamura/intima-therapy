@@ -16,6 +16,7 @@ export default defineConfig({
                 post: resolve(__dirname, 'post.html'),
                 about: resolve(__dirname, 'about.html'),
                 service: resolve(__dirname, 'service.html'),
+                service2: resolve(__dirname, 'service2.html'),
             },
         },
     },

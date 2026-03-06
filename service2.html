@@ -505,9 +505,9 @@
 
         <div class="absolute inset-0 z-0">
             <picture>
-                <source srcset="/src/images/hero-bg-serivce-mobile.png" media="(max-width: 639px)">
+                <source srcset="/src/images/HERO2.webp" media="(max-width: 639px)">
 
-                <img src="/src/images/hero-bg-service.png"
+                <img src="/src/images/Hero image.png"
                      alt=""
                      class="w-full h-full object-cover"
                      loading="lazy"
@@ -517,11 +517,76 @@
         <div class="relative sm:py-24">
             <h1 class="font-sans text-fluid-h1 text-center transition-all duration-1000 transform sm:py-12"
                 :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
-                Psychosexual Therapy
+                Vaginismus
             </h1>
         </div>
 
     </section>
+
+    <section class="py-12 pt-24 sm:py-24 px-4 lg:px-25 max-w-[1920px] mx-auto relative" x-data>
+        <div class="absolute -bottom-[43%] 2xl:-bottom-[36%] left-[15%] w-[60%] lg:w-[60%] pointer-events-none z-0">
+            <svg width="1218" height="1296" viewBox="0 0 1218 1296" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="w-full h-auto">
+                <g filter="url(#filter0_f_859_9833)">
+                    <path d="M571.802 1139.86C557.345 1070.33 665.531 845.222 736.808 799.782C808.086 754.343 941.863 1007.24 941.863 1007.24C941.863 1007.24 871.292 809.115 778.151 653.949C722.745 561.647 1061.21 709.863 1061.21 709.863C1061.21 709.863 777.281 560.446 793.692 435.287C807.123 332.855 976.699 319.085 976.699 319.085L763.835 297.859L765.938 188.265C765.938 188.265 698.761 441.554 615.278 428.293C531.796 415.031 561.919 155.856 561.919 155.856L573.667 402.889C573.667 402.889 441.944 197.389 387.729 266.903C333.513 336.417 554.905 380.994 523.059 467.777C491.212 554.561 226.39 466.164 309.901 478.989C371.197 488.402 466.984 479.436 466.984 479.436C466.984 479.436 142.685 546.866 156.271 719.973C157.75 738.812 590.079 559.071 454.345 587.293C355.957 607.751 460.962 966.544 462.483 949.16C475.495 800.533 471.881 882.373 525.424 801.572C702.577 534.233 571.802 1139.86 571.802 1139.86Z"
+                          fill="url(#paint0_linear_859_9833)" fill-opacity="0.15"/>
+                </g>
+                <defs>
+                    <filter id="filter0_f_859_9833" x="-0.000930786" y="4.57764e-05" width="1217.07" height="1295.72"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feGaussianBlur stdDeviation="77.9282" result="effect1_foregroundBlur_859_9833"/>
+                    </filter>
+                    <linearGradient id="paint0_linear_859_9833" x1="-182.6" y1="1044.9" x2="1093.72" y2="600.643"
+                                    gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#ED8F85"/>
+                        <stop offset="0.1875" stop-color="#D95F69"/>
+                        <stop offset="0.375" stop-color="#ECB1B6"/>
+                        <stop offset="0.629808" stop-color="#D95F69"/>
+                        <stop offset="0.769231" stop-color="#D29FEC"/>
+                        <stop offset="0.982559" stop-color="#D95F69"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+
+        <div class="flex flex-col-reverse lg:flex-row items-center lg:items-start lg:gap-4 gap-20 z-10 relative">
+
+            <div class="w-full lg:w-1/2 reveal-hidden"
+                 x-data="{ shown: false }"
+                 x-intersect.once.margin.-5%="shown = true"
+                 :class="shown ? 'reveal-visible' : 'reveal-hidden'"
+                 style="transition-delay: 200ms;">
+
+                <div class="relative w-full aspect-[4/4.5] sm:aspect-[4/3] rounded-3xl overflow-hidden">
+                    <img src="/src/images/content/Image - 2026-03-06T110200.493.webp"
+                         alt="Couple Intimacy"
+                         class="w-full h-full object-cover">
+
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 flex flex-col justify-between lg:self-stretch">
+
+                <div class="lg:max-w-[81%] flex flex-col gap-6 sm:gap-8 links-section text-fluid-28 links-section links-section-underline">
+                    <p>For some people, attempts at <a href="">vaginal penetration during sex</a> are met not with ease but with
+                        tightening, pain, or a strong sense that the body is saying no. This experience is often called
+                        vaginismus, though not everyone feels at home with the term itself.</p>
+                    <p>What matters more than the label is the lived experience: a body that closes rather than opens,
+                        often in ways that feel confusing, frustrating, or deeply isolating. While vaginismus can feel
+                        overwhelming, it does not necessarily affect desire, arousal, or the wish for intimacy.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+
     <section class="py-12 sm:py-24 xl:py-38 px-4 lg:px-20 max-w-[1920px] mx-auto relative">
 
         <!-- Заголовок секції -->
@@ -636,216 +701,7 @@
 
         </div>
     </section>
-    <section
-            class="py-12 sm:py-24 px-4 lg:px-20 max-w-[1920px] mx-auto relative font-sans"
-            x-data="{
-        activeAccordion: 1,
-        shown: false
-    }"
-            x-intersect.once.threshold.10="shown = true"
-    >
-        <!-- Основна сітка з кастомною пропорцією: ліва колонка менша -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-0 items-start">
 
-            <!-- ЛІВА КОЛОНКА (40% ширини на десктопі) -->
-            <div
-                    class="transition-all duration-1000 transform lg:pr-30 flex flex-col justify-between h-full"
-                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
-            >
-                <h2 class="text-fluid-h2 leading-[1.1] text-[#432448] mb-10 sm:mb-8">
-                    What this therapy <br> helps with
-                </h2>
-
-                <!-- Зображення з великим радіусом заокруглення -->
-                <div class="rounded-3xl overflow-hidden aspect-[4/4.5] sm:aspect-[4/3.8] ">
-                    <img
-                            src="/src/images/content/service-img3.webp"
-                            alt="Therapy space"
-                            class="w-full h-full object-cover"
-                    />
-                </div>
-            </div>
-
-            <!-- ПРАВА КОЛОНКА (60% ширини на десктопі) -->
-            <div
-                    class="2xl:space-y-4 space-y-3 transition-all duration-1000 delay-300 transform relative links-section"
-                    :class="shown ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'"
-            >
-
-                <div class="absolute left-0 bottom-0 w-full -translate-y-[20%] pointer-events-none">
-
-                    <svg class="w-full" height="1534" viewBox="0 0 1362 1534" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_f_1_37947)">
-                            <path d="M638.196 1377.88C621.432 1291.54 746.887 1011.97 829.542 955.542C912.197 899.112 1067.33 1213.18 1067.33 1213.18C1067.33 1213.18 985.493 967.132 877.484 774.433C813.234 659.804 1205.73 843.873 1205.73 843.873C1205.73 843.873 876.475 658.313 895.506 502.879C911.08 375.669 1107.72 358.569 1107.72 358.569L860.883 332.208L863.321 196.104C863.321 196.104 785.421 510.662 688.613 494.193C591.804 477.723 626.737 155.856 626.737 155.856L640.36 462.644C640.36 462.644 487.611 207.436 424.741 293.764C361.872 380.093 618.603 435.452 581.673 543.228C544.743 651.004 237.649 541.224 334.49 557.152C405.571 568.842 516.648 557.708 516.648 557.708C516.648 557.708 140.583 641.448 156.338 856.428C158.052 879.824 659.391 656.605 501.991 691.654C387.898 717.06 509.664 1162.64 511.428 1141.05C526.517 956.474 522.326 1058.11 584.416 957.765C789.847 625.759 638.196 1377.88 638.196 1377.88Z" fill="url(#paint0_linear_1_37947)" fill-opacity="0.15"/>
-                        </g>
-                        <defs>
-                            <filter id="filter0_f_1_37947" x="-0.000930786" y="4.57764e-05" width="1361.58" height="1533.74" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                                <feGaussianBlur stdDeviation="77.9282" result="effect1_foregroundBlur_1_37947"/>
-                            </filter>
-                            <linearGradient id="paint0_linear_1_37947" x1="-236.625" y1="1259.95" x2="1264.2" y2="772.156" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#ED8F85"/>
-                                <stop offset="0.1875" stop-color="#D95F69"/>
-                                <stop offset="0.375" stop-color="#ECB1B6"/>
-                                <stop offset="0.629808" stop-color="#D95F69"/>
-                                <stop offset="0.769231" stop-color="#D29FEC"/>
-                                <stop offset="0.982559" stop-color="#D95F69"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-
-                </div>
-
-                <!-- Акордеон -->
-                <div class="rounded-3xl border border-muted-purple/50 bg-gradient-to-r from-red-400/10 via-orange-300/10 to-pink-400/10 transition-all duration-300">
-                    <button
-                            @click="activeAccordion = activeAccordion === 1 ? null : 1"
-                            class="w-full flex justify-between sm:items-center items-start p-6 2xl:p-8 text-left focus:outline-none group"
-                    >
-                    <span class="text-[20px] sm:text-fluid-28 pr-6 2xl:pr-8">
-                        When sex becomes painful, tense, or something you avoid
-                    </span>
-                        <span
-                                class="shrink-0 transition-transform duration-500 transform"
-                                :class="activeAccordion === 1 ? 'rotate-0' : 'rotate-180'"
-                        >
-                            <svg class="arrow-w-6" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 11.5L11.5 1L22 11.5" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                    </span>
-                    </button>
-                    <div x-show="activeAccordion === 1" x-collapse>
-                        <div class="p-6 2xl:p-8 !pt-0 -mt-2 sm:mt-0 opacity-90 text-primary text-[16px] sm:text-fluid-18 2xl:leading-[1.6] leading-[1.4]">
-                            For many people, sexual difficulty shows up first in the body. Pain, tightness, numbness, anxiety, or involuntary responses can make sex feel stressful rather than connective. This may include experiences such as <a href="">vaginismus</a>, <a href="">dyspareunia</a> (pain during sex), <a href="">vulvodynia</a>, pain during penetration or arousal, ongoing vulval or pelvic pain, anal pain, pelvic floor difficulties, or pain linked to erection - including conditions such as <a href="">Peyronie’s disease</a> or experiences of <a href="">priapism</a>.These experiences can be influenced by many factors, including stress, past medical or sexual health experiences, trauma, hormonal changes, or shifts in the body over time - such as those associated with pregnancy, <a href="">menopause</a>, or ageing.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rounded-3xl border border-muted-purple/50 bg-gradient-to-r from-red-400/10 via-orange-300/10 to-pink-400/10 transition-all duration-300">
-                    <button
-                            @click="activeAccordion = activeAccordion === 2 ? null : 2"
-                            class="w-full flex justify-between sm:items-center items-start p-6 2xl:p-8 text-left focus:outline-none group"
-                    >
-        <span class="text-[20px] sm:text-fluid-28 pr-6 2xl:pr-8">
-            When desire feels confusing, absent, or doesn’t match
-        </span>
-                        <span
-                                class="shrink-0 transition-transform duration-500 transform"
-                                :class="activeAccordion === 2 ? 'rotate-0' : 'rotate-180'"
-                        >
-            <svg class="arrow-w-6" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 11.5L11.5 1L22 11.5" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </span>
-                    </button>
-                    <div x-show="activeAccordion === 2" x-collapse>
-                        <div class="p-6 2xl:p-8 !pt-0 -mt-2 sm:mt-0 opacity-90 text-primary text-[16px] sm:text-fluid-18 2xl:leading-[1.6] leading-[1.4]">
-                            Desire is a complex and fluid experience. We work to understand the underlying emotional and relational dynamics that affect how you feel.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rounded-3xl border border-muted-purple/50 bg-gradient-to-r from-red-400/10 via-orange-300/10 to-pink-400/10 transition-all duration-300">
-                    <button
-                            @click="activeAccordion = activeAccordion === 3 ? null : 3"
-                            class="w-full flex justify-between sm:items-center items-start p-6 2xl:p-8 text-left focus:outline-none group"
-                    >
-        <span class="text-[20px] sm:text-fluid-28 pr-6 2xl:pr-8">
-            When orgasm or ejaculation feel difficult, pressured, or absent
-        </span>
-                        <span
-                                class="shrink-0 transition-transform duration-500 transform"
-                                :class="activeAccordion === 3 ? 'rotate-0' : 'rotate-180'"
-                        >
-            <svg class="arrow-w-6" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 11.5L11.5 1L22 11.5" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </span>
-                    </button>
-                    <div x-show="activeAccordion === 3" x-collapse>
-                        <div class="p-6 2xl:p-8 !pt-0 -mt-2 sm:mt-0 opacity-90 text-primary text-[16px] sm:text-fluid-18 2xl:leading-[1.6] leading-[1.4]">
-                            Understanding the physiological and psychological aspects of your sexual response in a non-judgmental environment.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rounded-3xl border border-muted-purple/50 bg-gradient-to-r from-red-400/10 via-orange-300/10 to-pink-400/10 transition-all duration-300">
-                    <button
-                            @click="activeAccordion = activeAccordion === 4 ? null : 4"
-                            class="w-full flex justify-between sm:items-center items-start p-6 2xl:p-8 text-left focus:outline-none group"
-                    >
-        <span class="text-[20px] sm:text-fluid-28 pr-6 2xl:pr-8">
-            When sex and intimacy feel out of sync
-        </span>
-                        <span
-                                class="shrink-0 transition-transform duration-500 transform"
-                                :class="activeAccordion === 4 ? 'rotate-0' : 'rotate-180'"
-                        >
-            <svg class="arrow-w-6" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 11.5L11.5 1L22 11.5" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </span>
-                    </button>
-                    <div x-show="activeAccordion === 4" x-collapse>
-                        <div class="p-6 2xl:p-8 !pt-0 -mt-2 sm:mt-0 opacity-90 text-primary text-[16px] sm:text-fluid-18 2xl:leading-[1.6] leading-[1.4]">
-                            Exploring ways to reconnect with your body and your partner. We help bridge the gap between physical experience and emotional closeness.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rounded-3xl border border-muted-purple/50 bg-gradient-to-r from-red-400/10 via-orange-300/10 to-pink-400/10 transition-all duration-300">
-                    <button
-                            @click="activeAccordion = activeAccordion === 5 ? null : 5"
-                            class="w-full flex justify-between sm:items-center items-start p-6 2xl:p-8 text-left focus:outline-none group"
-                    >
-        <span class="text-[20px] sm:text-fluid-28 pr-6 2xl:pr-8">
-            When sexual behaviour feels hard to control or full of shame
-        </span>
-                        <span
-                                class="shrink-0 transition-transform duration-500 transform"
-                                :class="activeAccordion === 5 ? 'rotate-0' : 'rotate-180'"
-                        >
-            <svg class="arrow-w-6" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 11.5L11.5 1L22 11.5" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </span>
-                    </button>
-                    <div x-show="activeAccordion === 5" x-collapse>
-                        <div class="p-6 2xl:p-8 !pt-0 -mt-2 sm:mt-0 opacity-90 text-primary text-[16px] sm:text-fluid-18 2xl:leading-[1.6] leading-[1.4]">
-                            Understanding the physiological and psychological aspects of your sexual response in a non-judgmental environment.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rounded-3xl border border-muted-purple/50 bg-gradient-to-r from-red-400/10 via-orange-300/10 to-pink-400/10 transition-all duration-300">
-                    <button
-                            @click="activeAccordion = activeAccordion === 6 ? null : 6"
-                            class="w-full flex justify-between sm:items-center items-start p-6 2xl:p-8 text-left focus:outline-none group"
-                    >
-        <span class="text-[20px] sm:text-fluid-28 pr-6 2xl:pr-8">
-            When sex connects with identity, orientation, or ways of relating
-        </span>
-                        <span
-                                class="shrink-0 transition-transform duration-500 transform"
-                                :class="activeAccordion === 6 ? 'rotate-0' : 'rotate-180'"
-                        >
-            <svg class="arrow-w-6" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 11.5L11.5 1L22 11.5" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </span>
-                    </button>
-                    <div x-show="activeAccordion === 6" x-collapse>
-                        <div class="p-6 2xl:p-8 !pt-0 -mt-2 sm:mt-0 opacity-90 text-primary text-[16px] sm:text-fluid-18 2xl:leading-[1.6] leading-[1.4]">
-                            Exploring ways to reconnect with your body and your partner. We help bridge the gap between physical experience and emotional closeness.
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <section class="py-12 sm:py-24 xl:py-38 px-4 lg:px-20 max-w-[1920px] mx-auto font-sans">
 
@@ -857,9 +713,9 @@
                  :class="shown ? 'opacity-100 scale-100' : 'opacity-0 scale-105'">
 
                 <picture>
-                    <source srcset="/src/images/content/horizontal-mob-img1.webp" media="(max-width: 639px)">
+                    <source srcset="/src/images/content/Image and text (2).webp" media="(max-width: 639px)">
 
-                    <img src="/src/images/content/horizontal-img1.webp"
+                    <img src="/src/images/content/Image and text (1).webp"
                          alt="How psychosexual therapy can help"
                          class="w-full h-full object-cover">
                 </picture>
@@ -889,7 +745,7 @@
             </h2>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-stretch relative">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-stretch relative links-section-underline links-section">
 
             <div class="absolute left-0 -top-[30%] w-full -translate-x-[70%] pointer-events-none">
                 <svg class="w-full" height="1386" viewBox="0 0 1909 1386" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -921,13 +777,13 @@
                  style="transition-delay: 100ms;">
 
                 <div class="text-primary sm:text-fluid-24 text-base mb-4 leading-[1.4]">
-                    Sexual difficulties rarely have a single cause. They are often shaped by a combination of physical experiences, emotional history, relationships, trauma, stress, mental health, and wider life context and culture. Psychosexual therapy helps you make sense of how these layers interact, and how they show up in your body, your desires, and your relationships.
+                    Psychosexual therapy, sometimes referred to as <a href="">talking therapy with a sex therapist</a>, does not aim to force the body to change. Instead, it offers space to listen to what the body may be communicating.
                 </div>
 
                 <div class="shrink-0">
                     <svg class="w-fluid-18" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.7539 36.0718V13.3828H12.9015C25.7418 13.3828 36.0731 23.4349 36.0731 35.9282C36.0731 48.4215 25.7418 58.4736 12.9015 58.4736H12.7539C12.7539 58.6172 12.7539 36.0718 12.7539 36.0718Z" fill="#D95F69"/>
-                        <path d="M35.9258 36.0718V35.9282C35.9258 23.4349 46.2571 13.3828 59.0974 13.3828H59.245V35.9282V58.4736H59.0974C46.4047 58.6172 35.9258 48.5651 35.9258 36.0718Z" fill="#D95F69"/>
+                        <path d="M12.7539 36.0718V13.3828H12.9015C25.7418 13.3828 36.0731 23.4349 36.0731 35.9282C36.0731 48.4215 25.7418 58.4736 12.9015 58.4736H12.7539C12.7539 58.6172 12.7539 36.0718 12.7539 36.0718Z" fill="#8C587A"/>
+                        <path d="M35.9258 36.0718V35.9282C35.9258 23.4349 46.2571 13.3828 59.0974 13.3828H59.245V35.9282V58.4736H59.0974C46.4047 58.6172 35.9258 48.5651 35.9258 36.0718Z" fill="#8C587A"/>
                     </svg>
                 </div>
             </div>
@@ -939,12 +795,12 @@
                  style="transition-delay: 300ms;">
 
                 <div class="text-primary sm:text-fluid-24 text-base mb-4 leading-[1.4]">
-                    Therapy offers a space to slow down, reflect, and develop a different relationship with sex and intimacy - one that feels more grounded, connected, and in line with your values. It is a form of psychological treatment suited to people who want to understand themselves and their relationships more deeply, rather than seeking prescriptive solutions. Some people work individually; others involve their partner(s).
+                    Therapy often includes exploring emotional and relational history and a person’s <strong>medical and sexual history</strong>. Where helpful, therapy may be part of a wider <strong>vaginismus treatment</strong> approach, working alongside other professionals such as a GP, gynaecologist, <a href="">pelvic floor physical therapy</a> specialists, or a sexual health clinic.
                 </div>
 
                 <div class="shrink-0">
                     <svg class="w-fluid-18" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M51.3032 36.0001C57.1951 34.865 61.6292 29.93 61.6292 24.0132C61.6292 17.2569 55.8478 11.7798 48.7163 11.7798C42.3249 11.7798 37.032 16.1833 35.9993 21.96C34.9666 16.1833 29.6738 11.7798 23.2823 11.7798C16.1505 11.7798 10.3691 17.2569 10.3691 24.0132C10.3691 29.93 14.8034 34.865 20.6952 36.0001C14.8033 37.1353 10.3691 42.0704 10.3691 47.9872C10.3691 54.7435 16.1505 60.2205 23.2822 60.2205C29.6735 60.2205 34.9663 55.8171 35.9992 50.0404C37.0319 55.8171 42.3247 60.2205 48.7162 60.2205C55.8478 60.2205 61.6291 54.7434 61.6291 47.9872C61.6291 42.0704 57.1951 37.1353 51.3032 36.0001ZM35.9992 45.934C35.1096 40.9582 31.0627 37.0007 25.8692 36.0001C31.0627 34.9995 35.1096 31.0422 35.9992 26.0664C36.8888 31.0422 40.9358 34.9995 46.1293 36.0001C40.9358 37.0007 36.8888 40.9582 35.9992 45.934Z" fill="#D95F69"/>
+                        <path d="M51.3032 36.0001C57.1951 34.865 61.6292 29.93 61.6292 24.0132C61.6292 17.2569 55.8478 11.7798 48.7163 11.7798C42.3249 11.7798 37.032 16.1833 35.9993 21.96C34.9666 16.1833 29.6738 11.7798 23.2823 11.7798C16.1505 11.7798 10.3691 17.2569 10.3691 24.0132C10.3691 29.93 14.8034 34.865 20.6952 36.0001C14.8033 37.1353 10.3691 42.0704 10.3691 47.9872C10.3691 54.7435 16.1505 60.2205 23.2822 60.2205C29.6735 60.2205 34.9663 55.8171 35.9992 50.0404C37.0319 55.8171 42.3247 60.2205 48.7162 60.2205C55.8478 60.2205 61.6291 54.7434 61.6291 47.9872C61.6291 42.0704 57.1951 37.1353 51.3032 36.0001ZM35.9992 45.934C35.1096 40.9582 31.0627 37.0007 25.8692 36.0001C31.0627 34.9995 35.1096 31.0422 35.9992 26.0664C36.8888 31.0422 40.9358 34.9995 46.1293 36.0001C40.9358 37.0007 36.8888 40.9582 35.9992 45.934Z" fill="#8C587A"/>
                     </svg>
                 </div>
             </div>
@@ -956,16 +812,16 @@
                  style="transition-delay: 500ms;">
 
                 <div class="text-primary sm:text-fluid-24 text-base mb-4 leading-[1.4]">
-                    Where appropriate, our therapists work collaboratively with other health professionals, such as gynaecologists, urologists, women’s health physiotherapists, GPs, and sexual health clinics, to ensure your care is joined-up and responsive to both sexual and mental health needs.
+                    Some approaches may gently include body-based practices, such as gentle touching exercises, introduced only when and if they feel safe, appropriate, and aligned with the individual’s pace. In certain cases, external tools like vaginal dilators or vaginal trainers may be discussed as optional supports. These can sometimes include medical devices or, in some contexts, a sex toy, always introduced with consent, clear explanation, and respect for the individual’s pace and boundaries.
                 </div>
 
                 <div class="shrink-0">
                     <svg class="w-fluid-18" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M35.9999 28.161C46.7573 31.8335 58.0017 24.5236 61.115 11.8338C50.3576 8.16136 39.1133 15.4713 35.9999 28.161C32.8866 15.4713 21.6422 8.16136 10.8848 11.8338C13.998 24.5236 25.2425 31.8335 35.9999 28.161Z" fill="#D95F69"/>
-                        <path d="M10.8848 27.8363C13.998 40.5259 25.2423 47.8358 35.9997 44.1633C32.8866 31.4736 21.6422 24.1638 10.8848 27.8363Z" fill="#D95F69"/>
-                        <path d="M36 44.1633C46.7574 47.8358 58.0018 40.5259 61.1151 27.8363C50.3577 24.1638 39.1134 31.4736 36 44.1633Z" fill="#D95F69"/>
-                        <path d="M10.8848 43.8387C13.998 56.5284 25.2423 63.8382 35.9997 60.1657C32.8865 47.4761 21.6422 40.1662 10.8848 43.8387Z" fill="#D95F69"/>
-                        <path d="M36 60.1657C46.7574 63.8382 58.0018 56.5284 61.1151 43.8387C50.3577 40.1662 39.1134 47.4761 36 60.1657Z" fill="#D95F69"/>
+                        <path d="M35.9999 28.161C46.7573 31.8335 58.0017 24.5236 61.115 11.8338C50.3576 8.16136 39.1133 15.4713 35.9999 28.161C32.8866 15.4713 21.6422 8.16136 10.8848 11.8338C13.998 24.5236 25.2425 31.8335 35.9999 28.161Z" fill="#8C587A"/>
+                        <path d="M10.8848 27.8363C13.998 40.5259 25.2423 47.8358 35.9997 44.1633C32.8866 31.4736 21.6422 24.1638 10.8848 27.8363Z" fill="#8C587A"/>
+                        <path d="M36 44.1633C46.7574 47.8358 58.0018 40.5259 61.1151 27.8363C50.3577 24.1638 39.1134 31.4736 36 44.1633Z" fill="#8C587A"/>
+                        <path d="M10.8848 43.8387C13.998 56.5284 25.2423 63.8382 35.9997 60.1657C32.8865 47.4761 21.6422 40.1662 10.8848 43.8387Z" fill="#8C587A"/>
+                        <path d="M36 60.1657C46.7574 63.8382 58.0018 56.5284 61.1151 43.8387C50.3577 40.1662 39.1134 47.4761 36 60.1657Z" fill="#8C587A"/>
                     </svg>
 
                 </div>
