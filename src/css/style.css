@@ -246,11 +246,15 @@
 
 
     @media (min-width: 640px) {
+        .sm\:space-y-12 > :not(:last-child) {
+            --tw-space-y-reverse: 0;
+            --fluid-space-12: clamp(2rem, 2vw, 3rem);
+
+            margin-block-start: calc(var(--fluid-space-12) * var(--tw-space-y-reverse)) !important;
+            margin-block-end: calc(var(--fluid-space-12) * calc(1 - var(--tw-space-y-reverse))) !important;
+        }
+
         .sm\:py-12 {
-            /* Min: 2.25rem (36px @ 1440px)
-               Pref: 2.5vw (дає 36px на 1440px та 48px на 1920px)
-               Max: 3rem (48px @ 1920px)
-            */
             padding-top: clamp(2.25rem, 2.5vw, 3rem) !important;
             padding-bottom: clamp(2.25rem, 2.5vw, 3rem) !important;
         }
@@ -1280,29 +1284,10 @@ body {
     }
 }
 
-@media (width >= 40rem) {
-    .sm\:space-y-12 {
 
-    :where(& > :not(:last-child)) {
-        --tw-space-y-reverse: 0;
-        /* Min: 2rem (32px), Pref: 2vw (~38px на 1200px), Max: 3rem (48px) */
-        --fluid-space-12: clamp(2rem, 2vw, 3rem);
-
-        margin-block-start: calc(var(--fluid-space-12) * var(--tw-space-y-reverse)) !important;
-        margin-block-end: calc(var(--fluid-space-12) * calc(1 - var(--tw-space-y-reverse))) !important;
-    }
-}
-
-}
-.space-y-6 {
-
-:where(& > :not(:last-child)) {
+.space-y-6 > :not(:last-child) {
     --tw-space-y-reverse: 0;
-    /* Min: 1rem (16px), Pref: 1.2vw, Max: 1.5rem (24px) */
     --fluid-space-6: clamp(1rem, 1.2vw, 1.5rem);
-
     margin-block-start: calc(var(--fluid-space-6) * var(--tw-space-y-reverse)) !important;
     margin-block-end: calc(var(--fluid-space-6) * calc(1 - var(--tw-space-y-reverse))) !important;
-}
-
 }
