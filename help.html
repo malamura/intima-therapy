@@ -433,163 +433,122 @@
             We work with a broad spectrum of sexual and<br class="lg:block hidden"> relationship concerns. Below are some of the areas<br class="lg:block hidden"> we've created dedicated resources for
         </h2>
     </div>
-        <div class="w-full flex flex-col gap-6"
-             x-data="{ shown: false }"
-             x-intersect.once.threshold.20="shown = true"
-             :class="shown ? 'reveal-visible' : 'reveal-hidden'">
+    <div class="w-full flex flex-col gap-6"
+         x-data="{ shown: false }"
+         x-intersect.once.threshold.20="shown = true">
 
-                <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 service-links">
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 service-links">
 
-                    <div class="reveal-hidden"
-                         x-data="{ shown: false }"
-                         x-intersect.once.margin.-5%="shown = true"
-                         :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                         style="transition-delay: 0ms;">
-                        <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
-                            <span class="text-fluid-28">Sexual Performance Anxiety</span>
-                            <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="reveal-hidden"
-                         x-data="{ shown: false }"
-                         x-intersect.once.margin.-5%="shown = true"
-                         :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                         style="transition-delay: 100ms;">
-                        <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
-                            <span class="text-fluid-28">Vaginismus</span>
-                            <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="reveal-hidden"
-                         x-data="{ shown: false }"
-                         x-intersect.once.margin.-5%="shown = true"
-                         :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                         style="transition-delay: 200ms;">
-                        <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
-                            <span class="text-fluid-28">Anorgasmia</span>
-                            <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="reveal-hidden"
-                         x-data="{ shown: false }"
-                         x-intersect.once.margin.-5%="shown = true"
-                         :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                         style="transition-delay: 300ms;">
-                        <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
-                            <span class="text-fluid-28">Low Libido</span>
-                            <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
+            <div class="reveal-hidden" :class="shown ? 'reveal-visible' : ''" style="transition-delay: 0ms;">
+                <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
+                    <span class="text-fluid-28">Sexual Performance Anxiety</span>
+                    <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
 
-                    <div class="reveal-hidden"
-                         x-data="{ shown: false }"
-                         x-intersect.once.margin.-5%="shown = true"
-                         :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                         style="transition-delay: 0ms;">
-                        <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
-                            <span class="text-fluid-28">Erectile Dysfunction</span>
-                            <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="reveal-hidden"
-                         x-data="{ shown: false }"
-                         x-intersect.once.margin.-5%="shown = true"
-                         :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                         style="transition-delay: 100ms;">
-                        <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
-                            <span class="text-fluid-28">Infidelity Counselling</span>
-                            <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="reveal-hidden"
-                         x-data="{ shown: false }"
-                         x-intersect.once.margin.-5%="shown = true"
-                         :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                         style="transition-delay: 200ms;">
-                        <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
-                            <span class="text-fluid-28">Pain During Sex</span>
-                            <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="reveal-hidden"
-                         x-data="{ shown: false }"
-                         x-intersect.once.margin.-5%="shown = true"
-                         :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                         style="transition-delay: 300ms;">
-                        <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
-                            <span class="text-fluid-28">Rapid Ejaculation</span>
-                            <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
+            <div class="reveal-hidden" :class="shown ? 'reveal-visible' : ''" style="transition-delay: 100ms;">
+                <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
+                    <span class="text-fluid-28">Vaginismus</span>
+                    <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
 
-                    <div class="reveal-hidden"
-                         x-data="{ shown: false }"
-                         x-intersect.once.margin.-5%="shown = true"
-                         :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                         style="transition-delay: 0ms;">
-                        <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
-                            <span class="text-fluid-28">Communication issues</span>
-                            <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="reveal-hidden"
-                         x-data="{ shown: false }"
-                         x-intersect.once.margin.-5%="shown = true"
-                         :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                         style="transition-delay: 100ms;">
-                        <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
-                            <span class="text-fluid-28">Compulsive Sexual Behaviour</span>
-                            <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="reveal-hidden"
-                         x-data="{ shown: false }"
-                         x-intersect.once.margin.-5%="shown = true"
-                         :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                         style="transition-delay: 200ms;">
-                        <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
-                            <span class="text-fluid-28">Consensual Non-Monogamy</span>
-                            <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="reveal-hidden"
-                         x-data="{ shown: false }"
-                         x-intersect.once.margin.-5%="shown = true"
-                         :class="shown ? 'reveal-visible' : 'reveal-hidden'"
-                         style="transition-delay: 300ms;">
-                        <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
-                            <span class="text-fluid-28">Chemsex Counselling</span>
-                            <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                    </div>
+            <div class="reveal-hidden" :class="shown ? 'reveal-visible' : ''" style="transition-delay: 200ms;">
+                <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
+                    <span class="text-fluid-28">Anorgasmia</span>
+                    <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
 
-                </div>
+            <div class="reveal-hidden" :class="shown ? 'reveal-visible' : ''" style="transition-delay: 300ms;">
+                <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
+                    <span class="text-fluid-28">Low Libido</span>
+                    <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="reveal-hidden" :class="shown ? 'reveal-visible' : ''" style="transition-delay: 400ms;">
+                <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
+                    <span class="text-fluid-28">Erectile Dysfunction</span>
+                    <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="reveal-hidden" :class="shown ? 'reveal-visible' : ''" style="transition-delay: 500ms;">
+                <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
+                    <span class="text-fluid-28">Infidelity Counselling</span>
+                    <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="reveal-hidden" :class="shown ? 'reveal-visible' : ''" style="transition-delay: 600ms;">
+                <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
+                    <span class="text-fluid-28">Pain During Sex</span>
+                    <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="reveal-hidden" :class="shown ? 'reveal-visible' : ''" style="transition-delay: 700ms;">
+                <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
+                    <span class="text-fluid-28">Rapid Ejaculation</span>
+                    <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="reveal-hidden" :class="shown ? 'reveal-visible' : ''" style="transition-delay: 800ms;">
+                <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
+                    <span class="text-fluid-28">Communication issues</span>
+                    <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="reveal-hidden" :class="shown ? 'reveal-visible' : ''" style="transition-delay: 900ms;">
+                <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
+                    <span class="text-fluid-28">Compulsive Sexual Behaviour</span>
+                    <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="reveal-hidden" :class="shown ? 'reveal-visible' : ''" style="transition-delay: 1000ms;">
+                <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
+                    <span class="text-fluid-28">Consensual Non-Monogamy</span>
+                    <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="reveal-hidden" :class="shown ? 'reveal-visible' : ''" style="transition-delay: 1100ms;">
+                <a href="#" class="group hover:bg-card-pink hover:text-bg flex items-center justify-between bg-card-muted/8 p-6 sm:px-8 sm:py-8 rounded-2xl transition-colors duration-300">
+                    <span class="text-fluid-28">Chemsex Counselling</span>
+                    <svg class="group-hover:translate-x-1 transition-transform duration-300" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.699219 0.700195L10.6992 10.7002L0.699219 20.7002" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
 
         </div>
+    </div>
 
 </section>
 
