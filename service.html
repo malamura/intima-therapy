@@ -515,22 +515,22 @@
             </picture>
         </div>
         <div class="relative sm:py-24">
-            <h1 class="font-sans text-fluid-h1 text-center transition-all duration-1000 transform sm:py-12"
+            <h1 class="font-sans text-fluid-h1 text-center transition-all duration-1000 transform sm:py-8"
                 :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
                 Psychosexual Therapy
             </h1>
         </div>
 
     </section>
-    <section class="py-12 sm:py-24 xl:py-38 px-4 lg:px-20 max-w-[1920px] mx-auto relative">
+    <section class="py-12 pb-24 sm:py-24 xl:py-38 px-4 lg:px-20 max-w-[1920px] mx-auto relative">
 
         <!-- Заголовок секції -->
-        <div class="text-center mb-10 sm:mb-20"
+        <div class="-mt-5 text-center mb-10 sm:mb-20"
              x-data="{ shown: false }"
              x-intersect.once.threshold.50="shown = true"
              :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
              class="transition-all duration-1000">
-            <h2 class="font-sans text-fluid-h2">
+            <h2 class="font-sans text-fluid-h2 leading-[1.2]">
                 When sex, desire, <br>or intimacy feel difficult
             </h2>
         </div>
@@ -594,8 +594,8 @@
                     :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'"
             >
                 <!-- Текст -->
-                <div class="p-8 sm:p-20 flex flex-col justify-center text-bg gap-6 sm:gap-25">
-                    <h3 class="text-[32px] sm:text-fluid-44">
+                <div class="p-8 lg:p-20 flex flex-col justify-center text-bg gap-6 xl:gap-25">
+                    <h3 class="text-[32px] sm:text-fluid-44-small">
                         Exploring sex beyond performance
                     </h3>
                     <p class="text-lg sm:text-fluid-24 !leading-[1.5]">
@@ -618,14 +618,14 @@
                     :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'"
             >
                 <!-- Зображення (перше на десктопі через order) -->
-                <div class="h-[400px] lg:h-auto min-h-fluid-400  order-2 lg:order-1">
+                <div class="h-[400px] lg:h-auto min-h-fluid-400 order-2 lg:order-1">
                     <img src="/src/images/content/service-img1.webp"
                          alt="Close intimacy"
                          class="w-full h-full object-cover">
                 </div>
                 <!-- Текст (другий на десктопі) -->
-                <div class="p-8 sm:p-20 flex flex-col justify-center text-bg order-1 lg:order-2 gap-6 sm:gap-25">
-                    <h3 class="text-[32px] sm:text-fluid-44">
+                <div class="p-8 lg:p-20 flex flex-col justify-center text-bg order-1 lg:order-2 gap-6 xl:gap-25">
+                    <h3 class="text-[32px] sm:text-fluid-44-small">
                         Different concerns, shared intention
                     </h3>
                     <p class="text-lg sm:text-fluid-24 !leading-[1.5]">
@@ -637,7 +637,7 @@
         </div>
     </section>
     <section
-            class="py-12 sm:py-24 px-4 lg:px-20 max-w-[1920px] mx-auto relative font-sans"
+            class="py-12 pt-24 sm:py-24 px-4 lg:px-20 max-w-[1920px] mx-auto relative font-sans"
             x-data="{
         activeAccordion: 1,
         shown: false
@@ -649,7 +649,7 @@
 
             <!-- ЛІВА КОЛОНКА (40% ширини на десктопі) -->
             <div
-                    class="transition-all duration-1000 transform lg:pr-30 flex flex-col justify-between h-full"
+                    class="transition-all duration-1000 transform lg:pr-28 flex flex-col justify-between h-full"
                     :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
             >
                 <h2 class="text-fluid-h2 leading-[1.1] text-[#432448] mb-10 sm:mb-8">
@@ -657,7 +657,7 @@
                 </h2>
 
                 <!-- Зображення з великим радіусом заокруглення -->
-                <div class="rounded-3xl overflow-hidden aspect-[4/4.5] sm:aspect-[4/3.8] ">
+                <div class="rounded-3xl overflow-hidden aspect-[4/4.5] sm:aspect-[4/3.8] max-h-[400px] lg:max-h-auto">
                     <img
                             src="/src/images/content/service-img3.webp"
                             alt="Therapy space"
@@ -703,7 +703,7 @@
                             @click="activeAccordion = activeAccordion === 1 ? null : 1"
                             class="w-full flex justify-between sm:items-center items-start p-6 2xl:p-8 text-left focus:outline-none group"
                     >
-                    <span class="text-[20px] sm:text-fluid-28 pr-6 2xl:pr-8">
+                    <span class="text-[22px] sm:text-fluid-28-small pr-6 2xl:pr-8">
                         When sex becomes painful, tense, or something you avoid
                     </span>
                         <span
@@ -728,7 +728,7 @@
                             @click="activeAccordion = activeAccordion === 2 ? null : 2"
                             class="w-full flex justify-between sm:items-center items-start p-6 2xl:p-8 text-left focus:outline-none group"
                     >
-        <span class="text-[20px] sm:text-fluid-28 pr-6 2xl:pr-8">
+        <span class="text-[22px] sm:text-fluid-28-small pr-6 2xl:pr-8">
             When desire feels confusing, absent, or doesn’t match
         </span>
                         <span
@@ -752,7 +752,7 @@
                             @click="activeAccordion = activeAccordion === 3 ? null : 3"
                             class="w-full flex justify-between sm:items-center items-start p-6 2xl:p-8 text-left focus:outline-none group"
                     >
-        <span class="text-[20px] sm:text-fluid-28 pr-6 2xl:pr-8">
+        <span class="text-[22px] sm:text-fluid-28-small pr-6 2xl:pr-8">
             When orgasm or ejaculation feel difficult, pressured, or absent
         </span>
                         <span
@@ -776,7 +776,7 @@
                             @click="activeAccordion = activeAccordion === 4 ? null : 4"
                             class="w-full flex justify-between sm:items-center items-start p-6 2xl:p-8 text-left focus:outline-none group"
                     >
-        <span class="text-[20px] sm:text-fluid-28 pr-6 2xl:pr-8">
+        <span class="text-[22px] sm:text-fluid-28-small pr-6 2xl:pr-8">
             When sex and intimacy feel out of sync
         </span>
                         <span
@@ -800,7 +800,7 @@
                             @click="activeAccordion = activeAccordion === 5 ? null : 5"
                             class="w-full flex justify-between sm:items-center items-start p-6 2xl:p-8 text-left focus:outline-none group"
                     >
-        <span class="text-[20px] sm:text-fluid-28 pr-6 2xl:pr-8">
+        <span class="text-[22px] sm:text-fluid-28-small pr-6 2xl:pr-8">
             When sexual behaviour feels hard to control or full of shame
         </span>
                         <span
@@ -824,7 +824,7 @@
                             @click="activeAccordion = activeAccordion === 6 ? null : 6"
                             class="w-full flex justify-between sm:items-center items-start p-6 2xl:p-8 text-left focus:outline-none group"
                     >
-        <span class="text-[20px] sm:text-fluid-28 pr-6 2xl:pr-8">
+        <span class="text-[22px] sm:text-fluid-28-small pr-6 2xl:pr-8">
             When sex connects with identity, orientation, or ways of relating
         </span>
                         <span
@@ -847,7 +847,7 @@
         </div>
     </section>
 
-    <section class="py-12 sm:py-24 xl:py-38 px-4 lg:px-20 max-w-[1920px] mx-auto font-sans">
+    <section class="py-12 sm:py-24 xl:py-38 px-4 lg:px-20 mt-6 sm:-mb-16 max-w-[1920px] mx-auto font-sans">
 
         <div class="relative overflow-hidden rounded-3xl aspect-[2.1/1.95] sm:aspect-[4.1/1] flex items-center justify-center mb-10 sm:mb-7 2xl:mb-10"
              x-data="{ shown: false }"
@@ -971,6 +971,164 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <section class="py-12 sm:py-24 px-4 lg:px-25 lg:mt-22 sm:-mb-8 max-w-[1920px] mx-auto" x-data>
+
+        <div class="text-center mb-10 sm:mb-20 reveal-hidden"
+             x-data="{ shown: false }"
+             x-intersect.once.threshold.50="shown = true"
+             :class="shown ? 'reveal-visible' : 'reveal-hidden'">
+            <h2 class="font-sans leading-none text-fluid-h2 text-primary">
+                Our Psychosexual and <br class="hidden md:block"/> Relationship Therapists
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-4">
+
+            <div class="group cursor-pointer reveal-hidden"
+                 x-data="{ shown: false }"
+                 x-intersect.once.margin.-5%="shown = true"
+                 :class="shown ? 'reveal-visible' : 'reveal-hidden'"
+                 style="transition-delay: 0ms;">
+                <div class="relative overflow-hidden rounded-3xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
+                    <img src="/src/images/content/team1.webp"
+                         alt="Therapist"
+                         class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="flex justify-between items-center sm:px-4 gap-2">
+                    <div>
+                        <h3 class="font-sans text-fluid-28 leading-none text-primary">Dr. Sarah Jenks</h3>
+                        <p class="font-sans text-fluid-18 text-card-purple mt-3">Psychosexual Therapist</p>
+                    </div>
+                    <button class="btn-fluid-icon rounded-full bg-primary text-white flex items-center justify-center transform transition-transform group-hover:rotate-45">
+                        <svg class="w-1/2 h-1/2" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_48_200)">
+                                <path d="M7 21L21 7" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M9.625 7H21V18.375" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_48_200">
+                                    <rect width="28" height="28" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer reveal-hidden"
+                 x-data="{ shown: false }"
+                 x-intersect.once.margin.-5%="shown = true"
+                 :class="shown ? 'reveal-visible' : 'reveal-hidden'"
+                 style="transition-delay: 150ms;">
+                <div class="relative overflow-hidden rounded-3xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
+                    <img src="/src/images/content/team2.webp"
+                         alt="Therapist"
+                         class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="flex justify-between items-center sm:px-4 gap-2">
+                    <div>
+                        <h3 class="font-sans text-fluid-28 leading-none text-primary">Mark Dobson</h3>
+                        <p class="font-sans text-fluid-18 text-card-purple mt-3">Relationship Therapist</p>
+                    </div>
+                    <button class="btn-fluid-icon rounded-full bg-primary text-white flex items-center justify-center transform transition-transform group-hover:rotate-45">
+                        <svg class="w-1/2 h-1/2" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_48_200)">
+                                <path d="M7 21L21 7" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M9.625 7H21V18.375" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_48_200">
+                                    <rect width="28" height="28" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer reveal-hidden"
+                 x-data="{ shown: false }"
+                 x-intersect.once.margin.-5%="shown = true"
+                 :class="shown ? 'reveal-visible' : 'reveal-hidden'"
+                 style="transition-delay: 300ms;">
+                <div class="relative overflow-hidden rounded-3xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
+                    <img src="/src/images/content/team4.webp"
+                         alt="Therapist"
+                         class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="flex justify-between items-center sm:px-4 gap-2">
+                    <div>
+                        <h3 class="font-sans text-fluid-28 leading-none text-primary">Elena Rodriguez</h3>
+                        <p class="font-sans text-fluid-18 text-card-purple mt-3">Clinical Psychologist</p>
+                    </div>
+                    <button class="btn-fluid-icon rounded-full bg-primary text-white flex items-center justify-center transform transition-transform group-hover:rotate-45">
+                        <svg class="w-1/2 h-1/2" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_48_200)">
+                                <path d="M7 21L21 7" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M9.625 7H21V18.375" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_48_200">
+                                    <rect width="28" height="28" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer reveal-hidden"
+                 x-data="{ shown: false }"
+                 x-intersect.once.margin.-5%="shown = true"
+                 :class="shown ? 'reveal-visible' : 'reveal-hidden'"
+                 style="transition-delay: 450ms;">
+                <div class="relative overflow-hidden rounded-3xl md:rounded-3xl aspect-[4/4.5] sm:aspect-[3/4] mb-4 sm:mb-6">
+                    <img src="/src/images/content/team3.webp"
+                         alt="Therapist"
+                         class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="flex justify-between items-center sm:px-4 gap-2">
+                    <div>
+                        <h3 class="font-sans text-fluid-28 leading-none text-primary">James Carter</h3>
+                        <p class="font-sans text-fluid-18 text-card-purple mt-3">Sex Therapist</p>
+                    </div>
+                    <button class="btn-fluid-icon rounded-full bg-primary text-white flex items-center justify-center transform transition-transform group-hover:rotate-45">
+                        <svg class="w-1/2 h-1/2" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_48_200)">
+                                <path d="M7 21L21 7" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M9.625 7H21V18.375" stroke="#F4ECE4" stroke-width="1.4" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_48_200">
+                                    <rect width="28" height="28" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 sm:mt-16 lg:mt-20 flex justify-center reveal-hidden"
+             x-data="{ shown: false }"
+             x-intersect.once.threshold.50="shown = true"
+             :class="shown ? 'reveal-visible' : 'reveal-hidden'"
+             style="transition-delay: 600ms;">
+            <a href="#"
+               class="sm:w-auto w-full bg-card-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition">
+                Meet all our therapists
+            </a>
         </div>
     </section>
 
