@@ -498,38 +498,13 @@
     </div>
 </header>
 <div class="overflow-hidden">
-    <section
-            class="py-10 md:pb-8 sm:py-24 px-4 lg:px-25 mt-20 sm:mt-16 lg:mt-22 mb-14 sm:mb-0 max-w-[1920px] mx-auto relative sm:aspect-auto aspect-[1.2/1] flex flex-col justify-center"
-            x-data="{ shown: false }"
-            x-intersect.once.margin.-15%="shown = true">
-
-        <div class="absolute inset-0 z-0">
-            <picture>
-                <source srcset="/src/images/hero-bg-serivce-mobile.png" media="(max-width: 639px)">
-
-                <img src="/src/images/hero-bg-service.png"
-                     alt=""
-                     class="w-full h-full object-cover"
-                     loading="lazy"
-                     decoding="async">
-            </picture>
-        </div>
-        <div class="relative sm:py-24">
-            <h1 class="font-sans text-fluid-h1 text-center transition-all duration-1000 transform sm:py-8"
-                :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
-                Psychosexual Therapy
-            </h1>
-        </div>
-
-    </section>
     <section class="py-12 pb-24 sm:py-24 xl:py-38 px-4 lg:px-20 max-w-[1920px] mx-auto relative">
 
-        <!-- Заголовок секції -->
-        <div class="-mt-5 text-center mb-10 sm:mb-20"
+        <div class="-mt-5 text-center mb-10 sm:mb-20 transition-all duration-1000"
              x-data="{ shown: false }"
-             x-intersect.once.threshold.50="shown = true"
-             :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
-             class="transition-all duration-1000">
+             x-intersect.once="shown = true"
+             x-init="setTimeout(() => { if (!shown) shown = true }, 500)"
+             :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
             <h2 class="font-sans text-fluid-h2 leading-[1.2]">
                 When sex, desire, <br>or intimacy feel difficult
             </h2>
@@ -556,10 +531,7 @@
                     </linearGradient>
                 </defs>
             </svg>
-
-
         </div>
-
         <div class="absolute left-0 bottom-0 w-full translate-y-[20%] pointer-events-none">
             <svg class="w-full" height="1092" viewBox="0 0 1541 1092" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_1_37944)">
@@ -583,17 +555,15 @@
             </svg>
         </div>
 
-        <!-- Контентні блоки -->
         <div class="flex flex-col gap-6">
 
-            <!-- Перший блок (Фіолетовий) -->
             <div
                     x-data="{ shown: false }"
-                    x-intersect.once.threshold.20="shown = true"
+                    x-intersect.once="shown = true"
+                    x-init="setTimeout(() => { if (!shown) shown = true }, 700)"
                     class="grid grid-cols-1 lg:grid-cols-2 bg-primary rounded-3xl overflow-hidden transition-all duration-1000"
                     :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'"
             >
-                <!-- Текст -->
                 <div class="p-8 lg:p-20 flex flex-col justify-center text-bg gap-6 xl:gap-25">
                     <h3 class="text-[32px] sm:text-fluid-44-small">
                         Exploring sex beyond performance
@@ -602,7 +572,6 @@
                         Psychosexual therapy, also referred to as sex therapy, offers a space to explore sexual problems with care, curiosity, and empathy. It's not about performance, techniques, or quick solutions. It's about understanding how sex, desire, and intimacy are shaped by experience, relationship, and context, and how patterns that once made sense may no longer feel supportive.
                     </p>
                 </div>
-                <!-- Зображення -->
                 <div class="h-[400px] lg:h-auto min-h-fluid-400">
                     <img src="/src/images/content/service-img2.jpg"
                          alt="Embrace"
@@ -610,20 +579,18 @@
                 </div>
             </div>
 
-            <!-- Другий блок (Рожевий) -->
             <div
                     x-data="{ shown: false }"
-                    x-intersect.once.threshold.20="shown = true"
+                    x-intersect.once="shown = true"
+                    x-init="setTimeout(() => { if (!shown) shown = true }, 900)"
                     class="grid grid-cols-1 lg:grid-cols-2 bg-card-pink rounded-3xl overflow-hidden transition-all duration-1000"
                     :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'"
             >
-                <!-- Зображення (перше на десктопі через order) -->
                 <div class="h-[400px] lg:h-auto min-h-fluid-400 order-2 lg:order-1">
                     <img src="/src/images/content/service-img1.webp"
                          alt="Close intimacy"
                          class="w-full h-full object-cover">
                 </div>
-                <!-- Текст (другий на десктопі) -->
                 <div class="p-8 lg:p-20 flex flex-col justify-center text-bg order-1 lg:order-2 gap-6 xl:gap-25">
                     <h3 class="text-[32px] sm:text-fluid-44-small">
                         Different concerns, shared intention
