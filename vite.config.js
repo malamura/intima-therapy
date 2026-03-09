@@ -17,6 +17,7 @@ export default defineConfig({
                 about: resolve(__dirname, 'about.html'),
                 service: resolve(__dirname, 'service.html'),
                 condition: resolve(__dirname, 'condition.html'),
+                help: resolve(__dirname, 'help.html'),
             },
         },
     },
