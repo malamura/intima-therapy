@@ -27,7 +27,7 @@
         opacity: .5;
     }
 
-    .links-section a:not(.group), .links-section strong {
+    .links-section a:not(.group), .links-section strong, .links-section b {
         transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
         transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
         transition-duration: var(--tw-duration, var(--default-transition-duration));
@@ -39,12 +39,13 @@
         color: var(--color-card-pink-hover);
     }
 
-    .links-section-underline a:not(.group){
+    .links-section-underline a:not(.group) {
         text-decoration: underline;
         text-underline-offset: 0.1em;
         text-decoration-thickness: 0.05em;
     }
-    .links-section-underline a:not(.group):hover{
+
+    .links-section-underline a:not(.group):hover {
         text-decoration: none;
     }
 
@@ -122,7 +123,7 @@
     }
 
     .text-fluid-44,
-    .wp-content h2 {
+    .wp-content:not(.terms) h2 {
         font-size: clamp(2.125rem, 0.25rem + 2.083vw, 2.75rem) !important;
     }
 
@@ -166,6 +167,7 @@
         width: clamp(2.625rem, 3vw, 3.5rem); /* 42px на 1440px -> 56px на 1920px */
         height: clamp(2.625rem, 3vw, 3.5rem);
     }
+
 
 
 }
@@ -224,6 +226,15 @@
         padding-right: clamp(1.5rem, 1.667vw, 2rem) !important;
     }
 
+    .max-w-fluid-560 {
+        width: clamp(545px, 37.84vw, 716px);
+    }
+
+    .max-w-fluid-70 {
+        width: clamp(280px, 29.86vw, 480px);
+        max-width: 70%; /* Твоє обмеження у 70% для середніх екранів */
+    }
+
     .max-w-fluid-684 {
 
         max-width: clamp(33.75rem, 6.75rem + 30vw, 42.75rem) !important;
@@ -258,9 +269,11 @@
             padding-top: clamp(2.25rem, 2.5vw, 3rem) !important;
             padding-bottom: clamp(2.25rem, 2.5vw, 3rem) !important;
         }
+
         section.pt-int-0 {
             padding-top: 0 !important;
         }
+
         section.pb-int-0 {
             padding-bottom: 0 !important;
         }
@@ -268,9 +281,11 @@
         .sm\:mt-20 {
             margin-top: clamp(4.25rem, 2rem + 2.5vw, 5rem) !important;
         }
+
         .sm\:gap-20 {
             gap: clamp(4.25rem, 5.6rem - 1.5vw, 5rem);
         }
+
         .sm\:gap-6 {
             gap: clamp(1rem, 1.11vw, 1.5rem) !important;
         }
@@ -372,7 +387,7 @@
             font-size: clamp(2.125rem, 0.25rem + 2.083vw, 2.75rem) !important;
         }
 
-        .sm\:text-fluid-44-small{
+        .sm\:text-fluid-44-small {
             font-size: clamp(1.9375rem, -0.5rem + 2.708vw, 2.75rem) !important;
         }
 
@@ -479,6 +494,10 @@
             line-height: 1;
         }
 
+        .fluid-input {
+            padding: clamp(0.7rem, 0.96vw, 0.95rem) 1rem !important;
+        }
+
         .play-btn svg {
             width: clamp(1.75rem, 2.892vw, 2.75rem) !important;
             height: clamp(1.75rem, 2.892vw, 2.75rem) !important;
@@ -534,7 +553,7 @@
 
         /* Іконки в групах меню */
         nav .group svg,
-        .service-links .group svg{
+        .service-links .group svg {
             height: clamp(1rem, 1.111vw, 1.33rem) !important;
         }
 
@@ -550,6 +569,16 @@
             margin-right: clamp(-0.33rem, -0.278vw, -0.25rem) !important;
             margin-left: clamp(-0.26rem, -0.222vw, -0.2rem) !important;
         }
+
+        .sm\:text-fluid-14 {
+
+            font-size: clamp(11px, 1.5vw - 10.6px, 14px);
+        }
+
+        .sm\:p-16{
+
+        padding: clamp(44px, 3.05vw, 64px);
+    }
 
         .rounded-\[40px\] {
             border-radius: clamp(1.875rem, 2.083vw, 2.5rem) !important;
@@ -679,6 +708,21 @@
             margin-bottom: clamp(0.75rem, 0.833vw, 1rem) !important;
         }
 
+
+
+        /* Ширина */
+        .sm\:w-8 {
+            /* Min: 4rem (64px), Pref: 7.777vw (112px @ 1440px), Max: 8.5rem (136px) */
+            width: clamp(24px, 1.66vw, 32px);
+        }
+
+        /* Висота */
+        .sm\:h-8 {
+            /* Min: 4rem (64px), Pref: 7.777vw (112px @ 1440px), Max: 8.5rem (136px) */
+            height: clamp(24px, 1.66vw, 32px);
+        }
+
+
         /* Ширина */
         .sm\:w-37 {
             /* Min: 4rem (64px), Pref: 7.777vw (112px @ 1440px), Max: 8.5rem (136px) */
@@ -705,6 +749,12 @@
         .md\:p-8 {
             padding: clamp(1.5rem, 1.666vw, 2rem) !important;
         }
+
+        .md\:fluid-width-container-book {
+            width: 100%;
+            max-width: clamp(640px, 41.67vw + 40px, 840px);
+        }
+
 
 
         /*.px-6 {*/
@@ -785,6 +835,16 @@
         /* h-6: 18px на 1440px -> 24px на 1920px */
         .sm\:h-6 {
             height: clamp(1.125rem, 1.25vw, 1.5rem) !important;
+        }
+
+        .sm\:w-\[124px\]{
+        width: clamp(94px, 122px - 2.5vw, 124px);
+    }
+        .sm\:min-w-\[192px\] {
+            min-width: clamp(142px, 232px - 6.25vw, 192px);
+        }
+        .sm\:h-\[131px\]{
+            height: clamp(102px, 120.8px - 1.375vw, 131px);
         }
 
         .sm\:h-21 {
@@ -897,9 +957,11 @@
             max-width: clamp(5rem, 7.03vw, 8.4375rem) !important;
             width: 100%;
         }
+
         .lg\:p-10 {
             padding: clamp(1.75rem, -0.5rem + 2.5vw, 2.5rem) !important;
         }
+
         .lg\:gap-32 {
             gap: clamp(6.25rem, 1rem + 5.833vw, 8rem) !important;
         }
@@ -969,22 +1031,30 @@
             padding-top: clamp(7.125rem, 2.25rem + 6.35vw, 9.5rem) !important;
             padding-bottom: clamp(7.125rem, 2.25rem + 6.35vw, 9.5rem) !important;
         }
+
         .xl\:py-30 {
             padding-top: clamp(5.625rem, 1.775rem + 5vw, 7.5rem) !important;
             padding-bottom: clamp(5.625rem, 1.775rem + 5vw, 7.5rem) !important;
         }
+
         .xl\:gap-38 {
             gap: clamp(7.125rem, 2.25rem + 6.35vw, 9.5rem) !important;
         }
+
         .xl\:pt-38 {
             padding-top: clamp(7.125rem, 2.25rem + 6.35vw, 9.5rem) !important;
         }
+
         .xl\:pt-16 {
             padding-top: clamp(3rem, 0rem + 3.333vw, 4rem) !important;
         }
 
         .xl\:gap-25 {
             gap: clamp(4.6875rem, 5.2vw, 6.25rem) !important;
+        }
+
+        .xl\:text-fluid-16 {
+            font-size: clamp(0.718rem, 0.823vw, 1rem) !important;
         }
     }
     @media (min-width: 1400px) {
@@ -999,6 +1069,10 @@
     }
 
     @media (max-width: 1024px) {
+
+        .no-bg {
+            background: none !important;
+        }
 
         .max-w-fluid-about {
             max-width: 400px;
@@ -1021,12 +1095,26 @@
         }
     }
     @media (max-width: 640px) {
+
+        .max-w-fluid-560,
+        .max-w-fluid-70{
+            max-width: 100%;
+            width: 100%;
+        }
+
         .text-fluid-h2 {
             line-height: 48px;
         }
+
+        .fluid-input {
+            padding: 18px 16px !important;
+            font-size: 14px;
+        }
+
         .arrow-w-6 {
             margin-bottom: 4px;
         }
+
         .font-sans.mt-2.line-clamp-3 {
             font-size: 14px;
         }
@@ -1212,6 +1300,18 @@
 @utility reveal-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.z-30 {
+    z-index: 30;
+}
+
+.z-40 {
+    z-index: 40;
+}
+
+.z-50 {
+    z-index: 50;
 }
 
 .dashed-line-path {

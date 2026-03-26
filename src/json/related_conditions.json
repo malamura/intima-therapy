@@ -1,0 +1,73 @@
+[
+  {
+    "key": "group_condition_related_links",
+    "title": "Block: Condition Related Support",
+    "fields": [
+      {
+        "key": "field_rel_links_title",
+        "label": "Title",
+        "name": "title",
+        "type": "text",
+        "instructions": "Title displayed on the left side (supports <br> for line breaks).",
+        "required": false,
+        "default_value": "Related Conditions<br> and Support",
+        "wrapper": {
+          "width": "50",
+          "class": "",
+          "id": ""
+        }
+      },
+      {
+        "key": "field_rel_links_desc",
+        "label": "Description",
+        "name": "description",
+        "type": "textarea",
+        "instructions": "Description text displayed below the title on the left.",
+        "required": false,
+        "default_value": "Some people who experience vaginismus also seek support around...",
+        "wrapper": {
+          "width": "50",
+          "class": "",
+          "id": ""
+        },
+        "rows": 3,
+        "new_lines": "wpautop"
+      },
+      {
+        "key": "field_rel_links_query",
+        "label": "Related Conditions",
+        "name": "related_conditions",
+        "type": "relationship",
+        "instructions": "Select specific pages to link. If left empty, the block will automatically display 4 random pages from the 'Condition' post type.",
+        "required": false,
+        "post_type": [
+          "condition"
+        ],
+        "taxonomy": [],
+        "filters": [
+          "search",
+          "post_type"
+        ],
+        "return_format": "object",
+        "min": "",
+        "max": "",
+        "elements": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "block",
+          "operator": "==",
+          "value": "acf/condition-related-links"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+  }
+]

@@ -1,0 +1,85 @@
+[
+  {
+    "key": "group_theme_settings",
+    "title": "Theme Settings",
+    "fields": [
+      {
+        "key": "field_global_phone",
+        "label": "Phone Number",
+        "name": "global_phone",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "Enter the phone number for contact forms and footer (e.g., +44 123 456 789)",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "50",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "+44 123 456 789",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_global_email",
+        "label": "Email Address",
+        "name": "global_email",
+        "aria-label": "",
+        "type": "email",
+        "instructions": "Primary contact email address.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "50",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "hello@therapy.com",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_emergency_notice",
+        "label": "Emergency Notice (Contact Form)",
+        "name": "emergency_notice",
+        "aria-label": "",
+        "type": "textarea",
+        "instructions": "The 'Please note...' text displayed at the top of contact forms.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "Intima Therapy is not an emergency service. If you are experiencing a mental health crisis or are at risk of immediate harm to yourself or others, please contact your local emergency services or a crisis support line right away.",
+        "maxlength": "",
+        "rows": 4,
+        "placeholder": "Enter emergency notice text here...",
+        "new_lines": "br"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "options_page",
+          "operator": "==",
+          "value": "theme-settings"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0
+  }
+]

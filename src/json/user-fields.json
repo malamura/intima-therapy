@@ -1,0 +1,50 @@
+[
+  {
+    "key": "group_user_author_settings",
+    "title": "Author & Therapist Settings",
+    "fields": [
+      {
+        "key": "field_user_avatar",
+        "label": "Custom Avatar",
+        "name": "user_avatar",
+        "type": "image",
+        "instructions": "Square image for the author block (e.g. 300x300).",
+        "return_format": "array",
+        "preview_size": "thumbnail",
+        "library": "all"
+      },
+      {
+        "key": "field_user_job_title",
+        "label": "Job Title",
+        "name": "job_title",
+        "type": "text",
+        "instructions": "e.g. Psychosexual & Relationship Therapist"
+      },
+      {
+        "key": "field_linked_therapist",
+        "label": "Linked Therapist Profile",
+        "name": "linked_therapist_profile",
+        "type": "post_object",
+        "instructions": "Select the Therapist to link this author to their professional profile page.",
+        "post_type": ["therapist"],
+        "allow_null": 1,
+        "return_format": "object"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "user_form",
+          "operator": "==",
+          "value": "all"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+  }
+]

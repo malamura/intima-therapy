@@ -1,0 +1,67 @@
+{
+  "key": "group_condition_therapy_help",
+  "title": "Block: Therapy Help Grid",
+  "fields": [
+    {
+      "key": "field_th_title",
+      "label": "Hero Title",
+      "name": "hero_title",
+      "type": "text",
+      "default_value": "How psychosexual therapy can help"
+    },
+    {
+      "key": "field_th_img_desktop",
+      "label": "Desktop Image",
+      "name": "image_desktop",
+      "type": "image",
+      "return_format": "url"
+    },
+    {
+      "key": "field_th_img_mobile",
+      "label": "Mobile Image",
+      "name": "image_mobile",
+      "type": "image",
+      "return_format": "url"
+    },
+    {
+      "key": "field_th_cards",
+      "label": "Cards",
+      "name": "cards",
+      "type": "repeater",
+      "layout": "block",
+      "button_label": "Add Card",
+      "max": 3,
+      "sub_fields": [
+        {
+          "key": "field_th_card_text",
+          "label": "Card Text",
+          "name": "text",
+          "type": "wysiwyg",
+          "tabs": "visual",
+          "toolbar": "basic",
+          "media_upload": 0
+        },
+        {
+          "key": "field_th_card_icon",
+          "label": "Icon Type",
+          "name": "icon_type",
+          "type": "select",
+          "choices": {
+            "circles": "Two Circles",
+            "heart": "Abstract Heart",
+            "petals": "Flower Petals"
+          }
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/condition-therapy-help"
+      }
+    ]
+  ]
+}

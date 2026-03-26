@@ -1,0 +1,91 @@
+[
+  {
+    "key": "group_about_inclusive_space",
+    "title": "Block: About Inclusive Space",
+    "fields": [
+      {
+        "key": "field_inclusive_title",
+        "label": "Title",
+        "name": "title",
+        "type": "textarea",
+        "rows": 2,
+        "default_value": "An inclusive,<br>\nsex-positive space"
+      },
+      {
+        "key": "field_inclusive_image",
+        "label": "Side Image",
+        "name": "image",
+        "type": "image",
+        "return_format": "array",
+        "preview_size": "medium"
+      },
+      {
+        "key": "field_inclusive_list",
+        "label": "List Items",
+        "name": "list_items",
+        "type": "repeater",
+        "layout": "block",
+        "button_label": "Add Item",
+        "sub_fields": [
+          {
+            "key": "field_inclusive_list_text",
+            "label": "Text",
+            "name": "text",
+            "type": "wysiwyg",
+            "media_upload": 0,
+            "toolbar": "basic"
+          }
+        ]
+      }
+    ],
+    "location": [ [ { "param": "block", "operator": "==", "value": "acf/about-inclusive-space" } ] ],
+    "active": true
+  },
+  {
+    "key": "group_about_choosing_therapist",
+    "title": "Block: About Choosing Therapist",
+    "fields": [
+      {
+        "key": "field_choose_main_title",
+        "label": "Main Title",
+        "name": "main_title",
+        "type": "text",
+        "default_value": "Choosing a therapist"
+      },
+      {
+        "key": "field_choose_card_1",
+        "label": "Card 1 Text",
+        "name": "card_1_text",
+        "type": "textarea",
+        "rows": 3,
+        "default_value": "All therapists on the platform charge the same fee, so you can focus on what matters most - areas of specialism, lived experience, cultural sensitivity, and, above all, who you feel most at ease with."
+      },
+      {
+        "key": "field_choose_card_2",
+        "label": "Card 2 Text",
+        "name": "card_2_text",
+        "type": "textarea",
+        "rows": 3,
+        "default_value": "Our therapists come from diverse cultural backgrounds and offer sessions in multiple languages, including English, French, Greek, Portuguese, Farsi, and Hungarian."
+      },
+      {
+        "key": "field_choose_card_3",
+        "label": "Card 3 Text",
+        "name": "card_3_text",
+        "type": "textarea",
+        "rows": 3,
+        "default_value": "For many people, being able to work in their first language or with someone who understands their cultural context can make a real difference. We see the therapeutic relationship as central to the work."
+      },
+      {
+        "key": "field_choose_bottom_text",
+        "label": "Bottom Statement",
+        "name": "bottom_text",
+        "type": "textarea",
+        "rows": 3,
+        "default_value": "Taking time to choose someone who feels like a good fit is not only encouraged -<br class=\"lg:block hidden\">\n it’s part of the process"
+      }
+    ],
+    "location": [ [ { "param": "block", "operator": "==", "value": "acf/about-choosing-therapist" } ] ],
+    "active": true
+  }
+]

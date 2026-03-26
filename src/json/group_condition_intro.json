@@ -1,0 +1,135 @@
+[
+  {
+    "key": "group_condition_intro",
+    "title": "Block: Condition Intro",
+    "fields": [
+      {
+        "key": "field_cond_intro_image",
+        "label": "Image",
+        "name": "image",
+        "type": "image",
+        "return_format": "array",
+        "preview_size": "medium",
+        "library": "all"
+      },
+      {
+        "key": "field_cond_intro_text",
+        "label": "Text",
+        "name": "text",
+        "type": "wysiwyg",
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0,
+        "delay": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "block",
+          "operator": "==",
+          "value": "acf/condition-intro"
+        }
+      ]
+    ],
+    "active": true
+  },
+  {
+    "key": "group_condition_cards",
+    "title": "Block: Condition Cards",
+    "fields": [
+      {
+        "key": "field_cond_cards_title",
+        "label": "Title",
+        "name": "title",
+        "type": "text",
+        "default_value": "What This Is"
+      },
+      {
+        "key": "field_cond_cards_repeater",
+        "label": "Cards",
+        "name": "cards",
+        "type": "repeater",
+        "layout": "block",
+        "button_label": "Add Card",
+        "sub_fields": [
+          {
+            "key": "field_cond_cards_text",
+            "label": "Text",
+            "name": "text",
+            "type": "textarea",
+            "rows": 4
+          },
+          {
+            "key": "field_cond_cards_image",
+            "label": "Image",
+            "name": "image",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium"
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "block",
+          "operator": "==",
+          "value": "acf/condition-cards"
+        }
+      ]
+    ],
+    "active": true
+  },
+  {
+    "key": "group_condition_list",
+    "title": "Block: Condition Experiences List",
+    "fields": [
+      {
+        "key": "field_cond_list_title",
+        "label": "Title",
+        "name": "title",
+        "type": "text",
+        "default_value": "Common Experiences"
+      },
+      {
+        "key": "field_cond_list_desc",
+        "label": "Description",
+        "name": "description",
+        "type": "textarea",
+        "rows": 3,
+        "default_value": "People living with vaginismus often describe a mix of physical, emotional, and relational experiences, including:"
+      },
+      {
+        "key": "field_cond_list_repeater",
+        "label": "List Items",
+        "name": "list_items",
+        "type": "repeater",
+        "layout": "row",
+        "button_label": "Add Item",
+        "sub_fields": [
+          {
+            "key": "field_cond_list_text",
+            "label": "Text",
+            "name": "text",
+            "type": "wysiwyg",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "block",
+          "operator": "==",
+          "value": "acf/condition-list"
+        }
+      ]
+    ],
+    "active": true
+  }
+]

@@ -59,7 +59,7 @@ const initCardReveal = () => {
 
         tl.to(card, {
             yPercent: 120,
-            opacity: 0,
+            opacity: 1,
             scale: 0.9,
             ease: "power1.inOut"
         }, index === 0 ? 0 : ">");

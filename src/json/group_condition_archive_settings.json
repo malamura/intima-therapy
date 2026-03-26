@@ -1,0 +1,36 @@
+[
+  {
+    "key": "group_condition_archive_settings",
+    "title": "Condition Archive Settings",
+    "fields": [
+      {
+        "key": "field_cond_archive_title",
+        "label": "Archive Title",
+        "name": "archive_title",
+        "type": "textarea",
+        "instructions": "Use <br class=\"sm:hidden block\"> for mobile line breaks.",
+        "rows": 2,
+        "default_value": "What We<br class=\"sm:hidden block\"> Help With"
+      },
+      {
+        "key": "field_cond_archive_subtitle",
+        "label": "Archive Subtitle",
+        "name": "archive_subtitle",
+        "type": "textarea",
+        "instructions": "Text below the hero section.",
+        "rows": 4,
+        "default_value": "We work with a broad spectrum of sexual and<br class=\"lg:block hidden\"> relationship concerns. Below are some of the areas<br class=\"lg:block hidden\"> we've created dedicated resources for"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "options_page",
+          "operator": "==",
+          "value": "acf-options-archive-settings"
+        }
+      ]
+    ],
+    "active": true
+  }
+]

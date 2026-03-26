@@ -412,8 +412,8 @@
             <img src="/src/images/first-section.webp"
                  alt="Specialist Therapy Background"
                  fetchpriority="high"
-                 class="w-full h-full object-cover transition-transform duration-[3000ms] ease-out will-change-transform h-screen"
-                 :class="zoomOut ? 'scale-100' : 'scale-115'">
+                 class="w-full h-full object-cover transition-transform duration-[3000ms] ease-out will-change-transform h-screen scale-110"
+                 :class="zoomOut ? '!scale-100' : ''">
         </picture>
     </div>
 
@@ -786,22 +786,21 @@
             </h2>
         </div>
 
-        <div class="relative w-full aspect-video rounded-3xl overflow-hidden group cursor-pointer reveal-hidden"
+        <div class="relative w-full aspect-video rounded-3xl overflow-hidden group cursor-pointer transition-all duration-[1200ms] ease-out"
              @click="modalOpen = true"
              x-data="{ shown: false }"
-             x-intersect.once.margin.-5%="shown = true"
-             :class="shown ? 'reveal-visible' : 'reveal-hidden'"
+             x-intersect.once.margin.-10%="shown = true"
+             :class="shown ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-[0.85] translate-y-12'"
              style="transition-delay: 200ms;">
 
             <img src="/src/images/content/video.webp"
                  alt="Welcome Video"
-                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102">
+                 class="w-full h-full object-cover">
 
             <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
 
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="play-btn w-40 h-40 rounded-full bg-white/15 backdrop-blur-md border border-white/60 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-
                     <svg class="text-[#F4ECE4]" viewBox="0 0 44 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M40.8782 20.1324C44.0435 21.9598 44.0435 26.5284 40.8782 28.3559L7.12177 47.8452C3.95654 49.6726 1.40427e-06 47.3883 1.56403e-06 43.7334L3.26784e-06 4.75483C3.4276e-06 1.09994 3.95655 -1.18436 7.12178 0.643085L40.8782 20.1324Z" fill="currentColor"/>
                     </svg>
@@ -848,8 +847,7 @@
         </div>
     </div>
 
-</section>
-<section class="py-12 sm:py-24 px-4 lg:px-25 lg:mt-22 max-w-[1920px] mx-auto" x-data>
+</section><section class="py-12 sm:py-24 px-4 lg:px-25 lg:mt-22 max-w-[1920px] mx-auto" x-data>
 
     <div class="text-center mb-10 sm:mb-20 reveal-hidden"
          x-data="{ shown: false }"
@@ -1192,19 +1190,17 @@
             </div>
 
             <div class="relative grid grid-cols-1">
-                <template x-for="(testimonial, index) in testimonials" :key="index">
-                    <div class="col-start-1 row-start-1 transition-all duration-500 ease-out"
-                         :class="active === index
-                    ? 'opacity-100 translate-x-0 pointer-events-auto z-10'
-                    : 'opacity-0 translate-x-8 pointer-events-none -z-10'">
-
-                        <p class="font-sans text-fluid-36 leading-[1.3] text-primary mb-4 sm:mb-6">
-                            <span x-text="testimonial.text"></span>
-                        </p>
-
-                        <p class="font-sans text-[22px] sm:text-fluid-28 text-primary" x-text="testimonial.author"></p>
-                    </div>
-                </template>
+                <div class="relative grid grid-cols-1">
+                    <template x-for="(testimonial, index) in testimonials" :key="index">
+                        <div class="col-start-1 row-start-1 transition-all duration-700 cubic-bezier"
+                             :class="active === index ? 'opacity-100 translate-x-0 blur-0 pointer-events-auto z-10' : 'opacity-0 blur-sm translate-x-8 pointer-events-none -z-10'">
+                            <p class="font-sans text-fluid-36 leading-[1.3] text-primary mb-4 sm:mb-6">
+                                <span x-html="testimonial.text"></span>
+                            </p>
+                            <p class="font-sans text-[22px] sm:text-fluid-28 text-primary" x-text="testimonial.author"></p>
+                        </div>
+                    </template>
+                </div>
             </div>
 
             <div class="flex gap-2 justify-center items-end sm:justify-end arrows-slider">
