@@ -27,6 +27,11 @@
         opacity: .5;
     }
 
+    .adaptive-max-width-800 {
+        width: 100%;
+        max-width: clamp(700px, 400px + 20.83vw, 800px);
+    }
+
     .links-section a:not(.group), .links-section strong, .links-section b {
         transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
         transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -575,6 +580,10 @@
             font-size: clamp(11px, 1.5vw - 10.6px, 14px);
         }
 
+        .sm\:adaptive-height-70 {
+            height: clamp(70px, -42px + 17.5vw, 210px);
+        }
+
         .sm\:p-16{
 
         padding: clamp(44px, 3.05vw, 64px);
@@ -835,6 +844,13 @@
         /* h-6: 18px на 1440px -> 24px на 1920px */
         .sm\:h-6 {
             height: clamp(1.125rem, 1.25vw, 1.5rem) !important;
+        }
+
+        .sm\:w-\[140px\] {
+            width: clamp(110px, 164px - 3.75vw, 140px);
+        }
+        .sm\:h-\[150px\]{
+            height: clamp(116px, 177.2px - 4.25vw, 150px);
         }
 
         .sm\:w-\[124px\]{
@@ -1158,6 +1174,10 @@
 
         .read-badge.tag-item {
             font-size: 16px;
+        }
+
+        .profile-popup .read-badge.tag-item {
+            font-size: 14px;
         }
 
         .profile-icon .w-8 {

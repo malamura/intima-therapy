@@ -499,7 +499,7 @@
 </header>
 
 
-<div class="bg-[#F4ECE4] min-h-screen transition-colors duration-500 sm:-mt-2 2xl:mt-0"
+<div class="bg-[#F4ECE4] transition-colors duration-500"
      x-data="{
        step: 0,
     totalSteps: 6,
@@ -507,7 +507,7 @@
     supportDetails: '',
     therapistGender: '',
     specialExperiences: [],
-    proceedChoice: 'shortlist',
+    proceedChoice: '',
     isLoadingTherapists: false,
     shortlisted: [],
     isQuickViewOpen: false,
@@ -657,7 +657,7 @@
                         </h2>
 
                         <div class="flex flex-col gap-4 sm:gap-4 mb-12 sm:mb-12">
-                            <label class="flex items-center px-6 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)]  rounded-[2rem] border cursor-pointer transition-all duration-300"
+                            <label class="flex items-center px-[24px] gap-2 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)]  rounded-[2rem] border cursor-pointer transition-all duration-300"
                                    :class="supportType === 'individual' ? 'border-border-muted-purple bg-[#E9DDE5]' : 'border-[#784F71]/20 hover:border-muted-purple bg-bg'">
                                 <span class="sm:text-fluid-18 text-base text-primary flex-1">Individual therapy</span>
                                 <input type="radio" x-model="supportType" value="individual" class="hidden">
@@ -668,7 +668,7 @@
                                 </div>
                             </label>
 
-                            <label class="flex items-center px-6 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)]  rounded-[2rem] border cursor-pointer transition-all duration-300"
+                            <label class="flex items-center px-[24px] gap-2 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)]  rounded-[2rem] border cursor-pointer transition-all duration-300"
                                    :class="supportType === 'couples' ? 'border-muted-purple bg-[#E9DDE5]' : 'border-[#784F71]/20 hover:border-muted-purple bg-bg'">
                                 <span class="sm:text-fluid-18 text-base text-primary flex-1">Couples (Relationship) therapy</span>
                                 <input type="radio" x-model="supportType" value="couples" class="hidden">
@@ -679,7 +679,7 @@
                                 </div>
                             </label>
 
-                            <label class="flex items-center px-6 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)]  rounded-[2rem] border cursor-pointer transition-all duration-300"
+                            <label class="flex items-center px-[24px] gap-2 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)]  rounded-[2rem] border cursor-pointer transition-all duration-300"
                                    :class="supportType === 'dont_know' ? 'border-muted-purple bg-[#E9DDE5]' : 'border-[#784F71]/20 hover:border-muted-purple bg-bg'">
                                 <span class="sm:text-fluid-18 text-base text-primary flex-1">I don’t know yet</span>
                                 <input type="radio" x-model="supportType" value="dont_know" class="hidden">
@@ -717,8 +717,8 @@
 
                         <div class="relative mb-12 sm:mb-12">
                 <textarea x-model="supportDetails"
-                          maxlength="150"
-                          class="w-full h-70 rounded-2xl border border-muted-purple/20 bg-white p-5 sm:p-6 font-sans text-base sm:text-fluid-18 text-primary placeholder-primary/70 focus:outline-none focus:border-muted-purple resize-none transition-colors"
+                          maxlength="200"
+                          class="w-full h-70 sm:adaptive-height-70 rounded-2xl border border-muted-purple/20 bg-white p-5 sm:p-6 font-sans text-base sm:text-fluid-18 text-primary placeholder-primary/70 focus:outline-none focus:border-muted-purple resize-none transition-colors"
                           placeholder="Type here..."></textarea>
                             <div class="mt-2 text-right text-sm sm:text-fluid-14 text-primary/70 font-sans"
                                  x-text="supportDetails.length + '/150'"></div>
@@ -751,7 +751,7 @@
                             <p class="font-sans text-base sm:text-fluid-18 text-primary mb-4 sm:mb-6">Therapist gender
                                 (if this matters to you)</p>
                             <div class="flex flex-col gap-4 sm:gap-4">
-                                <label class="flex items-center px-6 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
+                                <label class="flex items-center px-[24px] gap-2 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
                                        :class="therapistGender === 'female' ? 'border-muted-purple bg-[#E9DDE5]' : 'border-[#784F71]/20 hover:border-muted-purple bg-bg'">
                                     <span class="sm:text-fluid-18 text-base text-primary flex-1">Female</span>
                                     <input type="radio" x-model="therapistGender" value="female" class="hidden">
@@ -762,7 +762,7 @@
                                     </div>
                                 </label>
 
-                                <label class="flex items-center px-6 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
+                                <label class="flex items-center px-[24px] gap-2 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
                                        :class="therapistGender === 'male' ? 'border-muted-purple bg-[#E9DDE5]' : 'border-[#784F71]/20 hover:border-muted-purple bg-bg'">
                                     <span class="sm:text-fluid-18 text-base text-primary flex-1">Male</span>
                                     <input type="radio" x-model="therapistGender" value="male" class="hidden">
@@ -773,7 +773,7 @@
                                     </div>
                                 </label>
 
-                                <label class="flex items-center px-6 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
+                                <label class="flex items-center px-[24px] gap-2 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
                                        :class="therapistGender === 'no_preference' ? 'border-muted-purple bg-[#E9DDE5]' : 'border-[#784F71]/20 hover:border-muted-purple bg-bg'">
                                     <span class="sm:text-fluid-18 text-base text-primary flex-1">No preference</span>
                                     <input type="radio" x-model="therapistGender" value="no_preference" class="hidden">
@@ -790,7 +790,7 @@
                             <p class="font-sans text-base sm:text-fluid-18 text-primary mb-4 sm:mb-6">Are there any
                                 specific experiences or approaches that feel important to you?</p>
                             <div class="flex flex-col gap-4 sm:gap-4">
-                                <label class="flex items-center px-6 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
+                                <label class="flex items-center px-[24px] gap-2 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
                                        :class="specialExperiences.includes('lgbtq') ? 'border-muted-purple bg-[#E9DDE5]' : 'border-[#784F71]/20 hover:border-muted-purple bg-bg'">
                                     <span class="sm:text-fluid-18 text-base text-primary flex-1">LGBTQIA+ lived exp. or specialisation</span>
                                     <input type="checkbox" x-model="specialExperiences" value="lgbtq" class="hidden">
@@ -806,7 +806,7 @@
                                     </div>
                                 </label>
 
-                                <label class="flex items-center px-6 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
+                                <label class="flex items-center px-[24px] gap-2 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
                                        :class="specialExperiences.includes('kink') ? 'border-muted-purple bg-[#E9DDE5]' : 'border-[#784F71]/20 hover:border-muted-purple bg-bg'">
                                     <span class="sm:text-fluid-18 text-base text-primary flex-1">Kink-aware practice</span>
                                     <input type="checkbox" x-model="specialExperiences" value="kink" class="hidden">
@@ -850,7 +850,7 @@
                         </h2>
 
                         <div class="flex flex-col gap-4 sm:gap-4 mb-8 sm:mb-12">
-                            <label class="flex items-center px-6 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
+                            <label class="flex items-center px-[24px] gap-2 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
                                    :class="proceedChoice === 'match' ? 'border-muted-purple bg-[#E9DDE5]' : 'border-[#784F71]/20 hover:border-muted-purple bg-bg'">
                                 <span class="sm:text-fluid-18 text-base text-primary flex-1">I’d like to shortlist up to three therapists</span>
                                 <input type="radio" x-model="proceedChoice" value="match" class="hidden"
@@ -863,7 +863,7 @@
                                 </div>
                             </label>
 
-                            <label class="flex items-center px-6 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
+                            <label class="flex items-center px-[24px] gap-2 py-5 sm:px-6 sm:py-[clamp(14px,0.97vw,20px)] rounded-[2rem] border cursor-pointer transition-all duration-300"
                                    :class="proceedChoice === 'shortlist' ? 'border-muted-purple bg-[#E9DDE5]' : 'border-[#784F71]/20 hover:border-muted-purple bg-bg'">
                                 <span class="sm:text-fluid-18 text-base text-primary flex-1">I’d like you to match me with a therapist</span>
                                 <input type="radio" x-model="proceedChoice" value="shortlist" class="hidden"
@@ -994,8 +994,8 @@
 
                         <div class="relative mb-12 sm:mb-12">
             <textarea x-model="preferredTimes"
-                      maxlength="150"
-                      class="w-full h-70 rounded-2xl border border-muted-purple/20 bg-white p-5 sm:p-6 font-sans text-base sm:text-fluid-18 text-primary placeholder-primary/70 focus:outline-none focus:border-muted-purple resize-none transition-colors"
+                      maxlength="200"
+                      class="w-full h-70 sm:adaptive-height-70 rounded-2xl border border-muted-purple/20 bg-white p-5 sm:p-6 font-sans text-base sm:text-fluid-18 text-primary placeholder-primary/70 focus:outline-none focus:border-muted-purple resize-none transition-colors"
                       placeholder="e.g. Tuesdays after 6pm, or weekday mornings"></textarea>
                             <div class="mt-2 text-right text-sm sm:text-fluid-14 text-primary/70 font-sans"
                                  x-text="preferredTimes.length + '/150'"></div>
@@ -1026,10 +1026,10 @@
                             with matching, though availability may vary.
                         </p>
 
-                        <div class="flex flex-col gap-6 sm:gap-8 mb-10 sm:mb-12">
+                        <div class="flex flex-col gap-3 sm:gap-8 mb-8 sm:mb-12">
 
                             <div>
-                                <label class="block font-sans text-sm sm:text-fluid-16 text-primary/80 mb-2">
+                                <label class="block font-sans text-sm sm:text-fluid-16 text-primary/80 mb-2 px-6 sm:p-0">
                                     First name<span class="text-[#E55A5A]">*</span>
                                 </label>
                                 <input type="text" x-model="contactName" placeholder="Type"
@@ -1037,7 +1037,7 @@
                             </div>
 
                             <div>
-                                <label class="block font-sans text-sm sm:text-fluid-16 text-primary/80 mb-2">
+                                <label class="block font-sans text-sm sm:text-fluid-16 text-primary/80 mb-2 px-6 sm:p-0">
                                     Email address<span class="text-[#E55A5A]">*</span>
                                 </label>
                                 <input type="email" x-model="contactEmail" placeholder="Email address*"
@@ -1045,7 +1045,7 @@
                             </div>
 
                             <div>
-                                <label class="block font-sans text-sm sm:text-fluid-16 text-primary/80 mb-2">
+                                <label class="block font-sans text-sm sm:text-fluid-16 text-primary/80 mb-2 px-6 sm:p-0">
                                     Phone number (optional)
                                 </label>
                                 <input type="tel" x-model="contactPhone" placeholder="XX XXXX XXX"
@@ -1054,7 +1054,7 @@
                         </div>
 
                         <div class="mb-8 sm:mb-12">
-                            <h3 class="font-sans text-base sm:text-fluid-18 text-primary mb-2">
+                            <h3 class="font-sans text-[18px] sm:text-fluid-18 text-primary mb-2">
                                 Is there anything important you’d like us to know before we contact you?
                             </h3>
                             <p class="font-sans text-sm sm:text-fluid-16 text-primary/70 mb-4">
@@ -1063,7 +1063,7 @@
 
                             <div class="relative">
                 <textarea x-model="contactImportantInfo"
-                          maxlength="150"
+                          maxlength="200"
                           class="w-full h-32 sm:h-40 rounded-2xl border border-[#784F71]/20 bg-white p-5 sm:p-6 font-sans text-base sm:text-fluid-18 text-primary placeholder-primary/40 focus:outline-none focus:border-muted-purple resize-none transition-colors"
                           placeholder="Type..."></textarea>
                                 <div class="mt-2 text-right text-sm sm:text-fluid-14 text-primary/70 font-sans"
@@ -1071,16 +1071,35 @@
                             </div>
                         </div>
 
-                        <p class="text-center font-sans text-sm sm:text-fluid-14 text-primary/70 mb-8 sm:mb-12 mx-auto">
+                        <p class="sm:flex hidden text-center font-sans text-sm sm:text-fluid-14 text-primary/70 mb-8 sm:mb-12 mx-auto">
                             These preferences help us match you more accurately. You can select none, one, or both.
                         </p>
                     </div>
+
+                    <label class="flex items-start gap-3 cursor-pointer sm:mb-6 mb-6" x-data="{ checked: false }">
+                        <div class="relative w-6 h-6 sm:w-6 sm:h-6 shrink-0">
+                            <input type="checkbox"
+                                   required
+                                   class="sr-only"
+                                   @change="checked = $el.checked">
+
+                            <div class="sm:mt-0  w-6 h-6 sm:w-6 sm:h-6 rounded transition-all duration-200 flex items-center justify-center border"
+                                 :class="checked ? 'bg-muted-purple border-muted-purple' : 'bg-white border-primary/70'">
+                                <svg class="text-white transition-opacity duration-200"  :class="checked ? 'opacity-100' : 'opacity-0'" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.8681 1.32395L4.81457 9.59025C4.74442 9.66249 4.66108 9.71982 4.5693 9.75893C4.47753 9.79805 4.37913 9.81818 4.27976 9.81818C4.18039 9.81818 4.082 9.79805 3.99022 9.75893C3.89845 9.71982 3.8151 9.66249 3.74496 9.59025L0.221524 5.97374C0.151292 5.90166 0.0955814 5.81608 0.0575722 5.72189C0.019563 5.6277 1.04654e-09 5.52676 0 5.42481C-1.04653e-09 5.32286 0.019563 5.22191 0.0575722 5.12773C0.0955814 5.03354 0.151292 4.94796 0.221524 4.87588C0.291756 4.80379 0.375133 4.74661 0.466895 4.70759C0.558658 4.66858 0.657008 4.6485 0.756331 4.6485C0.855654 4.6485 0.954004 4.66858 1.04577 4.70759C1.13753 4.74661 1.22091 4.80379 1.29114 4.87588L4.28039 7.94409L11.7998 0.227376C11.9416 0.0817894 12.134 0 12.3346 0C12.5352 0 12.7275 0.0817894 12.8694 0.227376C13.0112 0.372962 13.0909 0.570419 13.0909 0.77631C13.0909 0.9822 13.0112 1.17966 12.8694 1.32524L12.8681 1.32395Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="text-base sm:text-fluid-14 links-section-underline">
+                            I understand that Intima Therapy connects me with an independent therapist and that submitting this form does not start therapy.
+                        </span>
+                    </label>
 
                     <button type="button"
                             @click="step = 7"
                             :disabled="contactName.trim() === '' || !contactEmail.includes('@')"
                             class="!w-full !flex mx-auto bg-card-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition disabled:bg-card-pink disabled:opacity-50 disabled:cursor-not-allowed">
-                        Continue
+                        Submit enquiry
                     </button>
                 </div>
 
@@ -1091,8 +1110,7 @@
 
         <div class="sm:mt-16"></div>
 
-
-        <div x-show="isQuickViewOpen" style="display: none;" class="relative z-50">
+        <div x-show="isQuickViewOpen" style="display: none;" class="relative z-50 profile-popup">
             <div x-show="isQuickViewOpen"
                  x-transition:enter="ease-out duration-300"
                  x-transition:enter-start="opacity-0"
@@ -1103,7 +1121,7 @@
                  class="fixed inset-0 bg-black/60 transition-opacity"></div>
 
             <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-                <div class="flex min-h-full items-center justify-center p-4 text-center 2xl:p-0">
+                <div class="flex min-h-full items-end sm:items-center justify-center pt-30 sm:pt-4 sm:p-4 text-center 2xl:p-0">
                     <div x-show="isQuickViewOpen"
                          @click.away="isQuickViewOpen = false"
                          x-transition:enter="ease-out duration-300"
@@ -1112,25 +1130,25 @@
                          x-transition:leave="ease-in duration-200"
                          x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
                          x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                         class="relative transform overflow-hidden rounded-3xl bg-white text-left shadow-xs transition-all w-full max-w-[800px] p-6 sm:p-10">
+                         class="relative transform overflow-hidden rounded-t-3xl sm:rounded-3xl bg-white text-left shadow-xs transition-all w-full adaptive-max-width-800 p-5 sm:p-10">
 
-                        <div class="mb-8 text-right">
+                        <div class="sm:mb-8 mb-4 text-right">
                         <button @click="isQuickViewOpen = false" class="text-primary hover:opacity-70 transition-opacity">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="sm:w-6 sm:h-6 w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M18.75 5.25L5.25 18.75" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M18.75 18.75L5.25 5.25" stroke="#491E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                         </div>
-                        <div class="flex flex-col sm:flex-row gap-6 sm:gap-6 mb-6 sm:mb-6">
+                        <div class="flex flex-row gap-6 sm:gap-6 sm:mb-6">
 
                             <img src="https://therapy.youfuture.com.ua/wp-content/uploads/2026/02/team1-1.webp"
                                  alt="Therapist"
-                                 class="w-[120px] h-[120px] sm:w-[140px] sm:h-[150px] rounded-2xl object-cover object-top shrink-0">
+                                 class="w-[91px] h-[96px] sm:w-[140px] sm:h-[150px] rounded-2xl object-cover object-top shrink-0">
 
                             <div class="flex-1 flex flex-col">
-                                <h2 class="font-sans text-[24px] sm:text-fluid-28 text-primary mb-1">Hilton Mariano Da Silva</h2>
-                                <p class="font-sans text-base sm:text-fluid-18 text-primary/70 mb-4">Psychosexual & Relationship Therapist</p>
+                                <h2 class="font-sans text-base sm:text-fluid-28 text-primary mb-1">Hilton Mariano Da Silva</h2>
+                                <p class="font-sans text-sm sm:text-fluid-18 text-primary/70 mb-3 sm:mb-4">Psychosexual & Relationship Therapist</p>
 
                                 <div class="flex flex-wrap gap-2 mb-6 sm:mb-0">
                                     <span class="bg-blue-gray/8 backdrop-blur-sm text-[#3C6180] read-badge tag-item rounded-full border border-blue-gray/16 inline-flex px-5 py-1.5 sm:text-fluid-14 transition-colors duration-300">Online</span>
@@ -1139,7 +1157,7 @@
                             </div>
 
 
-                            <div class="flex flex-row sm:flex-col gap-2 shrink-0 min-w-0 sm:min-w-[110px] md:min-w-[clamp(142px,232px-6.25vw,192px)] 2xl:min-w-[192px]">
+                            <div class="hidden sm:flex flex-row sm:flex-col gap-2 shrink-0 min-w-0 sm:min-w-[110px] md:min-w-[clamp(172px,232px-6.25vw,192px)] 2xl:min-w-[192px]">
 
                                 <button type="button"
                                         @click="if(shortlisted.includes(activeTherapist)) shortlisted = shortlisted.filter(i => i !== activeTherapist); else if(shortlisted.length < 3) shortlisted.push(activeTherapist);"
@@ -1170,6 +1188,27 @@
                             <p>Sessions are collaborative and talking-based, with no physical contact or sexual activity involved.</p>
                         </div>
 
+                        <div class="mt-8 sm:hidden flex flex-row sm:flex-col gap-2 shrink-0 min-w-0 sm:min-w-[110px] md:min-w-[clamp(172px,232px-6.25vw,192px)] 2xl:min-w-[192px]">
+                            <a href="#"
+                               class="w-full whitespace-nowrap custom-height-fluid text-base sm:text-fluid-16 border border-primary/20 justify-center flex gap-2 items-center px-6 sm:px-7 py-2.5 sm:py-2 2xl:py-2.5 font-bold rounded-full font-bold hover:bg-muted-purple hover:text-bg transition">
+                                View full profile
+                            </a>
+
+                            <button type="button"
+                                    @click="if(shortlisted.includes(activeTherapist)) shortlisted = shortlisted.filter(i => i !== activeTherapist); else if(shortlisted.length < 3) shortlisted.push(activeTherapist);"
+                                    class="w-full whitespace-nowrap custom-height-fluid text-base sm:text-fluid-16 border border-card-pink justify-center flex gap-1.5 items-center bg-card-pink px-6 sm:px-7 py-2.5 sm:py-2 2xl:py-2.5 font-bold rounded-full font-bold hover:bg-card-pink-hover transition"
+                                    :class="shortlisted.includes(activeTherapist) ? '!bg-[#fcf7f5] text-card-pink border-card-pink hover:border-card-pink-hover ' : 'bg-card-pink hover:bg-card-pink-hover hover:border-card-pink-hover text-bg hover:text-white'">
+
+                                <template x-if="shortlisted.includes(activeTherapist)">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.5 9L6 12.5L14 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </template>
+
+                                <span x-text="shortlisted.includes(activeTherapist) ? 'Added' : 'Add to shortlist'"></span>
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -1181,44 +1220,47 @@
              x-transition:enter="transition ease-out duration-700 delay-300"
              x-transition:enter-start="opacity-0 translate-x-12"
              x-transition:enter-end="opacity-100 translate-x-0"
-             class="py-10 pb-8 sm:py-24 px-4 lg:px-25 lg:px-25 mt-20 sm:mt-16 lg:mt-22 max-w-[1140px] mx-auto relative z-10">
+             class="py-10 pb-8 sm:py-24 px-4 lg:px-25 lg:px-25 mt-20 sm:mt-16 lg:mt-22 max-w-[1140px] mx-auto relative z-10 min-h-[calc(100vh-123px)] sm:min-h-auto">
 
-        <div class="mx-auto md:min-w-[653px] md:max-w-[76%]">
+        <div class="mx-auto md:min-w-[653px] md:max-w-[92%]">
 
             <h1 class="font-sans text-fluid-h1 text-center mt-30 sm:mt-0 lg:mt-20 2xl:mt-30">
-                Find the right<br> therapist for you
+                Your enquiry <br>has been sent
             </h1>
 
             <div class="absolute w-[92%] sm:w-auto top-0 left-1/2 -translate-x-1/2 pointer-events-none z-0">
                 <svg class="max-w-fluid-560" viewBox="0 0 716 723" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M539.613 99.8037C540.003 99.8037 540.371 99.8035 540.761 99.8252C638.396 109.953 714.858 192.668 715.269 293.016V293.862C715.269 364.867 684.832 430.883 641.859 488.701C556.023 604.251 420.2 687.054 377.53 711.344C370.581 715.291 366.1 717.698 364.692 718.436L357.526 722.23L350.426 718.349C348.954 717.524 343.996 714.792 336.333 710.281C292.386 684.473 158.944 600.5 73.9512 486.793C30.6974 428.931 0.000131177 363.37 0 293.862C0 292.865 -0.000312095 291.845 0.0429687 290.848C1.53672 191.476 77.5888 109.888 174.531 99.8252C174.986 99.8035 175.44 99.8037 175.895 99.8037C273.335 99.8037 352.331 178.941 352.331 276.556C352.331 366.818 284.787 441.292 197.565 451.984H197.587C197.727 451.984 294.356 451.896 357.299 451.876C420.24 451.855 516.886 451.876 517.012 451.876C430.244 440.75 363.177 366.493 363.177 276.556C363.177 178.941 442.173 99.8037 539.613 99.8037ZM357.641 0C398.292 0.000139455 431.245 33.0135 431.245 73.7373C431.245 114.461 398.291 147.474 357.641 147.475C316.99 147.475 284.035 114.461 284.035 73.7373C284.035 33.0134 316.99 0 357.641 0Z"
-                          fill="url(#paint0_linear_1_35007)" fill-opacity="0.25"/>
+                          fill="url(#paint0_linear_thanks)" fill-opacity="0.25"/>
                     <defs>
-                        <linearGradient id="paint0_linear_1_35007" x1="357.635" y1="9.63009" x2="358.17" y2="426.37"
+                        <linearGradient id="paint0_linear_thanks" x1="357.635" y1="9.63009" x2="358.17" y2="426.37"
                                         gradientUnits="userSpaceOnUse">
                             <stop stop-color="#D0B4C6"/>
                             <stop offset="1" stop-color="#F1E9E2" stop-opacity="0"/>
                         </linearGradient>
                     </defs>
                 </svg>
+
             </div>
 
-            <div class="text-base sm:text-fluid-24 leading-[1.5] text-center mt-4 opacity-70 mt-6 sm:mt-6 mb-30 sm:mb-20">
-                We’ll guide you through a few simple questions to<br class="block sm:hidden"> help you find the right<br class="hidden md:block"> therapist, or let us match<br class="block sm:hidden">
-                you. A 15-minute free discovery call always comes<br> first before you decide to proceed with the<br class="block sm:hidden">
-                therapist of your choice.
+
+            <div class="text-base sm:text-fluid-24 leading-[1.5] text-center mt-4 opacity-70 mt-6 sm:mt-6 mb-10 sm:mb-12 flex flex-col space-y-4">
+                <p>Our team will review your information and contact you to arrange a free 15-minute discovery call.</p>
+
+                <p>We’ll be in touch within 1–2 business days.</p>
+
+                <p>Submitting this form does not start therapy or book a session.</p>
             </div>
 
-            <button type="button" @click="window.location.href='/'"
-                    class="w-full !flex mx-auto max-w-fluid-70 bg-card-pink hover:bg-hover-btn text-bg font-sans font-bold fluid-button rounded-full transition disabled:opacity-50 disabled:cursor-not-allowed">
-                Back to Home
-            </button>
+            <div class="text-center flex justify-center">
 
-            <div class="text-center opacity-70 text-[12px] sm:text-fluid-16 mt-6 sm:mt-6">Intima Therapy is not an
-                emergency service. If you’re experiencing<br class="block sm:hidden">
-                a mental<br class="hidden md:block"> health crisis or are at risk of harm, please contact<br class="block sm:hidden"> emergency services or a local<br class="hidden md:block"> crisis line
-                immediately.
+            <a href="#" class="!w-auto border border-primary/20 hover:bg-muted-purple hover:text-bg text-primary font-sans font-bold fluid-button rounded-full transition">
+                Return to homepage
+            </a>
             </div>
+
+
+
         </div>
 
         <div class="mt-8 sm:mt-16"></div>
